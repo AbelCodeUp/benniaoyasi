@@ -1,0 +1,104 @@
+/*头部样式*/
+html{
+    background: #ebeff2!important;
+}
+#wrapper.enlarged .topbar .topbar-left .logo .icon-c-logo{
+    line-height: 82px;
+}
+.height_smy{
+    height: 82px;
+    line-height: 75px;
+}
+.height2_smy{
+    height: 75px;
+    line-height: 75px;
+    overflow: hidden;
+}
+.logo_bg{
+    background: #f5f5f5;
+}
+.no_padding_smy{
+    padding: 0;
+}
+.nav_bg_smy{
+    background: url("../images/home/topbg.jpg") repeat-x;
+}
+.logo_big{
+    position: relative;
+    top: 10px;
+}
+.profile img.img_P_smy{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 19px;
+}
+.nav_box_smy{
+    width: 60%;
+}
+.nav_box_smy > li{
+    width: 16%;
+    position: relative;
+}
+.nav_box_smy > li > a{
+     width: 100%;
+    padding: 0;
+    height: 82px;
+    line-height: 78px;
+    text-align: center;
+    font-size: 18px;
+    color: #232323;
+}
+.nav_box_smy > li > a:focus,.cur_smy{
+    background: url("../images/home/topbg2.jpg") repeat-x;
+    color: #fff!important;
+}
+.login_on_smy{
+    display: block;
+    margin:20px 2px 0 0;
+    width: 200px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: #4b4b4b;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+.dropdown-menu_smy{
+    top:80%;
+    border-radius: 0;
+}
+@media screen and (max-width:1370px) and (min-width:1200px) {
+    .login_on_smy{
+        width: 160px;
+    }
+}
+@media screen and (max-width:1370px) and (max-width:1200px) {
+    .login_on_smy{
+        display: none;
+    }
+}
+.border-left{
+    width: 1px;
+    height: 60px;
+    background: #eee;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.border-right{
+    width: 1px;
+    height: 60px;
+    background: #eee;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.icon-magnet:before {
+    content: none;
+}

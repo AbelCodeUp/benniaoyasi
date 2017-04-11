@@ -1,0 +1,448 @@
+/*top*/
+/*topleft*/
+.main-content-class-top
+{
+    position: relative;
+
+    padding: 0 0 0 10px;
+}
+.main-content-class-middle-item-box-1122
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 450px;
+    height: 145px;
+    padding: 0 0 0 10px;
+
+    text-align: center;
+}
+.main-content-class-middle-item-box-rel-1122
+{
+    height: 145px;
+
+    border-radius: 3px;
+    background: #fff;
+}
+.main-content-class-middle-item-1122
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 120px;
+    height: 120px;
+    margin: 12px 10px;
+}
+.main-content-class-middle-item-rel-1122
+{
+    position: absolute;
+    top: 0;
+
+    width: 120px;
+}
+.main-content-class-middle-item-rel-1122 img
+{
+    width: 120px;
+}
+.main-content-class-middle-item-text-1122
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+}
+.main-content-class-middle-item-text-p1-1122
+{
+    height: 88px;
+    padding-top: 24px;
+}
+.main-content-class-middle-item-num-1122
+{
+    font-size: 3em;
+}
+.main-content-class-middle-item-te-1122
+{
+    font-size: 1.6em;
+
+    color: #2e2e2e;
+}
+.main-content-class-middle-item-text-p2-1122
+{
+    font-size: 1.6em;
+
+    color: #2e2e2e;
+}
+.redf05050-1122
+{
+    color: #f05050;
+}
+.yelffbc42-1122
+{
+    color: #ffbc42;
+}
+.blu5d9cec-1122
+{
+    color: #5d9cec;
+}
+/*topright*/
+.main-content-class-top .col-md-5
+{
+    float: left;
+
+    padding: 0 10px;
+
+    border-radius: 3px;
+}
+.main-content-class-top1
+{
+    width: 100%;
+    height: 145px;
+    margin-right: 10px;
+    padding: 5px;
+
+    border-radius: 3px;
+    background: #fff;
+}
+.main-content-class-top1-rel
+{
+    width: 100%;
+    height: 100%;
+}
+.main-content-class-top-left
+{
+    float: right;
+
+    width: 65%;
+    height: 100%;
+
+    text-indent: 10px;
+}
+.main-content-class-top-left-top_po
+{
+    font-size: 12px;
+    line-height: 30px;
+
+    position: absolute;
+    top: -20px;
+    right: -16px;
+
+    height: 30px;
+
+    color: #ffbd4d;
+}
+.main-content-class-top-right
+{
+    position: relative;
+
+    float: left;
+
+    width: 35%;
+    height: 100%;
+}
+.main-content-class-top-right-div
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+}
+.red2f05050
+{
+    color: #f05050;
+}
+.blu25d9cec
+{
+    color: #5d9cec;
+}
+.blac22e2e2e
+{
+    color: #2e2e2e;
+}
+.main-content-class-top-left-top
+{
+    font-size: 22px;
+    line-height: 80px;
+
+    position: relative;
+
+    height: 80px;
+    padding-top: 13px;
+}
+.main-content-class-top-left dd
+{
+    font-size: 14px;
+
+    color: #333;
+}
+.keshi_1130
+{
+    display: inline-block;
+
+    width: 98px;
+
+    text-align: center;
+}
+p.keshi_1130
+{
+    position: relative;
+}
+.xiegang
+{
+    display: inline-block;
+    visibility: hidden;
+
+    width: 10px;
+}
+
+/*middle*/
+.main-content-class-middle
+{
+    width: 100%;
+    margin: 0;
+
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: url('../images/appraisal/contentbg1.jpg') 68% bottom no-repeat #fff;
+    background-size: 16%;
+}
+.Learning-Record
+{
+    width: 100%;
+    height: 163px;
+
+    background: url('../images/appraisal/contentbg2.jpg') 24% bottom no-repeat #fff;
+    background-size: 14%;
+}
+.Learning-Record-title
+{
+    font-size: 18px;
+
+    position: absolute;
+    top: 20px;
+    left: 36px;
+
+    color: #444;
+}
+.Learning-Record-ul
+{
+    font-size: 14px;
+
+    float: left;
+
+    margin-top: 40px;
+    margin-right: 0;
+    margin-left: 40%;
+
+    color: #444;
+}
+.Learning-Record-ul li
+{
+    height: 26px;
+}
+
+.disabled_smy
+{
+    background: #e2e2e2;
+}
+.main-content-class-middle-btu-box
+{
+    padding: 29px 0 13px;
+
+    text-align: center;
+}
+.main-content-class-middle-btu
+{
+    display: inline-block;
+
+    width: 172px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.main-content-class-middle-btu dt
+{
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+    color: #323131;
+}
+.main-content-class-middle-btu dd
+{
+    width: 100%;
+    height: 60px;
+}
+.main-content-class-middle-btu_dd_button
+{
+    width: 163px;
+    margin-bottom: 10px;
+}
+.main-content-class-middle-btu_dd_button2
+{
+    float: left;
+
+    width: 100px;
+    margin-right: 8px;
+    padding: 6px 0;
+
+    text-align: center;
+}
+.main-content-class-middle-btu_dd_button3
+{
+    float: left;
+
+    width: 50px;
+    padding: 6px 0;
+
+    text-align: center;
+}
+.main-content-class-middle-btu dt.little_smy
+{
+    font-size: 16px;
+}
+@media screen and (max-width:1440px)
+{
+    .keshi_1130
+    {
+        display: inline-block;
+
+        width: 74px;
+
+        text-align: center;
+    }
+    .main-content-class-top-right
+    {
+        width: 25%;
+        margin-right: 3%;
+        margin-left: 2%;
+    }
+    .main-content-class-top-left
+    {
+        width: 68%;
+    }
+}
+@media screen and (max-width:1200px)
+{
+    .main-content-class-middle-btu-box
+    {
+        clear: both;
+
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:1200px)
+{
+    .main-content-class-middle-btu-box
+    {
+        float: right;
+
+        width: 190px;
+
+        text-align: center;
+    }
+}
+@media screen and (min-width:1440px)
+{
+    .main-content-class-middle-btu-box
+    {
+        float: right;
+
+        width: 300px;
+
+        text-align: center;
+    }
+    .main-content-class-top-left-top
+    {
+        font-size: 26px;
+
+        padding-top: 6px;
+    }
+    .main-content-class-top-left dd
+    {
+        font-size: 18px;
+    }
+    .Learning-Record-ul
+    {
+        margin-right: 10%;
+    }
+    .main-content-class-top-left-top_po
+    {
+        right: -10px;
+    }
+    .main-content-class-top-left
+    {
+        text-indent: 0;
+    }
+}
+.main-content-class-middle-btu span
+{
+    color: #f05050;
+}
+.Learning-Record-ul-btu
+{
+    font-size: 12px;
+
+    position: relative;
+
+    overflow: inherit;
+
+    margin-left: 10px;
+    padding: 1px 14px;
+}
+.Learning-Record-ul-btu img
+{
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}
+
+@media screen and (max-width:1010px)
+{
+    .main-content-class-middle-item-box-1122
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 145px;
+        padding: 0 10px 0 10px;
+
+        text-align: center;
+    }
+    .main-content-class-top1-box
+    {
+        width: 100%;
+        margin-top: 160px;
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+}
+/* 学生平台步骤 */
+.stepImg
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    z-index: 99999999;
+}
+.stepImg img
+{
+    width: 100%;
+}

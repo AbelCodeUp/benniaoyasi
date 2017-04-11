@@ -1,0 +1,407 @@
+#main_test{
+      position: relative;
+	width: 710px;
+	height: 660px;
+	overflow: hidden;
+      font-family: '微软雅黑';
+      background-color: #fff;
+      overflow-y:auto;
+      overflow-x:hidden;
+}
+#video_main{
+	width: 0;
+	height: 0;
+      position: absolute;
+      left:50%;
+      margin-left:-200px;
+      top:40px;
+      z-index: 10;
+      border:1px solid #ccc;
+}
+#videoMsg li,#erjiMsg li,#micMsg li{
+      padding:0;
+      line-height: 16px;
+      font-size: 14px;
+}
+
+/*#video_box .testContent{
+	width: 400px;
+	margin:0 auto;
+      margin-top:400px;
+	overflow: hidden;
+	text-align: center;
+}
+*/
+#testFlashView{
+      overflow: hidden;
+}
+.flashBox{
+      margin-top:120px;
+      overflow: hidden;
+      padding:10px;
+}
+.flashPng{
+      float: left;
+}
+.flashContent{
+      float: right;
+      margin-left: 20px;
+      line-height: 40px;
+}
+#testFlashView a{
+      clear: both;
+      display: block;
+      font-size: 20px;
+      width: 120px;
+      padding:8px;
+      margin:10px auto;
+      border:1px solid #ccc;
+}
+.flashContent .h2{
+      font-size: 22px;
+}
+
+.msg{
+      margin:0px auto;
+      text-align: center;
+      width: 400px;
+      font-size: 16px;
+      margin-top:360px;
+}
+
+.msg a{
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      background-color: #08bbf2;
+      border-radius:15px;
+      color:#fff;
+}
+.testPage{
+      padding: 0 30px;
+      width: 100%;
+      background: #fff;
+      position: relative;
+      z-index: 2;
+      /*margin-left:-2px;*/
+      overflow: hidden;
+}
+.testPage .testPageContent{
+      width: 600px;
+      margin:0px auto;
+      margin-top:40px;
+}
+
+.a{
+      width:120px;
+      height: 40px;
+      color:#fff;
+      text-align: center;
+      line-height: 40px;
+      background-color: #5db75d;
+      position: absolute;
+      right:10px;
+      font-size: 18px;
+      bottom:10px;
+      border-radius:6px;
+}
+dd img{
+      float: right;
+}
+.itemGroup img{
+      width: 18px;
+}
+.hr{
+      width:100%;
+      height: 1px;
+      background-color: #f2f2f2;
+}
+
+/* i{
+      position: absolute;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius:50%;
+      background-color: #fe4f00;
+      vertical-align: middle;
+      margin:auto 4px 2px 4px;
+      left: 0;
+      top:10px;
+} */
+.bottomHr{
+      border-bottom:2px solid #f2f2f2;
+}
+.topHr{
+      border-top:2px solid #f2f2f2;
+}
+
+.testPage .h1{
+      font-size: 20px;
+      color:black;
+}
+.testPage .statusMsg{
+      display: inline-block;
+      padding-left:20px;
+      font-size: 15px;
+      color:#ffa38e;
+}
+.itemGroup table{
+      margin-top:24px;
+}
+.itemGroup table,.itemGroup tr{
+      width: 100%;
+}
+.itemGroup tr.firstTr{
+      border-top:1px solid #f2f2f2;
+      border-bottom:1px solid #f2f2f2;
+}
+.itemGroup tr.firstTr th{
+      font-size: 16px;
+}
+.itemGroup tr{
+      height: 38px;
+}
+.itemGroup td,.itemGroup th{
+      text-align: left;
+      padding-left:0px;
+      line-height: 46px;
+}
+.success{
+      color:#5db75d;
+}
+.warning{
+      color:#fc0800;
+}
+.title{
+      width: 100%;
+      text-align: center;
+      height:40px;
+      font-size:20px;
+      line-height: 40px;
+      font-weight:bold;
+}
+.erjiDev{
+      overflow: hidden;
+      width:500px;
+      margin:0 auto;
+}
+.erjiDev li{
+      position: relative;
+      line-height: 24px;
+      padding-left:14px;
+}
+
+.erjiDev dt{
+      float: left;
+      width:270px;
+      height:120px;
+      margin-top:10px;
+}
+.erjiDev dt ul{
+      margin-top:10px;
+}
+.erjiDev dd{
+      float: right;
+      height:120px;
+      width: 230px;
+      margin-top:10px;
+}
+.btn{
+      margin:20px auto 40px;
+      display: block;
+      width: 500px;
+      text-align: left;
+
+}
+.btn .question{
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      width:200px;
+}
+.btn a{
+      display: inline-block;
+      width:80px;
+      text-align: center;
+      color:#fff;
+      border-radius:8px;
+      height:40px;
+      line-height: 40px;
+      margin-left:30px;
+      background-color: #5cb85c;
+      font-size: 16px;
+}
+.btn .warning{
+      background-color: #fe5954;
+}
+
+.micDev{
+      overflow: hidden;
+}
+.micDev li{
+      position: relative;
+      line-height: 24px;
+      padding-left:14px;
+}
+.micDev dt{
+      float: left;
+      width:290px;
+      height:140px;
+      margin-top:10px;
+}
+.micDev dt ul{
+      margin-top:10px;
+}
+.micDev dd{
+      float: right;
+      height:140px;
+      width: 210px;
+      margin-top:10px;
+}
+.video .micSelect{
+      width:100%;
+      height: 30px;
+      margin-bottom:10px;
+}
+.video .h1{
+      display: inline-block;
+      margin:20px auto;
+}
+.video_main{
+      width: 320px;
+      height: 260px;
+      visibility: hidden;
+}
+.bottom{
+      margin-top:40px;
+      height:60px;
+      position: relative;
+      line-height: 60px;
+}
+.bottom span,.bottom a{
+      display: inline-block;
+}
+.bottom span{
+      padding-left:200px;
+}
+.teamViewPanel{
+      width:410px;
+      display: inline-block;
+      padding:30px 30px;
+      padding-top:10px;
+      padding-bottom:80px;
+      border:1px solid #bbb;
+      position: absolute;
+      left: 50%;
+      margin-left:-280px;
+      top:200px;
+      z-index: 120;
+      background-color: #fff;
+
+}
+.teamViewPanel .tLogo{
+      line-height: 60px;
+      height: 60px;
+      font-size: 20px;
+      color:#08bbf2;
+      position: relative;
+}
+.teamViewPanel .tLogo .close{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      right: 0;
+      top:0;
+      font-size: 30px;
+      cursor: pointer;
+}
+.tLogo img{
+      vertical-align: middle;
+      margin-right:10px;
+}
+.teamContent{
+      padding-top:10px;
+      padding-left:60px;
+      height:120px;
+}
+.teamContent .downTeamView{
+      display:block;
+      margin:0 auto;
+      margin-top:20px;
+      width:160px;
+      height: 30px;
+      background-color: #08bbf2;
+      color:#fff;
+      line-height: 30px;
+      text-align: center;
+      border-radius:15px;
+}
+.teamViewPanel b{
+      margin-top: 20px;
+      display: block;
+      text-align: left;
+      font-weight: normal;
+      /*color:#08bbf2;
+      font-size: 16px;*/
+}
+#testMic{
+      text-align: center;
+}
+#testMic p{
+      font-size: 20px;
+      line-height: 40px;
+}
+.hr1{
+      margin-top:260px;
+      color:#fe0000;
+}
+.phone{
+      height: 25px;
+      line-height: 25px;
+      margin-top: 10px;
+}
+.submitPhone{
+      padding:0;
+      display: inline-block;
+      width:60px;
+      height: 25px;
+      background-color: #08bbf2;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 4px;
+      color:#fff;
+      margin-left:16px;
+}
+.phoneText{
+      padding: 0;
+      margin:0;
+      border:1px solid #ccc;
+      display: inline-block;
+      width:196px;
+      font-size:14px;
+      height:23px;
+      font-family:"微软雅黑" ;
+      line-height:23px;
+      padding-left:6px;   
+}
+#mainCover{
+      position: absolute;
+      z-index: 20;
+}
+.volumeBar{
+      width: 100%;
+      height: 22px;
+      border-radius: 11px;
+      background-color: #bcf6bb;
+}
+.volumeCount{
+      width: 200px;
+      height: 22px;
+      border-radius: 11px;
+      background-color: #72e16b;
+}

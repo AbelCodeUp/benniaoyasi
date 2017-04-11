@@ -1,0 +1,70 @@
+.learning-table{
+    border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+.learning-table td div{
+   width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 26px;
+}
+.learning-table th{
+    border-left:1px solid #ddd;border-top:1px solid #ddd;
+    padding: 30px 0;
+    text-align: center;
+    background: #ebeff2;
+    font-size: 16px;
+    color: #474747;
+}
+.learning-table td{
+    border-left:1px solid #ddd;border-top:1px solid #ddd;
+    padding: 30px 0;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    color: #4d4d4d;
+    vertical-align:middle
+}
+.learning-table .learning-table-on td{
+    color: #ff8a4d;
+}
+.learning-table .learning-table-on td a{
+    color: #ff8a4d;
+}
+.learning-table-over td:last-of-type{
+    color: #5fbeaa;
+}
+.learning-table-over td:last-of-type a{
+    color: #5fbeaa;
+}
+.learning-table-over-btu{
+    padding: 1px 19px;
+    font-size: 12px;
+    position: relative;
+    margin-top: -2px;
+    overflow: inherit;
+}
+.learning-table-over-btu img{
+    position: absolute;
+    top: 3px;
+    right: 9px;
+}
+.learning-table a{
+    color:#4d4d4d;
+}
+.learning-table-width1{
+    width: 18%;
+}
+.learning-table-width2{
+    width: 14%;
+}
+.learning-table-width4{
+    width: 23%;
+}
+/* page */
+#laypage{
+    margin-top: 20px;
+    text-align: right;
+}

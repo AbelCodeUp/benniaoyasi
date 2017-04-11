@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<title>Gogo Talk</title>
+	<!--calendar css-->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" />
+        <!-- Ladda buttons css -->
+        <link href="assets/plugins/ladda-buttons/css/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
+
+         <!--calendar css-->
+        <link href="assets/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet" />
+        <!--demo-->
+        <link href="assets/plugins/custombox/css/custombox.css" rel="stylesheet">
+        <!-- 圆环进度条 -->
+        <link href="assets/plugins/radial/radial.css" rel="stylesheet">
+
+         <!-- Tour css -->
+        <link href="assets/plugins/hopscotch/css/hopscotch.min.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/leftbar.css">
+        <link rel="stylesheet" href="css/rightbar.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/person.css">
+        <link rel="stylesheet" href="css/main-content-class2.css">
+        <link rel="stylesheet" href="css/main-orderTeacher.css">
+        <link rel="stylesheet" href="css/main-my-appraisal.css">
+        <link rel="stylesheet" href="css/main-Assessment-details.css">
+        <link rel="stylesheet" href="css/main-orderTeacher-detail.css">
+        <link rel="stylesheet" href="css/main-my-appraisal.css">
+        <link rel="stylesheet" href="css/popup-window.css">
+        <link rel="stylesheet" href="css/learning-table.css"/>
+        <link rel="stylesheet" href="css/weekReport.css">
+     <script>
+            // 判断浏览器\
+// 
+    
+            var DEFAULT_VERSION = "8.0";
+            var ua = navigator.userAgent.toLowerCase();
+            var isIE = ua.indexOf("msie")>-1;
+            var safariVersion;
+            if(isIE){
+                safariVersion =  ua.match(/msie ([\d.]+)/)[1];
+                if(safariVersion <= DEFAULT_VERSION ){
+                   window.location.href="/template/browsers.html";
+                }
+            }
+        </script>
+
+       
+        
+        <style>
+            html{
+                background: #fff;
+            }
+        </style>
+        <script>
+        //声明_czc对象:
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1261320976"]);
+        </script>
+</head>
+<body class="fixed-left" ng-controller="indexCtrl" style="min-width: 1200px;">
+
+
+      <div id="browers" style="width: 600px;display: none;border-top:2px solid #f05050;margin:0 auto;border-bottom: 2px solid #f05050;padding: 20px 30px;">
+    <h2>学习效果提升200%</h2>
+    <ul class="browtext">
+        <li>不卡顿</li>
+        <li>更安全</li>
+    </ul>
+    <p>尊敬的会员，检测到您的浏览器版本较低，为了帮助孩子拥有更好的学习效果,帮助孩子更好的提高课程，请下载最新的浏览器</p>
+    <div class="browerbox">
+        <a href="http://ie.sogou.com/">
+            <img src="browser/browser-sogou.png" alt="">
+        </a>
+        <a href="http://www.firefox.com.cn/">
+            <img src="browser/browser-fire.png" alt="">
+        </a>
+        <a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">
+            <img src="browser/browser-chrome.png" alt="">
+        </a>
+        <a href="http://www.opera.com/zh-cn">
+            <img src="browser/browser-opera.png" alt="">
+        </a>
+        <a href="http://browser.qq.com/">
+            <img src="browser/browser-qq.png" alt="">
+        </a>
+        <a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">
+            <img src="browser/browser-ie.png" alt="">
+        </a>
+        <a href="https://support.apple.com/kb/index?page=search&type=suggested&locale=zh_CN&q=safari+下载&src=support_searchbox_main">
+            <img src="browser/browser-safari.png" alt="">
+        </a>
+        <a href="http://www.uc.cn/">
+            <img src="browser/browser-uc.png" alt="">
+        </a>
+    </div>
+</div>
+
+
+      	<div ui-view></div>
+        <!-- Model dialog start -->
+        <div class="modal fade bs-example-modal-sm" id="dialogMsg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" ng-bind="massage">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- 课后评价 -->
+    <!-- sample modal content -->
+    <div class="orderTeacher modal-content" style="display: none;">
+        <button class="" data-toggle="modal" data-target="#custom-width-modal">评价</button>
+        <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog"
+             aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog" style="width:600px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="custom-width-modalLabel">我的评价</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="checkbox checkbox-warning">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1" name="sex" checked>
+                                <label for="inlineCheckbox1">
+                                    全部
+                                </label>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary waves-effect waves-light">提交评价</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- Modal -->
+    </div>
+
+<!-- Modal-Effect -->
+<script src="assets/plugins/custombox/js/custombox.min.js"></script>
+<script src="assets/plugins/custombox/js/legacy.min.js"></script>
+        <!-- Model dialog end -->
+              <!-- END wrapper -->
+               <script src="assets/js/modernizr.min.js"></script>
+        <script>
+                var resizefunc = [];
+                
+        </script>
+
+        <!-- BEGIN PAGE SCRIPTS -->
+        <script src="assets/plugins/moment/moment.js"></script>
+        
+        <!--&lt;!&ndash; jQuery  &ndash;&gt;-->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/plugins/switchery/js/switchery.min.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+
+        <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- loading botton -->
+        <script src="assets/plugins/ladda-buttons/js/spin.min.js"></script>
+        <script src="assets/plugins/ladda-buttons/js/ladda.min.js"></script>
+        <script src="assets/plugins/ladda-buttons/js/ladda.jquery.min.js"></script>
+        <!-- fullcalendar -->
+        <script src='assets/plugins/fullcalendar/js/fullcalendar.min.js'></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/laypage/laypage.js"></script>
+
+        <!-- Tour page js -->
+        <script src="assets/plugins/hopscotch/js/hopscotch.min.js"></script>
+        
+<!-- angular -->
+        <script src="js/config.js"></script>
+        <script src="assets/angular-1.4.1/angular.min.js"></script>
+        <script src="assets/js/angular-ui-router.js"></script>
+        <script src="assets/angular-1.4.1/angular-cookies.js"></script>
+        <script src="assets/angular-1.4.1/ng-infinite-scroll.min.js"></script>
+        <script src="directive/directiveCommon.js"></script>
+        <script src="service/server.js"></script>
+        <script src="js/app.js"></script>
+        <script src="controller/orderTeacherCtrl.js?v=20161127"></script>
+        <script src="filter/commonFilter.js?v=1.2"></script>
+        <script src="controller/indexCtrl.js?v=1.1"></script>
+        <script src="controller/loginctrl.js?v=1.1"></script>
+        <script src="controller/personCtrl.js?v=1.1"></script>
+        <script src="controller/homeCtrl.js?v=1.1"></script>
+        <script src="controller/myCalenderCtrl.js?v=1.1"></script>
+        <script src="controller/ReportCtrl.js?v=1.1"></script>
+        <script src="controller/studyCtrl.js?v=1.1"></script>
+        <script src="controller/teacherDetail.js?v=1.1"></script>
+        <script src="controller/MyAttentionCtrl.js?v=1.2"></script>
+        <script src="assets/layer/layer.js?v=1.2"></script>
+        <script src="directive/calendar.js?v=1.1"></script>
+        <script src="assets/html2canvas/html2canvas.min.js"></script>
+        <div style="display: none;">
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261320976'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261320976%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+        </div>
+        <div style="background: rgba(0,0,0,0.5);position: fixed;top:0;left:0;bottom: 0;width: 100%;height: 100%;z-index: 888;display: none;" id="mask1"></div>
+</body>
+
+</html>

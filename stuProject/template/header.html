@@ -1,0 +1,276 @@
+<!-- Top Bar Start -->
+    <div class="topbar">
+        <div style="position: absolute;background: rgba(0,0,0,0.5);top: 0;left: 0;width: 100%;height: 82px;z-index: 900;display: none;" id="mask2-1"></div>
+        <!-- LOGO -->
+        <div class="topbar-left height2_smy logo_bg">
+            <div class="text-center height_smy">
+                <a  class="logo"><i class="icon-magnet icon-c-logo"><img width="100%" src="images/home/logo.png"></i>
+                    <span><img class="logo_big" src="images/home/logo.png"></span></a>
+            </div>
+        </div>
+
+        <!-- Button mobile view to collapse sidebar menu -->
+        <div class="navbar navbar-default nav_bg_smy height_smy" role="navigation">
+            <div class="container no_padding_smy">
+                <div class="">
+                    <ul class="nav navbar-nav hidden-xs nav_box_smy">
+                        <li><a href="javascript:;" class="waves-effect waves-light">首页</a><span class="border-left"></span><span class="border-right"></span></li>
+                        <li><a href="javascript:;" class="waves-effect waves-light">关于我们</a><span class="border-right"></span></li>
+                        <li><a href="javascript:;" class="waves-effect waves-light">课程体系</a><span class="border-right"></span></li>
+                        <li><a href="javascript:;" class="waves-effect waves-light">课程购买</a><span class="border-right"></span></li>
+                        <li><a href="javascript:;" class="waves-effect waves-light">学习理念</a><span class="border-right"></span></li>
+                        <li><a href="javascript:;" ui-sref="home" class="waves-effect waves-light cur_smy">在线上课</a><span class="border-right"></span></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right pull-right">
+                        <li class="hidden-xs height_smy" style="margin-right: -10px;">
+                            <a href="javascript:;" class="text-center" style="line-height: 0;padding-top: 20px;color:#5d9cec" ng-click="collect(learn.gogo-talk.com)">
+                                <img src="../images/collect.png" alt="">
+                                <p>点击收藏</p>
+                            </a>
+                            
+                        </li>
+                        <li class="hidden-xs height_smy">
+                            <span id="" class="waves-light login_on_smy" ng-bind="userName"></span>
+                        </li>
+                        <li class="dropdown top-menu-item-xs" style="position: relative;">
+                            <a href="javascript:;" class="dropdown-toggle profile waves-light" data-toggle="dropdown" aria-expanded="true">
+                                <img src="images/home/img_p.jpg" alt="user-img" class="img-circle img_P_smy">
+                                <img style="position: absolute;top:58px;left:27px;width: 16px;height: 16px;border: none;" src="images/home/down_1128.png">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu_smy">
+                                <li><a href="javascript:void(0)" ui-sref="home.pcenter"><i class="ti-user m-r-10 text-custom"></i> 账户信息</a></li>
+                                <li><a href="javascript:void(0)" ui-sref="home.pcenter"><i class="ti-shopping-cart m-r-10 text-custom"></i> 我的订单</a></li>
+                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#custom-width-modal2"><i class="ti-lock m-r-10 text-custom"></i> 修改密码</a></li>
+                                <li><a href="javascript:void(0)" ng-click="outLogin()"><i class="ti-power-off m-r-10 text-danger"></i> 退出</a></li>
+                            </ul>
+                            <!-- 引导 -->
+                            <div style="position: absolute;top: 0;right:0;z-index: 999;display: none;" id="step-btn2">
+                                <a href="javascript:;">
+                                    <img src="../images/indicate/indicate-2.png" alt="">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar End -->
+<!--修改密码-->
+<div id="custom-width-modal2" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">修改密码</h4>
+            </div>
+            <div class="loginPwd_box">
+                <form role="form" class="loginPwd_form" name="findPwdForm">
+                    <div class="form-group findPwd_form_div has-feedback"
+                         ng-class="{'has-success':findPwdForm.OldPwd.$valid,'has-error':findPwdForm.OldPwd.$invalid && findPwdForm.OldPwd.$touched}">
+                        <input type="password" class="form-control" placeholder="请输入原密码" name="OldPwd"
+                               ng-model="findPwdData.OldPwd" ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/" required>
+
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="findPwdForm.OldPwd.$valid && findPwdForm.OldPwd.$touched"></span>
+
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="findPwdForm.OldPwd.$invalid && findPwdForm.OldPwd.$touched"></span>
+
+                        <div class="error-notice" ng-if="findPwdForm.OldPwd.$error.pattern">
+                            <span class="ion-arrow-up-b"></span>
+                            密码格式错误
+                        </div>
+
+                        <div class="error-notice"
+                             ng-if="findPwdForm.OldPwd.$error.required && findPwdForm.OldPwd.$touched">
+                            <span class="ion-arrow-up-b"></span>
+                            原密码不能为空
+                        </div>
+                    </div>
+                    <div class="form-group findPwd_form_div has-feedback"
+                         ng-class="{'has-success':findPwdForm.NewPwd.$valid,'has-error':findPwdForm.NewPwd.$invalid && findPwdForm.NewPwd.$touched}">
+                        <input type="password" class="form-control" placeholder="设置新密码6到12位" name="NewPwd"
+                               ng-model="findPwdData.NewPwd" ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/" required>
+
+            <span class="glyphicon glyphicon-ok form-control-feedback"
+                  ng-if="findPwdForm.NewPwd.$valid && findPwdForm.NewPwd.$touched"></span>
+
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="findPwdForm.NewPwd.$invalid && findPwdForm.NewPwd.$touched"></span>
+
+                        <div class="error-notice" ng-if="findPwdForm.NewPwd.$error.pattern">
+                            <span class="ion-arrow-up-b"></span>
+                            密码格式错误
+                        </div>
+
+                        <div class="error-notice"
+                             ng-if="findPwdForm.NewPwd.$error.required && findPwdForm.NewPwd.$touched">
+                            <span class="ion-arrow-up-b"></span>
+                            密码不能为空
+                        </div>
+                    </div>
+                    <div class="form-group findPwd_form_div"
+                         ng-class="{'has-success':findPwdForm.NewPwd2.$valid,'has-error':findPwdForm.NewPwd2.$invalid && findPwdForm.NewPwd2.$touched}">
+                        <input type="password" ng-model="againPwd.NewPwd2" class="form-control"
+                               compare="findPwdData.NewPwd"
+                               placeholder="再次输入新密码6到20位" ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/" name="NewPwd2"
+                               required>
+
+            <span class="glyphicon glyphicon-remove form-control-feedback"
+                  ng-if="findPwdForm.NewPwd2.$invalid && findPwdForm.NewPwd2.$touched"></span>
+
+                        <span class="glyphicon glyphicon-ok form-control-feedback"
+                              ng-if="findPwdForm.NewPwd2.$valid"></span>
+
+                        <div class="error-notice"
+                             ng-if="findPwdForm.NewPwd2.$error.required && findPwdForm.NewPwd2.$touched">
+                            <span class="ion-arrow-up-b"></span>
+                            再次输入密码不能为空
+                        </div>
+                        <div class="error-notice"
+                             ng-if="findPwdForm.NewPwd2.$error.pattern && findPwdForm.NewPwd2.$touched">
+                            <span class="ion-arrow-up-b"></span>
+                            再次输入密码格式不正确
+                        </div>
+                        <div class="error-notice"
+                             ng-if="findPwdForm.NewPwd2.$error.compare && findPwdForm.NewPwd2.$touched">
+                            <span class="ion-arrow-up-b"></span>
+                            与第一次输入密码不对
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary waves-effect waves-light" ng-disabled="findPwdForm.$invalid" ng-click="findpwd()" ng-bind="isChageText" id="isChageText"></button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+
+    <!-- /.modal-dialog -->
+     <div id="teacherTag" class="modal fade" tabindex="-1" role="dialog"
+             aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog" style="width:600px;font-size: 14px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="custom-width-modalLabel">我的评价</h4>
+                    </div>
+                    <div class="modal-pingjia">
+
+                        <div class="smyclearfix pingjia-bot">
+                            <div class="pingjia-title">你喜欢这个老师吗？</div>
+                            <div class="pingxing">
+                                    <div id="likeStar" data-score="3"></div>
+                            </div>
+                            <div class="pingjia-text pingjia-text1">和老师互动非常开心</div>
+                        </div>
+                        <div class="smyclearfix pingjia-bot">
+                            <div class="pingjia-title">还记得刚刚学过的内容吗？</div>
+                            <div class="pingxing">
+                                <div id="rememberStar" data-score="3"></div>
+                            </div>
+                            <div class="pingjia-text pingjia-text2">基本都记下了</div>
+                        </div>
+                        <div class="pingjia-title2"> 您有什么想告诉我们的？</div>
+                        <textarea class="form-control" rows="5" id="techer-content"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" ng-click="SubmitTag(lessonTagId)" class="btn btn-primary waves-effect waves-light">确认</button>
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        
+        <script type="text/javascript" src="lib/jquery.raty.min.js"></script>
+        <script>
+    $('#likeStar').raty({
+        number: 3,
+        score: 3,
+        path     : null,
+        starOn   : 'lib/img/star-on.png',
+        starOff  : 'lib/img/star-off.png',
+        click: function(score, evt) {
+            $(this).attr('data-score',score);
+            if(score==1){
+                $(".pingjia-text1").text("没感觉");
+            }else if(score==2){
+                $(".pingjia-text1").text("和老师交流很愉快");
+            }else if(score==3){
+                $(".pingjia-text1").text("和老师互动非常开心");
+            }
+
+
+        },mouseover: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text1").text("没感觉");
+            }else if(score==2){
+                $(".pingjia-text1").text("和老师交流很愉快");
+            }else if(score==3){
+                $(".pingjia-text1").text("和老师互动非常开心");
+            }
+
+        },mouseout: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text1").text("没感觉");
+            }else if(score==2){
+                $(".pingjia-text1").text("和老师交流很愉快");
+            }else if(score==3){
+                $(".pingjia-text1").text("和老师互动非常开心");
+            }
+
+        }
+
+    });
+    $('#rememberStar').raty({
+        number: 3,
+        score: 3,
+        path     : null,
+        starOn   : 'lib/img/star-on.png',
+
+        starOff  : 'lib/img/star-off.png',
+        click: function(score, evt) {
+            $(this).attr('data-score',score);
+            if(score==1){
+                $(".pingjia-text2").text("完全不记得");
+            }else if(score==2){
+                $(".pingjia-text2").text("记得一部分");
+            }else if(score==3){
+                $(".pingjia-text2").text("基本都记下了");
+            }
+
+        },mouseover: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text2").text("完全不记得");
+            }else if(score==2){
+                $(".pingjia-text2").text("记得一部分");
+            }else if(score==3){
+                $(".pingjia-text2").text("基本都记下了");
+            }
+
+        },mouseout: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text2").text("完全不记得");
+            }else if(score==2){
+                $(".pingjia-text2").text("记得一部分");
+            }else if(score==3){
+                $(".pingjia-text2").text("基本都记下了");
+            }
+
+        }
+
+    });
+</script>
+

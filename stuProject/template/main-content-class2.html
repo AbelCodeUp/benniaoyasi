@@ -1,0 +1,277 @@
+<style>
+    .tour-two{
+        background-color: #ffbd4a!important;
+        border:1px solid #ffbd4a!important;
+        border-radius: 30px;
+        transition: all ease 0.4s;
+        animation:change 1s infinite;
+        -moz-animation:change 1s infinite; /* Firefox */
+        -webkit-animation:change 1s infinite; /* Safari and Chrome */
+        -o-animation:change 1s infinite; /* Opera */
+        
+    }
+    .tour-two:hover{
+        background-color: #ffbd4a!important;
+        border:1px solid #ffbd4a!important;
+    }
+    @keyframes change
+    {
+        0%{ box-shadow: 0 0 4px #cc973b}
+        50%{ box-shadow: 0 0 30px #cc973b}
+        100%{ box-shadow: 0 0 4px #cc973b}
+    }
+
+    @-moz-keyframes change /* Firefox */
+    {
+    0%{ box-shadow: 0 0 4px #cc973b}
+        50%{ box-shadow: 0 0 30px #cc973b}
+        100%{ box-shadow: 0 0 4px #cc973b}
+    }
+
+    @-webkit-keyframes change /* Safari 和 Chrome */
+    {
+        0%{ text-shadow: 0 0 4px #cc973b}
+        50%{ box-shadow: 0 0 30px #cc973b}
+        100%{ box-shadow: 0 0 4px #cc973b}
+    }
+
+    @-o-keyframes change /* Opera */
+    {
+        0%{ box-shadow: 0 0 4px #cc973b}
+        50%{ box-shadow: 0 0 30px #cc973b}
+        100%{ box-shadow: 0 0 4px #cc973b}
+    }
+</style>
+<div class="col-lg-9">
+    <!-- Start content -->
+    <div class="row main-content-class-top common_mb">
+        <div class="col-md-7 main-content-class-middle-item-box-1122">
+            <div class="main-content-class-middle-item-box-rel-1122">
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 redf05050-1122" ng-bind="shuo | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">min</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">已说英语</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 yelffbc42-1122" ng-bind="chi | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">次</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">迟到</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 blu5d9cec-1122" ng-bind="que | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">次</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">缺席</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--修改-->
+        <div class="col-md-5 col-md-offset-7 main-content-class-top1-box">
+            <div class="main-content-class-top1">
+                <div class="main-content-class-top1-rel">
+                    <div class="main-content-class-top-right">
+                        <div data-label="{{getBili*100 |number:0 }}%"
+                             class="radial-bar radial-bar-{{getBili*100}} radial-bar-lg radial-bar-warning main-content-class-top-right-div"></div>
+                    </div>
+                    <div class="main-content-class-top-left">
+                        <dl>
+                            <dt class="main-content-class-top-left-top"><span
+                                    class="keshi_1130 blu25d9cec" ng-bind="useKeshi"></span><span>/</span><p class="keshi_1130 blac22e2e2e"><span ng-bind="sumKenshi"></span><span
+                                    class="main-content-class-top-left-top_po" ng-if="getKeshi > 0" >+{{getKeshi}}课时</span></p>
+                            </dt>
+                            <dd><span class="keshi_1130">已学课时</span><span class="xiegang">/</span><span
+                                    class="keshi_1130">总课时</span></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--修改-->
+    </div>
+
+    <!--马上开课 start-->
+    <div class="row main-content-class-middle common_mb">
+        <div class="col-lg-7 " >
+            <div class="Learning-Record" >
+                <div class="Learning-Record-title">最近学习记录</div>
+                <ul class="Learning-Record-ul">
+                    <li>日期：{{leftDate}} {{leftWeek}}</li>
+                    <li>时间：{{leftTime}}</li>
+                    <li>课程：{{lessonName}}</li>
+                    <li>状态：{{lessonStatue}}<button ng-if="preData.status != 0 || pinjinBtn " type="button" class="btn btn-rounded waves-effect waves-light Learning-Record-ul-btu" ng-class="{'btn-warning':preData.isComment == 0}" ng-click="AddTeacherTag(preData.lessonId)" ng-disabled="pinjin"><img ng-if="preData.isComment == 0" src="images/flag_red.gif">{{pjText}}</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box" ng-if="nextData.status == 1 && nextDataIsShow">
+            <dl class="main-content-class-middle-btu" style="position: relative;">
+                <dt >
+                    <div class="text-center">{{kaikefont}}</div>
+                    <div class="text-center">
+                        <span ng-bind="startClassTime" ng-if="underway == 1"></span>
+                        <count-down stemp="{{timeDiffDates}}" ng-if="underway == 0" callback="getClassDatail()"></count-down>
+                    </div>
+                    
+                </dt>
+                <dd  ng-if="unbtn == 0">
+                    
+                    <button type="button"
+                            ng-if="classBtn == 1"
+                            class="btn waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy tour-two" ng-class="{'btn-primary':!isJoinClassRoom}"
+                            ng-disabled="isJoinClassRoom" ng-click="goClient(nextData.lessonId, userName)">VIP教室进入
+                    </button>
+                   <!--  <button ng-if="classBtn == 1" type="button"
+                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button" ng-click="joinClassRoom(nextData.lessonId, userName,nextData.lessonName)">
+                        WEB教室进入
+                    </button> -->
+                    <a ng-href="{{nextData.ClassRoomUrl}}" target="_blank" data-url="{{nextData.ClassRoomUrl}}" ng-click="goQQRoom(nextData.lessonId, userName, $event)" target="_blank" ng-if="classBtn == 2" class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button">
+                        QQ教室进入
+                    </a>
+
+                    <a href="http://bnys.121learn.cn/login" data-url="{{nextData.ClassRoomUrl}}" ng-click="goQQRoom(nextData.lessonId, userName, $event,3)" target="_blank" ng-if="classBtn == 3" class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button">
+                        飞博教室进入
+                    </a>
+                </dd>
+                <dd ng-if="unbtn == 1">
+                    
+                    <button type="button"
+                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button" ng-click="goOrderTeacher()">
+                        快速预约
+                    </button>
+
+                    <p>距开课10分钟内方可进入</p>
+                </dd>
+                <div style="position: absolute;top: -15px;right:52px;z-index: 999;" ng-show="firstIn" id="step-btn1" ng-click="hideFun1()">
+                    <a href="javascript:;">
+                        <img src="../images/indicate/indicate-1.png" alt="">
+                    </a>
+                </div>
+            </dl>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box" ng-if="!nextDataIsShow" style="padding-top: 50px;position: relative;">
+            <dl class="main-content-class-middle-btu">
+                <dt>又偷懒了，马上去学</dt>
+                <dd>
+                    <button type="button"
+                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button" ng-click="goOrderTeacher()" id="tour-two">
+                        快速预约
+                    </button>
+                </dd>
+            </dl>
+            <div style="position: absolute;top: -15px;right:52px;z-index: 999;" ng-show="firstIn" id="step-btn1" ng-click="hideFun1()">
+                <a href="javascript:;">
+                    <img src="../images/indicate/indicate-1.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--马上开课 end-->
+    <!--日历 start-->
+    <div class="common_mb">
+        <div class="card-box">
+            <div id="mianCalendar" canlendar username="{{userName}}"></div>
+        </div>
+        <!-- BEGIN MODAL -->
+        <div class="modal fade none-border" id="event-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><strong>Add Event</strong></h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event
+                        </button>
+                        <button type="button" class="btn btn-danger delete-event waves-effect waves-light"
+                                data-dismiss="modal">Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<iframe id="goClient" frameborder="0" style="display: none;"></iframe>
+<iframe id="goQQRoom" frameborder="0" style="display: none;"></iframe>
+<!-- <step step-index="0" img-src="stepAttr" step-show="stepIsShow"></step> -->
+<!-- <style>
+    .stepbox{
+        width: 100%;
+        height: 100%;
+
+        position: fixed;
+        top:0;
+        left: 0;
+        bottom: 0;
+
+        z-index: 888;
+    }
+    .stepimg{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #fff;
+        
+    }
+    .stepimg img{
+        width: 100%;
+    }
+    .step-b {
+        width: 500px;
+        height: 500px;
+        display: block;
+        border-radius: 50%;
+
+        position: absolute;
+    }
+    .step-btn1,.step-btn3{
+        left: 64%;
+        top: 50%;
+        margin-left: -249px;
+        margin-top: -249px;
+    }
+    .step-btn2{
+        right: 33%;
+        top: 10%;
+    }
+    .step-btn4{
+        right: 33%;
+        top: 10%;
+    }
+</style> -->
+<!-- <div class="stepbox" style="display: none;">
+    <div class="stepimg" id="step1">
+        <img src="images/indicate/indicate-1.jpg" alt="">
+        <a href="javascript:;" class="step-b step-btn1" id="step-btn1"></a>
+    </div>
+    <div class="stepimg" id="step2" style="display: none;">
+        <img src="images/indicate/indicate-2.jpg" alt="">
+        <a href="javascript:;" class="step-b step-btn2" id="step-btn2"></a>
+    </div>
+    <div class="stepimg" id="step3" style="display: none;">
+        <img src="images/indicate/indicate-3.jpg" alt="">
+        <a href="javascript:;" class="step-b step-btn3" id="step-btn3"></a>
+    </div>
+    <div class="stepimg" id="step4" style="display: none;">
+        <img src="images/indicate/indicate-4.jpg" alt="">
+        <a href="javascript:;" class="step-b step-btn4" id="step-btn4"></a>
+    </div>
+</div> -->

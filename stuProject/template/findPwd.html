@@ -1,0 +1,85 @@
+<div class="loginPwd_box">
+    <ul class="loginPwd_font_top_title_box">
+        <li class="loginPwd_font_top_title loginPwd_font_top_title_item1">手机验证找回</li>
+    </ul>
+    <form role="form" class="loginPwd_form" name="findPwdForm">
+        <div class="form-group findPwd_form_div" ng-class="{'has-success':findPwdForm.tel.$valid,'has-error':findPwdForm.tel.$invalid && findPwdForm.tel.$touched}">
+            <input type="text" class="form-control" placeholder="请输入11位手机号" name="tel" maxlength="11" ng-model="findPwdData.cell" required
+                ng-pattern="/^1[3-9]\d{9}$/" autocomplete="off" ng-focus>
+            <timerbutton show-timer="false" timeout="60000" teltext="findPwdData.cell" ></timerbutton>
+            <!-- <button class="btn btn-sm find-fff">60s</button>
+            <button class="btn btn-sm find-pink" style="display: none;">发送验证码</button>
+            <button class="btn btn-sm find-pink" style="display: none;">重新发送验证码</button> -->
+            <div class="error-notice" ng-if="findPwdForm.tel.$error.required && !findPwdForm.tel.$focused">
+                <span class="ion-arrow-up-b"></span>
+                手机号不能为空
+            </div>
+            <div class="error-notice" ng-if="findPwdForm.tel.$error.pattern && !findPwdForm.tel.$focused">
+                <span class="ion-arrow-up-b"></span>
+                手机号码格式不正确
+            </div>
+        </div>
+        <div class="form-group findPwd_form_div" ng-class="{'has-success':findPwdForm.code.$valid,'has-error':findPwdForm.code.$invalid && findPwdForm.code.$touched}">
+            <input type="text" ng-model="findPwdData.code" class="form-control" placeholder="请输入6位验证码" name="code" ng-pattern="/^\d{6}$/" required ng-focus>
+            
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="findPwdForm.code.$invalid && findPwdForm.code.$touched"></span>
+
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="findPwdForm.code.$valid"></span>
+
+            <div class="error-notice" ng-if="findPwdForm.code.$error.pattern && !findPwdForm.code.$focused">
+                <span class="ion-arrow-up-b"></span>
+                请输入6位验证码
+            </div>
+            <div class="error-notice" ng-if="findPwdForm.code.$error.required && !findPwdForm.code.$focused">
+                <span class="ion-arrow-up-b"></span>
+                验证码不能为空
+            </div>
+        </div>
+        <div class="form-group findPwd_form_div has-feedback" ng-class="{'has-success':findPwdForm.Password.$valid,'has-error':findPwdForm.Password.$invalid && findPwdForm.Password.$touched}">
+            <input type="password" class="form-control" placeholder="设置新密码6到12位" name="Password" ng-model="findPwdData.newPsw" ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/" required ng-focus>
+
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="findPwdForm.Password.$valid && findPwdForm.Password.$touched"></span>
+
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="findPwdForm.Password.$invalid && findPwdForm.Password.$touched"></span>
+
+            <div class="error-notice" ng-if="findPwdForm.Password.$error.pattern && !findPwdForm.Password.$focused">
+                <span class="ion-arrow-up-b"></span>
+                密码格式错误
+            </div>
+
+            <div class="error-notice" ng-if="findPwdForm.Password.$error.required && !findPwdForm.Password.$focused">
+                <span class="ion-arrow-up-b"></span>
+                密码不能为空
+            </div>
+        </div>
+
+        <div class="form-group findPwd_form_div" ng-class="{'has-success':findPwdForm.Password2.$valid,'has-error':findPwdForm.Password2.$invalid && findPwdForm.Password2.$touched}">
+            <input type="password" ng-model="againPwd.Password2" class="form-control" compare="findPwdData.newPsw" placeholder="再次输入新密码6到20位"  ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/" name="Password2"
+            required ng-focus>
+
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="findPwdForm.Password2.$invalid && findPwdForm.Password2.$touched"></span>
+
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="findPwdForm.Password2.$valid"></span>
+
+            <div class="error-notice" ng-if="findPwdForm.Password2.$error.required && !findPwdForm.Password2.$focused">
+                <span class="ion-arrow-up-b"></span>
+                再次输入密码不能为空
+            </div>
+             <div class="error-notice" ng-if="findPwdForm.Password2.$error.pattern && !findPwdForm.Password2.$focused">
+                <span class="ion-arrow-up-b"></span>
+                再次输入密码格式不正确
+            </div>
+            <div class="error-notice" ng-if="findPwdForm.Password2.$error.compare && !findPwdForm.Password2.$focused">
+                <span class="ion-arrow-up-b"></span>
+                与第一次输入密码不对
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-block btn-hui login_pink" ng-disabled="findPwdForm.$invalid" ng-bind="chageText" ng-click="findpwd()" id="findBtn"></button>
+        </div>
+        
+    </form>
+    <div class="form-group loginPwd_register">
+            <a class="btn btn-block btn-hui login_fff" ui-sref="index.login">返回登录</a>
+    </div>
+</div>

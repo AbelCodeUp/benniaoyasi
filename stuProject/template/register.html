@@ -1,0 +1,61 @@
+<ul class="loginPwd_font_top_title_box">
+    <li class="loginPwd_font_top_title loginPwd_font_top_title_item1">账号注册</li>
+</ul>
+<div class="register_font_top">
+	<ul class="register_icon_box clearfix">
+		<div class="register_line"></div>
+		<li class="pull-left">
+			<span class="ion-checkmark-circled"></span>
+			<p>手机号注册</p>
+		</li>
+		<li class="pull-left">
+			<span class="ion-ios7-circle-outline"></span>
+			<p>微信号关注</p>
+		</li>
+	</ul>
+    <form name="regForm">
+        <div class="form-group has-feedback" ng-class="{'has-success':regForm.username.$valid,'has-error':regForm.username.$invalid && regForm.username.$touched}">
+            <input type="text" name="username" class="form-control" ng-model="regData.Cell" required ng-maxlength="11" ng-pattern="/^1[34578]\d{9}$/" placeholder="请输入11位手机号" autocomplete="off" ng-focus>
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="regForm.username.$valid"></span>
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="regForm.username.$invalid && regForm.username.$touched"></span>
+            <i class="md md-smartphone" ng-class="{'feed-success':regForm.username.$valid , 'feed-error':regForm.username.$invalid && regForm.username.$touched}"></i>
+            <div class="error-notice" ng-if="
+                regForm.username.$error.required && 
+                !regForm.username.$focused">
+                <span class="ion-arrow-up-b"></span>
+                手机号不能为空
+            </div>
+            <div class="error-notice" ng-if="
+                !regForm.username.$focused && 
+                regForm.username.$error.pattern">
+                <span class="ion-arrow-up-b"></span>
+                手机号格式错误
+            </div>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-success':regForm.password.$valid,'has-error':regForm.password.$invalid && regForm.password.$touched}" >
+            <input type="password" name="password" class="form-control" ng-model="regData.Password" required ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+            placeholder="密码由6至20字母或数字或符号组成" ng-focus>
+            <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="regForm.password.$valid"></span>
+            <span class="glyphicon glyphicon-remove form-control-feedback" ng-if="regForm.password.$invalid && regForm.password.$touched"></span>
+            <i class="ion-locked" ng-class="{'feed-success':regForm.password.$valid , 'feed-error':regForm.password.$invalid && regForm.password.$touched}"></i>
+            <div class="error-notice" ng-if="
+                regForm.password.$error.required && 
+                !regForm.password.$focused">
+                <span class="ion-arrow-up-b"></span>
+                密码不能为空
+            </div>
+            <div class="error-notice" ng-if="
+                !regForm.password.$focused && 
+                regForm.password.$error.pattern">
+                <span class="ion-arrow-up-b"></span>
+                密码格式错误
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="ladda-button btn btn-block btn-submit" ng-class="{'btn-pink':regForm.$valid,'btn-hui':regForm.$invalid}" ng-disabled="regForm.$invalid" ng-click="register()" ng-bind="registerText" id="regbtn"></button> 
+        </div>
+    </form>
+</div>
+<div class="form-group loginPwd_register">
+        <a class="btn btn-block btn-hui login_fff" ui-sref="index.login">返回登录</a>
+</div>

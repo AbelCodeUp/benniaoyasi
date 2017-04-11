@@ -1,0 +1,69 @@
+========== Left Sidebar Start ========== -->
+
+    <div class="left side-menu" >
+        <div style="position: relative;height: 100%">
+            <!-- 引导 -->
+            <div style="position: absolute;top: 135px;right:-782px;z-index: 999;display: none;" id="step-btn3">
+                <a href="javascript:;">
+                    <img src="../images/indicate/indicate-3.png" alt="">
+                </a>
+            </div>
+            <div style="position: absolute;background: rgba(0,0,0,0.5);top: 0;left: 0;width: 100%;height: 100%;z-index: 900;display: none;" id="mask3-1"></div>
+            <div class="sidebar-inner slimscrollleft" style="position: relative;">
+
+            <!--- Divider -->
+                <div id="sidebar-menu">
+                    
+                    <ul>
+                        <li class="has_sub bo_bottom_smy">
+                            <a href="javascript:void(0);" class="waves-effect" ui-sref="home" ui-sref-active="left_cur_smy"><i class="ti-home"></i> <span>学习首页</span></a>
+                        </li>
+
+                        <li class="has_sub bo_bottom_smy">
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航学习首页按钮', '点击', '左侧导航学习首页按钮']);" class="waves-effect"  ui-sref="home.mycalendar" ui-sref-active="left_cur_smy"><i class="ti-clipboard"></i> <span>我的课表</span></a>
+                        </li>
+
+                        <li class="has_sub bo_bottom_smy" >
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航预约课程按钮', '点击', '左侧导航预约课程按钮']);" ui-sref="home.orderteacher" ui-sref-active="left_cur_smy"  class="waves-effect"><i class="ti-calendar"></i> <span>预约课程</span> </a>
+                        </li>
+
+                        <li class="has_sub bo_bottom_smy" style="position: relative;" id="">
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航学习记录按钮', '点击', '左侧导航学习记录按钮']);" ui-sref-active="left_cur_smy" ui-sref="home.studyList" class="waves-effect"><i class="ti-pencil-alt"></i> <span>学习记录</span></a>
+                            
+                        </li>
+
+                        <li class="has_sub bo_bottom_smy" >
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航我的关注按钮', '点击', '左侧导航我的关注按钮']);" ui-sref-active="left_cur_smy" ui-sref="home.attention" class="waves-effect"><i class="ion-ios7-star-outline"></i> <span>我的关注</span></a>
+                        </li>
+
+                        <li class="has_sub bo_bottom_smy"  ui-sref-active="left_cur_smy">
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航测评报告按钮', '点击', '左侧导航测评报告按钮']);" ui-sref="home.testReportList" class="waves-effect"><i class="ti-file"></i> <span>测评报告</span></a>
+                        </li>
+                        
+                        <li class="has_sub bo_bottom_smy" >
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航账户信息按钮', '点击', '左侧导航账户信息按钮']);" ui-sref="home.pcenter" ui-sref-active="left_cur_smy" class="waves-effect"><i class="ti-user"></i> <span>账户信息</span></a>
+                        </li>
+
+                         <li class="has_sub bo_bottom_smy"  ui-sref-active="left_cur_smy" ng-if="wins">
+                            <a href="javascript:void(0);" onClick="_czc.push(['_trackEvent', '左侧导航设备检测按钮', '点击', '左侧导航设备检测按钮']);" ui-sref="home.testlist" class="waves-effect"><i class="ti-eye"></i> <span>设备检测</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="width: 100%;">
+                    <dl class="equipment_smy visible-md visible-lg">
+                        <!-- <dt ng-bind="serviceTime | date:'HH:mm:ss'"></dt> -->
+                        <dt ng-bind="thisServerTime"></dt>
+                        <dd>当前时间</dd>
+                    </dl>
+                    <dl class="wechat_smy visible-md visible-lg">
+                        <dt><img src="images/home/wechat.jpg"></dt>
+                        <dd>扫码关注  官方微信</dd>
+                        <dd class="songti_smy">400-8787-276</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    
+       
+    </div>
+    <!-- Left Sidebar End

@@ -1,0 +1,316 @@
+ <style>
+            .teacher-none{
+                width: 800px;
+                margin: 10% auto;
+            }
+            .teacher-none img{
+                display: block;
+                margin: 0 auto;
+            }
+            .teacher-none div{
+                text-align: center;
+            }
+            .teacher-none-text{
+                height: 100px;
+                line-height: 100px;
+                font-size: 22px;
+                color: #3f3f3f;
+            }
+
+            .weiguanzhu{
+              color:#dd5b5b;
+              background: url(images/weiguanzhu.png) no-repeat 85% 0px;
+              text-align: right;
+              margin-right: 15px;
+            }
+            .yiguanzhu{  
+              color: #dd5b5b;
+              text-align: right;            
+              margin-right: 15px;
+              background: url(images/yiguanzhu.png) no-repeat 80% 0px;
+            }
+             /*改 start*/
+            .guanzhu{
+              float: right;
+              width: 52px;
+              height: 30px;
+              margin-right: 7px;
+              text-align: center;
+            }
+            .weiguanzhu{
+              color:#dd5b5b;
+              background: url(images/weiguanzhu.png) no-repeat 0 0px;
+              background-size:16px 16px;
+            }
+            .yiguanzhu{  
+              color: #dd5b5b;
+              background: url(images/yiguanzhu.png) no-repeat 0 0px;
+              background-size:16px 16px;
+            }
+            /*end*/
+            /*新*/
+    #guanzhu .modal-content{
+        padding-top: 51px;
+        padding-left: 133px;
+        padding-right:133px;
+        padding-bottom: 41px;
+    }
+    #guanzhu .modal-img {
+        text-align: center;
+    }
+    #guanzhu .modal-img img{
+        width: 155px;
+        height:155px;
+    }
+    #guanzhu .modal-content p{
+        text-align: center;
+        font-size: 14px;
+        color:#323232;
+        margin-top: 5px;
+    }
+    #guanzhu .modal-content button{
+        width: 100px;
+        height: 36px;
+        border-radius: 36px;
+        text-align: center;
+        line-height: 36px;
+        color:#323232;
+        font-size: 16px;
+        border:0;
+        float:left;
+        background:#dedede;
+        margin-top: 6px;
+    }
+    #guanzhu .modal-content button.ding{
+        color:#fff;
+        background:#3db6ff;
+        margin-left: 20px;
+    }
+</style>
+
+<div class="col-lg-12" ng-if="!isBuyMeal">
+    <!-- Start content -->
+   <div class="orderTeacher">
+       <h2 class="orderTeacher_title">预约课程</h2>
+       <div class="teacher-none">
+            <img src="images/none/teacher-none.png">
+            <div class="teacher-none-text">您暂未购买课程，去看看有什么课程吧</div>
+            <div>
+              <a class="btn btn-lg btn-primary" href="http://www.gogo-talk.com/index.php?c=price&a=price" onClick="_czc.push(['_trackEvent', '预约老师页面暂未购买课程按钮', '点击', '预约老师页面暂未购买课程按钮']);">购买课程</a>
+            </div>
+        </div>
+  </div>
+
+</div>
+<div class="col-lg-12" ng-if="isBuyMeal">
+    <!-- Start content -->
+   <div class="orderTeacher">
+       <h2 class="orderTeacher_title">预约课程</h2>
+       <div class="orderTeacher-filtrate">
+           <div class=" clearfix orderTeacher-filtrate-div">
+               <div class=" orderTeacher-item">日期：</div>
+               <div class=" orderTeacher-filtrate-right" data-time="1" >
+                   <ul id="dateBox" hovernav class="ul_data_smy">
+                      <!-- ActiveClass: orange1122_ff752f -->
+                       <li class="datebtn_b" ng-class="{'active_nav':$index == 0}" ng-repeat="day in getDays" ng-click="weekClick($event)" data-day="{{day.times | date:'yyyy-MM-dd'}}"><p class="text-center">{{day.month}}/{{day.day}}</p><p ng-bind="day.week"></p></li>
+                   </ul>
+               </div>
+           </div>
+           <div class=" clearfix orderTeacher-filtrate-div" id="timeBox" hovernavtime >
+               <div class="orderTeacher-item">时间：</div>
+                   <div class="orderTeacher-filtrate-right" ng-repeat="allDay in allDays">
+                   <ul class="ul_time_smy">
+                   <!-- orange1122_2_ff752f -->
+                       <li>{{allDay.dayState}}</li>
+                       <li ng-click="timeClick($event)" class="timebtn_b" ng-class="{'no_click':day.isLast == 2,'active_nav':day.time == thisTime}" ng-repeat="day in allDay.dayAttrs"  ng-bind="day.time"></li>
+                   </ul>
+               </div>
+           </div>
+           <div class=" clearfix orderTeacher-filtrate-div">
+               <div class=" orderTeacher-item">性别：</div>
+               <div class=" orderTeacher-filtrate-right">
+                   <ul>
+                       <li>
+                           <div class="radio radio-inline orderTeacher-filtrate-right-input">
+                               <input type="radio" id="inlineCheckbox2" ng-checked="ALLState"  value="-1" name="sex" ng-click="sexClick()">
+                               <label for="inlineCheckbox2">
+                                   全部
+                               </label>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="radio radio-inline orderTeacher-filtrate-right-input">
+                               <input type="radio" id="inlineCheckbox1" value="1" name="sex" ng-click="sexClick()">
+                               <label for="inlineCheckbox1" >
+                                   男
+                               </label>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="radio radio-inline orderTeacher-filtrate-right-input">
+                               <input type="radio" id="inlineCheckbox0" value="0" name="sex"  ng-click="sexClick()">
+                               <label for="inlineCheckbox0">
+                                   女
+                               </label>
+                           </div>
+                       </li>
+                       <div class="fl" style="padding-top: 2px;">
+                           <div class="form-inline">
+                               <div class="form-group">
+                                   <input type="text" class="form-control" ng-model="teacherName" id="searchText" placeholder="老师姓名">
+                               </div>
+                               <button type="button" class="btn btn-primary" ng-click="searchTch()">搜索</button>
+                           </div>
+                       </div>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       <div class="row orderTeacher_teacher" id="stateClick" when-scrolled="loadMore()">
+            <div class="col-md-4 col-sm-4 col-xs-6 orderTeacher_teacher_item_box" ng-repeat="item in items">
+                <div class="orderTeacher_teacher_item">
+                    <div class="orderTeacher_teacher_item_img" >
+                        <img ui-sref="home.teacherDetail({teacherId:item.TeacherId})" ng-src="{{item.ImageUrl}}" onerror="javascript:this.src='images/default.jpg?v=1.1'">
+                        <div class="orderTeacher_teacher_item_img_top">
+                          <span class="f-left-smy" ng-bind="item.TeacherName"></span>
+                          <div class="guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[item.tchState == 1]" data-state=
+                          '{{item.tchState}}' ng-bind="item.tchState | isGuanZhu" data-tchid="{{item.TeacherId}}" ng-click="Attention($event)"></div>
+                        </div>
+                        <span class="orderTeacher_teacher_item_img_year">{{item.Age}}岁</span>
+                    </div>
+                    <p class="teacher-like">讲课{{item.LessonCount}}次</p>
+                    <div class="teacher-btu">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-white  waves-effect" aria-expanded="false">重上</button>
+                            <ul class="dropdown-menu">
+                                <li ng-click="AddlessonZj(item,booklist)" ng-repeat="booklist in booklists"><a href="javascript:;" ng-bind="booklist.FileTittle"></a></li>
+                            </ul>
+                        </div>
+                        <button type="button" ng-click="AddlessonNext(item)" class="btn btn-primary waves-effect waves-light teacher-btu2">预约下一节</button>
+                    </div>
+                </div>
+            </div>
+             <div ng-show='loadTeachers.busy'>Loading data...</div>
+             <div class="text-center" ng-show="loadTeachers.busy && haveMore && !noData ">没有更多老师了</div>
+       </div>
+       <div class="teacher-none" ng-if="noData && !haveMore">
+            <img src="images/none/teacher-none.png">
+            <div class="teacher-none-text">当前时间老师都被约走了，记得下次提前预约！</div>
+        </div>
+   </div>
+
+</div>
+
+<div id="confirmDialog" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">是否确认预约</h4>
+            </div>
+            <div class="modal-Confirming">
+                <div>预约时间：<span>{{thisDay}}&nbsp;{{getWeeks}}&nbsp;|&nbsp;{{sxw}}：&nbsp;{{thisTime}}</span></div>
+                <div>预约老师：<span ng-bind="tcName"></span></div>
+                <div>教材章节：<span ng-bind="nextClassName.FileTittle"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary waves-effect waves-light" ng-click="nextSendData()">确认</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div id="confirmDialogZj" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">是否确认预约</h4>
+            </div>
+            <div class="modal-Confirming">
+                <div>预约时间：<span>{{thisDay}}&nbsp;{{getWeeks}}&nbsp;|&nbsp;{{sxw}}：&nbsp;{{thisTime}}</span></div>
+                <div>预约老师：<span ng-bind="tcName"></span></div>
+                <div>教材章节：<span ng-bind="zjData.FileTittle"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary waves-effect waves-light" ng-click="zjSendData()">确认</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- 取消关注 -->
+<div id="guanzhu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:502px;height:319px">
+            <div class="modal-img">
+                <img src="images/none/table-none.png" alt="">
+            </div>
+            <p>确认要关注取消吗？</p>
+            <div class="modal-btnbox">
+                <button data-dismiss="modal">取消</button>
+                <button class="ding"  ng-click="closeAtten()">确定</button>
+            </div>
+            
+        </div>
+
+    </div>
+<!-- /.modal-dialog -->
+</div>
+<!-- <div class="yuyue-result">
+    <div class="yuyue-result-zhezhao" ng-bind="orginMsg"></div>
+<div class="yuyue-result-rel"></div>
+</div> -->
+<!-- <style>
+    .yuyue-result{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+    }
+    .yuyue-result-zhezhao{
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+    }
+    .yuyue-result-rel{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        padding: 30px;
+        background: #fff;
+        border-radius: 6px;
+        -webkit-animation:yuyue-result-rel 0.2s forwards;
+       animation:yuyue-result-rel 0.2s forwards;
+    }
+    @-webkit-keyframes yuyue-result-rel {
+        0%{-webkit-transform:scale(0,0);}
+        100%{-webkit-transform:scale(1,1);}
+    }
+    @keyframes yuyue-result-rel {
+        0%{transform:scale(0,0);}
+        100%{transform:scale(1,1);}
+    }
+</style> -->
+
+<style>
+
+</style>

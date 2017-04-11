@@ -1,0 +1,31 @@
+
+<div id="wrapper">
+    <div ui-view="header"></div>
+    <div ui-view="leftbar"></div>
+
+    <div  class="content-page">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- Start right Content here -->
+                    <!-- ============================================================== -->
+                    <div ui-view="content"></div>
+                    
+                    <!-- ============================================================== -->
+                    <!-- End Right content here -->
+                    <!-- ============================================================== -->
+
+                    
+                    <!-- Right Sidebar -->
+                    <div ui-view="rightside" ng-if="isShowRightBar"></div>
+                    <!-- /Right-bar -->
+
+                </div> 
+                <div ui-view="bottomcontent"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

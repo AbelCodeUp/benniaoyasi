@@ -1,0 +1,137 @@
+<style>
+    .vedioHover:hover{
+        color:#ffbd4a;
+    }
+     .table-none{
+        width: 800px;
+        margin: 10% auto;
+    }
+    .table-none img{
+        display: block;
+        margin: 0 auto;
+    }
+    .table-none div{
+        text-align: center;
+    }
+    .table-none-text{
+        height: 100px;
+        line-height: 100px;
+        font-size: 22px;
+        color: #3f3f3f;
+    }
+</style>
+<div class="col-lg-12">
+    <!-- Start content -->
+    <div class="orderTeacher">
+        <h2 class="orderTeacher_title">学习记录<p style="float: right;margin-right: 30px;"><a ng-click="goTestClient()" href="javascript:;">设备调试</a></p></h2>
+        <div class="table-none" id="studyNo" style="display: block;">
+            <img src="images/none/table-none.png">
+            <div class="table-none-text">当前没有学习记录，去预约课程吧！</div>
+            <div><button type="button" class="btn btn-warning waves-effect waves-light w-lg" ui-sref="home.orderteacher" onClick="_czc.push(['_trackEvent', '学习记录页,暂无学习记录，去预约按钮', '点击', '学习记录页,暂无学习记录，去预约按钮']);">去预约</button></div>
+        </div>
+        <div style="padding: 0 30px;min-height:600px; display:none;" class="studyList">
+            <table class="learning-table" border="0" cellspacing="0" cellpadding="0">
+                <thead style="display: none;" class="studyList">
+                    <tr>
+                        <th>时间</th>
+                        <th>状态</th>
+                        <th>考勤</th>
+                        <th>课程名称</th>
+                        <th>教师姓名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="studyList in studyLists" ng-class="{'learning-table-on':studyList.PageStatus == 2 || (studyList.StartTime | fateDateHour) || (studyList.StartTime | fateDate)}">
+                        <td ng-bind="studyList.StartTime"></td>
+                        <td>
+                            <div style="text-align: center!important;">{{studyList.PageStatus | stuList}}</div>
+                            <div style="text-align: center!important;">
+                                <button type="button" class="btn btn-warning btn-rounded waves-effect waves-light learning-table-over-btu" ng-if="studyList.PageStatus == 3" 
+                                    ng-click="AddTeacherTag(studyList.LessonId)" onClick="_czc.push(['_trackEvent', '学习记录页,待评价按钮', '点击', '学习记录页,待评价按钮']);">待评价
+                                    <img src="images/flag_red.gif"></button>
+                                <button type="button" class="btn btn-rounded waves-effect waves-light learning-table-over-btu" ng-if="studyList.PageStatus == 4" disabled="disabled">已评价</button>
+                            </div>
+                        </td>
+                        <td ng-bind="studyList.StudentStatus | status1"></td>
+                        <td><div style="text-align: center!important" ng-if="studyList.LessonName.length>1">{{studyList.LessonName}}</div>
+						<div style="text-align: center!important"  ng-if="studyList.LessonName==' '||studyList.LessonName.length < 1">待定</div>
+                        </td>
+                        <td>
+                            <div ng-bind="studyList.TeacherName" style="text-align: center!important"></div>
+                            <div style="text-align: center!important;" ng-if="studyList.IsComment">
+                                <button type="button" ng-click="lookpj($event)" class="btn btn-primary btn-rounded waves-effect waves-light learning-table-over-btu" data-remark="{{studyList.Remark}}" data-score="{{studyList.StuScore}}"
+                                data-time="{{studyList.TchCommentTime}}" data-name="{{studyList.TeacherName}}">查看评价</button>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="/PDFJSInNet/PDFJSInNet/web/viewer.html?name={{studyList.FilePath.slice(studyList.FilePath.lastIndexOf('/')+1)}}" target="_blank" ng-if="studyList.PageStatus < 3 && studyList.IsDemo != 1 && studyList.LessonName.length > 1" onClick="_czc.push(['_trackEvent', '学习记录页,暂无学习记录，预习按钮', '点击', '学习记录页,预习按钮']);">预习</a>
+                            <!-- <a href="javascript:;" style="color: #eee;pointer-events: none;" ng-if="studyList.PageStatus == 1 && studyList.StartTime | fateDateHour">WEB ROOM&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href="javascript:;" ng-if="studyList.PageStatus == 1 && studyList.StartTime | fateDateHour" style="color: #eee;pointer-events: none;" >VIP ROOM</a> -->
+
+                            <a href="javascript:;" ng-if="studyList.PageStatus == 0 && studyList.IsDemo != 1" ng-click="DelLesson(studyList.LessonId)">取消</a>
+
+                            <span ng-if="studyList.PageStatus == 0 && studyList.IsDemo == 1">体验课已约</span>
+                            <!-- <a href="javascript:;" ng-click="joinClassRoom(studyList.LessonId, userName, studyList.LessonName)" ng-if="studyList.PageStatus == 2 || (studyList.StartTime | fateDate)">WEB ROOM&nbsp;&nbsp;|&nbsp;&nbsp;</a> -->
+                            <a href="javascript:;" ng-if="(studyList.PageStatus == 2 || (studyList.StartTime | fateDate)) && studyList.ClassRoomUrl == '---'" ng-click="goClient(studyList.LessonId, userName)">VIP ROOM</a>
+
+                            <a ng-href="{{studyList.ClassRoomUrl}}" data-url="{{studyList.ClassRoomUrl}}" ng-click="goQQRoom(studyList.LessonId, userName, $event)" target="_blank" ng-if="(studyList.PageStatus == 2 || (studyList.StartTime | fateDate)) && studyList.ClassRoomUrl != '---'" >QQ ROOM</a>
+
+                            <a href="/PDFJSInNet/PDFJSInNet/web/viewer.html?name={{studyList.FilePath.slice(studyList.FilePath.lastIndexOf('/')+1)}}" target="复习按钮']);"
+                             ng-if="studyList.PageStatus == 3 || studyList.PageStatus == 4">复习</a>
+                            <span  ng-repeat="sPath in studyList.Path" >
+                                <span ng-show="$index >= 0">,</span><a ng-href="{{sPath}}" target="_blank" class="vedioHover">录像{{$index + 1}}</a>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+
+            <div id="laypage"></div>
+        </div>
+        
+    </div>
+
+</div>
+<iframe id="goClient" frameborder="0" style="display: none;"></iframe>
+<iframe id="goQQRoom" frameborder="0" style="display: none;"></iframe>
+
+<div id="lookpj" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">外教评价</h4>
+            </div>
+            <div class="modal-pingjia">
+                <div class="container-fluid">
+                    <div class="row" style="font-size: 14px;">
+                        <div class="col-md-6 text-left">
+                            <p ng-bind="tchName"></p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div id="lookStar" style="float:right;" data-score="{{scoreStar}}"></div>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 10px;min-height: 100px;">
+                            <p ng-bind="tchText" style="word-wrap:break-word">
+                                
+                            </p>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <span ng-bind="tchTime"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+
+    </div>
+<!-- /.modal-dialog -->
+</div>
+<script>
+    
+</script>

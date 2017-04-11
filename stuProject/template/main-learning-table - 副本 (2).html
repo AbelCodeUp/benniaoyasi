@@ -1,0 +1,59 @@
+<div class="col-lg-12">
+    <!-- Start content -->
+    <div class="orderTeacher">
+        <h2 class="orderTeacher_title">学习记录</h2>
+        <div ng-if="!noData">
+            <table class="learning-table" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th class="learning-table-width1">时间</th>
+                        <th class="learning-table-width2">状态</th>
+                        <th class="learning-table-width3">课程名称</th>
+                        <th class="learning-table-width4">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="studyList in studyLists" ng-class="{'learning-table-on':studyList.PageStatus == 2}">
+                        <td ng-bind="studyList.StartTime"></td>
+                        <td ng-bind="studyList.PageStatus | stuList"></td>
+                        <td><div ng-bind="studyList.LessonName"></div></td>
+                        <td><a href="javascript:;" ng-if="studyList.PageStatus == 1" ng-click="joinClassRoom(studyList.LessonId, userName)">预习</a><a href="javascript:;" ng-if="studyList.PageStatus == 0" ng-click="DelLesson(studyList.LessonId)">取消</a><button type="button" class="btn btn-warning btn-rounded waves-effect waves-light learning-table-over-btu" ng-if="studyList.PageStatus == 3" ng-click="AddTeacherTag(studyList.LessonId)">待评价<img src="images/flag_red.gif"></button>
+                        <button type="button" class="btn btn-rounded waves-effect waves-light learning-table-over-btu" ng-if="studyList.PageStatus == 4" disabled="disabled">已评</button>
+                        <a href="javascript:;" ng-click="joinClassRoom(studyList.LessonId, userName)" ng-if="studyList.PageStatus == 2">WEB ROOM&nbsp;&nbsp;|&nbsp;&nbsp;</a><a href="javascript:;" ng-if="studyList.PageStatus == 2" ng-click="goClient(studyList.LessonId, userName)">VIP ROOM</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+
+            <div id="laypage"></div>
+        </div>
+        <div class="table-none" ng-if="noData">
+            <img src="images/none/table-none.png">
+            <div class="table-none-text">当前没有学习记录，去看看有什么课程吧！</div>
+            <div><button type="button" class="btn btn-warning waves-effect waves-light w-lg" ui-sref="home.orderteacher">去看看<tton></div>
+        </div>
+    </div>
+</div>
+<iframe id="goClient" frameborder="0" style="display: none;">
+    
+</style>></iframe>
+<style>
+                .table-none{
+                    width: 800px;
+                    margin: 10% auto;
+                }
+                .table-none img{
+                    display: block;
+                    margin: 0 auto;
+                }
+                .table-none div{
+                    text-align: center;
+                }
+                .table-none-text{
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 22px;
+                    color: #3f3f3f;
+                }
+            </style>

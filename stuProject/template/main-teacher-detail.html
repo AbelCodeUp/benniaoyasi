@@ -1,0 +1,126 @@
+<div class="col-lg-12">
+    <!-- Start content -->
+    <div class="orderTeacher">
+        <h2 class="orderTeacher_title">
+            <button type="button" ui-sref="home.orderteacher" class="btn waves-effect"><i class="ion-chevron-left"></i>&nbsp;返回</button>
+        </h2>
+        <div class="teacher-detail clearfix">
+            <div class="teacher-detail-left">
+                <div class="smyclearfix">
+                    <div class="teacher-detail-left-item-box" ng-repeat="teacher in teacherLists">
+                        <div  class="teacher-detail-left-item-box-pad">
+                            <div class="orderTeacher_teacher_item orderTeacher_teacher_item-detail"  ng-click="clickTeacher($index, teacher.TeacherId, teacher.FisrtName)">
+                                <div class="orderTeacher_teacher_item_img">
+                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl != ''" ng-src="{{teacher.ImageUrl}}" onerror="javascript:this.src='images/default.jpg?v=1.1'">
+                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl == ''" ng-src="images/default.jpg">
+                                    <div class="orderTeacher_teacher_item_img_top"><span class="f-left-smy" ng-bind="teacher.FisrtName"></span></div>
+                                    <span class="orderTeacher_teacher_item_img_year">{{teacher.Age}}岁</span>
+                                </div>
+                                <p class="teacher-like">讲课{{teacher.LessonCount}}次</p>
+                                <span class="triangle-1123 t_active" ng-if="$index == thisIndex"><img src="images/icons/triangle.png"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teacher-detail-left-bottom">
+                    <div class="teacher-detail-left-bottom-pad">
+                        <div class="teacher-detail-left-bottom-baisc">
+                            <h2 class="teacher-detail-left-bottom-baisc-title">基本详情</h2>
+                            <div class="teacher-detail-left-bottom-baisc-pad">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="teacher-detail-left-bottom-baisc-left smyclearfix">
+                                            <div class="teacher-detail-left-bottom-baisc-item1">
+                                                <span class="teacher-detail-left-bottom-baisc-item-ti">英文姓名：</span><span ng-bind="teacherDetail.FisrtName"></span>
+                                            </div>
+                                            <div class="teacher-detail-left-bottom-baisc-item1">
+                                                <span class="teacher-detail-left-bottom-baisc-item-ti">年龄：</span><span>{{teacherDetail.Age}}岁</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher-detail-left-bottom-detail">
+                            <h2 class="teacher-detail-left-bottom-baisc-title">课程详情</h2>
+                            <div class="teacher-detail-left-bottom-baisc-pad">
+                                <ul class="teacher-detail-left-bottom-detail-ul smyclearfix">
+                                    <li class="text-center dateBtn" ng-class="{'cur-smy': $index == dateActive}" ng-repeat="time in teacherTimes" ng-click="getTeacherTime(time.date, $index)">
+                                        <p ng-bind="time.date"></p>
+
+                                        <p ng-bind="time.date | weekDay"></p>
+                                    </li>
+                                </ul>
+                                <ul class="teacher-detail-left-bottom-detail-ul2 smyclearfix">
+                                    <li ng-class="{'cur-smy':$index == timeIndex}" ng-click="timeActive($index,$event)" ng-repeat="time in allTime" ng-bind="time.lTime" data-lessonId="{{time.lessonId}}"></li>
+                                </ul>
+                            </div>
+                            <div class="teacher-btu teacher-btu1123" id="noData" style="display: none;">
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-white  waves-effect" aria-expanded="false">重上</button>
+                                    <ul class="dropdown-menu">
+                                       <li ng-click="AddlessonZj(booklist)" ng-repeat="booklist in booklists"><a href="javascript:;" ng-bind="booklist.FileTittle"></a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" ng-click="AddlessonNext(item)" class="btn btn-primary waves-effect waves-light teacher-btu2">预约下一节
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="teacher-detail-right">
+                <dl>
+                    <dt>您目前L1级别</dt>
+                    <dt>推荐的教师匹配度最高</dt>
+                    <dd><button type="button" ng-click="getTeacherList(0)" class="btn waves-effect">换一批&nbsp;<i class="ti-angle-right"></i></button></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="confirmDialog" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">是否确认预约</h4>
+            </div>
+            <div class="modal-Confirming">
+                <div>预约时间：<span>{{thisDate}}&nbsp;{{getWeeks}}&nbsp;|&nbsp;{{sxw}}：&nbsp;{{thisTime}}</span></div>
+                <div>预约老师：<span ng-bind="tcName"></span></div>
+                <div>教材章节：<span ng-bind="nextClassName.FileTittle"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary waves-effect waves-light" ng-click="nextSendData()">确认</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div id="confirmDialogZj" class="modal fade" tabindex="-1" role="dialog"
+     aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="custom-width-modalLabel">是否确认预约</h4>
+            </div>
+            <div class="modal-Confirming">
+                <div>预约时间：<span>{{thisDate}}&nbsp;{{getWeeks}}&nbsp;|&nbsp;{{sxw}}：&nbsp;{{thisTime}}</span></div>
+                <div>预约老师：<span ng-bind="tcName"></span></div>
+                <div>教材章节：<span ng-bind="zjData.FileTittle"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary waves-effect waves-light" ng-click="zjSendData()">确认</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

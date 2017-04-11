@@ -1,0 +1,71 @@
+<div class="col-lg-12">
+    <!--日历 start-->
+    <div class="orderTeacher"  style="min-height:600px;">
+        <h2 class="orderTeacher_title">我的测评</h2>
+
+        <div class="row my-appraisal-1122">
+            <div class="col-md-3 col-sm-4 col-xs-6 my-appraisal-item-1122" ng-repeat="weekReport in weekReports">
+                <a href="javascript:;" ui-sref="home.weekReportDetail({weekId:weekReport.ReportId})" onClick="_czc.push(['_trackEvent', '我的测评页面月报按钮', '点击', '我的测评页面月报按钮']);">
+                    <dl class="my-appraisal-item-top-1122">
+                        <dt>
+                            <img src="images/appraisal/ceping2.png">
+                        </dt>
+                        <dd ng-bind="weekReport.IsDemo"></dd>
+                    </dl>
+                    <div class="row">
+                        <div class="my-appraisal-item-bottomdiv1-1122">{{weekReport.StartTime.substring(0,weekReport.StartTime.indexOf(' '))}}-{{weekReport.EndTime.substring(0,weekReport.EndTime.indexOf(' '))}}</div>
+                    </div>
+            </a>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 my-appraisal-item-1122" ng-repeat="rePort in monReports">
+                <a ng-href="{{rePort.url}}" target="_blank" onClick="_czc.push(['_trackEvent', '我的测评页面周报按钮', '点击', '我的测评页面周报按钮']);">
+                    <dl class="my-appraisal-item-top-1122">
+                        <dt>
+                            <img src="images/appraisal/ceping1.jpg">
+                            <span>评级：LV{{rePort.LvItem}}</span>
+                        </dt>
+                        <dd ng-bind="rePort.IsDemo"></dd>
+                    </dl>
+                    <div class="row">
+                        <div class="my-appraisal-item-bottomdiv1-1122" ng-bind="CreateTime"></div>
+                        <div class="my-appraisal-item-bottomdiv2-1122">综合：{{rePort.LvValue}}分</div>
+                    </div>
+            </a>
+            </div>
+
+        </div>
+        <div class="ceping-none" ng-if="noData">
+            <img src="images/none/ceping-none.png">
+            <div class="ceping-none-text">新会员优惠，所有新会员免费赠送测评报告价值 ¥298，</div>
+            <div class="ceping-none-text2">马上会有老师联系您！保持电话畅通！</div>
+            <div class="ceping-none-text2">或拨打400-8787-286</div>
+        </div>
+        <style>
+            .ceping-none{
+                width: 800px;
+                margin: 10% auto;
+            }
+            .ceping-none img{
+                display: block;
+                margin: 0 auto;
+            }
+            .ceping-none div{
+                text-align: center;
+            }
+            .ceping-none-text{
+                padding-top: 26px;
+                height: 60px;
+                font-size: 18px;
+                color: #3f3f3f;
+            }
+            .ceping-none-text2{
+                font-size: 16px;
+                color: #ff4431;
+                height: 26px;
+            }
+        </style>
+
+    </div>
+
+</div>

@@ -1,0 +1,120 @@
+<style>
+    .comment-talk-box{
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    #dvRecord {
+        height: 300px;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #dvRecord::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    #dvRecord::-webkit-scrollbar-track-piece {
+        background-color: #CCCCCC;
+        -webkit-border-radius: 6px;
+    }
+
+    #dvRecord::-webkit-scrollbar-thumb:vertical {
+        height: 5px;
+        background-color: #999999;
+        -webkit-border-radius: 6px;
+    }
+
+    #dvRecord::-webkit-scrollbar-thumb:horizontal {
+        width: 5px;
+        background-color: #CCCCCC;
+        -webkit-border-radius: 6px;
+    }
+
+</style>
+<div class="nicescroll col-lg-3">
+    <!--在线学习 已登录 已测评 购买后 start-->
+    <div class="appraisal_allri2_smy common_mb">
+        <div class="appraisal_allri2_top_smy">
+            <div class="appraisal_allri2_top_name_smy">
+                <span class="appraisal_allri_top_name_vip_smy">VIP</span>
+                <span class="appraisal_allri_top_name_user_smy"><span ng-bind="userName"></span>, 你好</span>
+            </div>
+
+            <div class="appraisal_allri2_class_smy" ng-if="noBuyMeal == 1">有效期：剩余{{getDiffDay}}天<a type="button" class="btn btn-warning btn-rounded waves-effect waves-light" href="http://www.gogo-talk.com/index.php?c=price&a=price" onClick="_czc.push(['_trackEvent', '首页续费按钮', '点击', '首页续费按钮']);">续费</a></div>
+
+             <div class="appraisal_allri2_class_smy" ng-if="noBuyMeal == 0">我的课程：<a href="http://www.gogo-talk.com/index.php?c=price&a=price" class="btn btn-warning btn-rounded waves-effect waves-light" onClick="_czc.push(['_trackEvent', '首页去购买按钮', '点击', '首页去购买按钮']);">去购买</a></div>
+            
+            <div class="appraisal_allri2_top_level_smy" ng-if="isComplete == 2">
+                <p class="yelfce36d">
+                    <span ng-if="level > 0">L</span><span ng-bind="level | levelStatus"></span>
+                </p>
+                <span class="appraisal_allri2_top_level_line_smy" ng-if="level > 0"></span>
+                <p class="green81c13f">
+                    <span ng-if="level > 0">L</span><span ng-bind="level + 1" ng-if="level > 0"></span>
+                </p>
+            </div>
+
+            <span class="appraisal_allri2_crown_smy"></span>
+        </div>
+        <div class="appraisal_allri2_bot_smy">
+            <dl class="appraisal_allri_bot_smy_dl">
+                <dt class="yel1ffb022" ng-bind="jinri"></dt>
+                <dd>今日已学min</dd>
+            </dl>
+            <dl class="appraisal_allri_bot_smy_dl">
+                <dt class="blu14cace6" ng-bind="lianxu"></dt>
+                <dd>连续学习(天)</dd>
+            </dl>
+            <dl class="appraisal_allri_bot_smy_dl">
+                <dt class="red1dd5c5c" ng-bind="fen"></dt>
+                <dd>最近评分(分)</dd>
+            </dl>
+        </div>
+    </div>
+    <!--在线学习 已登录 已测评 购买后 end-->
+    <!--在线学习 随堂笔记 start-->
+    <div class="note-taking_smy common_mb" style="position:relative; " >
+        <a href="http://learn.gogo-talk.com/download/WeiyiEduSetup.exe" onClick="_czc.push(['_trackEvent', '学生客户端下载', '点击', '学生客户端下载']);">
+            <img src="images/down-client.png?v=1.1" alt="" width="100%" id="tour-one">
+        </a>
+        <div style="position: absolute;top: -19px;right:22px;z-index: 1005;display: none;" id="step-btn4" ng-click="sendFun()">
+            <a href="javascript:;">
+                <img src="../images/indicate/indicate-4.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--在线学习 随堂笔记 end-->
+    <!--在线学习 随堂笔记 start-->
+    <div class="note-taking_smy common_mb">
+        <div class="note-taking_top_smy">教师评价</div>
+        <div class="note-taking_bot_smy" id="dvRecord">
+            <span class="note-taking_bot_no_smy" ng-if="noNote">暂无教师评价</span>
+            <div class="comment-talk-box" ng-repeat="Comment in Comments">
+                <p ng-bind="Comment.TchName"></p>
+                <span style="position: absolute;right: 0;top: 0" ng-bind="Comment.StartTime"></span>
+                <div class="CommentStar" data-score="{{Comment.StuScore}}"></div>
+                <p ng-bind="Comment.Remark" style="word-wrap:break-word;"></p>
+            </div>
+        </div>
+    </div>
+    <!--在线学习 随堂笔记 end-->
+</div>
+<script>
+    setTimeout(function(){
+        $('.CommentStar').raty({
+            starOn   : 'lib/img/star-on.png',
+            starOff  : 'lib/img/star-off.png',
+            readOnly: true,
+            score: function() {
+                return $(this).attr('data-score');
+            }
+        });
+    },500)
+
+</script>

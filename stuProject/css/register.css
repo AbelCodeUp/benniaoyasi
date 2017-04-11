@@ -1,0 +1,167 @@
+
+.register_bigbox{
+	width: 100%;
+	height: auto;
+	min-width: 1240px;
+	background: #fff;
+}
+.register_header{
+	width: 1240px;
+	height: 80px;
+	margin: 0 auto;
+}
+.register_content{
+	width: 100%;
+	height: 645px;
+	background: url('../images/banner_bg.jpg')no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+}
+.register_box_center{
+	width: 1240px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.register_img_left_box{
+	width: 925px;
+	height: 100%;
+	margin-left: -59px;
+	padding-top: 53px;
+}
+.register_logo_img{
+	width: 140px;
+	height: 53px;
+	padding-top: 20px;
+}
+.register_font_box{
+	width: 411px;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 127px;
+}
+.register_font_box h3{
+	color: #fff;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+.register_font_write_box{
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+/* 注册 start */
+
+.register_font_top{
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 32px 20px 32px;
+	box-sizing: border-box;
+	
+}
+
+.register_icon_box{
+	position: relative;
+}
+
+.register_icon_box li{
+	height:70px;
+	width: 50%;
+	font-size: 20px;
+}
+.register_line{
+	width: 100%;
+	height: 5px;
+	background: #2ea2fb;
+	position: absolute;
+	top: 17%;
+	z-index: 2;
+}
+
+
+.register_font_top .form-group{
+	margin-bottom: 25px;
+}
+.register_font_top .form-group .btn{
+	color: #fff;
+}
+.register_font_top .form-group i{
+	position: absolute;
+    top: 2px;
+    left:0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+    font-size: 20px;
+}
+.register_font_top input{
+	text-indent: 20px;
+}
+.register_icon_box li span{
+	background: #fff;
+	position: relative;
+	z-index: 3;
+	color: #2ea2fb;
+}
+.register_icon_box li:nth-of-type(2){
+	text-align: right;
+}
+.register_icon_box li:nth-of-type(3){
+	text-align: right;
+}
+.register_icon_box li p{
+	font-size: 12px;
+}
+.vaild_red{
+	color: red;
+}
+.btn-submit{
+	text-indent: 0!important;
+}
+/* 注册 end */
+/* wechat start */
+.reg_wx_img_box p{
+	text-align: center;
+	margin-top: 15px;
+}
+.reg_wx_img_box img{
+	width: 50%;
+	display:block;
+	margin: 0 auto 20px;
+}
+/* wechat end */
+/* join english start*/
+.join_en_box{
+	border-radius: 4px;
+	border: 1px solid #cccccc;
+	padding: 25px 20px 25px 20px;
+}
+.join_en_box h2{
+	font-size: 20px;
+}
+.join_en_box a{
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.reg_join_main{
+	width: 100px;
+	color: #808080;
+	background: #e3e3e3;
+}
+.re_join_btn_box{
+	margin-top: 20px;
+}
+.reg_mf_cp{
+	width: 201px;
+	color: #fff;
+	background: #269ffa;
+}
+/* join english end*/

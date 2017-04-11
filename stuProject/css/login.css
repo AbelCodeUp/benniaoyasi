@@ -1,0 +1,175 @@
+/* 帐号登录 start */
+/* 公共部分 start*/
+.loginPwd_box{
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+}
+.loginPwd_font_top_title_box{
+    width: 100%;
+    height: 48px;
+}
+.loginPwd_font_top_title{
+    float: left;
+    width: 100%;
+    height:100%;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.loginPwd_font_top_title_item1{
+    background: #29b6f6;
+    color: #fff;
+}
+.loginPwd_font_top_title_item2{
+    color: #474747;
+}
+
+/*状态*/
+.login-input-success .form-control{
+    border-color: #fb6d9d;
+}
+.login-input-success .form-control-feedback{
+    color: #35c16d;
+}
+.login-input-error .form-control-feedback{
+    color: #f05050;
+}
+/*按钮不能点*/
+.login_fff{
+    background: #b0b0b0;
+    color: #fff;
+    font-size: 16px;
+}
+.login_fff:hover{
+    color: #fff;
+}
+/*按钮能点*/
+.login_pink{
+    background: #fb6d9d;
+    color: #fff;
+    font-size: 16px;
+}
+.login_pink:hover{
+    color: #fff;
+}
+/*错误提示*/
+.error-notice{
+    position: absolute;
+    top:44px;
+    left: 20px;
+    padding: 5px 10px;
+    background:#fcdede;
+    font-size: 14px;
+    color: #0a0a0a;
+    z-index: 99999;
+    border-radius: 3px;
+    border: 1px solid #e0c0c0;
+    display: none;
+    opacity: 1;
+    /* -webkit-animation:heijin-zi-left1 3s forwards;animation:heijin-zi-left1 3s forwards; */
+}
+.error-notice span{
+    position: absolute;
+    top:-9px;
+    left: 10px;
+    color: #ffe3e3;
+    text-shadow: -1px -1px 0 #e0c0c0;
+}
+.has-error .error-notice{
+    display: block;
+}
+/* 公共部分 end*/
+.loginPwd_form{
+    width: 100%;
+    overflow: hidden;
+    padding: 44px 32px 20px 32px;
+    box-sizing: border-box;
+}
+.loginPwd_form_div{
+    position: relative;
+    margin-bottom: 22px;
+}
+.loginPwd_form_div i{
+    position: absolute;
+    top: 2px;
+    left : 4px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+    font-size: 20px;
+    color: #bbbbbb;
+}
+.loginPwd_form_div input{
+    text-indent: 30px;
+}
+.loginPwd_a_div{
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+}
+.loginPwd_a_div a:nth-of-type(2){
+    color: #363636;
+    font-size: 12px;
+    float: right;
+}
+.loginPwd_a_div a:nth-of-type(1){
+    color: #c43232;
+    font-size: 12px;
+    float: left;
+}
+/*.switchery-small>small{*/
+    /*width: 14px;*/
+    /*height: 14px;*/
+/*}*/
+.form-switchCheck-span{
+    vertical-align: middle;
+}
+.loginPwd_register{
+    width: 100%;
+    margin:0;
+    border-radius: 0;
+}
+.loginPwd_register button{
+    border-radius: 0;
+}
+/* 帐号登录 end */
+
+
+/* 手机号找回密码 start */
+/*发送验证码按钮不能点*/
+.findPwd_form_div{
+    position: relative;
+}
+.findPwd_form_div input{
+    text-indent: 8px;
+}
+.find-fff{
+    position: absolute;
+    top:4px;
+    right: 4px;
+    width: 99px;
+    background: #eeeeee;
+    color: #403e3e;
+}
+.find-pink{
+    position: absolute;
+    top:4px;
+    right: 4px;
+    width: 99px;
+    background: #ff6699;
+    color: #fff;
+    padding: 5px 0;
+}
+.find-pink:hover{
+    color: #fff;
+}
+/* 手机号找回密码 end */
+
+/* 登录 提示 */

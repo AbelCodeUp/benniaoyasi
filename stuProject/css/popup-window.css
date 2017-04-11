@@ -1,0 +1,36 @@
+/*弹窗公共*/
+.modal-header .modal-title{
+    font-size: 16px!important;
+    text-indent: 10px;
+    text-align: center;
+}
+.modal-footer{
+    text-align: center;
+}
+/*评价*/
+.modal-pingjia{
+    padding:10px 30px;
+}
+.pingjia-title{
+    float: left;
+    width:230px;
+}
+.pingjia-bot{ padding: 10px 0;}
+.pingxing{float:left;width: 105px;}
+.pingjia-text{ float:left;width:152px;color: #ccc; font-size: 14px; }
+.pingjia-title2{
+    width:230px;
+    padding: 10px 0;
+}
+/*弹窗 确认预约*/
+.modal-Confirming{
+    padding: 30px;
+}
+.modal-Confirming div{
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

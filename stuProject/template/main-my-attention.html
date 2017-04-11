@@ -1,0 +1,535 @@
+<style>
+   .vedioHover:hover{
+        color:#ffbd4a;
+    }
+    /*新样式*/
+    .cardBox{
+        border:1px solid #ddd;
+        border-radius: 2px;
+        position: relative;
+    }
+    .cardBox .cardPhoto{
+        float:left;
+        width: 40%;
+        overflow: hidden;
+        margin-right: 5px;
+    }
+    .cardBox .cardPhoto img{
+        border:1px solid #ddd;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+    .cardBox .cardCon{
+        float:right;
+        font-size: 12px;
+        color:#333;
+        margin-top: 3%;
+        margin-right: 6%;
+    }
+    .cardBox .cardCon .cardName{
+        font-size: 16px;
+    }
+    /*改 start*/
+    .cardBox .cardCon .age{
+        color:#85888a;
+        font-size:12px;
+    }
+    
+    .yiguanzhu{
+        color:#dd5b5b;
+        background: url(images/yiguanzhu.png) no-repeat 0px 0px;
+        background-size:16px 16px;
+        padding-left: 20px;
+        margin-top: 3px;
+    }
+    .weiguanzhu{
+        color:#dd5b5b;
+        background: url(images/weiguanzhu.png) no-repeat 0px 0px;
+        background-size:16px 16px;
+        margin-top: 3px;
+        padding-left: 20px;
+    }
+   
+    .leftbtnbox .leftbtn,.rightbtnbox .rightbtn{
+        font-size: 30px;
+        color:#ddd;
+        line-height: 80px;
+        cursor: pointer;
+    }
+    .leftbtnbox .jiaobiao,.rightbtnbox .jiaobiao{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #3db6ff;
+        color:#fff;
+        display: block;
+        position: absolute;
+        top:27%;
+        text-align: center;
+        line-height: 36px;
+    }
+    /*end*/
+    .rightbtnbox .rightbtn{
+        float: right;
+    }
+    .leftbtnbox .jiaobiao{
+        left: 34%;
+    }
+    .rightbtnbox .jiaobiao{
+        right: 34%;
+    }
+    .cardBox-active{
+        border:1px solid #3db6ff;
+        background: #ebf8ff;
+        box-shadow: 0 0 8px rgba(61,182,255,0.4)
+    }
+    .cardBox .sanjiao{
+        display: none;
+    }
+    .cardBox-active .sanjiao{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -13px;
+        display: block;
+        width: 18px;
+        height: 13px;
+        background: url(images/sanjiao.jpg) no-repeat;
+    }
+    .classTable{
+        border:1px solid #3db6ff;
+    }
+    .classTable .monthBox{
+        width: 302px;
+        height: 53px;
+        line-height: 53px;
+        margin:0 auto;
+    }
+    .classTable .monthBox li{
+        float: left;
+        color: #666;
+        height: 50px;
+    }
+    .classTable .monthBox .month{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    .classTable .monthBox .week-active{
+        color:#3db6ff;
+    }
+    .classTable table{
+        width: 100%;
+        border-collapse:collapse;
+        margin-bottom: 10px;
+    }
+    .classTable table,.classTable tr,.classTable td,.classTable th{
+        border:1px solid #ddd;
+        text-align: center;
+    }
+    /*改 start*/
+    .classTable .monthBox .month-leftbtn,.classTable .monthBox .month-rightbtn{
+        width: 60px;
+    }
+    .classTable td{
+        width:12.5%;
+        height: 39px;
+        background: #f9fdff;
+        line-height: 39px;
+        overflow: hidden;
+        color:#666;
+    }
+    /*end*/
+    .classTable .time{
+        background: #fff;
+    }
+    .classTable th{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /*改 start*/
+    .classTable .today{
+        color:#dd5b5b;
+    }
+    .classTable .today .firstP{
+        color:#dd5b5b;
+    }
+    
+    .classTable .yiyue{
+        background:url(images/yiyue.jpg) no-repeat 39% 13px #9bd9ff;
+        color:#fff;
+        padding-left: 2%;
+    }
+    .classTable .weiyue{
+        background:url(images/weiyue.jpg) no-repeat 34% 13px #e58889;
+        color:#fff;
+        padding-left: 2%;
+        cursor: pointer;
+    }
+    /*end*/
+
+    .modal .modal-dialog .modal-content{
+        padding:0;
+        border-radius: 5px;
+        width: 450px;
+        height: 335px;
+        margin: 0 auto;
+    }
+    .modal .modal-dialog .modal-content .modal-header {
+        padding:0;
+        border:0;
+    }
+    .modal-content{
+        border:0;
+        overflow: hidden;
+    }
+    .modal-header{
+        width: 100%;
+        height:40px;
+        background:#3db6ff;
+    }
+    .modal-header .modal-title{
+        text-indent: 0;
+    }
+    .modal-header h4{
+        line-height: 40px;
+        color:#fff;
+    }
+    .modal-content .modal-yuyue{
+        height:72px;
+        border-bottom:1px solid #e2e7ed;
+        padding:0 33px 0 33px;
+    }
+    .modal-content .modal-yuyue p{
+        float:left;
+        background:url(images/nextlesson.png) no-repeat 0 27px;
+        padding-left: 59px;
+        line-height: 72px;
+        color:#000;
+    }
+    .modal-content .modal-yuyue button{
+        width: 100px;
+        height:32px;
+        background:#dd5b5b;
+        border-radius: 32px;
+        line-height: 32px;
+        color:#fff;
+        text-align: center;
+        border:0;
+        float: right;
+        margin-top:20px;
+    }
+    .modal-con{
+        height:212px;
+        overflow-y: scroll;
+    }
+    .modal-con li{
+        padding:0 33px 0 33px;
+        height:60px;
+    }
+    .modal-con li p{
+        float:left;
+        line-height: 60px;
+        color:#000;
+    }
+    .modal-con li button{
+        width: 100px;
+        height:32px;
+        background:#3db6ff;
+        border-radius: 32px;
+        line-height: 32px;
+        color:#fff;
+        text-align: center;
+        border:0;
+        float: right;
+        margin-top:14px;
+    }
+
+    /*新*/
+    #guanzhu .modal-content{
+        padding-top: 51px;
+        padding-left: 133px;
+        padding-right:133px;
+        padding-bottom: 41px;
+    }
+    #guanzhu .modal-img {
+        text-align: center;
+    }
+    #guanzhu .modal-img img{
+        width: 155px;
+        height:155px;
+    }
+    #guanzhu .modal-content p{
+        text-align: center;
+        font-size: 14px;
+        color:#323232;
+        margin-top: 5px;
+    }
+    #guanzhu .modal-content button{
+        width: 100px;
+        height: 36px;
+        border-radius: 36px;
+        text-align: center;
+        line-height: 36px;
+        color:#323232;
+        font-size: 16px;
+        border:0;
+        float:left;
+        background:#dedede;
+        margin-top: 6px;
+    }
+    #guanzhu .modal-content button.ding{
+        color:#fff;
+        background:#3db6ff;
+        margin-left: 20px;
+    }
+    .table-none{
+        text-align: center;
+        margin: 20px auto;
+    }
+    
+    .table-none{
+        width: 800px;
+        margin: 10% auto;
+    }
+    .table-none img{
+        display: block;
+        margin: 0 auto;
+    }
+    .table-none div{
+        text-align: center;
+    }
+    .table-none-text{
+        padding-top: 26px;
+        height: 60px;
+        font-size: 18px;
+        color: #3f3f3f;
+    }
+    .table-none-text2{
+        font-size: 16px;
+        color: #ff4431;
+        height: 26px;
+    }
+    
+</style>
+<link rel="stylesheet" href="amin-my-attention.css">
+<div class="col-lg-12" style="font-family:'Microsoft YaHei'!important; ">
+    <!-- Start content -->
+    <div class="orderTeacher">
+        <h2 class="orderTeacher_title">我的关注</h2>
+        <!-- 内容 start -->
+        <div class="container-fluid" ng-if="isShow">
+             <div class="row">
+                    <div class="leftbtnbox" ng-click="getTeacherFollow('left')">
+                        <span class="leftbtn ion-ios7-arrow-left"></span>
+                        <span class="jiaobiao"  ng-show="leftCount != 0" ng-bind="leftCount"></span>
+                    </div>
+                    <div class="card">
+                        <div class="cardBox cardAtt" ng-class="{true:'cardBox-active',false:' '}[isClick == $index]" ng-repeat="teacherList in teacherLists">
+                                <div class="cardPhoto">
+                            <a href="javascript:;" ng-click="getTeacherData(teacherList.TeacherId,$index)">
+                                <img ng-src="{{teacherList.ImageUrl}}" alt=""  onerror="javascript:this.src='images/default.jpg?v=1.1'">
+                            </a>
+                            </div>
+                            <ul class="cardCon">
+                                <li class="cardName">{{teacherList.TeacherName}}</li>
+                                <li class="age">{{teacherList.Age}}岁</li>
+                                <li>讲课 <span>{{teacherList.Num}}次</span></li>
+                                <li style="cursor: pointer;" class="yiguanzhu" ng-click="isAtten(teacherList.TeacherId)">
+                                    已关注
+                                </li>
+                            </ul>
+                            <div class="sanjiao"></div>
+                        </div>
+        
+                    </div>
+                    <div class="rightbtnbox" ng-click="getTeacherFollow('right')">
+                         <span class="jiaobiao" ng-show="rightCount != 0" ng-bind="rightCount"></span>
+                        <span class="rightbtn  ion-ios7-arrow-right" ></span>
+                    </div>                    
+                </div>
+            <div class="row">
+                <div class="col-md-12 classTable">
+                    <ul class="monthBox">
+
+                        <li class="month-leftbtn">
+                             <span class="ion-ios7-arrow-left" style="margin-right:10px;font-size:18px;vertical-align: middle;margin-top: -2px" ng-if="!isShowUpWeek" ></span>
+                             <span style="cursor: pointer;" ng-click='getWeekTime(0,$event)'  ng-if="!isShowUpWeek">上一周</span></li>
+
+                        <li class="month"> <span ng-bind="tYear"></span>年 <span ng-bind="tMonth"></span>月</li>
+
+                        <li class="month-rightbtn week-active">
+                            <span style="cursor: pointer;"  ng-click="getWeekTime(1,$event)">下一周</span>
+                            <span class=" ion-ios7-arrow-right" style="margin-left:10px;font-size:18px;vertical-align: middle;margin-top: -2px"></span>
+                        </li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th ng-repeat="timeAttr in timeAttrs" ng-class="{'today':timeAttr.isToDay == 1,' ':timeAttr.isToDay == 0}">
+                                <p
+                                ng-class="{'firstP':timeAttr.isToDay == 1,' ':timeAttr.isToDay == 0}">
+                                    <img ng-if="timeAttr.isToDay == 1" width="14" src="images/today.jpg" alt="">
+                                    {{timeAttr.week}}
+                                </p>
+
+                                <p ng-bind="timeAttr.month+'-'+timeAttr.day"></p>
+                            </th>
+                        </tr>
+                        <tbody>
+                            <tr ng-repeat="Tdata in Tdatas">
+                                <td class="time" ng-bind="Tdata.tTime"></td>
+                                <td ng-repeat="state in Tdata.states"
+                                ng-class="{'yiyue':state[Tdata.tTime]=='1','weiyue':state[Tdata.tTime]=='0',' ':state[Tdata.tTime]==' '}" ng-bind="state[Tdata.tTime] | fiiterNum" 
+                                ng-click="orderTeacher(state[Tdata.tTime],Tdata.tTime,$event)" data-lessid="{{state}}"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- 没有收藏 -->
+        <div class="table-none" id="studyNo" ng-if="!isShow">
+            <img src="images/none/table-none.png">
+            <div class="table-none-text">当前没关注，去关注老师吧！</div>
+            <div class="text-center"><button type="button" class="btn btn-warning waves-effect waves-light w-lg" ui-sref="home.orderteacher" onClick="_czc.push(['_trackEvent', '学习记录页,暂无学习记录，去预约按钮', '点击', '学习记录页,暂无学习记录，去预约按钮']);">去关注老师</button></div>
+        </div>
+
+        
+        
+    </div>
+
+</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:600px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+                <h4 class="modal-title" id="custom-width-modalLabel">选择课程</h4>
+            </div>
+            <div class="modal-yuyue">
+                <p>&nbsp;</p>
+                <button ng-click="nextSendData()">预约</button>
+            </div>
+            <ul class="modal-con">
+                <li ng-repeat="booklist in booklists">
+                    <p ng-bind="booklist.FileTittle"></p>
+                    <button ng-click="zjSendData(booklist.BDEId,booklist.BookingId)">重上</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+<!-- /.modal-dialog -->
+</div>
+<!--改 start-->
+<!-- 取消关注 -->
+<div id="guanzhu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:486px;height:319px">
+            <div class="modal-img">
+                <img src="images/none/table-none.png" alt="">
+            </div>
+            <p>确认要关注取消吗？</p>
+            <div class="modal-btnbox">
+                <button data-dismiss="modal">取消</button>
+                <button class="ding"  ng-click="closeAtten()">确定</button>
+            </div>
+            
+        </div>
+
+    </div>
+<!-- /.modal-dialog -->
+</div>
+<style>
+/*改 start*/
+@media screen and (min-width:768px){
+    .card{
+        width: 88%;
+        float:left;
+        padding-bottom: 13px;
+    }
+    .cardBox{
+        width: 18%;
+        float:left;
+        margin:0 1%;
+        padding:1%;
+    }
+    .cardBox .cardPhoto {
+        width: 40%;
+        margin-top: 7%;
+        margin-left:0;
+    }
+    .cardBox .cardCon{
+        margin-right:0;
+    }
+    .leftbtnbox,.rightbtnbox{
+        width:6%;
+        float:left;
+        position: relative;
+    }
+}
+/*改 end*/
+@media screen and (min-width: 980px){
+    .card{
+        width: 88%;
+        float:left;
+        padding-bottom: 13px;
+    }
+    .cardBox{
+        width: 18%;
+        float:left;
+        margin:0 1%;
+        padding:1%;
+    }
+    .cardBox .cardPhoto {
+        width: 40%;
+        margin-top: 10%;
+        margin-left:0;
+    }
+    .cardBox .cardCon{
+        margin-right:0;
+    }
+    .leftbtnbox,.rightbtnbox{
+        width:6%;
+        float:left;
+        position: relative;
+    }
+    .classTable{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .card{
+        width: 88%;
+        float:left;
+        padding-bottom: 13px;
+    }
+    .cardBox{
+        width: 18%;
+        float:left;
+        margin:0 1%;
+        padding:1%;
+    }
+    .cardBox .cardPhoto {
+        width: 40%;
+        margin-top: 4%;
+        margin-left:4%;
+    }
+    .cardBox .cardCon{
+        margin-right: 5%;
+    }
+    .leftbtnbox,.rightbtnbox{
+        width:6%;
+        float:left;
+        position: relative;
+        margin-top:1%;
+    }
+}
+</style>

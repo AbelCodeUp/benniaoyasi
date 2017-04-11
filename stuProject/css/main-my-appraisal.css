@@ -1,0 +1,55 @@
+.my-appraisal-1122{width: 100%; margin: 0;padding: 20px 30px 0;}
+.my-appraisal-item-1122{
+    padding: 20px;
+    margin-bottom: 16px;
+}
+.my-appraisal-item-top-1122{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #eee;
+   
+}
+.my-appraisal-item-top-1122 dt{
+    width: 100%;
+    position: relative;
+    padding-top: 70px;
+}
+.my-appraisal-item-top-1122 img{
+    display: block;
+    width: 40%;
+    margin:0 auto 27px;
+}
+.my-appraisal-item-top-1122 span{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 40px;
+    background: #ffcc73;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    color: #fff;
+}
+.my-appraisal-item-top-1122 dd{
+    height: 40px;
+    line-height: 40px;
+    background: #efefef;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+}
+.my-appraisal-item-bottomdiv1-1122{float: left;padding-left: 14px;padding-top: 10px;}
+.my-appraisal-item-bottomdiv2-1122{float:right;text-align: right;color: #dd5c5c;padding-right: 14px;padding-top: 10px;}
+@media screen and (max-width:1200px) {
+}
+@media screen and (min-width:1200px) {
+}
+@media screen and (min-width:1336px) {
+    .my-appraisal-item-1122{
+        width: 20%;
+    }
+}
+
+
+

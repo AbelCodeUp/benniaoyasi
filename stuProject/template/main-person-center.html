@@ -1,0 +1,81 @@
+
+<div class="col-lg-12">
+	<div class="orderTeacher" style="min-height: 0!important">
+	        <h2 class="orderTeacher_title">基本信息</h2>
+    		<div class="person-text-box box-padding">
+					<ul class="person-ui-box form-horizontal" style="position: relative;">
+						<li style="width: 100%">
+							<div class="form-group">
+								<label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子姓名：</label>
+								<div class="col-sm-2">
+									<input type="text" id="person1" class="form-control" required maxlength="10" placeholder="孩子的中文姓名"  ng-model="personData.Name">
+								</div>
+								<label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子英文姓名：</label>
+								<div class="col-sm-2">
+									<input type="text" id="person2" class="form-control" required maxlength="15" placeholder="孩子的英文姓名" ng-model="personData.NameEn">
+								</div>
+								<label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">家长姓名：</label>
+								<div class="col-sm-2">
+									<input type="text" maxlength="10" class="form-control" required placeholder="家长的姓名" ng-model="personData.FatherName">
+								</div>
+							</div>
+						</li>
+						<li style="width: 100%">
+							<div class="form-group">
+								<label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子年龄：</label>
+								<div class="col-sm-1">
+									<input type="text" id="age" maxlength="2" class="form-control" required ng-model="personData.Age" onKeyPress="if ((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" />
+								</div>
+							</div>
+						</li>
+						<li style="width: 100%">
+							<div class="form-group">
+								<label class="col-sm-2 control-label" style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子性别：</label>
+
+								<div class="col-sm-8">
+									<div class="row" style="margin-left: 3px;">
+										 <div class="radio radio-inline">
+                                            <input type="radio" value="1" name="radioInline"  ng-model="personData.Gender" ng-checked="gender">
+                                            <label for="inlineRadio1">男</label>
+                                        </div>
+                                        <div class="radio radio-inline">
+                                            <input type="radio" value="0" name="radioInline" ng-model="personData.Gender" ng-checked="!gender">
+                                            <label for="inlineRadio2">女</label>
+                                        </div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<button style="margin-left: 20px;position: absolute;bottom: 20px;right: 5px;width: 146px;height: 39px;background: " type="button" class="btn btn-success waves-effect waves-light btn-cosp-btn" ng-click="UpdateMyInfo()" id="saveMyinfo" onClick="_czc.push(['_trackEvent', '帐号信息,保存资料按钮', '点击', '帐号信息,保存资料按钮']);">保存资料
+		                    </button>
+					</ul>
+				</div>
+	    </div>
+    <div class="orderTeacher" style="min-height: 0!important">
+        <h2 class="orderTeacher_title">帐户信息</h2>
+        <div class="person-text-box box-padding">
+            <ul class="person-ui-box">
+                <li>
+                    <span style="display:inline-block;width:70px;text-align: right;margin-right: 10px;">手机号：</span><span ng-bind="userName"></span>
+                </li>
+                <li>
+                    <span style="display:inline-block;width:70px;text-align: right;margin-right: 10px;">密码：</span><span>***********</span>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-success waves-effect waves-light btn-cosp-btn"
+                            data-toggle="modal" data-target="#custom-width-modal2" onClick="_czc.push(['_trackEvent', '帐号信息,修改密码', '点击', '帐号信息,修改密码']);">修改密码
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="orderTeacher" style="min-height: 0!important">
+        <h2 class="orderTeacher_title">我的订单</h2>
+		
+        <div style="padding:0 30px;">
+            <iframe ng-src="{{trustSrc}}" id="alipay" scrolling="no" style="min-width: 800px;">
+            </iframe>
+        </div>
+    </div>
+
+</div>

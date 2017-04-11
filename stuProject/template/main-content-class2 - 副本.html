@@ -1,0 +1,193 @@
+<div class="col-lg-9">
+    <!-- Start content -->
+    <div class="row main-content-class-top common_mb">
+        <div class="col-md-7 main-content-class-middle-item-box-1122">
+            <div class="main-content-class-middle-item-box-rel-1122">
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 redf05050-1122" ng-bind="shuo | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">min</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">已说英语</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 yelffbc42-1122" ng-bind="chi | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">次</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">迟到</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-class-middle-item-1122">
+                    <div class="main-content-class-middle-item-rel-1122">
+                        <img src="images/appraisal/contentmidd1.jpg">
+                        <div class="main-content-class-middle-item-text-1122">
+                            <p class="main-content-class-middle-item-text-p1-1122"><span
+                                    class="main-content-class-middle-item-num-1122 blu5d9cec-1122" ng-bind="que | numSplit"></span><span
+                                    class="main-content-class-middle-item-te-1122">次</span></p>
+                            <p class="main-content-class-middle-item-text-p2-1122">缺席</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-7 main-content-class-top1-box">
+            <div class="main-content-class-top1">
+                <div class="main-content-class-top1-rel">
+                    <div class="main-content-class-top-right">
+                        <div data-label="{{getBili*100 |number:0 }}%" class="radial-bar radial-bar-{{getBili*100}} radial-bar-lg radial-bar-warning main-content-class-top-right-div"></div>
+                    </div>
+                    <div class="main-content-class-top-left">
+                        <dl>
+                            <dt class="main-content-class-top-left-top"><span class="blu25d9cec" ng-bind="useKeshi"></span> / <span
+                                    class="blac22e2e2e" ng-bind="sumKenshi"></span><span class="main-content-class-top-left-top_po" ng-if="getKeshi > 0">+{{getKeshi}}次</span>
+                            </dt>
+                            <dd>已学课时/总课时</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--等待匹配测试老师 start-->
+    <div class="row main-content-class-middle common_mb">
+        <div class="col-lg-6 ">
+            <div class="Learning-Record">
+                <div class="Learning-Record-title">最近学习记录</div>
+                <ul class="Learning-Record-ul">
+                    <li>日期：2016/11/09 星期三</li>
+                    <li>时间：22:00-22:25</li>
+                    <li>课程：青少年英语-KIDS ENGLISH</li>
+                    <li>状态：学生缺席<button type="button" class="btn btn-warning btn-rounded waves-effect waves-light Learning-Record-ul-btu">待评价<img src="images/flag_red.gif"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box">
+            <dl class="main-content-class-middle-btu">
+                <dt>等待匹配测试老师</dt>
+                <dd>
+                    <button type="button"
+                            class="btn waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy"
+                            disabled>查看
+                    </button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--等待匹配测试老师 end-->
+    <!--马上开课 start-->
+    <div class="row main-content-class-middle common_mb">
+        <div class="col-lg-6 ">
+            <div class="Learning-Record">
+                <div class="Learning-Record-title">最近学习记录</div>
+                <ul class="Learning-Record-ul">
+                    <li>日期：2016/11/09 星期三</li>
+                    <li>时间：22:00-22:25</li>
+                    <li>课程：青少年英语-KIDS ENGLISH</li>
+                    <li>状态：学生缺席<button type="button" class="btn btn-warning btn-rounded waves-effect waves-light Learning-Record-ul-btu">待评价<img src="images/flag_red.gif"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box">
+            <dl class="main-content-class-middle-btu">
+                <dt>马上开课&nbsp;<count-down stemp="120000"></count-down></dt>
+                <dd>
+                    <button type="button"
+                            class="btn waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy"
+                            disabled>快速进入
+                    </button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--马上开课 end-->
+    <!--查看报告 start-->
+    <div class="row main-content-class-middle common_mb">
+        <div class="col-lg-6">
+            <div class="Learning-Record">
+                <div class="Learning-Record-title">最近学习记录</div>
+                <ul class="Learning-Record-ul">
+                    <li>日期：2016/11/09 星期三</li>
+                    <li>时间：22:00-22:25</li>
+                    <li>课程：青少年英语-KIDS ENGLISH</li>
+                    <li>状态：学生缺席<button type="button" class="btn btn-warning btn-rounded waves-effect waves-light Learning-Record-ul-btu">待评价<img src="images/flag_red.gif"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box">
+            <dl class="main-content-class-middle-btu">
+                <dt>又偷懒了，马上去学</dt>
+                <dd>
+                    <button type="button"
+                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button">
+                        快速预约
+                    </button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--查看报告 end-->
+    <!--上次预约教师 start-->
+    <div class="row main-content-class-middle common_mb">
+        <div class="col-lg-6">
+            <div class="Learning-Record">
+                <div class="Learning-Record-title">最近学习记录</div>
+                <ul class="Learning-Record-ul">
+                    <li>日期：2016/11/09 星期三</li>
+                    <li>时间：22:00-22:25</li>
+                    <li>课程：青少年英语-KIDS ENGLISH</li>
+                    <li>状态：学生缺席<button type="button" class="btn btn-warning btn-rounded waves-effect waves-light Learning-Record-ul-btu">待评价<img src="images/flag_red.gif"></button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 main-content-class-middle-btu-box">
+            <dl class="main-content-class-middle-btu">
+                <dt class="little_smy">上次预约教师 Tray</dt>
+                <dd>
+                    <button type="button"
+                            class="btn btn-primary waves-effect waves-light main-content-class-middle-btu_dd_button2">
+                        快速预约
+                    </button>
+                    <button type="button"
+                            class="btn btn-warning waves-effect waves-light main-content-class-middle-btu_dd_button3">更换
+                    </button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--上次预约教师 end-->
+    <!--日历 start-->
+    <div class="common_mb">
+        <div class="card-box">
+            <div id="calendar"></div>
+        </div>
+        <!-- BEGIN MODAL -->
+        <div class="modal fade none-border" id="event-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><strong>Add Event</strong></h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event
+                        </button>
+                        <button type="button" class="btn btn-danger delete-event waves-effect waves-light"
+                                data-dismiss="modal">Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--日历 end-->
+</div>

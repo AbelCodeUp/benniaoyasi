@@ -1,0 +1,119 @@
+<div class="col-lg-12">
+    <!-- sample modal content -->
+    <div class="orderTeacher modal-content">
+        <button class="" data-toggle="modal" data-target="#custom-width-modal">评价</button>
+        <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog"
+             aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog" style="width:600px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="custom-width-modalLabel">我的评价</h4>
+                    </div>
+                    <div class="modal-pingjia">
+
+                        <div class="smyclearfix pingjia-bot">
+                            <div class="pingjia-title">你喜欢这个老师吗？</div>
+                            <div class="pingxing">
+                                    <div id="cancel-off-and-cancel-on-demo"></div>
+                            </div>
+                            <div class="pingjia-text pingjia-text1">和老师互动非常开心</div>
+                        </div>
+                        <div class="smyclearfix pingjia-bot">
+                            <div class="pingjia-title">还记得刚刚学过的内容吗？</div>
+                            <div class="pingxing">
+                                <div id="cancel-off-and-cancel-on-demo2"></div>
+                            </div>
+                            <div class="pingjia-text pingjia-text2">基本都记下了</div>
+                        </div>
+                        <div class="pingjia-title2"> 您有什么想告诉我们的？</div>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary waves-effect waves-light">确认</button>
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- Modal -->
+    </div>
+</div>
+<!-- Modal-Effect -->
+<script src="assets/plugins/custombox/js/custombox.min.js"></script>
+<script src="assets/plugins/custombox/js/legacy.min.js"></script>
+
+
+<script type="text/javascript" src="lib/jquery.raty.min.js"></script>
+<script>
+    $('#cancel-off-and-cancel-on-demo').raty({
+        number: 3,
+        score: 3,
+        path     : null,
+        starOn   : 'lib/img/star-on.png',
+        starOff  : 'lib/img/star-off.png',
+        click: function(score, evt) {
+            if(score==1){
+                $(".pingjia-text1").text("没感觉");
+            }else if(score==2){
+                $(".pingjia-text1").text("和老师交流很愉快");
+            }else if(score==3){
+                $(".pingjia-text1").text("和老师互动非常开心");
+            }
+
+        },mouseover: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text1").text("没感觉");
+            }else if(score==2){
+                $(".pingjia-text1").text("和老师交流很愉快");
+            }else if(score==3){
+                $(".pingjia-text1").text("和老师互动非常开心");
+            }
+
+        },mouseout: function(score, evt) {
+
+            $(".pingjia-text1").text("和老师互动非常开心");
+
+        }
+
+    });
+    $('#cancel-off-and-cancel-on-demo2').raty({
+        number: 3,
+        score: 3,
+        path     : null,
+
+
+        starOn   : 'lib/img/star-on.png',
+
+        starOff  : 'lib/img/star-off.png',
+        click: function(score, evt) {
+            if(score==1){
+                $(".pingjia-text2").text("完全不记得");
+            }else if(score==2){
+                $(".pingjia-text2").text("记得一部分");
+            }else if(score==3){
+                $(".pingjia-text2").text("基本都记下了");
+            }
+
+        },mouseover: function(score, evt) {
+
+            if(score==1){
+                $(".pingjia-text2").text("完全不记得");
+            }else if(score==2){
+                $(".pingjia-text2").text("记得一部分");
+            }else if(score==3){
+                $(".pingjia-text2").text("基本都记下了");
+            }
+
+        },mouseout: function(score, evt) {
+
+            $(".pingjia-text2").text("基本都记下了");
+
+        }
+
+    });
+</script>
