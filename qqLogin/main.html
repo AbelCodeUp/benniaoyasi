@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="qq_css/style.css">
+</head>
+<body>
+	<div class="qq_header fl">
+		<div class="logo_img fl">
+			<img src="qq_images/login-logo.png" alt="">
+			<span>青少在线外教</span>
+		</div>
+		<div class="logo_title">
+			Please select a course
+		</div>
+
+	</div>
+	<div class="qq_content">
+		<div class="main_content">
+			<div class="main_header">
+				<ul>
+					<li>Beijing Time</li>
+					<li>
+						<span id="serverTime"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="main_panel">
+				<p class="main_panel_title text-right" id="lessonType">
+					Regular Class
+				</p>
+				<ul>
+					<li>
+						<span id="startTime">17:30</span>
+					</li>
+					<li>
+						<span id="lessonName">Text6</span>
+					</li>
+				</ul>
+				<a href="javascript:;" class="joinClassRoom u-btn">Go</a>
+			</div>
+		</div>
+	</div>
+	<script src="qq_js/jquery-1.7.2.min.js"></script>
+	<script src="qq_js/encode.js"></script>
+	<script>
+		var serverTime;
+		var tTime;
+		var tLessonId = Decrypt(location.search.split('?')[1]).split('=')[1];
+		if(tLessonId == undefined){
+			window.location.href = window.location.href = '/qqLogin/login.html';
+		}
+		var promise = $.ajax({
+			url:'http://w.gogo-talk.com/api/Login/GetTeacherClassLesson',
+			type:'get',
+			dataType:'json',
+			data:{'lessonId':tLessonId}
+		});
+		promise.done(function(res){
+			if(res.result == 1){
+				serverTime = res.msg;
+				var data = res.data[0];
+				var startTime = data.StartTime.split('T')[0] + ' ' + data.StartTime.split('T')[1];
+				var className = data.LessonName;
+				var type = data.IsDemo == 1 ? '体验课':'正常课';
+
+				$('#lessonType').html(type);
+				$('#startTime').html(startTime);
+				$('#lessonName').html(className);
+
+				getTime(serverTime);
+				tTime = new Date(serverTime).getTime();
+
+			}
+		});
+		setInterval(function(){
+			tTime += 1000;
+			getTime(tTime);
+		},1000);
+		function getTime(time){
+			var myDate = new Date(time);
+			var year = myDate.getFullYear();
+			var month = myDate.getMonth() + 1;
+			var day = myDate.getDate();
+			var hours = myDate.getHours();
+			var minutes = myDate.getMinutes();
+			var seconds = myDate.getSeconds();
+			var n, d, h, m,s;
+			if (month < 10) {
+				n = "0" + month;
+			} else {
+				n = hours;
+			}
+			if (day < 10) {
+				d = "0" + day;
+			} else {
+				d = day;
+			}
+			if (hours < 10) {
+				h = "0" + hours;
+			} else {
+				h = hours;
+			}
+			if (seconds < 10) {
+				s = "0" + seconds;
+			} else {
+				s = seconds;
+			}
+			if (minutes < 10) {
+				m = "0" + minutes;
+			} else {
+				m = minutes;
+			}
+			$("#serverTime").html(year+"-"+n+"-"+d+" "+h+":"+m+":"+s); //将值赋给div
+		}
+
+	</script>
+</body>
+</html>

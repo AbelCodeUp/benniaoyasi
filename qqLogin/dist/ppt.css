@@ -1,0 +1,368 @@
+    	#svgbox{
+    		width: 50px;
+    		position: absolute;
+    		left:10px;top:60px;
+    		z-index:10;
+    	}
+    	#svgbox .btnbox{
+    		width: 100%;
+    		margin:0;padding:0;
+    		list-style: none;
+    		position: static;
+    	}
+    	#svgbox .btnbox2{
+    		width: 100%;
+    		margin:0;padding:0;
+    		list-style: none;
+    		position: absolute;
+            left:0;
+            bottom:-70%;
+    	}
+    	#svgbox .btnbox li{
+    		display: block;
+            float:left!important;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            position:relative;
+            margin-bottom: 15px;
+    	}
+    	#svgbox .btnbox li div.iconfont{
+    		position: static;
+    		width: 100%;
+    		height:100%;
+    		text-align: center;
+    		line-height: 40px;
+    		font-size: 22px;
+    		color:#fff;border-radius: 50%;background:rgba(0,0,0,0.4);
+    	}
+    	#svgbox .btnbox2 li{
+    		display: block;
+            float:left!important;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            position:static;
+    	}
+    	#svgbox .btnbox2 li div.iconfont{
+    		position: static;
+    		width: 100%;
+    		height:100%;
+    		text-align: center;
+    		line-height: 40px;
+    		font-size: 22px;
+    		color:#fff;border-radius: 50%;background:rgba(0,0,0,0.4);
+    	}
+    	#hudongBox{
+    		position:absolute;
+    		left: 0;
+    		bottom:0;
+    		width:100%;
+    		height:50px;
+    		z-index: 9;
+    	}
+    	#pageBox{
+    		position:relative;
+    		right:0;
+    		bottom:0;
+    		width:140px;
+    		height:32px;
+    		z-index: 10;
+    		float:right;
+    		bottom: 0;
+    	}
+    	#pageBox button{
+    		width: 32px;
+    		height:32px;
+    		font-size: 20px;
+    		text-align: center;
+    		float:left;
+    		position: static;
+    		border-radius: 50%;
+    		background:rgba(0,0,0,0.4);
+    		color:#fff;
+    	}
+    	#pageBox button div{
+    		position: static;
+    	}
+    	#pageBox #slide-counter{
+    		width: 50px;
+    		height:30px;
+    		text-align: center;
+    		float:left;
+    		position: static;
+    	}
+    	#pageBox #slide-counter #current-slide {
+		    margin-top: 7px;
+		    border: none;
+		    width: 100%;position: static;
+		}
+		#svgbox .btnbox .shezhi{
+			width: 247px;
+			height:44px;
+			position: absolute;
+			left:52px;
+			top:0px;
+			border-radius: 2px;
+            display: none;
+			z-index: 10;background:rgba(0,0,0,0.4)
+		}
+		#svgbox .btnbox .shezhi .lineWidth{
+			float:left;
+			position: static;
+			overflow: hidden;
+			padding-top:10px;
+			padding-bottom: 10px;
+			padding-left: 5px;
+		}
+		#svgbox .btnbox .shezhi .lineWidth li{
+            float:left;
+			position: static;
+			display: block;
+			width:22px;
+			height:22px;
+			border:1px solid rgba(0,0,0,0);
+		}
+		#svgbox .btnbox .shezhi .lineWidth li.lineWidth-active{
+			border:1px solid #ccc;
+		}
+		#svgbox .btnbox .shezhi .lineWidth li span{
+			display: block;
+			width:2px;
+			height:2px;position: static;
+			border-radius: 50%;
+			background:#000;
+			margin:9px auto;
+			border:1px solid #ccc;
+		}
+		#svgbox .btnbox .shezhi .shuline{
+			position: static;
+			width: 1px;
+			height:24px;
+			background-color: #ccc;
+			margin-left:2px;
+			margin-right: 8px;
+			float:left;
+			margin-top: 10px;
+		}
+		#svgbox .btnbox .shezhi .lineWidth li .twopx{
+			width:4px;
+			height:4px;
+			margin:8px auto;
+		}
+		#svgbox .btnbox .shezhi .lineWidth li .threepx{
+			width:6px;
+			height:6px;
+			margin:7px auto;
+		}
+		#svgbox .btnbox .colorBox{
+		    float:left;
+		    position: static;
+		    padding-top:8px;
+		    width:155px;
+		    padding-left: 0;
+		}
+		#svgbox .btnbox .colorBox li{
+			width: 11px;
+            height:11px;
+            border:1px solid #ccc;
+            float:left;
+            position: static;
+            margin:1px;
+		}
+		#svgbox .btnbox .colorBox li.color-active1{
+			width: 26px;
+			height:26px;
+			margin-right: 4px;
+			padding:1px;
+		}
+        #svgbox .btnbox .colorBox li.color-active1 .color-active{
+        	width:26px;
+        	height:26px;
+        	background:#000; 
+        	position: static;
+        }
+		#hudongBox #biaoqing{
+			position: relative;
+			bottom:10px;
+			z-index: 10;
+			float:left;
+			padding:0;
+			margin:0;
+			list-style: none;
+			line-height: 30px;
+			margin-left: 55px;
+		}
+		#hudongBox #biaoqing li{
+			position: static;
+			float:left;
+			margin:0 10px;
+			width:50px;
+			height:50px;
+			border-radius: 50%;
+            text-align: center;
+		}
+		#hudongBox #biaoqing #veryGood{
+            background:url(images/verygood-s.png) no-repeat center center rgba(0,0,0,0.4);
+            background-size:80% ;
+            position: relative;
+		}
+		#hudongBox #biaoqing #good{
+            background:url(images/good-s.png) no-repeat center center rgba(0,0,0,0.4);
+            position: relative;
+            background-size:60% ;
+		}
+		#hudongBox #biaoqing #zan{
+            background:url(images/zan.png) no-repeat center center rgba(0,0,0,0.4);
+            position: relative;
+            background-size:47% ;
+		}
+		#veryGoodBox{
+			width: 48px;
+			height:32px;
+			position: absolute;right:0;bottom:0;left:0;top:0;
+			margin:auto;
+			z-index: 12;
+			padding:10px;
+			opacity:0;
+			overflow: hidden;
+            text-align: center;
+		}
+		#veryGoodBox img{
+			width: 80%;
+			position: static;
+		}
+		#GoodBox{
+			width: 28px;
+			height:32px;
+			position: absolute;right:0;bottom:0;left:0;top:0;
+			margin:auto;
+			z-index: 12;
+			padding:10px;
+			opacity:0;
+			overflow: hidden;
+		}
+		#GoodBox img{
+			width: 80%;
+			position: static;
+		}
+		@keyframes aa{
+            0%{
+            	transform:rotateZ(0deg);
+            }
+            25%{transform:rotateZ(45deg);}
+            50%{
+            	transform:rotateZ(0deg);
+            }
+            75%{transform:rotateZ(-45deg);}
+            100%{transform:rotateZ(0deg);}
+		}
+		@-webkit-keyframes aa{
+            0%{
+            	transform:rotateZ(0deg);
+            }
+            25%{transform:rotateZ(45deg);}
+            50%{
+            	transform:rotateZ(0deg);
+            }
+            75%{transform:rotateZ(-45deg);}
+            100%{transform:rotateZ(0deg);}
+		}
+		@-moz-keyframes aa{
+            0%{
+            	transform:rotateZ(0deg);
+            }
+            25%{transform:rotateZ(45deg);}
+            50%{
+            	transform:rotateZ(0deg);
+            }
+            75%{transform:rotateZ(-45deg);}
+            100%{transform:rotateZ(0deg);}
+		}
+		@-ms-keyframes aa{
+            0%{
+            	transform:rotateZ(0deg);
+            }
+            25%{transform:rotateZ(45deg);}
+            50%{
+            	transform:rotateZ(0deg);
+            }
+            75%{transform:rotateZ(-45deg);}
+            100%{transform:rotateZ(0deg);}
+		}
+		@-o-keyframes aa{
+            0%{
+            	transform:rotateZ(0deg);
+            }
+            25%{transform:rotateZ(45deg);}
+            50%{
+            	transform:rotateZ(0deg);
+            }
+            75%{transform:rotateZ(-45deg);}
+            100%{transform:rotateZ(0deg);}
+		}
+		#GoodBox.goodActive{
+			animation:aa 0.8s linear;
+			-webkit-animation: aa 0.8s linear;
+	        -moz-animation:aa 0.8s linear;
+	        -ms-animation:aa 0.8s linear;
+	        -o-animation: aa 0.8s linear;
+		}
+
+        #dianzan{
+        	width:200px;
+        	height:360px;
+        	position:absolute;left:14%;bottom:40px;z-index:11;
+        	display: none;
+        }
+        #headbox{
+            width:100%;height:20px;position:absolute;left:0;top:0;z-index:13;
+            padding:15px 0 15px 0;
+            background:rgba(255,255,255,0.2);
+        }
+        #headbox #logobox{
+            position: static;
+            float:left;
+            margin-left: 15px;
+        }
+        #headbox #logobox img{
+        	position: static;
+        	height:20px;
+        	float:left;
+        }
+        #headbox #logobox p{
+        	position: static;
+        	line-height: 20px;
+        	font-size: 10px;
+        	margin:0;
+        	float:left;
+        	color:#cf121c;
+        	margin-left: 3px;
+        }
+        #headbox #head-right{
+        	position: static;
+        	float:right;
+        	height:20px;
+        	margin-right: 10px;
+        }
+        #headbox #head-right p{
+        	position:static;
+        	float:left;
+        	margin:0;
+        	margin-right: 20px;
+        	font-size: 14px;
+        	line-height: 20px;
+        }
+        #headbox #head-right p span{
+        	position: static;
+
+        }
+        #headbox #head-right p.iconfont:before{
+        	margin-right: 8px;
+        }
+        #clock{color:#cf121c;}

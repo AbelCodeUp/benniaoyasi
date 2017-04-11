@@ -1,0 +1,293 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+body,html{
+    font-family:Arial,'Times New Roman','Microsoft YaHei',SimHei;
+    font:bold 12px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei;
+}
+ul li
+{
+    list-style: none;
+}
+.fl
+{
+    float: left;
+}
+.fr
+{
+    float: right;
+}
+.text-right{
+	text-align: right;
+}
+/* header */
+.qq_header
+{
+    line-height: 122px;
+
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    height: 122px;
+
+    background-color: #fff;
+    overflow: hidden;
+
+    position: relative;
+}
+.logo_title
+{
+	line-height: 130px;
+	text-align: center;
+
+	width: 100%;
+	height: 100%;
+	color: #ea5851;
+	font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+}
+.qq_header .logo_img *
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+.logo_img
+{
+    width: 406px;
+
+    text-align: center;
+}
+.qq_header .logo_img img
+{
+    width: 170px;
+}
+.qq_header .logo_img span
+{
+    font-size: 18px;
+}
+/* content */
+.qq_content
+{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background: #ebeff2;
+    background-color: #ebeff2;
+}
+.login_content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 1028px;
+    height: 600px;
+    margin-top: -260px;
+    margin-left: -514px;
+
+    background-color: #fff;
+}
+.login-left-img
+{
+    width: 50%;
+    height: 100%;
+}
+.login-left-img img
+{
+    width: 100%;
+}
+
+.login-right-box
+{
+    width: 50%;
+    height: 100%;
+}
+.r-header
+{
+    font-size: 40px;
+    line-height: 160px;
+
+    width: 100%;
+    height: 160px;
+
+    text-indent: 63px;
+
+    color: #ea5851;
+}
+.r-content
+{
+    width: 390px;
+    margin: 0 auto;
+}
+.r-content ul li
+{
+    line-height: 50px;
+
+    height: 50px;
+}
+.r-title
+{
+    font-size: 20px;
+
+    color: #999;
+}
+.r-input
+{
+    font-size: 18px;
+    line-height: 40px;
+
+    width: 100%;
+    height: 40px;
+
+    color: #ccc;
+    border: none;
+    border-bottom: 1px solid #e2e6ed;
+    outline: none;
+    background: #fff;
+}
+.l-submit
+{
+    font-size: 36px;
+
+    width: 100%;
+    height: 85px;
+    margin-top: 50px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    background: #ccc;
+
+    border-radius: 40px;
+
+    outline: none;
+    -webkit-appearance: button;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    user-select: none;
+    border: none;
+    cursor: not-allowed;
+}
+
+.l-active{
+	background: #cf121c;
+	cursor: pointer;
+}
+
+/* 首页 */
+.main_content{
+	width: 500px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -250px;
+	text-align: center;
+
+}
+.main_header{
+	height: 100px;
+}
+.main_header ul li{
+	height: 50px;
+}
+.main_header ul li:nth-of-type(1){
+	font-size: 26px;
+	color: #333333;
+}
+.main_header ul li:nth-of-type(2){
+	font-size: 30px;
+	color: #333333;
+}
+.main_panel{
+	background: #fff;
+	padding: 20px;
+}
+.main_panel_title{
+	height: 50px;
+	line-height: 50px;
+    font-size: 20px;
+}
+.main_panel ul li{
+	height: 65px;
+	line-height: 65px;
+	color: #333;
+}
+.main_panel ul li span{
+	font-size: 28px;
+}
+.u-btn {
+	padding-right: 120px;
+	padding-left: 120px;
+	max-width: 300px;
+	height: 60px;
+	background: #ea5851;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-size: 32px;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 auto;
+	border-radius: 30px;
+	margin-top: 30px;
+}
+/* 结束上课 */
+.e_content{
+	width: 700px;
+	height: 400px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -350px;
+	padding: 20px 30px;
+}
+.e-btn{
+	max-width: 700px;
+	padding-right: 80px;
+	padding-left: 80px;
+	font-size: 28px;
+}
+.e-header{
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 1px solid #ccc;
+	font-size: 30px;
+	color: #333333;
+}
+.e-content{
+	font-size: 26px;
+	color: #333;
+	text-align: center;
+}
+.e-con-title{
+	height: 90px;
+	line-height: 90px;
+}
+.e-content ul li{
+	height: 50px;
+	line-height: 50px;
+}

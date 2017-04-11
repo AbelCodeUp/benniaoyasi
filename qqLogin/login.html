@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQRoom Login</title>
+	<link rel="stylesheet" href="http://localhost:63342/qqLogin/qq_css/style.css">
+	<link rel="stylesheet" href="http://localhost:63342/qqLogin/qq_css/rjp.css">
+</head>
+<body>
+	<div class="qq_header fl">
+		<div class="logo_img">
+			<img src="http://localhost:63342/qqLogin/qq_images/login-logo.png" alt="">
+			<span>青少在线外教</span>
+		</div>
+	</div>
+	<div class="qq_content">
+		<div class="login_content">
+			<div class="fl login-left-img">
+				<img src="http://localhost:63342/qqLogin/qq_images/login-bg.png" alt="">
+			</div>
+			<div class="login-right-box fr">
+				<div class="r-header">
+					<p>Login</p>
+				</div>
+				<div class="r-content">
+					<ul>
+						<li class="r-title">Account:</li>
+						<li>
+							<input type="text" onClick="$('#keyboard').show()" onkeypress="javascript:return false" class="r-input" id="write" placeholder="Please enter the account" maxlength="6">
+
+						</li>
+					</ul>
+					<input value="Login" type="button" id="l-submit" class="l-submit l-active" >
+				</div>
+			</div>
+			<ul id="keyboard" style="display: none">
+
+				<li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+
+				<li class="symbol"><span class="off">1</span><span class="on">!</span></li>
+
+				<li class="symbol"><span class="off">2</span><span class="on">@</span></li>
+
+				<li class="symbol"><span class="off">3</span><span class="on">#</span></li>
+
+				<li class="symbol"><span class="off">4</span><span class="on">$</span></li>
+
+				<li class="symbol"><span class="off">5</span><span class="on">%</span></li>
+
+				<li class="symbol"><span class="off">6</span><span class="on">^</span></li>
+
+				<li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
+
+				<li class="symbol"><span class="off">8</span><span class="on">*</span></li>
+
+				<li class="symbol"><span class="off">9</span><span class="on">(</span></li>
+
+				<li class="symbol"><span class="off">0</span><span class="on">)</span></li>
+
+				<li class="symbol"><span class="off">-</span><span class="on">_</span></li>
+
+				<li class="symbol"><span class="off">=</span><span class="on">+</span></li>
+
+				<li class="delete lastitem">delete</li>
+
+				<li class="tab">tab</li>
+
+				<li class="letter">q</li>
+
+				<li class="letter">w</li>
+
+				<li class="letter">e</li>
+
+				<li class="letter">r</li>
+
+				<li class="letter">t</li>
+
+				<li class="letter">y</li>
+
+				<li class="letter">u</li>
+
+				<li class="letter">i</li>
+
+				<li class="letter">o</li>
+
+				<li class="letter">p</li>
+
+				<li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+
+				<li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+
+				<li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
+
+				<li class="capslock">caps lock</li>
+
+				<li class="letter">a</li>
+
+				<li class="letter">s</li>
+
+				<li class="letter">d</li>
+
+				<li class="letter">f</li>
+
+				<li class="letter">g</li>
+
+				<li class="letter">h</li>
+
+				<li class="letter">j</li>
+
+				<li class="letter">k</li>
+
+				<li class="letter">l</li>
+
+				<li class="symbol"><span class="off">;</span><span class="on">:</span></li>
+
+				<li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
+
+				<li class="return lastitem">return</li>
+
+				<li class="left-shift">shift</li>
+
+				<li class="letter">z</li>
+
+				<li class="letter">x</li>
+
+				<li class="letter">c</li>
+
+				<li class="letter">v</li>
+
+				<li class="letter">b</li>
+
+				<li class="letter">n</li>
+
+				<li class="letter">m</li>
+
+				<li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
+
+				<li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+
+				<li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+
+				<li class="right-shift lastitem">shift</li>
+
+				<li class="space lastitem">&nbsp;</li>
+
+			</ul>
+
+		</div>
+		<div class="main_content" style="display: none">
+			<div class="main_header">
+				<ul>
+					<li>Beijing Time</li>
+					<li>
+						<span id="serverTime"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="main_panel">
+				<p class="main_panel_title text-right" id="lessonType">
+					Regular Class
+				</p>
+				<ul>
+					<li>
+						<span id="startTime">17:30</span>
+					</li>
+					<li>
+						<span id="lessonName">Text6</span>
+					</li>
+				</ul>
+				<a href="javascript:;" class="joinClassRoom u-btn">Go</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://localhost:63342/qqLogin/qq_js/jquery-1.7.2.min.js"></script>
+	<script src="http://localhost:63342/qqLogin/qq_js/encode.js"></script>
+	<script src="http://localhost:63342/qqLogin/qq_js/keyboard.js"></script>
+	<script>
+		$(function(){
+			var loginAjax;
+			var lessonId;
+			var num = /\d{6}/g;
+			var submit = $('#l-submit');
+
+			submit.click(function(){
+
+				var token = $('#write');
+				if(token.val() == ''){
+					alert('请填写认证码');
+					return false;
+				}else if(!(num.test(token.val()))){
+					alert('请填写正确格式的认证码');
+					return false;
+				}else{
+					loginAjax = $.ajax({
+						url:'http://w.gogo-talk.com/api/Login/GetAuthCode',
+						type:'get',
+						dataType:'json',
+						data:{'authCode':token.val()}
+					});
+					loginAjax.done(function(res){
+						if(res.result == 1){
+							if(res.data != null){
+								alert('认证成功');
+								$('.login_content').hide();
+								$('.main_content').show();
+								token.val('');
+								lessonId = res.data[0].LessonId;
+								var promise = $.ajax({
+									url:'http://w.gogo-talk.com/api/Login/GetTeacherClassLesson',
+									type:'get',
+									dataType:'json',
+									data:{'lessonId':lessonId}
+								});
+								promise.done(function(res){
+									if(res.result == 1){
+										var serverTime = res.msg;
+										var data = res.data[0];
+										var startTime = data.StartTime.split('T')[0] + ' ' + data.StartTime.split('T')[1];
+										var className = data.LessonName;
+										var type = data.IsDemo == 1 ? '体验课':'正常课';
+
+										$('#lessonType').html(type);
+										$('#startTime').html(startTime);
+										$('#lessonName').html(className);
+
+										getTime(serverTime);
+										var tTime = new Date(serverTime).getTime();
+
+										setInterval(function(){
+											tTime += 1000;
+											getTime(tTime);
+										},1000);
+
+									}
+								});
+							}else{
+								alert('您的认证码不正确，请重新输入！');
+								token.val('');
+							}
+						}
+					});
+
+				}
+			});
+
+			function getTime(time){
+				var myDate = new Date(time);
+				var year = myDate.getFullYear();
+				var month = myDate.getMonth() + 1;
+				var day = myDate.getDate();
+				var hours = myDate.getHours();
+				var minutes = myDate.getMinutes();
+				var seconds = myDate.getSeconds();
+				var n, d, h, m,s;
+				if (month < 10) {
+					n = "0" + month;
+				} else {
+					n = hours;
+				}
+				if (day < 10) {
+					d = "0" + day;
+				} else {
+					d = day;
+				}
+				if (hours < 10) {
+					h = "0" + hours;
+				} else {
+					h = hours;
+				}
+				if (seconds < 10) {
+					s = "0" + seconds;
+				} else {
+					s = seconds;
+				}
+				if (minutes < 10) {
+					m = "0" + minutes;
+				} else {
+					m = minutes;
+				}
+				$("#serverTime").html(year+"-"+n+"-"+d+" "+h+":"+m+":"+s); //将值赋给div
+			}
+
+		});
+	</script>
+</body>
+</html>
