@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/*banner start--------*/
+.philippines_banner{position: absolute; top:0; left: 0; width: 100%; height: 100%;min-width: 1250px; overflow: hidden;}
+.philippines_banner_bg{position: absolute; top:0; left: 0; right: 0; margin: 0 auto;width: 100%; height:100%;object-fit: cover;}
+.philippines_banner_text{position: absolute; top:30%; left:0;width: 61%;}
+.philippines_banner_text1{width:100%;-webkit-animation: philippines_banner_text2 1s forwards;animation: philippines_banner_text2 1s forwards;}
+.philippines_banner_text2{width:100%;-webkit-animation: philippines_banner_text 1.4s forwards;animation: philippines_banner_text 1.4s forwards;}
+.philippines_banner_text3{width:100%;-webkit-animation: philippines_banner_text2 1.8s forwards;animation: philippines_banner_text2 1.8s forwards;}
+@-webkit-keyframes philippines_banner_text{
+    0%{ opacity: 0; transform: translate(15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+@keyframes philippines_banner_text{
+    0%{ opacity: 0; transform: translate(15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+@-webkit-keyframes philippines_banner_text2{
+    0%{ opacity: 0; transform: translate(-15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+@keyframes philippines_banner_text2{
+    0%{ opacity: 0; transform: translate(-15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+/*banner end----------*/
+/*about us start--------*/
+.philippines_title{display: block;margin: 94px 0 34px 0;}
+.philippines_abu{ width: 100%; font-size: 16px; line-height: 30px; color: #333333; word-spacing: 4px; padding-bottom: 94px;}
+/*about us end--------*/
+/*career start*/
+.philippines_career{width: 100%; height:auto; background: #f9f9f9; padding-bottom: 58px; position: relative; overflow: hidden;}
+.philippines_title2{width: 100%;padding: 94px 0 58px 0; text-align: right;}
+.philippines_career_rel{width: 100%; height: 740px; position: relative;}
+
+
+.philippines_career_item_rel_box{width: 100%; height: 740px; position: relative;}
+.philippines_career_item_rel{ width: 100%;height: 100%; position: absolute; top:0; left: 0;display: none;}
+.philippines_career_item_rel.curr{ display: block;}
+.philippines_career_item_rel_left{width: 510px; height: 100%;}
+.philippines_career_item_rel_right{ position: absolute; left: 590px; top:0;-webkit-animation: philippines_career_item_rel_right 1.8s forwards;animation: philippines_career_item_rel_right 1.8s forwards;}
+@-webkit-keyframes philippines_career_item_rel_right{
+    0%{ opacity: 0; transform: translate(15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+@keyframes philippines_career_item_rel_right{
+    0%{ opacity: 0; transform: translate(15px,0);}
+    100%{opacity: 1; transform: translate(0,0);}
+}
+.philippines_career_item_ti{ font-size: 46px; color: #333; font-weight: bold; height: 80px;}
+.philippines_career_item_ti_sub{ font-size: 20px;color: #333; font-weight: bold; height: 30px; }
+.philippines_do{background: url("../philippines_images/pic/do.png") 0 11px no-repeat; width: 100%; line-height: 26px; padding-left: 20px; font-size: 16px;color: #333;  }
+.philippines_do2{background: url("../philippines_images/pic/do.png") 0 9px no-repeat; width: 100%; line-height: 22px; padding-left: 20px; font-size: 16px;color: #333;  }
+.philippines_do_mb{margin-bottom: 20px;}
+.po_lineheight32{ line-height: 32px;}
+
+/*list*/
+.philippines_career_item_list{position: absolute; top:590px; left: 0;}
+.philippines_mr12{margin-right: 12px;}
+.philippines_career_item_list dl{ width:161px; height: 200px; overflow: hidden;cursor: pointer; }
+.philippines_career_item_list dl img{-webkit-transition: all 0.6s linear;transition: all 0.6s linear;cursor: pointer; }
+.philippines_career_item_list dl:hover img{-webkit-transform: scale(1.1,1.1);transform: scale(1.1,1.1);}
+.philippines_career_item_list dl dt{ width:161px;height:113px; overflow: hidden;position: relative; cursor: pointer; }
+.philippines_career_item_list dl dt span{position: absolute; left: 0; top: 0; width: 100%; height: 100%;background:#000;opacity: 0.36; cursor: pointer; }
+.philippines_career_item_list dl.curr dt span{display: none; }
+.philippines_career_item_list dl dd{ text-align: center; color: #333; font-size: 18px; height: 40px; line-height: 40px;cursor: pointer;}
+
+
+/*career left*/
+.philippines_career_lebtu{position: absolute; left: -170px; top: 234px; width:91px; }
+.philippines_career_pre{ width: 91px;height: 91px; margin-bottom: 78px; background: url("../philippines_images/up1.png") no-repeat; background-size: contain; cursor: pointer;}
+.philippines_career_pre:hover{background: url("../philippines_images/up2.png") no-repeat; background-size: contain;}
+.philippines_career_nex{ width: 91px;height: 91px; background: url("../philippines_images/dow1.png") no-repeat; background-size: contain;cursor: pointer;}
+.philippines_career_nex:hover{ background: url("../philippines_images/dow2.png") no-repeat; background-size: contain;}
+
+/*btu*/
+.philippines_navbtu2{width: 160px; height:58px; background:#e50113;position: absolute;right:20px; top: 794px;}
+@media screen and (max-width: 1400px) {
+    .philippines_navbtu2{position: absolute;left: 0;right: 0;margin: 0 auto; top: 960px;}
+    .philippines_career{ height: 1018px;}
+}
+.philippines_navbtu2_text{ width:100%; height: 100%;color: #fff; text-align: center; line-height: 58px; font-size: 18px;display: block;cursor: pointer;-webkit-animation: philippines_navbtu2_text1 0.4s forwards;animation: philippines_navbtu2_text1 0.4s forwards;}
+@-webkit-keyframes philippines_navbtu2_text1{
+    0%{opacity: 0;-webkit-transform: translate(-20px,0);}
+    100%{opacity: 1;-webkit-transform: translate(0,0);}
+}
+@keyframes philippines_navbtu2_text1{
+    0%{opacity: 0;transform: translate(-20px,0);}
+    100%{opacity: 1;transform: translate(0,0);}
+}
+.philippines_navbtu2:hover .philippines_navbtu2_text{-webkit-animation: philippines_navbtu2_text 0.2s forwards;animation: philippines_navbtu2_text 0.2s forwards;}
+@-webkit-keyframes philippines_navbtu2_text{
+    0%{ opacity: 1; transform: translate(0,0);}
+    100%{opacity: 0; transform: translate(20px,0);}
+}
+@keyframes philippines_navbtu2_text{
+    0%{ opacity: 1; transform: translate(0,0);}
+    100%{opacity: 0; transform: translate(20px,0);}
+}
+.philippines_navbtu2_hov{width:100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; overflow: hidden;cursor: pointer;}
+.philippines_navbtu2:hover .philippines_navbtu2_hov{ opacity: 1;}
+.philippines_navbtu2_hov_xian{ width:66px; height: 2px; border-radius: 3px; background: #fff; overflow: hidden; position: absolute;top: 28px;left: 44px;}
+.philippines_navbtu2:hover .philippines_navbtu2_hov_xian{ opacity: 1;-webkit-animation: philippines_navbtu2_hov_xian 0.7s forwards;animation: philippines_navbtu2_hov_xian 0.7s forwards;}
+@-webkit-keyframes philippines_navbtu2_hov_xian{
+    0%{left: -200px; width: 200px; opacity: 0;}
+    100%{left: 44px; width:66px; opacity: 1;}
+}
+@keyframes philippines_navbtu2_hov_xian{
+    0%{left: -160px; width: 200px; opacity: 0;}
+    100%{left: 44px; width:66px; opacity: 1;}
+}
+.philippines_navbtu2_hov_jiao{ width: 10px; height: 18px; background: url("../philippines_images/philippines_jiao.png") no-repeat; background-size: contain; position: absolute; top:20px; left: 102px;}
+.philippines_navbtu2:hover .philippines_navbtu2_hov_jiao{ -webkit-animation: philippines_navbtu2_hov_jiao 0.8s forwards;animation: philippines_navbtu2_hov_jiao 0.8s forwards;}
+@-webkit-keyframes philippines_navbtu2_hov_jiao{
+    0%{ -webkit-transform: scale(0,0)}
+    50%{ -webkit-transform: scale(0,0)}
+    100%{ -webkit-transform: scale(1,1)}
+}
+@keyframes philippines_navbtu2_hov_jiao{
+    0%{transform: scale(0,0)}
+    50%{transform: scale(0,0)}
+    100%{transform: scale(1,1)}
+}
+
+/*career end*/
+/*contact start*/
+.philippines_contact{ padding-bottom: 58px;}
+.philippines_title3{display: block;margin: 94px 0 58px 0;}
+.philippines_map{ width: 864px;}
+.philippines_map_rel{ width: 100%; height: 517px;background: url("../philippines_images/map.jpg") no-repeat; background-size: contain;}
+#map_canvas{display:block;width: 100%; height: 100%;}
+.philippines_address{ font-size: 16px; line-height: 36px; color: #333333; word-spacing: 2px; padding: 20px 0;}
+.philippines_address span{ font-weight: bold;}
+.philippines_map_google{ width: 200px; height: auto; position: relative;}
+.philippines_map_google_ico{ width: 17px; height: 20px;  background: url("../philippines_images/position.png") no-repeat; background-size: contain;}
+.philippines_map_google:hover .philippines_map_google_ico{background: url("../philippines_images/position2.png") no-repeat; background-size: contain;}
+.philippines_map_google a{position: absolute; top:0 ;left: 0;width: 100%; height: 100%;}
+.philippines_map_google_text{ font-size: 18px; color: #333;margin-left: 10px;position: relative;}
+.philippines_map_google_text:after{content:""; width:100%; height:2px; background:#333; position: absolute; top:22px; left: 0; opacity: 0;}
+.philippines_map_google:hover .philippines_map_google_text:after{opacity:1;-webkit-animation: philippines_nav_hov 0.4s forwards;animation: philippines_nav_hov 0.4s forwards;}
+
+.philippines_map_right{width: 308px;}
+.philippines_map_ti{ padding-top: 56px; font-size: 20px; color: #333; font-weight: bold;line-height: 36px;}
+.philippines_map_p{font-size: 16px; color: #333;line-height: 26px; word-spacing: 4px;}
+.philippines_map_p a{font-size: 16px; color: #333;line-height: 26px;}
+.philippines_map_p a:hover{ color: #666;}
+/*contact end*/
+/*apply now start*/
+.philippines_apply{ width: 100%; height: 830px;background:#e50113; overflow: hidden; position: relative;}
+.philippines_title4{ display: block; margin: 0 auto;padding: 94px 0 58px 0;}
+.philippines_apply_rel{width: 100%; height: 740px;background: #fff;}
+.philippines_apply_form{width:1100px;margin: 0 auto; height: 740px; padding-top: 20px; }
+.philippines_apply_form_rel{width: 100%; height: 100%;}
+.philippines_apply_form_item{ height:88px; line-height:88px; border-bottom: 1px dashed #efefef; overflow: hidden}
+.philippines_apply_form_item2{ height:88px; line-height:88px; overflow: hidden;}
+.philippines_apply_form_item input{ text-indent: 10px;}
+.philippines_apply_form_item_label{ display: inline-block;width:206px; font-size: 18px; color: #333; position: relative; letter-spacing: 1px;}
+.philippines_apply_form_item_label span{color: #e50113; font-size: 18px;display: inline-block; padding-right: 10px; vertical-align:middle;}
+.philippines_apply_form_item_label2{ display: inline-block;width:200px; margin-left: 50px; font-size: 18px; color: #333; position: relative; letter-spacing: 1px;}
+.philippines_apply_form_item_label2 span{color: #e50113; font-size: 18px;display: inline-block; padding-right: 10px; vertical-align:middle;}
+
+.philippines_apply_select,.philippines_apply_form_item_input1{width: 314px; height: 44px; border: 1px solid #eeeeee;background: #fff;color: #333; font-size: 16px; text-indent: 6px; font-weight:normal;}
+.philippines_apply_select option{font-size: 14px; color: #999;}
+.philippines_apply_form_item_input2{width: 678px; height: 44px; border: 1px solid #eeeeee;background: #fff;color: #333; font-size: 18px; text-indent: 6px; font-weight:normal;}
+.philippines_apply_form_item_input3{width: 490px; height: 44px; border: 1px solid #eeeeee;background: #fff;color: #333; font-size: 18px; text-indent: 6px; font-weight:normal;}
+.philippines_apply_form_item_file_btu{ margin-left:30px;width: 153px; height: 46px; border: 1px solid #eeeeee;background: #f7f7f7;color: #666666; font-size: 16px; text-indent: 6px; font-weight:normal;-webkit-animation: philippines_apply_submit1 0.8s forwards;animation: philippines_apply_submit1 0.8s forwards;}
+.philippines_apply_form_item_file_btu:hover{color: #333;background: #eeeeee; -webkit-animation: philippines_apply_submit 0.8s forwards;animation: philippines_apply_submit 0.8s forwards;}
+.philippines_apply_form_item_file{display: none;}
+.tongyi_box{}
+.tongyi_box_xing{font-size: 18px; color: #e50113;padding-right: 12px; padding-top: 28px; }
+.gou{ width: 18px; height: 18px; border: 1px solid #666; background: #fff; margin-top: 23px; margin-right: 20px; position: relative; cursor: pointer;}
+.gou img{ width: 16px;position: absolute; top:0;left: 0; right: 0; bottom: 0; margin: auto; cursor: pointer;}
+.gou img.gou_img_dis{ display: none;}
+.text{height:68px; line-height: 68px; font-size: 14px;letter-spacing: 1px;}
+.text a{color:#e50113; }
+
+.philippines_apply_submit{ width: 260px; height: 60px; display: block; margin:10px auto 0; background: #e50113;color: #fff; font-size: 20px; text-align: center; line-height: 60px;-webkit-animation: philippines_apply_submit1 0.8s forwards;animation: philippines_apply_submit1 0.8s forwards; cursor: pointer;}
+@-webkit-keyframes philippines_apply_submit1{
+    0%{ letter-spacing: 4px;}
+    100%{letter-spacing: 0;}
+}
+@keyframes philippines_apply_submit1{
+    0%{ letter-spacing: 4px;}
+    100%{letter-spacing: 0;}
+}
+.philippines_apply_submit:hover{letter-spacing: 2px;  -webkit-animation: philippines_apply_submit 0.8s forwards;animation: philippines_apply_submit 0.8s forwards; background: #dc0213;}
+@-webkit-keyframes philippines_apply_submit{
+    0%{ letter-spacing: 0;}
+    100%{letter-spacing: 4px;}
+}
+@keyframes philippines_apply_submit{
+    0%{ letter-spacing: 0;}
+    100%{letter-spacing: 4px;}
+}
+/*apply now end*/
+
+
+
+.maodian{opacity: 0;}

@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+*{padding:0; margin:0; border:none;cursor:default; }
+body {font-size:12px;font-family: 'Arial', "微软雅黑";background:#FFF; width:100%; min-height:100%;min-width:1250px;}
+img {border:0;vertical-align:middle;}
+button, html input[type=button], input[type=submit] {-webkit-apperance:button;cursor:pointer}
+ul, li, ol {list-style:none;}
+a, button, input {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+a, area, button {   blur:expression(this.onFocus=this.blur());}
+:focus {outline:none;}
+a, input, button, select, textarea {outline:none;}
+a, a:hover {cursor:pointer;text-decoration:none;}
+table {border-collapse:collapse;}
+/*公共类名*/
+.new_warpper_0208 {width:1200px;margin:0 auto;}
+.left {float:left;}
+.right {float:right;}
+.smyclearfix:after{ content:"."; display:block; clear:both; height:0; font-size:0; overflow:hidden;}
+.smyclearfix{ zoom:1;}
+
+/*head start-------------------*/
+.philippines_head{ width: 100%; min-width: 1250px; max-width: 1920px; height: 70px; position: fixed; top: 0;left: 0;right: 0; margin: 0 auto; background: #fff; z-index: 90; box-shadow:0 1px 10px rgba(0,0,0,0.2);}
+.philippines_logo{ width: 238px; height: 52px; padding-top: 10px; padding-left: 24px;}
+.philippines_logo img{ width:100%;}
+
+.philippines_nav{ width: auto; height: 100%;}
+.philippines_navbtu{ width: 198px; height: 100%; background:#e50113;position: relative;}
+.philippines_navbtu_text{ width: 198px; height: 100%;color: #fff; text-align: center; line-height: 70px; font-size: 20px;display: block;cursor: pointer;-webkit-animation: philippines_navbtu_text1 0.4s forwards;animation: philippines_navbtu_text1 0.4s forwards;}
+@-webkit-keyframes philippines_navbtu_text1{
+    0%{opacity: 0;-webkit-transform: translate(-20px,0);}
+    100%{opacity: 1;-webkit-transform: translate(0,0);}
+}
+@keyframes philippines_navbtu_text1{
+    0%{opacity: 0;transform: translate(-20px,0);}
+    100%{opacity: 1;transform: translate(0,0);}
+}
+.philippines_navbtu:hover .philippines_navbtu_text{-webkit-animation: philippines_navbtu_text 0.2s forwards;animation: philippines_navbtu_text 0.2s forwards;}
+@-webkit-keyframes philippines_navbtu_text{
+    0%{ opacity: 1; transform: translate(0,0);}
+    100%{opacity: 0; transform: translate(20px,0);}
+}
+@keyframes philippines_navbtu_text{
+    0%{ opacity: 1; transform: translate(0,0);}
+    100%{opacity: 0; transform: translate(20px,0);}
+}
+.philippines_navbtu_hov{width: 198px; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; overflow: hidden;cursor: pointer;}
+.philippines_navbtu:hover .philippines_navbtu_hov{ opacity: 1;}
+.philippines_navbtu_hov_xian{ width:80px; height: 2px; border-radius: 3px; background: #fff; overflow: hidden; position: absolute;top: 34px;left: 60px;}
+.philippines_navbtu:hover .philippines_navbtu_hov_xian{ opacity: 1;-webkit-animation: philippines_navbtu_hov_xian 0.7s forwards;animation: philippines_navbtu_hov_xian 0.7s forwards;}
+@-webkit-keyframes philippines_navbtu_hov_xian{
+    0%{left: -200px; width: 200px; opacity: 0;}
+    100%{left: 60px; width:80px; opacity: 1;}
+}
+@keyframes philippines_navbtu_hov_xian{
+    0%{left: -160px; width: 200px; opacity: 0;}
+    100%{left: 60px; width:80px; opacity: 1;}
+}
+.philippines_navbtu_hov_jiao{ width: 10px; height: 18px; background: url("../philippines_images/philippines_jiao.png") no-repeat; background-size: contain; position: absolute; top:26px; left: 131px;}
+.philippines_navbtu:hover .philippines_navbtu_hov_jiao{ -webkit-animation: philippines_navbtu_hov_jiao 0.8s forwards;animation: philippines_navbtu_hov_jiao 0.8s forwards;}
+@-webkit-keyframes philippines_navbtu_hov_jiao{
+    0%{ -webkit-transform: scale(0,0)}
+    60%{ -webkit-transform: scale(0,0)}
+    100%{ -webkit-transform: scale(1,1)}
+}
+@keyframes philippines_navbtu_hov_jiao{
+    0%{transform: scale(0,0)}
+    60%{transform: scale(0,0)}
+    100%{transform: scale(1,1)}
+}
+/*nav start*/
+.philippines_nav_rel{ height: 100%; width: auto; overflow: hidden;}
+.philippines_nav_rel li{ height: 100%;}
+.philippines_nav_rel a{display: block;padding: 23px 0 0; margin:0 26px;height: 57px; font-size: 22px; color: #333; position: relative;}
+.philippines_nav_rel a:after{content:""; width:100%; height:2px; background:#e50113; position: absolute; top:52px; left: 0; opacity: 0;}
+.philippines_nav_rel li:hover a,.philippines_nav_rel li.curr a{color:#e50113;}
+.philippines_nav_rel li.curr a:after{opacity:1;-webkit-animation: philippines_nav_hov 0.4s forwards;animation: philippines_nav_hov 0.4s forwards;}
+@-webkit-keyframes philippines_nav_hov{
+    0%{ -webkit-transform: scale(0,0)}
+    100%{ -webkit-transform: scale(1,1)}
+}
+@keyframes philippines_nav_hov{
+    0%{transform: scale(0,0)}
+    100%{transform: scale(1,1)}
+}
+/*nav end*/
+/*head end----------*/
+
+
+.philippines_footer{ width: 1196px; height: 52px; margin: 58px auto; border: 1px solid #e2e1e1;}
+.philippines_footer_part1{ width: 247px; border-right: 1px solid #e2e1e1; height: 100%; text-align: center; line-height: 50px;}
+.philippines_footer_part1 img{ width: 70%;}
+.philippines_footer_part2{ width: 678px; height: 52px; line-height: 52px;border-right: 1px solid #e2e1e1; text-indent: 20px; font-size: 14px; color: #333; letter-spacing: 1px; word-spacing:2px;}
+.philippines_footer_part3{ width: 213px; height: 52px; line-height: 52px;border-right: 1px solid #e2e1e1; text-indent: 22px; font-size: 20px; color: #333; letter-spacing: 1px; }
+.philippines_footer_part4{ width: 52px; height: 52px; line-height: 52px; text-align:center; cursor: pointer;}
+.philippines_footer_part4 img{  cursor: pointer;}
