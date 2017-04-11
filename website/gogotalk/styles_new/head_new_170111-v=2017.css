@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* head */
+@media screen and (max-width:1360px) {
+   .new_warpper_170111{width:1100px; margin:0 auto;}
+}
+.head_161025{width:100%;height:auto; padding-top: 5px;}
+.headTop_161025{width:100%;height:90px;background: #fff;border-top:5px solid #cf121c; position: relative;}
+.headTop_logo_161025{width: 173px;height: 55px;margin-top: 20px;}
+.headTop_tel_161025{width: 268px;height: 39px;margin-top: 25px;}
+
+.download_0111{ width: 111px; height: 107px; background: url("../images_new/headImages_new/down/bg.png"); position: absolute;top:-10px;right: 0;}
+.download_jiantou_0111{ width: 14px; position: absolute;top:60px;left:79px;-webkit-animation:download_jiantou_0111 0.8s both infinite alternate;animation:download_jiantou_0111 0.8s both infinite alternate;}
+@-webkit-keyframes download_jiantou_0111 {
+    0% {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+@keyframes download_jiantou_0111 {
+    0% {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+/* nav */
+.headNav_161025{width: 100%;height: 64px;border-top: 1px solid #dcdcdc;background: #f5f7f8;}
+.headRelNav_161025{width: 1128px;height: 64px;overflow: hidden;margin: 0 auto;}
+.headRelNav_161025 li{height: 60px;line-height: 60px;padding: 0 22px;margin: 0 25px;}
+.headRelNav_161025 li a{color: #5a5a5a;font-size: 18px;}
+
+.headRelNav_161025 li.cur_new{border-bottom:4px solid #cf121c;}
+.headRelNav_161025 li.cur_new a{color:#cf121c;}
+
+.headRelNav_161025 li:hover{height: 60px;line-height: 60px;}
+.headRelNav_161025 li:hover a{color: #000;}
+.headRelNav_161025 li.cur_new:hover a{color: #cf121c;}
+
+/* 侧边栏 */
+.cebianlan_161025{position: fixed;top: 200px;right:0;z-index: 99999;}
+.cebianlan_161025_red{position: absolute;top: 0;right: -148px;width: 222px;height: 73px;
+    background: url("../images_new/headImages_new/cebian_red2_new_161025.png") no-repeat;cursor: pointer;}
+.cebianlan_161025_red_tel{height: 20px;padding: 16px 0 0 77px;font-size: 18px;color: #fff;letter-spacing: 2px;cursor: pointer; white-space:nowrap;}
+.cebianlan_161025_red_tel a{color: #fff;cursor: pointer;}
+.cebianlan_161025_red_time{padding-left: 77px;font-size: 13px;color: #fda9a9;cursor: pointer;}
+
+.cebianlan_161025_blue{position: absolute;top: 92px;right: -148px;width: 222px;height: 73px;
+background: url("../images_new/headImages_new/cebian_blue_new_161025.png") no-repeat;cursor: pointer;}
+.cebianlan_161025_blue_form{display: none;position: absolute;top: 19px;left: 23px;width: 222px;height: 33px;cursor: pointer;}
+.search_ord_161026{width: 222px;height: 33px;line-height: 33px;font-size: 14px;border-radius: 60px;background: #fff;color: #00b3d7!important;text-indent: 16px;}
+.search_ord_161026_button{position: absolute;top: 5px;left: 162px;width:29px;height: 22px;
+background: url("../images_new/headImages_new/cebian_blue3_new_161025.png") no-repeat;cursor: pointer;}
+.cebianlan_161025_blue:hover{background:url('../images_new/headImages_new/cebian_blue2_new_161025.png') no-repeat; }
+
+.cebianlan_161025_green{position: absolute;top: 185px;right: 0;cursor: pointer;width: 74px;height: 73px;}
+.cebianlan_161025_green1{cursor: pointer;}
+.cebianlan_161025_green2{position: absolute;top:0;right: -134px;cursor: pointer;}
+
+/* 预约试听 */
+
+.yuyuezhezhao_new_161026{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 1250px;
+    width: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    z-index: 999999;
+}
+
+
+.yuyueshiting_new_161026,.yuyueshiting_s_new_161026{
+    position: fixed;
+    top:200px;left: 0;bottom: 0;right: 0;
+    margin: auto;
+    z-index: 9999999;
+
+}
+.yuyueshitingbg_new_161026{
+    margin:3px auto;
+    width: 430px;
+    height: 434px;
+    background:#fff;
+    opacity: 0.9;
+    filter:alpha(opacity=9);
+    box-shadow: 0 0 6px rgba(0,0,0,0.9);
+}
+.yuyueshitingrel_new_161026{
+    position: absolute;
+    top:3px;
+    left: 0;bottom: 0;right: 0;
+    margin:0 auto;
+    width: 430px;
+    height: 434px;
+
+}
+.yuyueshiting_new_161026_close{
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 15px;
+    left: 382px;
+    background: url("../images_new/headImages_new/yuyueshiting_new_161026_close.png") no-repeat;
+    cursor: pointer;
+}
+.yuyueshiting_new_161026_close:hover{
+    background: url("../images_new/headImages_new/yuyueshiting_new_161026_close2.png") no-repeat;
+}
+.yuyueshiting_new_161026_title{
+    width: 403px;
+    margin: 0 auto;
+    height: 68px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 26px;
+    color: #333333;
+    border-bottom: 1px dashed #c4c4c4;
+}
+.yuyuezhezhao_new_161026_form{
+     width: 360px;
+     height: auto;
+     margin: 40px auto;
+}
+.yuyuezhezhao_new_161026_form p{
+    position: relative;
+    width:100%;
+    height: auto;
+}
+.yuyuezhezhao_new_161026_form input{
+    display: block;
+    width: 355px;
+    height: 47px;
+    border-radius: 8px;
+    border: 2px solid #ffdada;
+    line-height: 47px;
+    text-indent: 68px;
+    font-size: 14px;
+    color: #b1b1b1!important;
+    margin-bottom: 30px;
+}
+.yuyuezhezhao_new_161026_form p label{
+    position: absolute;
+    width: 68px;
+    height: 47px;
+    line-height: 47px;
+    top:2px;
+    left:0;
+    text-indent: 18px;
+    font-size: 14px;
+    color: #b1b1b1;
+}
+.yuyueshiting_new_161026_btu{
+    width: 100%;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: #e2403e;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.yuyueshiting_new_161026_btu:hover{
+    background: #e12c29;
+}
+.yuyueshiting_s_new_161026{
+    width: 430px;
+	height:489px;
+	margin-top:-4px;
+    background: url("../images_new/headImages_new/yuyueshiting_new_161026_sus.png") no-repeat;
+    box-shadow: 0 0 6px rgba(0,0,0,0.9);
+}
+.yuyueshiting_new_161026_btu2{
+    width: 355px;
+    height: 51px;
+    margin: 388px auto;
+    line-height: 51px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: #e2403e;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.yuyueshiting_new_161026_btu2:hover{
+    background: #e12c29;
+}
+.yuyueshiting_box1_new_161026,.yuyueshiting_box2_new_161026{display: none;}

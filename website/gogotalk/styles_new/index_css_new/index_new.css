@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* 我们的优势 */
+.Our_advantage_161025{
+    width: 100%;
+    height: 730px;
+    background:url("../../images_new/indexImages_new/youshi_161025.png") center no-repeat;
+    position: relative;
+    z-index: 2;
+}
+.Our_advantage_161025_main{
+    position: relative;
+	height: 730px;
+}
+.Our_advantage_title_161025{
+    position: absolute;
+    left: 604px;
+    top: 15px;
+}
+
+/* 3d鼠标效果 */
+.project {
+    width: 280px;
+    height: 224px;
+    position: absolute;
+}
+.Our_advantage_161025_item1{top:15px; left: 897px;}
+.Our_advantage_161025_item2{top:251px; left: 604px;}
+.Our_advantage_161025_item3{top:251px; left: 897px;}
+.Our_advantage_161025_item4{top:488px; left: 19px;}
+.Our_advantage_161025_item5{top:488px; left: 311px;}
+.Our_advantage_161025_item6{top:488px; left: 604px;}
+.project-list:after {
+    content: " ";
+    display: block;
+    clear: both; }
+.project__card {
+    position: relative;
+    will-change: transform;
+    transition: box-shadow .3s ease;
+    box-shadow: 0 10px 30px transparent;
+}
+.project__card.hover-in {
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+.project__card.hover-out {
+    transition: -webkit-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in; }
+.project:hover .project__card {
+    box-shadow: 0 10px 30px rgba(207, 18, 28, 0.4); }
+
+.project__card_rel{
+    width: 282px;
+    height: 226px;
+    background: url("../../images_new/indexImages_new/youshi_itembg_161025.png") no-repeat;
+}
+.project:hover .project__card_rel{
+    background: url("../../images_new/indexImages_new/youshi_itembg2_161025.png") no-repeat;
+}
+
+.project__card_rel dl{
+    width: 100%;
+    height:100%;
+}
+.project__card_rel dl dt{
+    width: 100%;
+    height: 110px;
+    padding-top: 25px;
+}
+.project__card_rel dl dt img{
+    display: block;
+    margin: 0 auto;
+}
+.project__card_rel dl dd{
+    width: 93%;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #8c8c8c;
+    line-height: 32px;
+}
+
+/* 我们的口碑 */
+.koubei_new_161026{width: 100%; height: 768px;}
+.koubei_new_161026_title{display: block; margin: 0 auto;}
+.koubeirel_new_161026{width: 100%; min-width: 1250px; height: 690px; overflow: hidden; position: relative;}
+.koubeiover_new_161026{height: 690px; position: absolute; left: 0; top:0; white-space: nowrap;}
+
+.koubeiover_page1_new_161026,.koubeiover_page2_new_161026{    height: 690px;position: relative;}
+.koubeiover_page1_new_161026_1{position:absolute; top:12.3%;left:59%;width: 36.7%; height: auto; cursor: pointer;z-index: 8; 
+max-width:705px;}
+.koubeiover_page1_new_161026_2{position:absolute; top:74%;left:43.6%;width: 39.8%; height: auto; cursor: pointer;z-index: 9;
+   max-width:698px;}
+.koubeiover_page1_new_161026_3{position:absolute; top:12.3%;left:20%;width: 36.4%; height: auto; cursor: pointer;z-index: 2;
+max-width:698px;}
+.koubeiover_page1_new_161026_4{position:absolute; top:40.4%;left:6.5%;width: 36.5%; height: auto; cursor: pointer;z-index: 10;
+max-width:701px;}
+.koubeiover_page1_new_161026_5{position:absolute; top:50%;left:28%;width: 36.7%; height: auto; cursor: pointer;z-index: 3;
+max-width:704px;}
+.koubeiover_page1_new_161026_6{position:absolute; top:69%;left:0;width: 36.8%; height: auto; cursor: pointer; z-index: 1;
+max-width:706px;}
+.koubeiover_page1_new_161026_7{position:absolute; top:60%;left:62.8%;width: 36.5%; height: auto; cursor: pointer;z-index: 6;
+max-width:701px;}
+
+.koubeiover_page1_new_161026_9{position:absolute; top:22%;left:3.6%;width: 36.7%; height: auto; cursor: pointer;z-index: 4;
+max-width:704px;}
+.koubeiover_page1_new_161026_10{position:absolute; top:35%;left:53%;width: 36.6%; height: auto; cursor: pointer;z-index: 7;
+max-width:704px;}
+
+.koubeiover_page2_new_161026_1{position:absolute; top:64.5%;left:60.4%;width: 36.7%; height: auto; cursor: pointer;z-index: 8;
+max-width:705px;}
+.koubeiover_page2_new_161026_2{position:absolute; top:20%;left:30%;width: 36%; height: auto; cursor: pointer;z-index: 9;
+max-width:697px;}
+.koubeiover_page2_new_161026_3{position:absolute; top:53%;left:4%;width: 36.4%; height: auto; cursor: pointer;z-index: 2;
+ max-width:698px;}
+.koubeiover_page2_new_161026_4{position:absolute; top:5%;left:62%;width: 36.7%; height: auto; cursor: pointer;z-index: 1;
+ max-width:705px;}
+.koubeiover_page2_new_161026_5{position:absolute; top:50%;left:44%;width: 36.6%; height: auto; cursor: pointer;z-index: 3;
+ max-width:703px;}
+.koubeiover_page2_new_161026_6{position:absolute; top:72%;left:20%;width: 36.8%; height: auto; cursor: pointer; z-index: 1;
+ max-width:704px;}
+.koubeiover_page2_new_161026_7{position:absolute; top:36%;left:57%;width: 36.5%; height: auto; cursor: pointer;z-index: 6;
+  max-width:701px;}
+.koubeiover_page2_new_161026_8{position:absolute; top:37%;left:15%;width: 36.8%; height: auto; cursor: pointer;z-index: 5;
+  max-width:697px;}
+.koubeiover_page2_new_161026_9{position:absolute; top:10%;left:3.6%;width: 36.7%; height: auto; cursor: pointer;z-index: 4;
+ max-width:694px;}
+
+.zuoyouyidong{-webkit-animation: zuoyouyidong 20s infinite alternate;animation: zuoyouyidong 20s infinite alternate;}
+@-webkit-keyframes zuoyouyidong {
+    0%{
+        -webkit-transform: translate(50px,0);
+        transform: translate(50px,0);
+    }
+    100%{
+        -webkit-transform: translate(-50px,0);
+        transform: translate(-50px,0);
+    }
+}
+@keyframes zuoyouyidong {
+    0%{
+        transform: translate(50px,0);
+    }
+    100%{
+        transform: translate(-50px,0);
+    }
+}
+.fangda{-webkit-animation: fangda 1s ease forwards;animation: fangda 1s ease forwards;}
+@-webkit-keyframes fangda {
+    0%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(1.1);
+        transform:scale(1.1);
+    }
+}
+@keyframes fangda {
+    0%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100%{
+        -webkit-transform: scale(1.1);
+        transform:scale(1.1);
+    }
+}
+
+.koubei_btubox_new_161026{position: absolute;top:0;left: 0; right: 0; height: 72px; margin:340px auto; display: none; z-index: 999}
+.koubeirel_new_161026:hover .koubei_btubox_new_161026{display: block;}
+.koubei_btuleft_new_161026{ width: 72px; height: 72px; background: url("../../images_new/indexImages_new/koubeibtu_new_161026.png") no-repeat; cursor: pointer;}
+.koubei_btuleft_new_161026:hover{background: url("../../images_new/indexImages_new/koubeibtu2_new_161026.png") no-repeat;}
+.koubei_bturight_new_161026{ width: 72px; height: 72px; background: url("../../images_new/indexImages_new/koubeibtu3_new_161026.png") no-repeat;cursor: pointer;}
+.koubei_bturight_new_161026:hover{background: url("../../images_new/indexImages_new/koubeibtu4_new_161026.png") no-repeat;}
+
+
+/*企业荣誉*/
+.qiyerongyu_new_161129{
+    padding-top: 10px;
+}
+.qiyerongyu_new_161129-rel{padding-top: 40px;}
+.qiyerongyu_new_161129-rel-item{float: left;width: 25%;cursor: pointer;}
+.qiyerongyu_new_161129-rel-item-dt{margin:0 auto;width: 265px;height: 193px;position: relative;overflow: hidden;cursor: pointer;}
+.qiyerongyu_new_161129-rel-item-dt img{display: block;width: 265px;height: 193px;cursor: pointer;}
+.light-161129{position: absolute;top:-20px;left:-388px;width: 388px;height:387px;background: url("../../images_new/indexImages_new/light_161129.png") no-repeat; cursor: pointer;}
+.qiyerongyu_new_161129-rel-item:hover .light-161129{
+    -webkit-animation: light-161129 0.6s forwards;
+   animation: light-161129 0.68s forwards;
+}
+.qiyerongyu_new_161129-rel-item:hover .qiyerongyu_new_161129-rel-item-dt{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+@-webkit-keyframes light-161129 {
+    0%{left:-388px;opacity: 0.2;
+        filter:alpha(opacity=20);
+        -webkit-transform: scale(2,2);
+    }
+    100%{left:388px;opacity: 0.1;
+        filter:alpha(opacity=10);
+        -webkit-transform: scale(1,1);
+    }
+}
+@keyframes light-161129 {
+    0%{left:-388px;opacity: 0.2;
+        filter:alpha(opacity=20);
+        transform: scale(2,2);
+    }
+    100%{left:388px;opacity: 0.1;
+        filter:alpha(opacity=10);
+        transform: scale(1,1);
+    }
+}
+.qiyerongyu_new_161129-rel-item dd{
+    padding-top: 20px;
+    font-size: 12px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    height: 74px;
+    cursor: pointer;
+}
+/* 3d鼠标效果 */
+.hezuo_new_161129_rel{
+    padding: 40px 0 40px 0;
+}
+.project2 {
+    width: 271px;
+    height: 114px;
+    float: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.project2 a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 271px;
+    height: 114px;
+
+}
+.project2__card {
+    position: relative;
+    will-change: transform;
+    transition: box-shadow .3s ease;
+    box-shadow: 0 10px 30px transparent;
+    cursor: pointer;
+}
+.project2__card.hover-in {
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+.project2__card.hover-out {
+    transition: -webkit-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in; }
+.project2__card_rel{
+    width: 271px;
+    height: 114px;
+    cursor: pointer;
+}
+.project2:hover .project2__card_rel{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.mr-161129{margin-right: 38px;}
+
+
+
+
+/* 我们的愿景 */
+.yuanjing_new_161026{
+    width: 100%;
+    height: 440px;
+    background: url("../../images_new/indexImages_new/yuanjing_new_161026.jpg") center no-repeat;
+    overflow: hidden;
+}
+.yuanjingxian_new_161026{
+    opacity: 0.8;
+    filter:alpha(opacity=0.8);
+    width: 100%;
+    height: 509px;
+    background: url("../../images_new/indexImages_new/yuanjingxian_new_161026.png") center no-repeat;
+    -webkit-animation:opca 0.8s infinite alternate;animation:opca 0.8s infinite alternate;
+}
+@-webkit-keyframes opca {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity:0.8;
+    }
+}
+
+@keyframes opca {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}

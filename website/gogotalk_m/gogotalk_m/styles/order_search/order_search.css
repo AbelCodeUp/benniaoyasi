@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 没有订单 start*/
+.no_order{ width: 100%; height:5.6rem;background:#eee; padding-top: 3rem;}
+.no_order_img{ display: block; margin: 0 auto; width: 1.1rem}
+.no_order_text{  margin: 0.4rem auto; width:100%; text-align: center;font-size: 0.3rem; color: #333;}
+/* 没有订单 end*/
+/* 有订单 start*/
+.have_order{width: 100%;padding:0.7rem 0; min-height:7.06rem;background:#eee;}
+.have_order_title{ height: 0.46rem; text-align: center;margin: 0 auto 0.6rem;display: block; font-size: 0.4rem; color: #333;}
+.order_list{width: 7.4rem; margin: 0 auto;}
+.order_item{ width: 100%; box-sizing: border-box; background: #fff; margin-bottom: 0.14rem;}
+.order_part1{height: 0.84rem; width:6.8rem; margin: 0 auto; border-bottom: 1px solid #ebebeb; padding: 0 0.2rem;box-sizing: border-box;}
+.order_part1_item{ width: 50%; height: 100%;}
+.order_part1_span1{ width: 0.36rem;height:0.36rem;background: url("../../images/order_search/order_time.png") no-repeat; background-size: contain; margin: 0.3rem 0.1rem 0 0;}
+.order_part1_span2{ width: 0.29rem;height:0.29rem;background: url("../../images/order_search/order_time2.png") no-repeat; background-size: contain; margin: 0.28rem 0.1rem 0 0;}
+.order_part1_item_p{width: auto;height:0.84rem; line-height: 0.86rem; font-size: 0.3rem; color: #d10e00; overflow: hidden;}
+.order_part2{height: auto; width:6.8rem; margin: 0 auto; padding:0.2rem;box-sizing: border-box;}
+.order_part2_div{height:0.6rem; line-height: 0.62rem; font-size: 0.28rem; color: #333; overflow: hidden;}
+.order_part3{height:auto;width:100%;background:#fbfbfb; padding:0 0.3rem;box-sizing: border-box; font-size: 0.32rem;color: #333;}
+.order_part3_top{height:0.84rem; line-height: 0.86rem; text-align: right; width:100%;padding:0 0.2rem;box-sizing: border-box; font-size: 0.32rem;color: #333;}
+.order_part3_top span{display:inline-block;color: #fb5624; padding-left: 0.1rem;}
+
+.order_part3_bot{height:1.24rem;width:100%;box-sizing: border-box; font-size: 0.32rem;color: #333; position: relative; border-top:1px solid #ebebeb; }
+.zfb_0613{position: absolute; top:0.32rem; left: 0.2rem; width: 2rem; height: 0.6rem;background: #d10e00; text-align: center; line-height: 0.6rem; font-size: 0.26rem; color: #fff;border-radius: 4px; }
+.weixin_0613{position: absolute; top:0.32rem; left: 2.4rem; width: 2rem; height: 0.6rem;background: #d10e00; text-align: center; line-height: 0.6rem; font-size: 0.26rem; color: #fff;border-radius: 4px; }
+.kuaiyin_0613{position: absolute; top:0.32rem; left: 4.6rem; width: 2rem; height: 0.6rem;background: #d10e00; text-align: center; line-height: 0.6rem; font-size: 0.26rem; color: #fff;border-radius: 4px; }
+/* 有订单 end*/
+

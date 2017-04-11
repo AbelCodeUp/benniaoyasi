@@ -1,0 +1,118 @@
+@charset"gb2312";
+/*CSSDocument*/
+/*---Publicstyle---------------------------------------------------------*/
+*{margin:0;padding:0;border:none;font-weight:normal;word-spacing: 2px;color: #333;}
+body,html{background:#fff;font-family:"Microsoft yahei",'Arial';-webkit-tap-highlight-color:rgba(0,0,0,0.01);overflow:scroll;overflow-x: hidden; }
+html{font-size:100%;}
+fieldset,img,input,button{border:0;}
+ol,ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bold;}
+input,button,textarea,a{outline:none; border-radius: 0;-webkit-appearance: none;}
+select{outline:none; border-radius: 0;}
+a{color:#000;text-decoration:none;cursor:pointer;}
+a:hover{text-decoration:none;}
+img{vertical-align:middle;border:none;}
+
+.left{float:left;}
+.right{float:right;}
+.clearfix:after{content:".";display:block;clear:both;height:0;font-size:0;overflow:hidden;}
+.clearfix{zoom:1;}
+
+.smy_wapper{width:8rem;margin:0 auto;}
+
+
+/*头部公共部分 start---------------------------------------------------*/
+.common_head{ position: fixed; top: 0; left: 0;z-index: 9999;}
+
+/*文字滚动css start*/
+.text_scroll{height: 0.6rem;background:#cf121c; display: none;}
+.text_scroll_laba{ position: absolute; left: 0.3rem; top:0.16rem; width: 0.3rem;}
+#gongao{ position:absolute; top:0; left:0.78rem;width:6.94rem;height:0.6rem;line-height:0.6rem;overflow:hidden;font-size:0.26rem;}
+.scroll_div{width:auto;height:0.6rem;margin:0 auto;white-space: nowrap;overflow:hidden;}
+#gongao #scroll_begin, #gongao #scroll_end{display:inline;}
+#gongao #scroll_begin span, #gongao #scroll_end span{display:inline-block; padding: 0 0.4rem; color: #fff;}
+/*文字滚动css end*/
+
+/*head start*/
+.head{ height: 1.1rem; background: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2); position: relative;}
+.gogotalk_m_logo{ position:absolute; top: 0.24rem; left: 0.3rem; width: 2.13rem; height: 0.63rem;background: url("../images/common/logo.png") no-repeat; background-size: contain;}
+.meau{ width: 0.66rem; position:absolute; top:0.22rem; right: 0.3rem;}
+.meau2{ width: 0.6rem; position:absolute; top:0.25rem; right: 0.33rem; }
+.nav{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; overflow: hidden; z-index: 10000;background: #fff; display: none;}
+
+@-webkit-keyframes hongyuan {
+    0%{opacity: 0;-webkit-transform: translate(100%,0);}
+    100%{opacity: 1;-webkit-transform: translate(0,0);}
+}
+@keyframes hongyuan {
+    0%{opacity: 0;transform: translate(100%,0);}
+    100%{opacity: 1;transform:translate(0,0);}
+}
+.hongyuan{width:22.22rem; height: 22.22rem; position: absolute; top:-3.59rem; left: 0;background: #cf121c;border-radius: 50%; -webkit-animation: hongyuan 0.8s forwards;animation: hongyuan 0.8s forwards;}
+.close{ position: absolute; top:0.38rem; right: 0.38rem; width:0.62rem; height:0.62rem;background: url("../images/common/colse.png") no-repeat; background-size: contain; -webkit-animation: hongyuan 0.8s forwards;animation: hongyuan 0.8s forwards;}
+.nav_tru{ width: 6.64rem; height:7.74rem;position: absolute; top:0;bottom: 0; left: 0.98rem; margin: auto;  }
+.nav_tru_ul{ width: 100%;}
+.nav_tru_ul li{ width: 100%; height: 1.06rem;opacity: 0;}
+.nav_tru_ul_li1{-webkit-animation: hongyuan 0.8s 0.3s forwards;animation: hongyuan 0.8s 0.3s forwards;}
+.nav_tru_ul_li2{-webkit-animation: hongyuan 0.8s 0.4s forwards;animation: hongyuan 0.8s 0.4s forwards;}
+.nav_tru_ul_li3{-webkit-animation: hongyuan 0.8s 0.5s forwards;animation: hongyuan 0.8s 0.5s forwards;}
+.nav_tru_ul_li4{-webkit-animation: hongyuan 0.8s 0.6s forwards;animation: hongyuan 0.8s 0.6s forwards;}
+.nav_tru_ul a{ display:block;width: 100%; height: 1.06rem; line-height: 1.06rem; text-align: center; color: #fff; font-size: 0.4rem;}
+.pho{ width: 100%; text-align: center; position: relative; opacity:0;-webkit-animation: hongyuan 0.8s 0.7s forwards;animation: hongyuan 0.8s 0.7s forwards;}
+.pho span{display: inline-block;vertical-align: middle;}
+.dianh{ width: 0.6rem; height: 0.6rem; background: url("../images/common/pho.png") no-repeat; background-size: contain;}
+.dianh_rel{ height: 0.6rem; line-height: 0.6rem; color: #fff; font-size: 0.4rem;}
+.pho_a{ position: absolute; top:0; left: 0;width: 100%; height: 100%;}
+.form_search{ width: 100%;margin: 0.4rem 0; position: relative; opacity:0;-webkit-animation: hongyuan 0.8s 0.8s forwards;animation: hongyuan 0.8s 0.8s forwards;}
+.input_search{ border-radius: 4px; width: 100%; height: 0.9rem; display: block;background: #fff; text-align: center; font-size: 0.3rem; color: #999;}
+.btu_search{ width: 1.08rem ;height: 0.6rem; border-left: 1px solid #eee; position: absolute; top:0.17rem;right: 0;}
+.btu_search img{ width: 0.5rem ;margin:0.03rem auto; display: block;}
+/*head end*/
+/*右侧预约 start*/
+.yuyue_common_z{ width: 100%; height: 100%; position: fixed; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 99999; display: none; }
+@-webkit-keyframes yuyue_common_z {
+    0%{-webkit-transform: scale(0,0);}
+    100%{-webkit-transform: scale(1,1);}
+}
+@keyframes yuyue_common_z {
+    0%{transform: scale(0,0);}
+    100%{transform:scale(1,1);}
+}
+.yuyue_common_box{ width:7.4rem; height:6.5rem; background: #fff; box-shadow: 0 0 1px 1px rgba(0,0,0,0.3); border-radius: 4px; position: absolute; top:0; left: 0; right: 0; bottom: 0; margin: auto; overflow: hidden;-webkit-animation:yuyue_common_z 0.6s forwards;animation:yuyue_common_z 0.6s forwards;}
+.yuyue_common_title{ width: 100%; height:1.26rem; background: #cf121c; text-align: center; line-height:1.28rem; overflow: hidden; font-size: 0.4rem; font-weight: normal; color: #fff;}
+.form_common{ width: 100%; padding-top: 0.6rem;}
+.form_common_div{ width:6.6rem; height: 0.9rem; border: 1px solid #fdeeef;  margin: 0 auto 0.56rem; background: #fff; border-radius: 4px; position: relative;}
+.form_common_input{background: none; display: block; width: 100%; height: 100%; position: absolute; top:0; left: 0; font-size: 0.3rem; color: #666; text-indent: 1.6rem;}
+.form_common_label{ position: absolute; top:0 ;left: 0;width: 1.6rem; height: 0.9rem; line-height: 0.9rem; font-size: 0.3rem; color: #999; text-indent: 0.4rem;}
+.form_common_btu{width:6.62rem; height: 0.9rem; border: 1px solid #cf121c;  margin: 0 auto 0.56rem; background: #cf121c; border-radius: 4px; color: #fff;font-size: 0.36rem; letter-spacing: 2px;  text-align: center;line-height: 0.9rem}
+
+.yuyue_b{ position: fixed; bottom: 0.6rem; right: 0.1rem; width: 1.14rem; height: 1.14rem; background: #cf121c; border-radius: 50%; box-shadow: 0 0 1px 1px rgba(0,0,0,0.3); z-index: 999999;}
+.yuyue_b_img1,.yuyue_b_img2{ position:absolute; top:0; right:0; left: 0; bottom: 0; margin: auto; width: 50%;}
+.yuyue_b_img2{ width: 36%;}
+.yuyue_dis{display: none;}
+.yuyue_dis2{display: block;}
+/*右侧预约 end*/
+/*头部公共部分 end-----------------------------------------------------*/
+
+.zhanwei{height: 1.1rem;}
+
+
+
+
+
+.footer{background: #333;}
+.footer_top{height: 2.7rem;position: relative;}
+.erweima{width:1.18rem;position: absolute; top:1.06rem; right: 0.3rem;}
+.erweima_box{ position: fixed; top:0; left: 0;width: 100%; height: 100%; background: rgba(0,0,0,0.6);z-index: 99999;display: none;}
+.closefo{ position: absolute; top:0.38rem; right: 0.38rem; width:0.62rem; height:0.62rem;background: url("../images/common/colse.png") no-repeat; background-size: contain; -webkit-animation: hongyuan 0.8s forwards;animation: hongyuan 0.8s forwards;}
+.erweimabig{display: block; width: 100%;-webkit-animation:yuyue_common_z 0.6s forwards;animation:yuyue_common_z 0.6s forwards;}
+.footer_top_text{ width:6.28rem; height: 100%; position: absolute; top:0.4rem; left: 0;}
+.footer_top_p{ width: 6.28rem; position: relative; text-indent: 0.7rem;  height:0.62rem; line-height:0.62rem;font-size: 0.24rem; color: #fff; white-space: nowrap;}
+.footer_top_p a{ font-size: 0.24rem; color: #fff;}
+.footer_top_span{ position: absolute; top:0.16rem; left: 0.3rem;}
+.footer_top_span1{width: 0.16rem; height: 0.24rem; background: url("../images/common/fo1.png") center no-repeat; background-size: contain;}
+.footer_top_span2{width: 0.19rem; height: 0.22rem; background: url("../images/common/fo2.png") center no-repeat; background-size: contain;}
+.footer_top_span3{width: 0.26rem; height: 0.2rem; background: url("../images/common/fo3.png") center no-repeat; background-size: contain;}
+
+.footer_bottom{  padding-top:0.4rem;background: #2e2e2e;padding:0.4rem 0.32rem 0.32rem 0.32rem;}
+.footer_bottom_p{width:100%;font-size: 0.1rem; color: #fff;}

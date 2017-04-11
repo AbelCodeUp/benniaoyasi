@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* banner start*/
+.banner_price{height: 4.2rem;}
+.banner_price img{height: 4.2rem; display: block;}
+/* banner end*/
+/* main start*/
+.price_main{ padding-top: 0.7rem;}
+.price_main_title{ height: 0.46rem; display: block; margin: 0 auto 0.6rem;}
+.price_table{ width: 7.4rem; background: #fff; box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);border-radius: 6px;overflow: hidden; margin: 0 auto;}
+.bg_red{ background: #cf121c; height: 1rem; padding:0 0.2rem;}
+.price_table_rel{width: 7rem; margin:0 auto;border-collapse: collapse;}
+.price_table_rel_th{float:left;height: 1rem; line-height: 1rem; color: #fff; font-size: 0.3rem; text-align: center;}
+.price_table_rel tr{border-bottom: 1px solid #eee;}
+.price_table_rel tr:last-of-type{border-bottom:none;}
+.price_table_rel_th.price_table_th2{ text-align: left;text-indent: 1.04rem;}
+.price_table_rel td{height: 1rem;padding-top:1px;box-sizing: border-box; color: #777; font-size: 0.3rem;}
+.price_table_w1{ width: 1.16rem;}
+.price_table_w2{ width: 3.68rem;}
+.price_table_w3{ width: 2.14rem;}
+.price_table_p1{ padding-left: 0.3rem;}
+.price_table_p2{ text-align: center;}
+.price_table_p3{ padding-left: 0.3rem; position: relative;}
+.price_table_p3 a{position: absolute; top:0; left: 0; right: 0; bottom: 0; margin: auto; width: 90%; height: 80%;-webkit-tap-highlight-color:rgba(0,0,0,0.05);}
+.yen{ display: inline-block; padding-right: 0.08rem;color: #777;font-size: 0.26rem;}
+.pri_jiantou{ position: absolute; top:0; right: 0.3rem; bottom: 0; margin: auto; width: 0.15rem; height: 0.21rem; background: url("../../images/price/jian.png") no-repeat;background-size: contain}
+/* main end*/
+
+.price_wenti{ padding-top: 0.7rem; padding-bottom: 0.7rem;}
+.price_wenti_title{height: 0.46rem; display: block; margin: 0 auto 0.6rem;}
+.price_wenti_p{ text-align: center; font-size: 0.3rem;}
+.price_wenti_p a{color: #666;}
+
+/*确认订单 start*/
+.querendingdan{ position: fixed; z-index: 99999; background: #cf121c; width: 100%; height: 100%; top:0; left: 0; padding-top: 0.7rem; box-sizing: border-box; display: none;
+-webkit-animation:querendingdan 0.4s forwards linear;animation:querendingdan 0.4s forwards linear; }
+@-webkit-keyframes querendingdan {
+    0%{ opacity:0;-webkit-transform: translate(100%,0)}
+    100%{opacity:1;-webkit-transform: translate(0,0)}
+}
+@keyframes querendingdan {
+    0%{opacity:0;transform: translate(100%,0)}
+    100%{opacity:1;transform: translate(0,0)}
+}
+.querendingdan_title{ height: 0.46rem; margin: 0 auto 0.56rem; display: block;opacity:0;-webkit-animation:querendingdan 0.6s 0.6s forwards linear;animation:querendingdan 0.4s 0.4s forwards linear;}
+.close_pri{ position: absolute; top: 0.66rem; left: 0.26rem; width: 0.6rem; height: 0.6rem;background: url("../../images/price/back.png") no-repeat; background-size: contain;}
+.querendingdan_box{ width: 7.4rem; margin: 0 auto; height: 80%; background: #fff; opacity: 0; box-shadow: 0 0 5px 2px rgba(0,0,0,0.1); border-radius: 5px;overflow-x: hidden; overflow-y: scroll; padding: 0.4rem 0;-webkit-animation:querendingdan 0.4s 0.4s forwards linear;animation:querendingdan 0.4s 0.4s forwards linear;}
+.querendingdan_box::-webkit-scrollbar{width:2px;}
+.querendingdan_box::-webkit-scrollbar-track{background-color:rgba(0,0,0,0);}
+.querendingdan_box::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.05);}
+.querendingdan_box::-webkit-scrollbar-thumb:hover {background-color:rgba(0,0,0,0);}
+.querendingdan_box::-webkit-scrollbar-thumb:active {background-color:rgba(0,0,0,0);}
+
+
+.buy_form{ width: 100%; height: auto;}
+.buy_form div{ width: 100%; height:0.7rem; line-height: 0.7rem;}
+.buy_form div.div4{ width: 100%; line-height: 0.3rem;color: #cf121c; font-size: 0.24rem;padding-left: 0.43rem; margin-bottom: 0.3rem;
+line-height: 1.5em}
+.buy_form div.div6{ width: 100%; height:0.3rem; line-height: 0.3rem;color: #999; font-size: 0.24rem; text-indent: 0.46rem; margin-bottom: 0.3rem;}
+.buy_form div.div5{ width: 6.44rem; border-bottom: 1px solid #cf121c; margin: 0 auto 0.2rem; position: relative;}
+.buy_form div.div4 a{ color: #cf121c;}
+.buy_form div input{ float: left;height:0.7rem; line-height: 0.7rem; width: 4.8rem; background: none; font-size: 0.3rem;}
+.buy_form_0516_lable{ width: 1.56rem;float: left; font-size: 0.3rem; padding-left: 0.46rem; position: relative;}
+.buy_form_0516_lable span{position:absolute; left:-0.26rem;top:0.04rem;font-size: 0.3rem;}
+.buy_form div.div5 .buy_form_0516_lable{ padding-left: 0;}
+.duigou2{ display:none;position: absolute; bottom:0.24rem; right: 0; margin-bottom: auto; width: 0.4rem; height: 0.27rem; background: url("../../images/price/duigou2.png") no-repeat; background-size: contain;}
+
+.buy_form div.div7{ width: 6.44rem; border-bottom: 1px solid #eee; margin: 0 auto 0.2rem; position: relative;}
+.buy_form div.div7 .buy_form_0516_lable{ padding-left: 0;}
+.buy_form div.div8{ width: 6.44rem;line-height: 0.4rem; margin: 0.4rem auto 0.2rem; position: relative;}
+.buy_form div.div8 .duigou{float: left; width: 0.24rem; height: 0.24rem;border: 1px solid #eee; position: relative; margin-top: 0.06rem;}
+.buy_form div.div8 .duigou i{position: absolute; top:0.06rem; left: 0.01rem; width: 0.22rem; height: 0.22rem;background: url("../../images/price/duigou2.png") no-repeat; background-size: contain;}
+.duigou_i_dis{display: none;}
+.div8_text{float:left; width:6rem;color: #999; font-size: 0.24rem; margin-left: 0.1rem; }
+.div8_text a{color: #cf121c; }
+
+.buy_form div.btu4_0426{ display: block; width:6rem; margin: 0 auto 0.16rem; height: 0.6rem; border: 1px solid #cf121c; line-height: 0.6rem; text-align: center; color: #cf121c; font-size: 0.28rem;
+border-radius: 60px;}
+.buy_form div.btu4_0426.btu4_04262{ border: 1px solid #eee;background: #eee; color: #999; font-size: 0.28rem;
+border-radius: 60px;}
+
+/*确认订单 end*/

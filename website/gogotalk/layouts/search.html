@@ -1,0 +1,164 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><title>GoGoTalk青少外教在线英语_我的订单</title><meta content="GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习" name="keywords"><meta content="GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。" name="description"><link rel="stylesheet" type="text/css" href="../styles/base_0425.css"><link rel="stylesheet" type="text/css" href="../styles/order.css"><script src="../js/jquery-1.7.2.min.js"></script><script src="../js/order.js"></script><script src="../js/smy_0426_tijiao.js" charset="gbk"></script><style type="text/css" rel="stylesheet">.zfb_0613{position: absolute; top: 160px; left: 466px;width:102px; height: 28px; background: #fb5624; font-size: 12px; color: #fff; text-align: center; line-height: 28px; cursor: pointer;}
+.weixin_0613{position: absolute; top: 160px; left: 576px;width:102px; height: 28px; background: #fb5624; font-size: 12px; color: #fff; text-align: center; line-height: 28px; cursor: pointer;}
+.zfb_0613:hover{ background: #f32409;}
+.weixin_0613:hover{ background: #f32409;}</style><script type="text/javascript">var tel = GetRequest().phone;
+InitData();
+function InitData(){
+   $.ajax({
+      type: "GET",
+      url: "http://w.gogo-talk.com/api/order/GetOrderList",
+      data: { Mobile: GetRequest().phone },
+      dataType: "json",
+      success: function(data){
+       if(data.Return == 1){
+         var strHtml = '';
+         var Data = data.data;
+          if(Data.length >= 1){
+            for(var i = 0;i < Data.length;i++){
+              var payData = Data[i];
+              var payTime = '';
+              var payType;
+              if(payData.Status == 1){
+                payType = '已支付';
+              }else{
+                payType = '未支付';
+              }
+                strHtml += '<div class="new_warpper_0508 order_item smyclearfix">' +
+                              '<div class="left order_item_left smyclearfix" style="position:relative;">' +
+                                  '<ul class="left order_information">' +
+                                      '<li>订单号码：<span>' + payData.OrderNUM + '</span></li>' +
+                                      '<li>商品名称：<span>' + payData.ProductName + '</span></li>' +
+                                      '<li>支付时间：<span>' + payTime + '</span></li>' +
+                                      '<li>支付方式：<span style="color:#d10e00;">' + payType + '</span>';
+                if(payData.Status == 1 ){
+                }else{
+                  strHtml += '<div class="zfb_0613" data-type="1" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="payType(this)">支付宝支付</div>' +
+                            '<div class="weixin_0613" data-type="2" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="payType(this)">微信支付</div>' +
+                            '<div id="kq_input"></div>' +
+                            '<input class="weixin_0613" style="left: 686px;" type="button" value="网银/快捷支付" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="quickMony(this);">';
+                }
+                strHtml += '<form class="buy_form" id="kq_buy_form" name="buy_form" method="post" action="https://www.99bill.com/gateway/recvMerchantInfoAction.htm">' +
+                              '<input type="hidden" name="did" value="GT-18012M-PH-154738977720">' +
+                              '<input type="hidden" name="wx_WIDout_trade_no" value="GT-18012M-PH-1547389777208">' +
+                              '<input type="hidden" name="wx_WIDsubject" value="GT2016180-PH">' +
+                              '<input type="hidden" name="wx_WIDtotal_fee" value="11700">' +
+                              '<input type="hidden" name="wx_WIDmobile" value="17778141896">' +
+                              '<input type="hidden" name="wx_course_id" value="4">' +
+                            '</form>' +
+                          '</li>' +
+                      '</ul>' +
+                      '<div class="left order_price">付款金额：<span>￥'+ payData.Prices +'元</span></div>' +
+                  '</div>' +
+                  '<div class="right order_item_right">' +
+                      '<div class="order_keshi">购买课时：<span>180节</span></div>' +
+                      '<div class="order_qixian">有效时间：<span>12个月</span></div>' +
+                  '</div>' +
+              '</div>';
+            }
+          }else{
+            strHtml += '<div style="width: 100%; text-align: center; font-size: 24px; color: #999; margin-top:100px;"> 亲，您还没有订单哦！</div>';
+          }
+          $('#order_ddbox').html(strHtml);
+        }
+      }
+  });
+}
+//支付
+function payType(dom){
+  var postUrl = 'http://w.gogo-talk.com/api/order/PostZhiFu';
+  var ZhiFuType = $(dom).data('type');
+  var OrderNum = $(dom).data('num');
+  var GoodsId = $(dom).data('id');
+  var GoodsName = $(dom).data('name');
+  var Gprice = $(dom).data('prices');
+  var Mobile = tel;
+  var Remarks = $(dom).data('remark');
+  $.post(postUrl,{'ZhiFuType':ZhiFuType,'OrderNum':OrderNum,'GoodsId':GoodsId,'GoodsName':GoodsName,'Gprice':Gprice,'Mobile':Mobile,'Remarks':Remarks},function(data){
+      if(data.Return == 1){
+          if(ZhiFuType == 1){ 
+              window.location.href = data.data;
+          }else if(ZhiFuType == 2){
+
+              var wxImg = encodeURIComponent("wx=*" + data.data + "*&mon="+ Gprice +"&num="+ OrderNum +"&type=" + GoodsName + "");
+              window.location.href = "wxpay.html?" + wxImg;
+
+          }
+          
+      }else{
+          alert(data.data);
+      }
+  })
+} 
+function quickMony(){
+  var postUrl = 'http://w.gogo-talk.com/api/order/PostZhiFu';
+  var OrderNum = $(dom).data('num');
+  var GoodsId = $(dom).data('id');
+  var GoodsName = $(dom).data('name');
+  var Gprice = $(dom).data('prices');
+  var Mobile = tel;
+   var Remarks = $(dom).data('remark');
+
+  if($('.duigou i').hasClass('display_duigou')){
+      Mobile = $("#shoujihaoma").val();
+      if (Mobile == null) {
+          return false;
+      }else{
+          var re = /^1[3|5|7|8|][0-9]{9}$/;
+          if (!re.test(Mobile)) {
+              alert("请输入有效的手机号码！");
+              $("#shoujihaoma").css({border:"1px solid red"});
+              return;
+          }
+      }
+      $("input#beizhuxinxi").val("");
+      $("input#shoujihaoma").val("");
+      $("#shoujihaoma").css({border:"1px solid #333"});
+      var sendMsg = 'OrderNum='+OrderNum+'&GoodsId='+GoodsId+'&GoodsName='+GoodsName+'&Gprice='+Gprice+'&Mobile='+Mobile+'&Remarks='+Remarks;
+
+      window.location.href = 'http://112.126.86.35:8456/Send.aspx?'+ sendMsg;
+  }
+
+}
+
+function GetRequest() {  
+  //url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；  
+  var url = location.search; //获取url中"?"符以及其后的字串  
+  var theRequest = new Object();  
+  if(url.indexOf("?") != -1)//url中存在问号，也就说有参数。  
+  {   
+    var str = url.substr(1);  
+      strs = str.split("&");  
+    for(var i = 0; i < strs.length; i ++)  
+      {   
+      theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+      }  
+  }  
+  return theRequest;  
+}</script></head><body><!-- 公共头部 start--><script type="text/javascript">$().ready(function () {
+//获取客户端日期并格式化
+var myDate = new Date();
+var datetime = myDate.getFullYear() + "年" + ((myDate.getMonth() + 1) > 10 ? (myDate.getMonth() + 1) : "0"
++ (myDate.getMonth() + 1)) + "月" + (myDate.getDate() < 10 ? "0" + myDate.getDate() : myDate
+.getDate()) + "日" + (myDate.getHours() < 10 ? "0" + myDate.getHours() : myDate
+.getHours()) + "时" + (myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate
+.getMinutes()) + "分" + (myDate.getSeconds() < 10 ? "0" + myDate.getSeconds() : myDate
+.getSeconds()) + "秒";
+var starttime = "2017年02月22日00时00分00秒";
+var endtime = "2017年02月25日00时00分00秒";
+//判断日期
+if(datetime<starttime){
+}else if(datetime > starttime && endtime > datetime) {
+$(".head_161025").addClass("head_1123");
+$(".headTop_161025").addClass("head_1123_bo");
+$(".head_161025").prepend("<div class='top1123_bg'><div class='new_warpper_161020 smyclearfix'><div class='left top1123_laba'></div><div id='scrollobj' class='left'><span class='scrollobj_span'>&nbsp;&nbsp;</span></div></div><style>.head_1123{height: auto;padding-top: 0;}.head_1123_bo{border: none;}.top1123_bg{position:relative;background: url('/images_new/headImages_new/top-gundong.jpg') repeat-x;}.top1123_laba {width: 30px;height: 26px;margin: 5px 30px 0 10px;background: url('/images_new/headImages_new/top-laba.png') no-repeat;} #scrollobj{width: 1130px; height:38px; line-height: 38px;color:#fff;white-space:nowrap;overflow:hidden; font-size: 16px;}.scrollobj_span{display: inline-block; padding:0 50px;height:38px;line-height:38px;}</style></div>");
+$(".scrollobj_span").html("开学季活动延长72小时：购180课时送15课时；购360课时送40课时；购720课时送60课时！全线9折，速来抢课！");
+setInterval("scroll(document.getElementById('scrollobj'))", 20);
+} else {
+$(".top1123_bg").css({"display": "none"});
+}
+});</script><!-- 导航 nav start--><link rel="stylesheet" type="text/css" href="../styles_new/head_new_170111.css"><!-- 头 css--><div class="head_161025"><!-- 活动 start--><script>//文字滚动
+function scroll(obj) {
+var tmp = (obj.scrollLeft)++;
+if (obj.scrollLeft == tmp) obj.innerHTML += obj.innerHTML;
+if (obj.scrollLeft >= obj.firstChild.offsetWidth) obj.scrollLeft = 0;
+}</script><!-- 活动 end--><div class="headTop_161025"><div class="new_warpper_161020 new_warpper_170111 smyclearfix"><a href="index.html" class="left headTop_logo_161025"><img width="100%" src="../images_new/headImages_new/logo_161025_new.png" alt="gogotalk"></a><a href="tel://4008787276" class="right headTop_tel_161025"><img style="width:100%;" src="../images_new/headImages_new/tel_161025_new.png" alt="gogotalk"></a></div><div class="download_0111"><img src="../images_new/headImages_new/down/jiantou.png" class="download_jiantou_0111"><a style="position: absolute; top: 0;left:0;width: 100%; height: 100%; z-index: 4;" href="http://learn.gogo-talk.com/download/WeiyiEduSetup.exe"></a></div></div><div class="headNav_161025"><ul class="smyclearfix headRelNav_161025"><li data-btntype="index" class="nav-group cur_new left"><a href="./main.html">首页</a></li><li data-btntype="about" class="nav-group left"><a href="./aboutus.html">关于我们</a></li><li data-btntype="lesson" class="nav-group left"><a href="./course.html">课程体系</a></li><li data-btntype="buyLesson" class="nav-group left"><a href="./price.html">课程购买</a></li><li class="left"><a target="_blank" href="index.php-c=scroll&amp;a=scroll.html">学习理念</a></li><li class="left"><a target="_blank" href="http://bnys.121learn.cn/login?next=%2Flearn">在线上课</a></li><li class="left yuyueshiting_btu_js"><a href="javascript:void(0);">预约试听</a></li></ul></div></div><!-- 导航 nav end--><!-- 公共侧边栏 start--><div class="cebianlan_161025"><div class="cebianlan_161025_red"><p class="cebianlan_161025_red_tel"><a href="tel://4008787276">400-8787-276</a></p><p class="cebianlan_161025_red_time">工作时间：10:00-20:00</p></div><div class="cebianlan_161025_blue"><form id="cebianlan_161025_blue_form" name="" method="post" action="index.php-c=search&amp;a=search.html" class="cebianlan_161025_blue_form"><input id="search_ord_161026" name="mobile" type="text" value="输入电话，查询订单" class="search_ord_161026"><span class="search_ord_161026_button"></span></form></div><div class="cebianlan_161025_green"><img src="../images_new/headImages_new/cebian_green_new_161025.png" class="cebianlan_161025_green1"><img src="../images_new/headImages_new/cebian_green2_new_161025.png" class="cebianlan_161025_green2"></div><script src="../js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" charset="gbk"></script></div><!-- 公共侧边栏 end--><!-- 预约试听 start--><div class="yuyueshiting_box1_new_161026 shitingbox_new_161026"><div class="yuyuezhezhao_new_161026"></div><div class="yuyueshiting_new_161026"><div class="yuyueshitingbg_new_161026"></div><div class="yuyueshitingrel_new_161026"><div class="yuyueshiting_new_161026_close"></div><div class="yuyueshiting_new_161026_title">预约试听课程</div><form id="yuyuezhezhao_new_161026_form" name="" method="post" action="" class="yuyuezhezhao_new_161026_form"><p><input id="yuyuezhezhao_new_161026_form_name" name="name" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_name"><label>姓名：</label></p><p><input id="yuyuezhezhao_new_161026_form_tel" name="mobile" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_tel"><label>电话：</label></p><div id="yuyueshiting_new_161026_btu" class="yuyueshiting_new_161026_btu">马上预约</div></form></div></div></div><div class="yuyueshiting_box2_new_161026 shitingbox_new_161026"><div class="yuyuezhezhao_new_161026"></div><div class="yuyueshiting_s_new_161026"><div class="yuyueshitingrel_new_161026"><div class="yuyueshiting_new_161026_close"></div><div class="yuyueshiting_new_161026_btu2">确定</div></div></div></div><!-- 预约试听 end--><!-- 公共头部 end--><div class="order_page1_0518"><div class="new_warpper_0508"><div class="order_title"><span></span>我的订单</div><div id="order_ddbox"></div></div></div><!-- footer start--><link rel="stylesheet" type="text/css" href="../styles_new/footer_new_161020.css"><!-- 尾 css--><div class="footer_161025_new"><div class="new_warpper_161020 smyclearfix footer_161025_new_top"><p class="left footer_161025_new_p1"><img src="../images_new/footerImages_new/footerImage1.png">service@gogo-talk.com</p><p class="left footer_161025_new_p2"><img src="../images_new/footerImages_new/footerImage2.png">北京市朝阳区安慧北里逸园28号逸园商务楼4层403</p><p class="right footer_161025_new_p3"><img src="../images_new/footerImages_new/footerImage3.png">咨询热线：<a href="tel://4008787276">400-8787-276</a></p></div><div style="height: 145px;" class="footer_161025_new_bottom"><div class="new_warpper_161020"><p><a href="http://www.anquan.org"><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></a></p><p style="margin-top: 30px;">青少英语 www.gogo-talk.com 京ICP备15001014号-4<span>All Rights Reserved Copyright 2002-2015 笨鸟盛世(北京)教育科技有限公司 版权所有</span></p><p><a href="index.php.html">青少英语官网</a> |<a href="index.php-c=course&amp;a=course.html">课程体系</a> |<a href="index.php-c=price&amp;a=price.html">课程购买</a> |<a href="index.php-c=scroll&amp;a=scroll.html" target="_blank">学习理念</a> |<a href="http://bnys.121learn.cn" target="_blank">在线上课</a> |<a href="index.php-c=aboutus&amp;a=aboutus.html">联系我们</a> |<a href="index.php-c=agreement&amp;a=agreement.html">服务协议</a></p></div></div></div><!-- footer end--><!-- 公共头部 end--></body></html>

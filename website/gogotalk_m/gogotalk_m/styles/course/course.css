@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* banner start*/
+.banner_course{height: 4.2rem;}
+.banner_course img{height: 4.2rem; display: block;}
+/* banner end*/
+/* 体系 start*/
+.course_tixi{ padding: 0.7rem 0 0;}
+.course_tixi_title{ height: 0.46rem; margin: 0 auto 0.6rem;display: block;}
+.course_tixi_box{width: 7.4rem;margin: 0 auto;}
+.course_tixi_item{ margin-bottom: 0.2rem;}
+.course_tixi_item_top{width: 100%; height: 0.98rem;background: #cf211c;border-radius: 4px;position: relative;}
+.course_tixi_item_top p{width: 100%; height: 0.98rem;line-height:0.98rem; text-align:center;border-radius: 4px; font-size: 0.36rem; color: #fff;}
+.course_tixi_item_top_ico{ position: absolute; top:0.42rem; right: 0.46rem; width: 0.18rem;}
+.course_tixi_item_top_ico img{ display: block; width: 100%;}
+.course_tixi_item_top_ico img.disp_course{ display: none;}
+.course_tixi_item_bottom{ display: none; padding:0 0.2rem;}
+.course_tixi_item_bottom2{ display: block;}
+.course_tixi_item_bottom_h1{ font-size:0.32rem; color:#d72129; padding-top:0.7rem;height:0.86rem;font-weight: normal;}
+.course_tixi_item_bottom_h2{ font-size:0.32rem; color:#d72129; padding-top:0.54rem;height:0.66rem;font-weight: normal;}
+.course_tixi_item_bottom img{ display: block; margin-left: 0.52rem; height: 1rem;}
+.course_tixi_item_bottom p{font-size: 0.26rem; color: #333; margin-bottom: 0.6rem;}
+.yuyue_course{ width: 4.2rem; height: 0.8rem; border-radius: 60px; border: 1px solid #cf211c; text-align: center; line-height: 0.8rem; font-size: 0.36rem; color: #cf211c; margin:  0 auto;}
+.yuyue_course_mb{ margin-bottom: 0.7rem;}
+/* 体系 end*/
+/* 阶段 start*/
+.course_jieduan{ padding: 0.7rem 0;}
+.course_jieduan_title{ height: 0.46rem; margin: 0 auto 0.6rem;display: block;}
+.course_jieduan_box{width: 7.4rem;margin: 0 auto;}
+.course_jieduan_item{ margin-bottom: 0.2rem;}
+.course_jieduan_item_top{width: 100%; height: 0.98rem;background: #ff7a01;border-radius: 4px;position: relative;}
+.course_jieduan_item_top p{width: 100%; height: 0.98rem;line-height:0.98rem; text-align:center;border-radius: 4px; font-size: 0.36rem; color: #fff;}
+.course_jieduan_item_top_ico{ position: absolute; top:0.42rem; right: 0.46rem; width: 0.18rem;}
+.course_jieduan_item_top_ico img{ display: block; width: 100%;}
+.course_jieduan_item_top_ico img.disp_course{ display: none;}
+.course_jieduan_item_bottom{ display: none;}
+.course_jieduan_item_bottom2{ display: block;}
+.course_jieduan_item_bottom h2{ font-weight: normal; font-size: 0.4rem; color: #333; text-align: center; padding: 0.7rem 0 0.56rem;}
+.course_jieduan_item_bottom p{ font-size: 0.26rem; color: #333;padding:0 0.2rem 0.6rem;}
+.course_jieduan_item_bottom table{ width: 100%; margin-bottom: 0.6rem;border-collapse: collapse;}
+.course_jieduan_item_bottom th{ height: 1.32rem; background: #fee9d5; border: 1px solid #fee9d5; font-size: 0.3rem; color: #333; text-align: center;}
+.course_jieduan_item_bottom td{padding: 0.4rem 0.2rem; background: #fff; border: 1px solid #fee9d5; font-size: 0.26rem; color: #333; text-align: center;}
+.course_jieduan_item_bottom td.course_jieduan_left{ text-align: left;}
+/* 阶段 end*/

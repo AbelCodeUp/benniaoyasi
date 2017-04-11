@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=320px,maximum-scale=1.3,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>GoGoTalk青少外教在线英语</title>
+    <meta content="GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习" name="keywords"/>
+    <meta content="GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。"
+          name="description"/>
+    <link rel="stylesheet" type="text/css" href="styles/video_m_all/styles/video_m.css"/>
+    <script src="styles/video_m_all/js/jquery-1.7.2.min.js"></script>
+    <script src="styles/video_m_all/js/shipei.js"></script>
+    <script type="text/javascript">
+        function setHeight() {
+            var max_height = document.documentElement.clientHeight;
+            var primary = document.getElementById('page1_mainBox');
+            primary.style.minHeight = max_height + "px";
+            primary.style.maxHeight = max_height + "px";
+        }
+        /* 水印效果 焦点事件*/
+        $(document).ready(function () {
+            $("#page1_password").focus(function () {
+
+                var pwd = $("#page1_password").val();
+                if (pwd == null || pwd == '请输入您的密码') {
+                    $("#page1_password").val('');
+                }
+            });
+            $("#page1_password").blur(function () {
+                var pwd = $("#page1_password").val();
+
+                if (pwd == '' || pwd == null) {
+                    $("#page1_password").val('请输入您的密码');
+                }
+
+            });
+            //focusblur
+            jQuery.focusblur = function (focusid) {
+                var focusblurid = $(focusid);
+                var defval = focusblurid.val();
+                focusblurid.focus(function () {
+                    var thisval = $(this).val();
+                    if (thisval == defval) {
+                        $(this).val("");
+                        $(this).css({color: '#170c2e'});
+                    }
+                });
+                focusblurid.blur(function () {
+                    var thisval = $(this).val();
+                    if (thisval == "") {
+                        $(this).val(defval);
+                        $(this).css({color: '#170c2e'});
+                    }
+                });
+            };
+            /*下面是调用方法*/
+            $.focusblur("#page1_mobile");
+        });
+    </script>
+</head>
+<body style="background: #11071f;" onload="setHeight();" onresize="setHeight()">
+<div class="page1_mainBox" id="page1_mainBox">
+    <img class="page1_logo" src="styles/video_m_all/video_images/page1/logo.png">
+    <img class="page1_text" src="styles/video_m_all/video_images/page1/text.png">
+
+    <div class="page1_hua_box">
+        <img class="page1_hua page1_hua1" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua2" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua3" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua4" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua5" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua6" src="styles/video_m_all/video_images/page1/hua.png">
+        <img class="page1_hua page1_hua7" src="styles/video_m_all/video_images/page1/hua.png">
+    </div>
+    <div class="page1_form">
+        <form class="page1_form_rel" name="" method="post" action="login.html#%23%23">
+            <div class="page1_mobile_box">
+                <div class="page1_mobile_label"><img src="styles/video_m_all/video_images/page1/mobile.png"></div>
+                <input type="text" class="page1_mobile" id="page1_mobile" name="mobile" value="请输入您的手机号" maxlength="11"
+                       onkeyup="value=value.replace(/[^\d]/g,'')"/>
+            </div>
+            <div class="page1_mobile_box">
+                <div class="page1_mobile_label"><img src="styles/video_m_all/video_images/page1/key.png"></div>
+                <input type="text" class="page1_mobile" id="page1_password" name="password" value="请输入您的密码">
+            </div>
+            <div class="page1_btu">确认提交</div>
+        </form>
+    </div>
+    <div class="page1_tishi">
+        <div class="page1_tishi_text"><span id="name"></span>，欢迎回来 !</div>
+    </div>
+</div>
+<script>
+    $(".page1_btu").click(function () {
+        var mobile = $("input#page1_mobile").val();
+        var password = $("input#page1_password").val();
+        if (mobile == "" || password == "") {
+            return false;
+        } else {
+            var re = /^1[3|5|7|8|][0-9]{9}$/;
+            if (!re.test(mobile)) {
+                alert("请输入有效的手机号码！");
+                return;
+            }
+        }
+        $.post("http://w.gogo-talk.com/api/BedTimeSotry/StudentStoryLogin", {phone: mobile, Password: password}, function (data) {
+
+            if (data.Result == 0) {
+                //登录成功调用
+                $("#name").html(data.Msg);
+
+                $(".page1_form").hide();
+                $(".page1_tishi").show();
+                setTimeout(function () {
+                    window.location.href = 'video_list.html';
+                }, 1500);
+            } else {
+                alert('用户名或密码错误哦 /(ㄒoㄒ)/~');
+                //没有用户跳转表单
+                //window.location.href='http://www.gogo-talk.com/new_html/index.html';
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

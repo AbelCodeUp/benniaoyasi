@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>video</title>
+</head>
+<body style="background-color: #000">
+<iframe height=498 width=100% src='' frameborder=0 allowfullscreen id="video" style="margin-top: 100px;"></iframe>
+<script src="styles/video_m_all/js/jquery-1.7.2.min.js"></script>
+<script>
+    function GetRequest() {
+        //url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；
+        var url = location.search; //获取url中"?"符以及其后的字串
+        var theRequest = new Object();
+        if(url.indexOf("?") != -1)//url中存在问号，也就说有参数。
+        {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++)
+            {
+                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    var hHeight = $(window).height();
+    var iVideo = $('#video');
+
+    iVideo.css('margin-top',hHeight/2 - 320);
+    iVideo.attr('src',GetRequest().url);
+    document.title = GetRequest().name;
+
+    var eventTester = function(e){
+        Media.addEventListener(e,function(){
+            console.log((new Date()).getTime(),e)
+        },false);
+    }
+
+
+    var resizeIframe=function(){
+        var bodyw=document.body.clientWidth;
+        for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
+
+            document.getElementsByTagName("iframe")[ilength].height = bodyw*9/16;//设定高度
+
+        }
+    }
+//    window.onload = window.onresize = function () {
+//        resizeIframe();
+//    }
+</script>
+</body>
+</html>

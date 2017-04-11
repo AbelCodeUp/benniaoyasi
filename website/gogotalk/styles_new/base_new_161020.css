@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+*{padding:0; margin:0; border:none;cursor:default; }
+body {font-size:12px;font-family: 'Arial', "微软雅黑";background:#FFF; width:100%; min-height:100%;min-width:1250px;}
+img {border:0;vertical-align:middle;}
+button, html input[type=button], input[type=submit] {-webkit-apperance:button;cursor:pointer}
+ul, li, ol {list-style:none;}
+a, button, input {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+a, area, button {   blur:expression(this.onFocus=this.blur());}
+:focus {outline:none;}
+a, input, button, select, textarea {outline:none;}
+a, a:hover {cursor:pointer;text-decoration:none;}
+table {border-collapse:collapse;}
+/*公共类名*/
+.new_warpper_161020 {width:1200px;margin:0 auto;}
+.left {float:left;}
+.right {float:right;}
+.smyclearfix:after{ content:"."; display:block; clear:both; height:0; font-size:0; overflow:hidden;}
+.smyclearfix{ zoom:1;}

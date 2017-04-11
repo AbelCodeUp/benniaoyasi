@@ -1,0 +1,106 @@
+
+<!-- 公共头部 start-->
+<script type="text/javascript">
+  $().ready(function () {
+  //获取客户端日期并格式化
+  var myDate = new Date();
+  var datetime = myDate.getFullYear() + "年" + ((myDate.getMonth() + 1) > 10 ? (myDate.getMonth() + 1) : "0"
+  + (myDate.getMonth() + 1)) + "月" + (myDate.getDate() < 10 ? "0" + myDate.getDate() : myDate
+  .getDate()) + "日" + (myDate.getHours() < 10 ? "0" + myDate.getHours() : myDate
+  .getHours()) + "时" + (myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate
+  .getMinutes()) + "分" + (myDate.getSeconds() < 10 ? "0" + myDate.getSeconds() : myDate
+  .getSeconds()) + "秒";
+  var starttime = "2017年02月22日00时00分00秒";
+  var endtime = "2017年02月25日00时00分00秒";
+  //判断日期
+  if(datetime<starttime){
+  }else if(datetime > starttime && endtime > datetime) {
+  $(".head_161025").addClass("head_1123");
+  $(".headTop_161025").addClass("head_1123_bo");
+  $(".head_161025").prepend("<div class='top1123_bg'><div class='new_warpper_161020 smyclearfix'><div class='left top1123_laba'></div><div id='scrollobj' class='left'><span class='scrollobj_span'>&nbsp;&nbsp;</span></div></div><style>.head_1123{height: auto;padding-top: 0;}.head_1123_bo{border: none;}.top1123_bg{position:relative;background: url('/images_new/headImages_new/top-gundong.jpg') repeat-x;}.top1123_laba {width: 30px;height: 26px;margin: 5px 30px 0 10px;background: url('/images_new/headImages_new/top-laba.png') no-repeat;} #scrollobj{width: 1130px; height:38px; line-height: 38px;color:#fff;white-space:nowrap;overflow:hidden; font-size: 16px;}.scrollobj_span{display: inline-block; padding:0 50px;height:38px;line-height:38px;}</style></div>");
+  $(".scrollobj_span").html("开学季活动延长72小时：购180课时送15课时；购360课时送40课时；购720课时送60课时！全线9折，速来抢课！");
+  setInterval("scroll(document.getElementById('scrollobj'))", 20);
+  } else {
+  $(".top1123_bg").css({"display": "none"});
+  }
+  });
+</script>
+<!-- 导航 nav start-->
+<link rel="stylesheet" type="text/css" href="../styles_new/head_new_170111.css"/>
+<!-- 头 css-->
+<div class="head_161025">
+  <!-- 活动 start-->
+  <script>
+    //文字滚动
+    function scroll(obj) {
+    var tmp = (obj.scrollLeft)++;
+    if (obj.scrollLeft == tmp) obj.innerHTML += obj.innerHTML;
+    if (obj.scrollLeft >= obj.firstChild.offsetWidth) obj.scrollLeft = 0;
+    }
+  </script>
+  <!-- 活动 end-->
+  <div class="headTop_161025">
+    <div class="new_warpper_161020 new_warpper_170111 smyclearfix"><a href="index.html" class="left headTop_logo_161025"><img width="100%" src="../images_new/headImages_new/logo_161025_new.png" alt="gogotalk"/></a><a href="tel://4008787276" class="right headTop_tel_161025"><img style="width:100%;" src="../images_new/headImages_new/tel_161025_new.png" alt="gogotalk"/></a></div>
+    <div class="download_0111"><img src="../images_new/headImages_new/down/jiantou.png" class="download_jiantou_0111"/><a style="position: absolute; top: 0;left:0;width: 100%; height: 100%; z-index: 4;" href="http://learn.gogo-talk.com/download/WeiyiEduSetup.exe"></a></div>
+  </div>
+  <div class="headNav_161025">
+    <ul class="smyclearfix headRelNav_161025">
+      <li data-btntype="index" class="nav-group cur_new left"><a href="./main.html">首页</a></li>
+      <li data-btntype="about" class="nav-group left"><a href="./aboutus.html">关于我们</a></li>
+      <li data-btntype="lesson" class="nav-group left"><a href="./course.html">课程体系</a></li>
+      <li data-btntype="buyLesson" class="nav-group left"><a href="./price.html">课程购买</a></li>
+      <li class="left"><a target="_blank" href="index.php-c=scroll&amp;a=scroll.html">学习理念</a></li>
+      <li class="left"><a target="_blank" href="http://bnys.121learn.cn/login?next=%2Flearn">在线上课</a></li>
+      <li class="left yuyueshiting_btu_js"><a href="javascript:void(0);">预约试听</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 导航 nav end-->
+<!-- 公共侧边栏 start-->
+<div class="cebianlan_161025">
+  <div class="cebianlan_161025_red">
+    <p class="cebianlan_161025_red_tel"><a href="tel://4008787276">400-8787-276</a></p>
+    <p class="cebianlan_161025_red_time">工作时间：10:00-20:00</p>
+  </div>
+  <div class="cebianlan_161025_blue">
+    <form id="cebianlan_161025_blue_form" name="" method="post" action="index.php-c=search&amp;a=search.html" class="cebianlan_161025_blue_form">
+      <input id="search_ord_161026" name="mobile" type="text" value="输入电话，查询订单" class="search_ord_161026"/><span class="search_ord_161026_button"></span>
+    </form>
+  </div>
+  <div class="cebianlan_161025_green"><img src="../images_new/headImages_new/cebian_green_new_161025.png" class="cebianlan_161025_green1"/><img src="../images_new/headImages_new/cebian_green2_new_161025.png" class="cebianlan_161025_green2"/></div>
+  <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" charset="gbk"></script>
+</div>
+<!-- 公共侧边栏 end-->
+<!-- 预约试听 start-->
+<div class="yuyueshiting_box1_new_161026 shitingbox_new_161026">
+  <div class="yuyuezhezhao_new_161026"></div>
+  <div class="yuyueshiting_new_161026">
+    <div class="yuyueshitingbg_new_161026"></div>
+    <div class="yuyueshitingrel_new_161026">
+      <div class="yuyueshiting_new_161026_close"></div>
+      <div class="yuyueshiting_new_161026_title">预约试听课程</div>
+      <form id="yuyuezhezhao_new_161026_form" name="" method="post" action="" class="yuyuezhezhao_new_161026_form">
+        <p>
+          <input id="yuyuezhezhao_new_161026_form_name" name="name" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_name"/>
+          <label>姓名：</label>
+        </p>
+        <p>
+          <input id="yuyuezhezhao_new_161026_form_tel" name="mobile" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_tel"/>
+          <label>电话：</label>
+        </p>
+        <div id="yuyueshiting_new_161026_btu" class="yuyueshiting_new_161026_btu">马上预约</div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="yuyueshiting_box2_new_161026 shitingbox_new_161026">
+  <div class="yuyuezhezhao_new_161026"></div>
+  <div class="yuyueshiting_s_new_161026">
+    <div class="yuyueshitingrel_new_161026">
+      <div class="yuyueshiting_new_161026_close"></div>
+      <div class="yuyueshiting_new_161026_btu2">确定</div>
+    </div>
+  </div>
+</div>
+<!-- 预约试听 end-->
+<!-- 公共头部 end-->

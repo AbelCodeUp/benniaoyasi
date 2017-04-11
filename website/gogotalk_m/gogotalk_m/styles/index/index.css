@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* 优势 start*/
+.youshi{height:auto;padding-bottom:0.5rem;border-bottom: 1px solid #f3f3f3;background: url("../../images/index/youshibg.jpg") no-repeat; background-size: contain; padding-top: 0.7rem;}
+.title1{ display: block;height: 1.02rem; margin: 0 auto 0.2rem;}
+.youshi_box{ width: 7.24rem;margin: 0 auto;}
+.youshi_item{ width: 3.62rem; height: auto; padding: 0.52rem 0 0.26rem;box-sizing: border-box;}
+.youshi_ti{ display: block;height: 0.6rem; margin: 0 auto 0.28rem; }
+.youshi_ti_t{ width: 100%; text-align: center;height: 0.5rem;font-size: 0.26rem;font-weight: bold;}
+.youshi_p{width: 2.6rem;margin: 0 auto;font-size: 0.26rem; line-height: 0.4rem;text-align: center;}
+/* 优势 end*/
+/* 外教 start*/
+.waijiao{ height: 12.1rem; background: #fdfdfd; border-bottom: 1px solid #f3f3f3;padding-top: 0.7rem;box-sizing: border-box;}
+.swiper-container {width:320px;height:374px;margin:0.5rem auto 0;}
+.swiper-slide {width:180px;margin:0 auto;position: relative;}
+.swiper-slide img{width:100%;display:block;margin:0 auto;}
+.ti_p{ width: 230px; height: 4.3rem;position: absolute;top:180px; left: -23px; font-size:0.28rem; line-height: 0.4rem;display: none;text-align: center;opacity: 0;}
+.ti_p2{ width: 230px; height: 4.3rem;position: absolute;top:180px; left: -23px; font-size:0.26rem; line-height: 0.38rem;display: none;text-align: center;}
+.swiper-slide-active .ti_p{display: block;-webkit-animation: ti_p 0.8s 0.2s forwards;animation: ti_p 0.8s 0.2s forwards;}
+@-webkit-keyframes ti_p {
+    0%{opacity: 0;-webkit-transform: translate(0,10px);}
+    100%{opacity: 1;-webkit-transform: translate(0,0);}
+}
+@keyframes ti_p {
+    0%{opacity: 0;transform: translate(0,10px);}
+    100%{opacity: 1;transform: translate(0,0);}
+}
+.swiper-pagination{ font-size: 0.26rem;}
+.jiantou{ position: absolute; bottom: 13px; left: 0; right: 0; margin: 0 auto; width: 2rem;height: 0.2rem; background: url("../../images/index/jiantou.png") center no-repeat;background-size: contain; }
+/* 外教 end*/
+/* 口碑 start*/
+.koubei{ height:auto; background: #fff; border-bottom: 1px solid #f3f3f3;padding: 0.7rem 0 0.9rem;box-sizing: border-box;}
+.swiper-container2{width:320px;height:210px;margin:0.7rem auto 0;}
+.swiper-container2 .swiper-slide {width:180px;position: relative; padding:0 20px; border-right: 1px solid #f3f3f3;}
+.swiper-container2 .swiper-slide img{width:180px;display:block;}
+/* 口碑 end*/
+/* 预约 start*/
+.yuyue_index{height: 6.7rem; box-sizing: border-box; border-bottom: 1px solid #f3f3f3; padding-top: 0.7rem; background: #fdfdfd;}
+.title2{display: block;height: 0.46rem; margin: 0 auto 0.2rem;}
+.form_index{ width: 100%; padding-top: 0.4rem;}
+.form_index_div{ width:7.38rem; height: 0.9rem; border: 1px solid #fdeeef;  margin: 0 auto 0.56rem; background: #fff; border-radius: 4px; position: relative;}
+.form_index_input{background: none; display: block; width: 100%; height: 100%; position: absolute; top:0; left: 0; font-size: 0.3rem; color: #666; text-indent: 1.6rem;}
+.form_index_label{ position: absolute; top:0 ;left: 0;width: 1.6rem; height: 0.9rem; line-height: 0.9rem; font-size: 0.3rem; color: #999; text-indent: 0.4rem;}
+.form_index_btu{width:7.38rem; height: 0.9rem; border: 1px solid #cf121c;  margin: 0 auto 0.56rem; background: #cf121c; border-radius: 4px; color: #fff;font-size: 0.36rem; letter-spacing: 2px;  text-align: center;line-height: 0.9rem}
+/* 预约 end*/
+/* 荣誉 start*/
+.rongyu{height:auto; padding-top: 0.7rem; padding-bottom: 0.2rem;}
+.rongyu_box{width: 7.4rem; margin: 0 auto; padding-top: 0.6rem;}
+.rongyu_item{ width: 3.52rem;margin-bottom: 0.5rem; position: relative;}
+.rongyu_item a{position: absolute; top:0; left: 0; width: 100%; height: 100%;-webkit-tap-highlight-color:rgba(0,0,0,0.05);border-radius: 0;}
+.rongyu_item_mr{margin-right: 0.35rem;}
+.rongyu_item_dl{ width:100%;}
+.rongyu_item_dl dt img{ width:100%;display:block;}
+.rongyu_item_dl dt{margin-bottom: 0.2rem;}
+.rongyu_item_dl dd{ text-align: center;font-size: 0.24rem;}
+/* 荣誉 end*/
+/* 媒体 start*/
+.meiti{height:auto; padding-bottom: 0.6rem;}
+.meiti_box{width: 7.4rem; margin: 0 auto; padding-top: 0.6rem;}
+.meiti_item{ width: 3.52rem; height:0.98rem; border: 1px solid #f3f3f3; box-sizing: border-box; background:#fff;margin-bottom: 0.36rem; overflow: hidden; position: relative;}
+.meiti_item:first-of-type{ -webkit-tap-highlight-color:rgba(0,0,0,0.05);}
+.meiti_item img{ width:3.53rem;position: absolute; top:-1px;left:-1px;}
+.meiti_item_mr{margin-right: 0.35rem;}
+/* 媒体 end*/

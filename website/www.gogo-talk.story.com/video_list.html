@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>GoGoTalk青少外教在线英语</title>
+    <meta content="GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习" name="keywords"/>
+    <meta content="GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。"
+          name="description"/>
+    <link rel="stylesheet" type="text/css" href="styles/video_m_all/styles/video_m.css"/>
+
+</head>
+<body style="background: #e4f8ff;">
+<div class="list_banner">
+    <img src="styles/video_m_all/video_images/list/banner.png">
+</div>
+<div class="clearfix list_tab_top" id="itembox">
+
+</div>
+<div class="list_tab_bottom" id="videobox">
+
+</div>
+<!--footer start-->
+<div class="smy_wapper footer">
+    <img src="styles/video_m_all/video_images/list/fo.png">
+</div>
+<!--footer end-->
+<!--回到顶部-->
+<div id="returnTop"></div>
+<script src="styles/video_m_all/js/jquery-1.7.2.min.js"></script>
+<script src="styles/video_m_all/js/shipei.js"></script>
+<script>
+    $("#returnTop").click(function () {
+        var speed = 200;//滑动的速度
+        $('body,html').animate({scrollTop: 0}, speed);
+        return false;
+    });
+    $.ajax({
+        url: 'http://w.gogo-talk.com/api/BedTimeSotry/GetBedTimeSotryList',
+        data: {},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+//                    格式化数据
+            var aData = res.DataResult;
+            var aObj = {};
+            aObj['G' + aData[0].Grade] = [];
+            for (var i = 0; i < aData.length; i++) {
+                for (var j in aObj) {
+                    if (j == 'G' + aData[i].Grade) {
+                        aObj['G' + aData[i].Grade].push(aData[i])
+                    } else {
+                        aObj['G' + aData[i].Grade] = [];
+                        aObj['G' + aData[i].Grade].push(aData[i])
+                    }
+                }
+
+            }
+//                    绑定dom
+            for (var k in aObj) {
+                var str = '<div class="left list_tab_top_item">' +
+                        '<a href="javascript:;" style="color:#ffffff;">' + k + ' 1~10</a>' +
+                        '</div>';
+                var itembox = $(' <div class="clearfix list_tab_bottom_itembox">');
+                for (var s = 0; s < aObj[k].length; s++) {
+                    var vHtml = '<div class="left list_tab_bottom_item" data-url="' + aObj[k][s].VideoUrl + '" data-name="' + aObj[k][s].StoryName + '">' +
+                            '<div class="list_tab_bottom_item_top">' +
+                            '<img class="list_tab_bottom_item_top_img" src="' + aObj[k][s].VideoImg + 'g">' +
+                            '<span class="list_tab_bottom_item_top_a"></span>' +
+                            '</div>' +
+                            '<div class="list_tab_bottom_item_bottom">' + aObj[k][s].StoryName + '</div>' +
+                            '</div>';
+                    itembox.append(vHtml);
+                }
+                $('#itembox').append(str);
+                $('#videobox').append(itembox);
+                $($('.list_tab_bottom_itembox')[0]).addClass('list_tab_bottom_itembox_cur');
+                $($('.list_tab_top_item')[0]).addClass('list_tab_top_itemcur');
+            }
+
+            var tPage = location.hash.split('#')[1];
+            $($('#itembox .list_tab_top_item')[tPage]).addClass('list_tab_top_itemcur').siblings().removeClass('list_tab_top_itemcur');
+            $($('#videobox .list_tab_bottom_itembox')[tPage]).addClass('list_tab_bottom_itembox_cur').siblings().removeClass('list_tab_bottom_itembox_cur');
+
+
+        }
+    });
+
+    $('#videobox').on('click','.list_tab_bottom_item',function(){
+        var url = $(this).data('url');
+        var name = $(this).data('name');
+        window.location.href = 'video.html?url=' + url + '&name=' + name;
+    });
+
+
+    $('#itembox').on('click', '.list_tab_top_item', function () {
+        var index = $(this).index();
+        window.location.href = '#'+index;
+        $(this).addClass('list_tab_top_itemcur').siblings().removeClass('list_tab_top_itemcur');
+        $($('.list_tab_bottom_itembox')[index]).addClass(' list_tab_bottom_itembox_cur').siblings().removeClass(' list_tab_bottom_itembox_cur');
+    });
+//    var tPage = window.location.href.split('#')[1];
+
+
+</script>
+</body>
+</html>

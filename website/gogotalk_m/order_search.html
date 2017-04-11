@@ -1,0 +1,273 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=320px,maximum-scale=1.3,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>GoGoTalk青少外教在线英语_订单查询</title>
+    <meta content="GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习" name="keywords"/>
+    <meta content="GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。"
+          name="description"/>
+    <!--gogotalk_m_common.css之中包括公共头部以及公共底部-->
+    <link rel="stylesheet" type="text/css" href="gogotalk_m/styles/gogotalk_m_common.css"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="gogotalk_m/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="gogotalk_m/styles/order_search/order_search.css" type="text/css"/>
+
+
+    <script src="gogotalk_m/js/jquery-1.7.2.min.js"></script>
+    <script src="gogotalk_m/js/shipei.js"></script>
+
+    <script src="gogotalk_m/js/common.js"></script>
+
+</head>
+<body style="overflow-y: hidden;">
+<!--头部公共部分 start-------------------------------------------------------->
+<div class="common_head">
+    <!--文字滚动 start-->
+    <div class="smy_wapper text_scroll">
+        <img class="text_scroll_laba" src="gogotalk_m/images/common/laba.png">
+
+        <div id="gongao">
+            <div id="scroll_div" class="scroll_div">
+                <div id="scroll_begin">
+                    <span>开学季活动延长72小时：购180课时送15课时；购360课时送40课时；购720课时送60课时！全线9折，速来抢课！</span>
+                    <span>开学季活动延长72小时：购180课时送15课时；购360课时送40课时；购720课时送60课时！全线9折，速来抢课！</span>
+                    <span>开学季活动延长72小时：购180课时送15课时；购360课时送40课时；购720课时送60课时！全线9折，速来抢课！</span>
+                </div>
+                <div id="scroll_end"></div>
+            </div>
+            <script type="text/javascript">ScrollImgLeft();</script>
+        </div>
+    </div>
+    <!--文字滚动 end-->
+    <!--head start-->
+    <div class="smy_wapper head">
+        <a class="gogotalk_m_logo" href="index.html"></a>
+        <img class="meau" id="meau" src="gogotalk_m/images/common/meau.png">
+    </div>
+    <!--head end-->
+</div>
+<div class="nav">
+    <div class="hongyuan"></div>
+    <div class="close"></div>
+    <div class="nav_tru">
+        <ul class="nav_tru_ul">
+            <li class="nav_tru_ul_li1"><a href="index.html">GoGoTalk</a></li>
+            <li class="nav_tru_ul_li2"><a href="about_us.html">关于我们</a></li>
+            <li class="nav_tru_ul_li3"><a href="course.html">课程体系</a></li>
+            <li class="nav_tru_ul_li4"><a href="price.html">课程购买</a></li>
+        </ul>
+        <div class="pho">
+            <span class="dianh"></span>
+            <span class="dianh_rel">400-8787-276</span>
+            <a class="pho_a" href="tel://4008787276"></a>
+        </div>
+        <form class="form_search">
+            <input class="input_search" id="input_search" type="text" value="输入手机号查询订单" maxlength="11"/>
+
+            <div class="btu_search">
+                <img src="gogotalk_m/images/common/search.png"/>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="zhanwei" style="width: 100%;"></div>
+<!--右侧预约 start-->
+<div class="yuyue_common_z">
+    <div class="yuyue_common_box">
+        <h2 class="yuyue_common_title">预约试听课程</h2>
+
+        <form class="form_common">
+            <div class="form_common_div">
+                <input class="form_common_input" id="name_common" type="text"/>
+                <label class="form_common_label">姓名：</label>
+            </div>
+            <div class="form_common_div">
+                <input class="form_common_input" id="mobile_common" type="text"/>
+                <label class="form_common_label">电话：</label>
+            </div>
+            <div class="form_common_btu" id="form_common_btu">立即预约</div>
+        </form>
+    </div>
+</div>
+<div class="yuyue_b">
+    <img class="yuyue_b_img1" src="gogotalk_m/images/common/yuyue.png">
+    <img class="yuyue_b_img2 yuyue_dis" src="gogotalk_m/images/common/yuyue2.png">
+</div>
+<!--右侧预约 end-->
+<!--头部公共部分 end--------------------------------------------------------->
+
+<!--没有订单 start-->
+<div class="no_order" style="display: none;">
+    <img class="no_order_img" src="gogotalk_m/images/order_search/no_order.png">
+    <p class="no_order_text">亲，您还没有订单哦！</p>
+</div>
+<!--没有订单 end-->
+<!--有订单 start-->
+<div class="have_order">
+    <img class="have_order_title" src="gogotalk_m/images/order_search/order_title.png">
+    <div class="order_list" id="orderList">
+
+
+    </div>
+</div>
+<!--有订单 end-->
+
+
+<!-- <!--底部公共 start ------------------------------------------------------- -->
+<div class="smy_wapper footer">
+    <div class="footer_top">
+        <img class="erweima" src="gogotalk_m/images/common/erweima.jpg">
+
+        <div class="erweima_box">
+            <img class="erweimabig" src="gogotalk_m/images/common/erweima.png">
+
+            <div class="closefo"></div>
+        </div>
+        <div class="footer_top_text">
+            <p class="footer_top_p"><span class="footer_top_span footer_top_span1"></span>北京市朝阳区安慧北里逸园28号逸园商务楼4层403</p>
+
+            <p class="footer_top_p"><span class="footer_top_span footer_top_span2"></span><a href="tel://4008787276">咨询热线：400-8787-276</a>
+            </p>
+
+            <p class="footer_top_p"><span class="footer_top_span footer_top_span3"></span>service@gogo-talk.com</p>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <p class="footer_bottom_p">青少英语 www.gogo-talk.com 京ICP备15001014号-4</p>
+
+        <p class="footer_bottom_p">All Rights Reserved 2002-2015 笨鸟盛世(北京)教育科技有限公司 版权所有</p>
+    </div>
+</div>
+<!--  -->
+<script>
+    InitData();
+    function InitData(){
+        $.ajax({
+            type: "GET",
+            url: "http://w.gogo-talk.com/api/order/GetOrderList",
+            data: { Mobile: GetRequest().tel },
+            dataType: "json",
+            success: function(data){
+                if(data.Return == 1){
+                    var strHtml = '';
+                    var Data = data.data;
+                    if(Data.length >= 1){
+                        $('.have_order').show();
+                        $('.no_order').hide();
+                        for(var i = 0;i < Data.length;i++){
+                            var payData = Data[i];
+                            var payTime = '';
+                            var payType;
+                            if(payData.Status == 1){
+                                payType = '已支付';
+                            }else{
+                                payType = '未支付';
+                            }
+                            strHtml += '<div class="order_item">'+
+                                    '<div class="order_part1">'+
+                                    '<div class="left order_part1_item">'+
+                                    '<span class="left order_part1_span1"></span>'+
+                                    '<p class="left order_part1_item_p">购买课时：60节</p>'+
+                            '</div>'+
+                            '<div class="right order_part1_item>">'+
+                                    '<p class="right order_part1_item_p">有效时间：3个月</p>'+
+                            '<span class="right order_part1_span2"></span>'+
+                                    '</div>'+
+                                    '</div>'+
+                                    '<div class="order_part2">'+
+                                    '<div class="order_part2_div">订单号码：' + payData.OrderNUM + '</div>'+
+                            '<div class="order_part2_div">商品名称：' + payData.ProductName + '</div>'+
+                            '<div class="order_part2_div">支付时间：' + payTime + '</div>'+
+                            '<div class="order_part2_div">支付方式：' + payType + '</div>'+
+                            '</div>'+
+                            '<div class="order_part3">'+
+                                    '<div class="order_part3_top">付款金额：<span>&yen;</span><span>'+ payData.Prices +'</span></div>'+
+
+                            '</div>'+
+                            '</div>'+
+                            '<div class="order_part3_bot">';
+                            if(payData.Status == 1 ){
+                            }else{
+                                strHtml += '<div class="zfb_0613" data-type="1" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="payType(this)">支付宝支付</div>';
+//                                        '<div class="weixin_0613" data-type="2" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="payType(this)">微信支付</div>' +
+//                                        '<div id="kq_input"></div>' +
+//                                        '<input class="weixin_0613" style="left: 686px;" type="button" value="网银/快捷支付" data-num = "'+ payData.OrderNUM +'" data-id="'+ payData.GoodsId +'" data-name="'+ payData.ProductName +'" data-prices="'+ payData.Prices +'" data-remark="'+ payData.Remark +'" onclick="quickMony(this);">';
+                            }
+                            strHtml += '</div>'+
+                                        '</div>'+
+                                        '</div>';
+                        }
+                    }else{
+                        $('.have_order').hide();
+                        $('.no_order').show();
+                    }
+                    $('#orderList').html(strHtml);
+                }
+            }
+        });
+    }
+    //支付
+    function payType(dom){
+        var postUrl = 'http://w.gogo-talk.com/api/order/PostZhiFu';
+        var ZhiFuType = $(dom).data('type');
+        var OrderNum = $(dom).data('num');
+        var GoodsId = $(dom).data('id');
+        var GoodsName = $(dom).data('name');
+        var Gprice = $(dom).data('prices');
+        var Mobile = GetRequest().tel;
+        var Remarks = $(dom).data('remark');
+        $.post(postUrl,{'ZhiFuType':ZhiFuType,'OrderNum':OrderNum,'GoodsId':GoodsId,'GoodsName':GoodsName,'Gprice':Gprice,'Mobile':Mobile,'Remarks':Remarks},function(data){
+            if(data.Return == 1){
+                if(ZhiFuType == 1){
+                    window.location.href = data.data;
+                }else if(ZhiFuType == 2){
+
+                    var wxImg = encodeURIComponent("wx=*" + data.data + "*&mon="+ Gprice +"&num="+ OrderNum +"&type=" + GoodsName + "");
+                    window.location.href = "wxpay.html?" + wxImg;
+
+                }
+
+            }else{
+                alert(data.data);
+            }
+        })
+    }
+    function quickMony(){
+        var postUrl = 'http://w.gogo-talk.com/api/order/PostZhiFu';
+        var OrderNum = $(dom).data('num');
+        var GoodsId = $(dom).data('id');
+        var GoodsName = $(dom).data('name');
+        var Gprice = $(dom).data('prices');
+        var Mobile = tel;
+        var Remarks = $(dom).data('remark');
+
+        if($('.duigou i').hasClass('display_duigou')){
+        }else{
+            Mobile = $("#shoujihaoma").val();
+            if (Mobile == null) {
+                return false;
+            }else{
+                var re = /^1[3|5|7|8|][0-9]{9}$/;
+                if (!re.test(Mobile)) {
+                    alert("请输入有效的手机号码！");
+                    $("#shoujihaoma").css({border:"1px solid red"});
+                    return;
+                }
+            }
+            $("input#beizhuxinxi").val("");
+            $("input#shoujihaoma").val("");
+            $("#shoujihaoma").css({border:"1px solid #333"});
+            var sendMsg = 'OrderNum='+OrderNum+'&GoodsId='+GoodsId+'&GoodsName='+GoodsName+'&Gprice='+Gprice+'&Mobile='+Mobile+'&Remarks='+Remarks;
+
+            window.location.href = 'http://112.126.86.35:8456/Send.aspx?'+ sendMsg;
+        }
+    }
+</script>
+</body>
+</html>
