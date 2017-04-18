@@ -561,6 +561,8 @@ orderTeacherCtrl.controller('orderTeacherCtrl', ['$scope', '$rootScope', '$cooki
 					layer.msg('预约成功', {
 						icon: 1
 					});
+					//重新获取教材
+					GetBookList();
 					$scope.pageIndex--;
 					// 清空数据
 					$scope.items = [];
@@ -626,6 +628,8 @@ orderTeacherCtrl.controller('orderTeacherCtrl', ['$scope', '$rootScope', '$cooki
 							icon: 1
 						});
 						$scope.pageIndex--;
+						//重新获取教材
+						GetBookList();
 						// 清空数据
 						$scope.items = [];
 						setTimeout(function() {

@@ -1,0 +1,207 @@
+doctype html
+html
+  head(lang='en')
+    meta(http-equiv='content-type', content='text/html;charset=utf-8')
+    // meta name="viewport" content="width=device-width, initial-scale=1"
+    title GoGoTalk青少外教在线英语_课程购买
+    meta(content='GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习', name='keywords')
+    meta(content='GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。', name='description')
+    link(rel='stylesheet', type='text/css', href='../styles/base_0425.css')
+    link(rel='stylesheet', type='text/css', href='../styles/price0221.css')
+    script(src='../js/jquery-1.7.2.min.js')
+    script(src='../js/price.js', charset='utf-8')
+    script(src='../js/smy_0426_tijiao.js', charset='gbk')
+    script(type='text/javascript', src='../js/jquery.downCount.js')
+    script(src='../js_new/newyear2.js')
+    //if IE 9
+      script.
+        $(function(){$(".fangda_1025").css({"opacity":1});});
+    script(src='../js_new/yuanxiao.js')
+  body
+    include header
+    // 170221 start
+    .banner170221
+      .new_warpper_161020.banner170221_box
+        img.banner170221_text(src='../images_new/indexImages_new/banner_index/banner_170221/text.png')
+        img.banner170221_up(src='../images_new/indexImages_new/banner_index/banner_170221/up.png')
+        img.banner170221_s1(src='../images_new/indexImages_new/banner_index/banner_170221/s1.png')
+        img.banner170221_s2(src='../images_new/indexImages_new/banner_index/banner_170221/s2.png')
+        img.banner170221_s3(src='../images_new/indexImages_new/banner_index/banner_170221/s3.png')
+    // 170221 end
+    // page1 start
+    // 菲律宾课程
+    div(style="background: url('../images/price/bg_0628.png') center top no-repeat;")
+      .new_warpper_0508.page1_0426(style='padding-top:80px;')
+        img(style='display:block; margin:0 auto;', src='../images/price/title.png')
+        table.table_0513(style='margin-top:60px;')
+          tr.table_0513_th
+            td.table_0513_width1 课时数
+            td.table_0513_width1 课程总价
+            td.table_0513_width1 有效期
+            td.dispaly_none.table_0513_width1.hui_0513 购买
+      // 说明开始
+      .illustrate
+        img(style='display:block; margin:100px auto 0;', src='../images/price/title3.png')
+        div(style='width:1156px; height:300px;margin:60px auto 0; border-radius:8px; background:#675fca;')
+          div(style='width:100%; text-align:center; height:100px; line-height:100px; font-size:24px; color:#fff;')
+            | 遇到问题？点击查看
+            a.a_0628(href='index.php-c=illustrate&a=illustrate.html', target='_blank') 《在线支付及上课指南》
+          .smyclearfix
+            div(style=' width:384px; height:160px; float:left; border-right:1px solid #857fd5;')
+              h2(style=' width:100%; height:64px; line-height:64px; color:#fff; text-align:center; font-size:24px; font-weight:normal;') 课程优势
+              p(style='width:240px; margin:0 auto; font-size:16px; color:#fff; line-height:24px;') 上课时间自由，预约课程方便，每天都可以给孩子25分钟短时高频的英语学习环境。
+            div(style=' width:384px; height:160px; float:left; border-right:1px solid #857fd5;')
+              h2(style=' width:100%; height:64px; line-height:64px; color:#fff; text-align:center; font-size:24px; font-weight:normal;') 适合人群
+              p(style='width:240px; margin:0 auto; font-size:16px; color:#fff; line-height:24px;') 所有对英语学习感兴趣的小朋友及青少年。
+            div(style=' width:384px; height:160px; float:left; border-right:')
+              h2(style=' width:100%; height:64px; line-height:64px; color:#fff; text-align:center; font-size:24px; font-weight:normal;') 特别提示
+              p(style='width:240px; margin:0 auto; font-size:16px; color:#fff; line-height:24px;') 孩子可以在一天多次高频学习，也可以一周几次巩固学习效果哦~其他事宜可致电GoGoTalk官方客服400-8787-276详细了解。
+      div(style="width:100%; height:124px; margin:120px auto 0;background:url('images/price/footerbg_0628.png') center top no-repeat;")
+      style.
+        .a_0628{color: #f5fb00}
+        .a_0628:hover{ color:#fbbd00;}
+        .btu_buy{width:130px !important;}
+        script.
+          function fun(class_hour,id){
+          //alert(window.location.href);
+          $.post("http://www.gogo-talk.com/index.php?c=course&a=getCourse",{'class_hour':class_hour,'id':id},function(data){
+          //alert(data);
+          data = eval('('+data+')');
+          //$("#dingdanhaoma").val(data.out_trade_no);
+          $("#dingdanhaoma").attr("value",data.out_trade_no);
+          $("#wx_dingdanhaoma").attr("value",data.out_trade_no);
+          $("#kq_dingdanhaoma").attr("value",data.out_trade_no);
+          $("#out_trade_no").val(data.out_trade_no);
+          $("#wx_out_trade_no").val(data.out_trade_no);
+          $("#kq_out_trade_no").val(data.out_trade_no);
+          $("#course_id").val(data.id);
+          $("#wx_course_id").val(data.id);
+          $("#kq_course_id").val(data.id);
+          $("#shangpinmingcheng").val(data.subject);
+          $("#wx_shangpinmingcheng").val(data.subject);
+          $("#kq_shangpinmingcheng").val(data.subject);
+          $("#subject").val(data.subject);
+          $("#wx_subject").val(data.subject);
+          $("#kq_subject").val(data.subject);
+          $("#fukuanjine").val(data.total_fee);
+          $("#wx_fukuanjine").val(data.total_fee);
+          $("#kq_fukuanjine").val(data.total_fee);
+          $("#total_fee").val(data.total_fee);
+          $("#wx_total_fee").val(data.total_fee);
+          $("#kq_total_fee").val(data.total_fee);
+          $("#buy_form_0516").show();
+          $("#xf_mb").show();
+          });
+          }
+          function fun1(){
+          $("#shoujihaoma").css({border:"1px solid #333"});
+          $("#buy_form_0516").hide();
+          $("#xf_mb").hide();
+          }
+    #buy_form_0516.buy_form_0516
+      .close2_0427(onclick='fun1()')
+      .form_0516_title 确认订单
+      .form_0516_rel
+        form#buy_form.buy_form(name='buy_form', method='post', action='index.php-c=pay&a=payment.html', style='')
+          p
+            label.buy_form_0516_lable(for='dingdanhaoma') 订单编号：
+            input#dingdanhaoma(name='dingdanhaoma', type='text', onfocus="this.value=''", value='', disabled='disabled')
+            input#out_trade_no(name='WIDout_trade_no', type='hidden', value='')
+            input#course_id(name='course_id', type='hidden', value='')
+          p
+            label.buy_form_0516_lable(for='shangpinmingcheng') 商品名称：
+            input#shangpinmingcheng(name='shangpinmingcheng', type='text', onfocus="this.value=''", disabled='true')
+            input#subject(name='WIDsubject', type='hidden', value='')
+          p(style='height:36px;')
+            label.buy_form_0516_lable(for='fukuanjine') 付款金额：
+            input#fukuanjine(name='fukuanjine', type='text', onfocus="this.value=''", disabled='true')
+            input#total_fee(name='WIDtotal_fee', type='hidden', value='')
+          p(style='text-indent: 234px; font-size: 14px;color: #fc5624;height: 42px; padding-top:6px; position:relative;')
+            img(style='position:absolute; top:0; left:200px; width:20px;', src='../images/price/hui.png')
+            | 试听当天报名，可享课程优惠，详情请致电
+            a(href='tel://4008787276', style='color: #fc5624;font-size:12px;') 4008787276
+          p(style='height:36px;')
+            label.buy_form_0516_lable(for='dingdanhaoma')
+              span(style='display:inline-block;color: #fc5624; vertical-align: middle;') * 
+              | 手机号码：
+            // <input name="WIDmobile" id="shoujihaoma" type="text" onfocus="this.value=''"/>
+            input#shoujihaoma(name='WIDmobile', type='text', onfocus="this.value=''")
+          p(style='text-indent: 194px; font-size: 12px;color: #999999;height: 36px;') 注意：手机号码，必填（支付信息将以短信形式发送至您的手机）
+          p(style='height:36px;')
+            label.buy_form_0516_lable(for='beizhuxinxi') 备注信息：
+            // <input name="WIDremarks" id="beizhuxinxi" type="text" onfocus="this.value=''"/>
+            input#beizhuxinxi(name='WIDremarks', type='text', onfocus="this.value=''")
+          p(style='text-indent: 194px; font-size: 12px;color: #999999;height:36px;') 注意：备注信息，选填（可填写您对本课程的建议，要求等）
+          p(style='text-indent: 162px; font-size: 14px; height: 30px;')
+            span.duigou
+              i
+            span(style='display: inline-block; text-indent: 20px;')
+              | 我已阅读并同意
+              a(href='index.php-c=agreement&a=agreement.html', target='_blank', style='color: #fc5624;')  《GoGoTalk青少英语课程服务协议》
+          .smyclearfix
+            #buy_queren_zhifubao.left.btu4_0426.btu_buy(style='margin-left: 200px;') 支付宝支付
+            #buy_queren_weixin.left.btu4_0426.btu_buy 微信支付
+            #buy_queren_kuaiqian.left.btu4_0426.btu_buy 网银/快捷支付
+        // 隐藏微信表单
+        form#wx_buy_form.buy_form(name='buy_form', method='post', action='weixinpay/example/native.php.html', style='display: none;')
+          p
+            label.buy_form_0516_lable(for='wx_dingdanhaoma') 订单编号：
+            input#wx_dingdanhaoma(name='wx_dingdanhaoma', type='text', onfocus="this.value=''", value='', disabled='disabled')
+            input#wx_out_trade_no(name='wx_WIDout_trade_no', type='hidden', value='')
+            input#wx_course_id(name='wx_course_id', type='hidden', value='')
+          p
+            label.buy_form_0516_lable(for='wx_shangpinmingcheng') 商品名称：
+            input#wx_shangpinmingcheng(name='wx_shangpinmingcheng', type='text', onfocus="this.value=''", disabled='true')
+            input#wx_subject(name='wx_WIDsubject', type='hidden', value='')
+          p
+            label.buy_form_0516_lable(for='wx_fukuanjine') 付款金额：
+            input#wx_fukuanjine(name='wx_fukuanjine', type='text', onfocus="this.value=''", disabled='true')
+            input#wx_total_fee(name='wx_WIDtotal_fee', type='hidden', value='')
+          p(style='text-indent: 194px; font-size: 14px;color: #fc5624;height: 42px;') 试听课后两日内报名，可享课程优惠，详情请联系您的课程顾问。
+          p(style='height:42px;')
+            label.buy_form_0516_lable(for='wx_dingdanhaoma')
+              span(style='display:inline-block;color: #fc5624; vertical-align: middle;') * 
+              | 手机号码：
+            input#wx_shoujihaoma(name='wx_WIDmobile', type='text', onfocus="this.value=''")
+          p(style='text-indent: 194px; font-size: 12px;color: #999999;height: 42px;') 注意：手机号码，必填（支付信息将以短信形式发送至您的手机）
+          p(style='height:42px;')
+            label.buy_form_0516_lable(for='wx_beizhuxinxi') 备注信息：
+            input#wx_beizhuxinxi(name='wx_WIDremarks', type='text', onfocus="this.value=''")
+          p(style='text-indent: 194px; font-size: 12px;color: #999999;height:36px;') 注意：备注信息，选填（可填写您对本课程的建议，要求等）
+          p(style='text-indent: 162px; font-size: 14px; height: 30px;')
+            span.duigou
+              i
+            span(style='display: inline-block; text-indent: 20px;')
+              | 我已阅读并同意
+              a(href='index.php-c=agreement&a=agreement.html', target='_blank', style='color: #fc5624;')  《GoGoTalk青少英语课程服务协议》
+        // ##################块钱支付start######################
+        form#kq_buy_form(name='kqPay', action='https://www.99bill.com/gateway/recvMerchantInfoAction.htm', method="post", style='display: none;')
+          input#inputCharset(type='hidden', name='inputCharset', value='<%=inputCharset%>')
+          input#pageUrl(type='hidden', name='pageUrl', value='')
+          input#bgUrl(type='hidden', name='bgUrl', value='<%=bgUrl%>')
+          input#version(type='hidden', name='version', value='<%=version%>')
+          input#language(type='hidden', name='language', value='<%=language%>')
+          input#signType(type='hidden', name='signType', value='<%=signType%>')
+          input#signMsg(type='hidden', name='signMsg', value='<%=signMsg%>')
+          input#merchantAcctId(type='hidden', name='merchantAcctId', value='<%=merchantAcctId%>')
+          input#payerName(type='hidden', name='payerName', value='')
+          input#payerContactType(type='hidden', name='payerContactType', value='<%=payerContactType%>')
+          input#payerContact(type='hidden', name='payerContact', value='<%=payerContact%>')
+          input#orderId(type='hidden', name='orderId', value='<%=orderId%>')
+          input#orderAmount(type='hidden', name='orderAmount', value='<%=orderAmount%>')
+          input#orderTime(type='hidden', name='orderTime', value='<%=orderTime%>')
+          input#productName(type='hidden', name='productName', value='')
+          input#productNum(type='hidden', name='productNum', value='<%=productNum%>')
+          input#productId(type='hidden', name='productId', value='<%=productId%>')
+          input#productDesc(type='hidden', name='productDesc', value='')
+          input#ext1(type='hidden', name='ext1', value='<%=ext1%>')
+          input#ext2(type='hidden', name='ext2', value='')
+          input#payType(type='hidden', name='payType', value='<%=payType%>')
+          input#bankId(type='hidden', name='bankId', value='')
+          input#redoFlag(type='hidden', name='redoFlag', value='')
+          input#pid(type='text', name='pid', value='')
+
+          
+        // ##################块钱支付end######################
+    #xf_mb.xf_mb   
+    include footer

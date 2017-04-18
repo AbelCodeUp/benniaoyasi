@@ -1,0 +1,134 @@
+doctype html
+html
+  head
+    meta(http-equiv='content-type', content='text/html;charset=utf-8')
+    meta(name='viewport', content='user-scalable=no')
+    // meta name="viewport" content="width=device-width, initial-scale=1"
+    title GoGoTalk青少外教在线英语_微信支付
+    meta(content='GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习', name='keywords')
+    meta(content='GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。', name='description')
+    link(type='text/css', rel='stylesheet', href='../styles/base_0425.css')
+  script(type='text/javascript', src='../js/jquery-1.7.2.min.js')
+  script.
+    $(document).ready(function(){
+    setInterval(orderquery, 3000);
+    getwxmsg();
+    });
+    function orderquery(){
+      $.get("http://w.gogo-talk.com/api/order/GetOrderStatus",{'OrderNum':GetRequest().num},function(data){
+      //alert(data);
+        if(data.Return == 1){
+          alert('支付成功');
+          window.location.href='http://localhost:8080/dist/price.html';
+        }
+      })
+    }
+    function getwxmsg(){
+      var wxImg = getWxImg();
+      
+      var wxmoney = GetRequest().mon;
+      var wxnum = GetRequest().num;
+      var wxtype = GetRequest().type;
+      
+      $('.weixin_0530_div2 img').attr('src',wxImg);
+      $('#dNum').text(wxnum);
+      $('#dType').text(wxtype);
+      $('.dPrice').text(wxmoney);
+
+    }
+    function GetRequest() {
+    //url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；
+    var url = decodeURIComponent(location.search); //获取url中"?"符以及其后的字串
+    var theRequest = new Object();
+    if(url.indexOf("?") != -1)//url中存在问号，也就说有参数。
+    {
+    var str = url.substr(1);
+    strs = str.split("&");
+    for(var i = 0; i < strs.length; i ++)
+    {
+    theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+    }
+    }
+    return theRequest;
+    }
+
+    function getWxImg(){
+      var url = decodeURIComponent(location.search);
+      console.log( url.slice(url.indexOf('*')+1,url.lastIndexOf('*')))
+      return url.slice(url.indexOf('*')+1,url.lastIndexOf('*'));
+    }
+  body
+    // nav start
+    .logo_box
+      .smyclearfix.new_warpper_0508
+        a.left.logo_0425(href='http://www.gogo-talk.com/')
+          img(style='margin-left: 2px;', src='../images/logo_05083.png')
+    // nav end
+    // 订单 开始
+    .pay_success_bg
+      .smyclearfix.message_0530
+        .left.message_0530_left
+          p
+            | 订单编号：
+            span#dNum
+          p
+            | 商品名称：
+            span#dType
+        .right.message_0530_right
+          span.dPrice
+          |  元
+      .weixin_0530
+        .smyclearfix.weixin_0530_div1
+          .left.weixin_0530_div1_one
+            img(src='../images/weixin/weixin1.png', style='z-index: 999;')
+          .left.weixin_0530_div1_two
+          .left.weixin_0530_div1_three 亿万用户的选择，更快更安全
+          .right.weixin_0530_div1_four
+            | 支付
+            span.dPrice
+            | 元
+        // 二维码 开始
+        .weixin_0530_div2
+          img(style='z-index: 999;')
+        // 二维码 结束
+        .weixin_0530_div3
+    // 订单 结束
+    style.
+      .logo_box {height: 115px;overflow: hidden; background: #fff; border-bottom: 1px solid #eee;}
+      .logo_0425 {display: block;width: 402px;height: 102px;margin-top:25px;overflow: hidden;cursor: pointer;  }
+      .logo_0425 img {cursor: pointer;}
+      body,html{
+      width: 100%;
+      padding-bottom: 60px;
+      background: url("../images/price/succse_bg.jpg") no-repeat;
+      background-size: cover;
+      position: relative;
+      }
+      .pay_success_bg{ width: 1000px; margin: 0 auto;}
+      .message_0530{ height:140px; overflow: hidden;}
+      .message_0530_left{padding-top: 40px; width: 70%;}
+      .message_0530_left p{ text-indent: 26px; height: 34px; line-height: 34px; font-size: 16px;color: #333333;}
+      .message_0530_right{width: 20%; text-align: right; padding-right: 30px; height:44px; margin-top:60px;font-size: 16px;color: #333333;}
+      .message_0530_right span{ font-size: 24px; color: #ff4900; font-weight:500;font-family: "Arial";}
+      .weixin_0530{width: 100%;height:486px; background: #fff;border-top: 2px solid #b3b3b3;border-bottom: 2px solid #b3b3b3;}
+      .weixin_0530_div1{width: 954px; height: 60px; border: 1px solid #b3b3b3;margin: 28px auto 0;}
+      .weixin_0530_div1_one{ margin:13px 7px 0 23px; }
+      .weixin_0530_div1_two{ margin: 19px 22px 0 0; width: 51px; height: 22px; background: url("../images/weixin/weixin2.png") no-repeat; background-size:cover;}
+      .weixin_0530_div1_three{ width: 388px; height:60px; line-height: 60px; font-size: 16px; color: #999;}
+      .weixin_0530_div1_four{ width: 210px; padding-right: 46px; height: 60px; line-height: 60px; text-align: right; font-size: 18px; color: #363636;}
+      .weixin_0530_div1_four span{ display: inline-block; margin: 0 4px;font-size: 19px; color: #ff4900; font-weight:500;font-family: "Arial";}
+      .weixin_0530_div2{width: 194px; height: 194px; border: 1px solid #9f9f9f; margin: 60px auto 0;}
+      .weixin_0530_div3{ width:196px; height: 66px; margin: 7px auto 0; background: url("../images/weixin/weixin4.png") no-repeat; background-size:cover;}
+      .weixin_0530_div2 img{ width: 100%; height:100%;}
+      @media screen and (max-width: 1250px){
+      body{ min-width:1000px;}
+      .new_warpper_0508{ width:900px !important; margin:0 auto;}
+      .pay_success_bg{ width: 900px; margin: 0 auto;}
+      .weixin_0530{width: 100%;height:1066px; background: #fff;border-top: 2px solid #b3b3b3;border-bottom: 2px solid #b3b3b3;}
+      .weixin_0530_div1{width: 854px; height: 60px; border: 1px solid #b3b3b3;margin: 28px auto 0;}
+      .weixin_0530_div1_three{ width: 288px; height:60px; line-height: 60px; font-size: 16px; color: #999;}
+      .weixin_0530_div2{ width:800px; height:800px; margin: 80px auto 0;}
+      .weixin_0530_div2 img{ width: 100%; height:100%;}
+      .weixin_0530_div3{ display:none;}
+      }
+

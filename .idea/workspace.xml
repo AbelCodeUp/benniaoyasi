@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="227a668b-8f52-491e-8660-97fda85713db" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/banner_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/banner_text1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/banner_text2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_170321/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_170407/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_20170401/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_20170417/bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/christmas/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/di.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/jiang1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/jiang2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/jiang3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/jiang4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/jiang5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/last1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/last2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/light.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/main_bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part0_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part1_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part2_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part2_img1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part2_img2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part3_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/part4_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/shipin1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/shipin2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/shipin3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_170321/text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_20170417/text1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/banner_index/b_20170417/text2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/title_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/title_li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/xian.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/xian11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/xian2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/xian3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/yuan1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/yuan2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/zhuanti/easter/yuan3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website/gogotalk/dist/agreement.html" />
+      <change type="DELETED" beforePath="E:\myWork\MyWorkSpaces\website\gogotalk\dist\scroll.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images/illustrate/a.jpg" afterPath="$PROJECT_DIR$/website/gogotalk/images/illustrate/a.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images/illustrate/b.jpg" afterPath="$PROJECT_DIR$/website/gogotalk/images/illustrate/b.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images/illustrate/c.jpg" afterPath="$PROJECT_DIR$/website/gogotalk/images/illustrate/c.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/images/down-client.png" afterPath="$PROJECT_DIR$/stuProject/images/down-client.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/jiaoshi_new_161026_6.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/jiaoshi_new_161026_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei10_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei10_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei11_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei11_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei12_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei12_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei13_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei13_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei14_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei14_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei15_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei15_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei16_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei16_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei17_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei17_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei18_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei18_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei19_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei19_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei1_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei1_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei2_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei2_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei3_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei3_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei4_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei4_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei5_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei5_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei6_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei6_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei7_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei7_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei9_new.png" afterPath="$PROJECT_DIR$/website/gogotalk/images_new/indexImages_new/koubei_new/koubei9_new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/controller/MyAttentionCtrl.js" afterPath="$PROJECT_DIR$/stuProject/controller/MyAttentionCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/aboutus.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/aboutus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk_m/gogotalk_m/js/common.js" afterPath="$PROJECT_DIR$/website/gogotalk_m/gogotalk_m/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/course.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/course.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk_m/index.html" afterPath="$PROJECT_DIR$/website/gogotalk_m/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js_new/jquery-1.7.2.min_new.js" afterPath="$PROJECT_DIR$/website/gogotalk/js_new/jquery-1.7.2.min_new.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-my-attention.html" afterPath="$PROJECT_DIR$/stuProject/template/main-my-attention.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-order-teacher.html" afterPath="$PROJECT_DIR$/stuProject/template/main-order-teacher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-rightbar.html" afterPath="$PROJECT_DIR$/stuProject/template/main-rightbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-week-ReportDetail.html" afterPath="$PROJECT_DIR$/stuProject/template/main-week-ReportDetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/main.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/controller/orderTeacherCtrl.js" afterPath="$PROJECT_DIR$/stuProject/controller/orderTeacherCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/price.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/price.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js/price.js" afterPath="$PROJECT_DIR$/website/gogotalk/js/price.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/search.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/search.html" />
+    </list>
+    <ignored path="MyWorkSpaces.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="MyWorkSpaces" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk_m/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="price.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/price.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.153847">
+              <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.653847">
+              <caret line="189" column="52" selection-start-line="189" selection-start-column="52" selection-end-line="189" selection-end-column="52" />
+              <folding>
+                <marker date="1492504270821" expanded="true" signature="2440:2458" placeholder="..." />
+                <marker date="1492504270821" expanded="true" signature="2905:2919" placeholder="..." />
+                <marker date="1492504270821" expanded="true" signature="5465:5545" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wxpay.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/wxpay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0055991043">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scroll.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/scroll.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="454" column="0" selection-start-line="454" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agreement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/agreement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.615385">
+              <caret line="76" column="54" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.192308">
+              <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutus.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/aboutus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.807692">
+              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/website/gogotalk_m/gogotalk_m/js/common.js" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/aboutus.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/agreement.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/course.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/price.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/search.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/main.html" />
+        <option value="$PROJECT_DIR$/website/gogotalk/dist/scroll.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\myWork\MyWorkSpaces\website\gogotalk\dist" />
+      <recent name="E:\myWork\MyWorkSpaces\website\gogotalk\scroll" />
+      <recent name="E:\myWork\MyWorkSpaces\website\gogotalk\images_new" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\myWork\MyWorkSpaces\website\gogotalk\dist" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="227a668b-8f52-491e-8660-97fda85713db" name="Default" comment="" />
+      <created>1492500053895</created>
+      <option name="number" value="Default" />
+      <updated>1492500053895</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/website/gogotalk_m/gogotalk_m/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5745375">
+          <caret line="194" column="67" selection-start-line="194" selection-start-column="67" selection-end-line="194" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/images_new/footerImages_new/footerImage1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk_m/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/aboutus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.807692">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.615385">
+          <caret line="76" column="54" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.192308">
+          <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/price.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.153847">
+          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.653847">
+          <caret line="189" column="52" selection-start-line="189" selection-start-column="52" selection-end-line="189" selection-end-column="52" />
+          <folding>
+            <marker date="1492504270821" expanded="true" signature="2440:2458" placeholder="..." />
+            <marker date="1492504270821" expanded="true" signature="2905:2919" placeholder="..." />
+            <marker date="1492504270821" expanded="true" signature="5465:5545" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/scroll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="454" column="0" selection-start-line="454" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/wxpay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0055991043">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

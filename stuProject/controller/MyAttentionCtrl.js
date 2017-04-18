@@ -228,8 +228,6 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 		var toMonth = thisDate.getMonth() + 1;
 		var toDay = thisDate.getDate();
 
-
-		;
 		var year = date.getFullYear();
 		// var month = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth + 1);
 		var month = date.getMonth() + 1;

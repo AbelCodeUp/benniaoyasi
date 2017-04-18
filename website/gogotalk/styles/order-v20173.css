@@ -1,0 +1,472 @@
+/* nav 
+.logo_box {
+    height: 102px;
+    overflow: hidden;
+}
+
+.logo_0425 {
+    display: block;
+    width: 402px;
+    height: 102px;
+    margin-top: 17px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.logo_0425 img {
+    cursor: pointer;
+}
+
+.nav_0425{
+    width: 100%;
+    height: 62px;
+    background:#29294d;
+    overflow: hidden;
+}
+.rel_nav_0425{text-align: center;height: 62px;line-height: 62px;}
+.rel_nav_0425 li {
+    display: inline-block;
+}
+.rel_nav_0425 li a {
+    display: block;
+    height:58px;
+    border-bottom: 4px solid #29294d;
+    padding: 0 8px;
+    font-size: 18px;
+    text-align: center;
+    color: #c8c9d3;
+    margin: 0 42px;
+    position: relative;
+}
+.rel_nav_0425 li.current_0426 a{
+    border-bottom: 4px solid #fff;
+    color: #fdfeff;
+}
+@-webkit-keyframes halftone {
+    100% {
+        background-size: 2.3em 2.3em, 0.1em 0.1em;
+    }
+}
+@keyframes halftone {
+    100% {
+        background-size: 2.3em 2.3em, 0.1em 0.1em;
+    }
+}
+.phone_0425 {
+    width: 292px;
+    height: 50px;
+    background: url("../images/phone_0508.png") no-repeat;
+	background-size:100%;
+    margin-top: 26px;
+    margin-right: 12px;
+}
+*/
+
+/* page1 */
+.order_page1_0518 {
+    min-height:528px;
+    padding-bottom: 52px;
+    background: url("../images/order/order_bg.jpg") repeat;
+}
+.order_title{
+    position: relative;
+    width: 100%;
+    height: 78px;
+    padding-top: 61px;
+    font-size: 30px;
+    color: #fb5624;
+    text-indent: 34px;
+}
+.order_title span{
+    position: absolute;
+    top: 67px;
+    left: 0;
+    width: 9px;
+    height:29px ;
+    background:#fb5624;
+}
+.order_item{
+    height: 236px;
+    background: #ebebeb;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 47px;
+}
+.order_item_left{
+    width: 841px;
+    height: 100%;
+    background: #fff;
+}
+.order_information{
+    width: 510px;
+    padding-left: 70px;
+    padding-top: 46px;
+}
+.order_information li{
+    height: 40px;
+    font-size: 18px;
+    color: #29294d;
+}
+.order_price{
+    width: 260px;
+    padding-top: 90px;
+    font-size: 18px;
+    color: #29294d;
+}
+.order_price span{
+    font-size: 24px;
+    color: #fb5624;
+}
+.order_item_right{
+    width: 358px;
+    height: 100%;
+    background:#fbfbfb ;
+}
+.order_keshi{
+    width: 252px;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    background: url("../images/order/keshi.png") no-repeat;
+    margin:58px auto 46px;
+    font-size: 18px;
+    color: #d10e00;
+    text-indent: 88px;
+}
+.order_qixian{
+    width: 252px;
+    height: 46px;
+    line-height: 46px;
+    overflow: hidden;
+    background: url("../images/order/shijian.png") 5px no-repeat;
+    margin:0 auto 46px;
+    font-size: 18px;
+    color: #d10e00;
+    text-indent: 88px;}
+/* btu2 */
+.btu2_0426 {
+    margin: 0 auto;
+    width: 262px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    background: #fb5624;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btu2_0426_hover {
+    -webkit-animation: halftone 1s forwards;
+    animation: halftone 1s forwards;
+    background: -webkit-radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    background: radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    /* 形状 ， 每个圆球（花纹）的颜色与大小 ，渐变颜色与渐变半径 ， 背景X方向偏移位置 ，分布均匀（平铺） ， 背景Y方向偏移位置*/
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* form1_0426 
+.form1_0426 {
+    width: 100%;
+    height: 84px;
+    background: #292929;
+    overflow: hidden;
+}
+
+.smy_0401_commonti_formti {
+    width: 100%;
+    text-align: center;
+    padding-top: 38px;
+    font-size: 24px;
+    color: #24202b;
+    cursor: default;
+}
+
+.shenqing {
+    width: 186px;
+    padding-left: 12px;
+    height: 86px;
+    line-height: 86px;
+    font-size: 24px;
+    color: #fefefe;
+    font-weight: bold;
+}
+
+.form1 {
+    width: 790px;
+}
+
+.form1 p {
+    position: relative;
+    width: 183px;
+    height: 42px;
+    margin-top: 20px;
+    margin-right: 16px;
+    overflow: hidden;
+}
+
+.form1 p label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    line-height: 42px;
+    width: 183px;
+    height: 42px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #a5a5a5;
+    text-indent: 14px;
+    cursor: text;
+}
+
+#smy_0401_name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 183px;
+    height: 42px;
+    border: 1px solid #24202b;
+    background: #fff;
+    text-indent: 14px;
+    cursor: text;
+}
+
+#smy_0401_year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 183px;
+    height: 42px;
+    border: 1px solid #24202b;
+    background: #fff;
+    text-indent: 14px;
+    cursor: text;
+}
+
+#smy_0401_phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 183px;
+    height: 42px;
+    border: 1px solid #24202b;
+    background: #fff;
+    text-indent: 14px;
+    cursor: text;
+}
+.btu3_0426 {
+    margin: 0 auto;
+    width: 262px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    background: #fb5624;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btu3_0426_hover {
+    -webkit-animation: halftone 1s forwards;
+    animation: halftone 1s forwards;
+    background: -webkit-radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    background: radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btu3 {
+    margin-top: 20px;
+    width: 192px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+}
+
+.form1 p label.error {
+    color: #fcaf01 !important;
+}
+.footer{
+    padding-top: 30px;
+    height:120px;
+}
+.footer p {
+    font-size: 14px;
+    text-align: center;
+    height: 30px;
+    color: #999999;
+}
+.footer p span{
+    display: inline-block;
+    height: 10px;
+    width: 40px;
+    vertical-align: middle;
+}
+*/
+
+/* tanchuang 
+.yuyue1_0426{
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 442px;
+    height: 352px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 6px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.xuxian_0427{
+    width:410px;
+    height: 67px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #c7c7c7;
+    overflow: hidden;
+}
+
+.title_yuyue{
+    width:100%;
+    text-align: center;
+    height: 53px;
+    margin-top: 14px;
+    line-height: 53px;
+    font-size: 20px;
+    color: #ff6600;
+}
+.close1_0427{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width:23px;
+    height:23px ;
+    background: url("../images/close2_0427.png") no-repeat;
+    cursor: pointer;
+}
+.close1_0427:hover{
+    background: url("../images/close1_0427.png") no-repeat;
+}
+.form2_0427{
+    width:410px;
+    margin:0 auto;
+    padding-top: 10px;
+}
+.form2 {
+    width:100%;
+}
+
+.form2 p {
+    position: relative;
+    width: 358px;
+    height: 44px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.form2 p label {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: block;
+    line-height: 42px;
+    width: 356px;
+    height: 42px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #a5a5a5;
+    text-indent: 14px;
+    cursor: text;
+}
+
+#smy_0401_name2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 356px;
+    height: 42px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    text-indent: 64px;
+    cursor: text;
+    border-radius: 5px;
+}
+
+#smy_0401_phone2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 356px;
+    height: 42px;
+    border: 1px solid #dcdcdc;
+    background: #fff;
+    text-indent: 64px;
+    cursor: text;
+    border-radius: 5px;
+}
+
+.form2 p label.error2 {
+    color: #fcaf01 !important;
+    text-indent: 290px;
+    font-size: 13px;
+}
+.btu4_0426 {
+    margin: 10px auto 0;
+    width: 358px;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    background: #fb5624;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btu4_0426_hover {
+    -webkit-animation: halftone 0.6s forwards;
+    animation: halftone 0.6s forwards;
+    background: -webkit-radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    background: radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
+    radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.yuyue2_0426{
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 442px;
+    height: 352px;
+    background:url("../images/chenggong.png") center no-repeat;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    display: none;
+}
+.yuanjiao{
+    border-radius: 600px;
+}
+#queding{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+}*/

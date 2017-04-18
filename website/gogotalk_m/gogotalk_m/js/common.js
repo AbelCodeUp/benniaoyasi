@@ -192,7 +192,7 @@ $(function(){
             dataType: "json",
             success: function (data) {
                 if (data.Return == 1) {
-                    $(".yuyue_common_z").hide();
+                    $(".yuyue_common_z").removeClass("yuyue_dis2");
                     $(".yuyue_b_img1").removeClass('yuyue_dis');
                     $(".yuyue_b_img2").addClass('yuyue_dis');
                     $("input#name_common").val("");

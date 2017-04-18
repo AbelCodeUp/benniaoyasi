@@ -170,7 +170,7 @@
             <div class="col-md-4 col-sm-4 col-xs-6 orderTeacher_teacher_item_box" ng-repeat="item in items">
                 <div class="orderTeacher_teacher_item">
                     <div class="orderTeacher_teacher_item_img" >
-                        <img ui-sref="home.teacherDetail({teacherId:item.TeacherId})" ng-src="{{item.ImageUrl}}" onerror="javascript:this.src='images/default.jpg?v=1.1'">
+                        <img ui-sref="home.teacherDetail({teacherId:item.TeacherId})" ng-src="{{item.ImageUrl}}" onerror="javascript:this.src='images/default.png?v=1.1'">
                         <div class="orderTeacher_teacher_item_img_top">
                           <span class="f-left-smy" ng-bind="item.TeacherName"></span>
                           <div class="guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[item.tchState == 1]" data-state=

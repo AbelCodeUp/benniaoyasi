@@ -1,232 +1,7 @@
-﻿/**
+/**
  * Created by Administrator on 2016/4/25.
  */
 $(function(){
-    var goodsId = null;
-    getTdData();
-    function getTdData(){
-        $.ajax({
-               type: "GET",
-               url: "http://w.gogo-talk.com/api/order/GetGoodsList",
-               dataType:'json',
-               success: function(data){
-                    if(data.Return == 1){
-                        var tdData = data.data;
-                        for(var i=0;i<tdData.length;i++){
-                            var tdD = tdData[i];
-                            var ClassHours  =tdD.ClassHours;
-                            var GPrice = tdD.GPrice;
-                            var ExpireDay = Math.floor(tdD.ExpireDay/30);
-                            var tdStr = '<tr>'+
-                                    '<td>'+ClassHours+'课时</td>'+
-                                    '<td>'+GPrice+'元</td>'+
-                                    '<td>'+ExpireDay+'个月</td>'+
-                                    '<td class="dispaly_none"><div class="goodsBtn" data-bid="'+ tdD.GoodsId +'">购买</div></td>'+
-                                '</tr>';
-                            $('.table_0513 tbody').append(tdStr);
-                        }
-                    }
-                },
-                error:function(msg,textStatus){
-                    console.log(msg)
-                    console.log(textStatus)
-                }
-            });
-    }
-    $('.table_0513 tbody').on('click','.goodsBtn',function(){
-        goodsId = $(this).data('bid');
-        $.get("http://w.gogo-talk.com/api/order/GetNewOrderNum",{ 'GoodsId':goodsId },function(data){
-                
-            if(data.Return == 1){
-                var buyData = data.data;
-                $('#dingdanhaoma').val(buyData.OrderNUM);
-                $("#wx_dingdanhaoma").attr("value",buyData.OrderNUM);
-                $("#kq_dingdanhaoma").attr("value",buyData.OrderNUM);
-
-                $('#shangpinmingcheng').val(buyData.GoodsName);
-                $("#wx_shangpinmingcheng").val(buyData.GoodsName);
-                $("#kq_shangpinmingcheng").val(buyData.GoodsName);
-
-                $('#fukuanjine').val(buyData.DiscountAmount.toFixed(2)); 
-                $("#wx_fukuanjine").val(buyData.DiscountAmount.toFixed(2));
-                $("#kq_fukuanjine").val(buyData.DiscountAmount.toFixed(2));
-
-                $("#buy_form_0516").show();
-		        $("#xf_mb").show();
-            }
-        });
-        
-    })
-    // 关闭弹窗
-    $('.close2_0427').click(function(){
-        funClose();
-    })
-    $('#xf_mb').click(function(){
-        funClose();
-    })
-
-    function funClose(){
-        $("#shoujihaoma").css({border:"1px solid #333"});
-        $("#buy_form_0516").hide();
-        $("#xf_mb").hide();
-    }
-
-    // 支付宝按钮
-    $('#buy_queren_zhifubao').click(function(){
-        
-        payType(1);
-        
-    })
-    // 微信按钮
-    $("#buy_queren_weixin").click(function () { //“提交”按钮单击事件
-        payType(2)
-    });
-    //快钱支付
-    $("#buy_queren_kuaiqian").click(function(){
-        var OrderNum = $('#dingdanhaoma').val();
-        var GoodsId = goodsId;
-        var GoodsName = $('#shangpinmingcheng').val();
-        var Gprice = $('#fukuanjine').val();
-        var Mobile;
-        var Remarks = $('#beizhuxinxi').val();
-        if($('.duigou i').hasClass('display_duigou')){
-		}else{
-	        Mobile = $("#shoujihaoma").val();
-	        if (Mobile == null) {
-	            return false;
-	        }else{
-	            var re = /^1[3|5|7|8|][0-9]{9}$/;
-	            if (!re.test(Mobile)) {
-	                alert("请输入有效的手机号码！");
-	                $("#shoujihaoma").css({border:"1px solid red"});
-	                return;
-	            }
-	        }
-	        $("input#beizhuxinxi").val("");
-	        $("input#shoujihaoma").val("");
-	        $("#shoujihaoma").css({border:"1px solid #333"});
-            var sendMsg = 'OrderNum='+OrderNum+'&GoodsId='+goodsId+'&GoodsName='+GoodsName+'&Gprice='+Gprice+'&Mobile='+Mobile+'&Remarks='+Remarks;
-
-            window.location.href = 'http://112.126.86.35:8456/Send.aspx?'+ sendMsg;
-        }
-    })
-
-    //支付
-    function payType(type){
-        var postUrl = 'http://w.gogo-talk.com/api/order/PostZhiFu';
-        var ZhiFuType = type;
-        var OrderNum = $('#dingdanhaoma').val();
-        var GoodsId = goodsId;
-        var GoodsName = $('#shangpinmingcheng').val();
-        var Gprice = $('#fukuanjine').val();
-        var Mobile;
-        var Remarks = $('#beizhuxinxi').val();
-        if($('.duigou i').hasClass('display_duigou')){
-		}else{
-	        Mobile = $("#shoujihaoma").val();
-	        if (Mobile == null) {
-	            return false;
-	        }else{
-	            var re = /^1[3|5|7|8|][0-9]{9}$/;
-	            if (!re.test(Mobile)) {
-	                alert("请输入有效的手机号码！");
-	                $("#shoujihaoma").css({border:"1px solid red"});
-	                return;
-	            }
-	        }
-	        $("input#beizhuxinxi").val("");
-	        $("input#shoujihaoma").val("");
-	        $("#shoujihaoma").css({border:"1px solid #333"});
-            $.post(postUrl,{'ZhiFuType':ZhiFuType,'OrderNum':OrderNum,'GoodsId':GoodsId,'GoodsName':GoodsName,'Gprice':Gprice,'Mobile':Mobile,'Remarks':Remarks},function(data){
-                if(data.Return == 1){
-                    if(type == 1){ 
-                        window.location.href = data.data;
-                    }else if(type == 2){
-
-                        var wxImg = encodeURIComponent("wx=*" + data.data + "*&mon="+ Gprice +"&num="+ OrderNum +"&type=" + GoodsName + "");
-                        window.location.href = "wxpay.html?" + wxImg;
-
-                    }
-                    // else if(type == 3){
-                    //     var data = data.data;
-                    //     $('#inputCharset').val(data.inputCharset);
-                    //     $('#pageUrl').val(data.pageUrl);
-                    //     $('#bgUrl').val(data.bgUrl);
-                    //     $('#version').val(data.version);
-                    //     $('#language').val(data.language);
-                    //     $('#signType').val(data.signType)
-                    //     $('#signMsg').val(data.signMsg);
-                    //     $('#merchantAcctId').val(data.merchantAcctId);
-                    //     $('#payerName').val(data.payerName);
-                    //     $('#payerContactType').val(data.payerContactType);
-                    //     $('#payerContact').val(data.payerContact);
-                    //     $('#orderId').val(data.orderId);
-                    //     $('#orderAmount').val(data.orderAmount);
-                    //     $('#orderTime').val(data.orderTime);
-                    //     $('#productName').val(data.productName);
-                    //     $('#productNum').val(data.productNum);
-                    //     $('#productId').val(data.productId);
-                    //     $('#productDesc').val(data.productDesc);
-                    //     $('#ext1').val(data.ext1);
-                    //     $('#ext2').val(data.ext2);
-                    //     $('#payType').val(data.payType);
-                    //     $('#bankId').val(data.bankId);
-                    //     $('#redoFlag').val(data.redoFlag);
-                    //     // $('#pid').val(data.pid);
-
-                    //     $('#kq_buy_form').submit();
-                    // }
-                    
-                }else{
-                    alert(data.data);
-                }
-            });
-         }
-    } 
-        
-    
-    function fun(class_hour,id){
-	    //alert(window.location.href);
-        $.post("http://www.gogo-talk.com/index.php?c=course&a=getCourse",{'class_hour':class_hour,'id':id},function(data){
-           //alert(data);
-            data = eval('('+data+')');
-
-            //$("#dingdanhaoma").val(data.out_trade_no);
-            $("#dingdanhaoma").attr("value",data.out_trade_no);
-            $("#wx_dingdanhaoma").attr("value",data.out_trade_no);
-            $("#kq_dingdanhaoma").attr("value",data.out_trade_no);
-            
-            $("#out_trade_no").val(data.out_trade_no);
-            $("#wx_out_trade_no").val(data.out_trade_no);
-            $("#kq_out_trade_no").val(data.out_trade_no);
-            
-            $("#course_id").val(data.id);
-            $("#wx_course_id").val(data.id);
-            $("#kq_course_id").val(data.id);
-            
-            $("#shangpinmingcheng").val(data.subject);
-            $("#wx_shangpinmingcheng").val(data.subject);
-            $("#kq_shangpinmingcheng").val(data.subject);
-            
-            $("#subject").val(data.subject);
-            $("#wx_subject").val(data.subject);
-            $("#kq_subject").val(data.subject);
-            
-            $("#fukuanjine").val(data.total_fee);
-            $("#wx_fukuanjine").val(data.total_fee);
-            $("#kq_fukuanjine").val(data.total_fee);
-            
-            $("#total_fee").val(data.total_fee);
-            $("#wx_total_fee").val(data.total_fee);
-			$("#kq_total_fee").val(data.total_fee);
-			
-            $("#buy_form_0516").show();
-			$("#xf_mb").show();
-        });
-
-    }
-   
-
     $(".rel_nav_0425 li:eq(3)").addClass("current_0426");
     $(".rel_nav_0425 li").hover(function () {
         $(this).addClass("current_0426").siblings().removeClass("current_0426");
@@ -337,8 +112,117 @@ $(function(){
 
 
      /* ajax */
-    
-    
+    $("#buy_queren_zhifubao").click(function () { //“提交”按钮单击事件
+	    if($('.duigou i').hasClass('display_duigou')){
+		}else{
+	        var mobile = $("#shoujihaoma").val();
+	        if (mobile == null) {
+	            return false;
+	        }else{
+	            var re = /^1[3|5|7|8|][0-9]{9}$/;
+	            if (!re.test(mobile)) {
+	                alert("请输入有效的手机号码！");
+	                $("#shoujihaoma").css({border:"1px solid red"});
+	                return;
+	            }
+	        }
+	        $("#sourceurl_buy").val(window.location.href);
+	        $("#buy_form").submit();
+	        $("input#beizhuxinxi").val("");
+	        $("input#shoujihaoma").val("");
+	        $("#shoujihaoma").css({border:"1px solid #333"});
+
+         }
+    });
+    $("#buy_queren_weixin").click(function () { //“提交”按钮单击事件
+        if($('.duigou i').hasClass('display_duigou')){
+        }else{
+            var mobile = $("#shoujihaoma").val();
+            if (mobile == null) {
+                return false;
+            }else{
+                var re = /^1[3|5|7|8|][0-9]{9}$/;
+                if (!re.test(mobile)) {
+                    alert("请输入有效的手机号码！");
+                    $("#shoujihaoma").css({border:"1px solid red"});
+                    return;
+                }
+            }
+            $("#sourceurl_buy").val(window.location.href);
+            var liuyan= $("#beizhuxinxi").val();
+            $("#wx_shoujihaoma").val(mobile);
+            $("#wx_beizhuxinxi").val(liuyan);
+            $("#wx_buy_form").submit();
+            $("input#wx_beizhuxinxi").val("");
+            $("input#wx_shoujihaoma").val("");
+            $("#shoujihaoma").css({border:"1px solid #333"});
+
+        }
+    });
+    //块钱支付
+    $("#buy_queren_kuaiqian").click(function () { //“提交”按钮单击事件
+        
+        if($('.duigou i').hasClass('display_duigou')){
+        }else{
+	        
+            var mobile = $("#shoujihaoma").val();
+            if (mobile == null) {
+                return false;
+            }else{
+                var re = /^1[3|5|7|8|][0-9]{9}$/;
+                if (!re.test(mobile)) {
+                    alert("请输入有效的手机号码！");
+                    $("#shoujihaoma").css({border:"1px solid red"});
+                    return;
+                }
+            }
+            $("#sourceurl_buy").val(window.location.href);
+            var liuyan= $("#beizhuxinxi").val();
+            //课程id
+            var course_id = $("#wx_course_id").val();
+            //手机号码
+            $("#kq_shoujihaoma").val(mobile);
+            //手机号码
+            var kq_payerContact = mobile;
+            
+            //订单编号
+            var kq_orderId = $("#kq_dingdanhaoma").val();
+            
+            //商品价格
+            var kq_orderAmount = $("#kq_total_fee").val() * 100;
+            
+			//商品名称
+            var kq_productName = $("#kq_shangpinmingcheng").val();
+            
+            //商品代码
+            var kq_productId = kq_productName;
+            
+            
+            //商品描述
+            var kq_productDesc = $("#beizhuxinxi").val();
+            
+            
+            $("#kq_beizhuxinxi").val(liuyan);
+            //通过post获取认证信息
+            $.post("/index.php?c=price&a=kq_setInfo2",{course_id:course_id,payerContact:kq_payerContact,orderId:kq_orderId,orderAmount:kq_orderAmount,productName:kq_productName,productId:kq_productId,productDesc:kq_productDesc},function(data){
+	           // alert(data);
+
+	            if(data != 0){
+		            $("#kq_input").html(data);
+		            //提交
+		            $("#kq_buy_form").submit();
+		            $("input#kq_beizhuxinxi").val("");
+		            $("input#kq_shoujihaoma").val("");
+		            $("#shoujihaoma").css({border:"1px solid #333"});
+	            }else{
+		            alert("订单已存在");
+	            }
+
+            });
+            
+
+        }
+    });
     $(".duigou i").click(function(){
         $(this).toggleClass("display_duigou");
         if($('.duigou i').hasClass('display_duigou')){

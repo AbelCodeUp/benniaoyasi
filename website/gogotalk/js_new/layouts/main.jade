@@ -1,0 +1,272 @@
+doctype html
+html
+  head
+      meta(charset="UTF-8")
+      title GoGoTalk青少外教在线英语
+      meta(content='GoGoTalk,青少英语,GoGoTalk青少英语,笨鸟盛世,教育资源,在线学习', name='keywords')
+      meta(content='GoGoTalk是笨鸟盛世（北京）科技有限公司旗下的在线青少外教英语品牌。作为互联网英语教育的领跑者，GoGoTalk采用“外教互动式在线学习”模式，让中国孩子足不出户汲取全球优秀教育资源，与世界共同成长。从语言艺术、全球视野、自信沟通和文化探索四个维度全面学习，引领孩子跨越地域屏障，与世界自信沟通，自由表达。', name='description')
+      link(rel='stylesheet', type='text/css', href='../styles_new/base_new_161020.css')
+      meta(http-equiv='Cache-Control', content='no-transform ')
+      meta(http-equiv='Cache-Control', content='no-siteapp')
+      link(rel='stylesheet', href='../styles_new/pageloader.css')
+      // 页面加载 css
+      link(rel='stylesheet', href='../styles_new/index_css_new/banner_new0221.css', type='text/css')
+      link(rel='stylesheet', href='../styles_new/index_css_new/index_new.css', type='text/css')
+      link(rel='stylesheet', href='../styles_new/index_css_new/index_jiaoshilunbo.css', type='text/css')
+      script(src='../js_new/jquery-1.7.2.min_new.js')
+      script(src='../js_new/yuanxiao.js')
+      script(type='text/javascript', src='../js_new/index_js_new/banner_main_new.js')
+      // 教师轮播 js start
+      script(type='text/javascript', src='../js_new/index_js_new/jquery.corner_jiaoshilunbo.js')
+      script(type='text/javascript', src='../js_new/index_js_new/jquery.roundabout_jiaoshilunbo.js')
+      script(type='text/javascript', src='../js_new/index_js_new/jquery.roundabout-shapes_jiaoshilunbo.js')
+      script(type='text/javascript', src='../js_new/index_js_new/index_jiaoshilunbo.js')
+      // 教师轮播 js end
+      script(type='text/javascript', src='../js_new/index_js_new/index_new.js')
+      script(type='text/javascript').
+        $(function () {
+        var sources_name = 'index';
+        $.post("http://www.gogo-talk.com/api.php?c=index&a=tongji", {
+        sources_name: sources_name
+        }, function (data) {
+        });
+        });
+  body
+    include header
+    #content
+      // banner start
+    #touchMain.slide-main
+      a.prev(href='javascript:;', stat='prev1001')
+        img(src='../images_new/indexImages_new/banner_index/l-btn.png')
+      #slideContent.slide-box
+        // 170221 start
+        .slide.banner170221
+          .new_warpper_161020.banner170221_box
+            img.banner170221_text(src='../images_new/indexImages_new/banner_index/banner_170221/text.png')
+            img.banner170221_up(src='../images_new/indexImages_new/banner_index/banner_170221/up.png')
+            img.banner170221_s1(src='../images_new/indexImages_new/banner_index/banner_170221/s1.png')
+            img.banner170221_s2(src='../images_new/indexImages_new/banner_index/banner_170221/s2.png')
+            img.banner170221_s3(src='../images_new/indexImages_new/banner_index/banner_170221/s3.png')
+          a(style='position: absolute; top: 0;left:0;width: 100%; height: 100%; z-index: 4;', href='index.php-c=price&a=price.html')
+        // 170221 end
+        #bgstylea.slide
+          .new_warpper_161020(style='position: relative')
+            span.bannerbtu2_161026.yuyueshiting_btu_js 预约试听
+        #bgstyleb.slide
+          .new_warpper_161020(style='position: relative')
+            span.bannerbtu3_161026.yuyueshiting_btu_js 预约试听
+        #bgstylea2.slide
+          .new_warpper_161020(style='position: relative')
+            span.bannerbtu4_161026.yuyueshiting_btu_js 预约试听
+      a.next(href='javascript:;', stat='next1002')
+        img(src='../images_new/indexImages_new/banner_index/r-btn.png')
+      .item
+        a.cur(stat='item1001', href='javascript:;')
+          span
+        a(href='javascript:;', stat='item1002')
+          span
+        a(href='javascript:;', stat='item1003')
+          span
+        a(href='javascript:;', stat='item1004')
+          span
+    // banner end
+    // 我们的优势 start
+    .Our_advantage_161025
+      .new_warpper_161020.Our_advantage_161025_main
+        img.Our_advantage_title_161025(src='../images_new/indexImages_new/youshi_title_161025.png', alt='我们的优势')
+        .project.Our_advantage_161025_item1
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item1_161025.png', alt='纯外教')
+                dd 5000＋国际认证外教，汲取全球优质教育资源，塑造纯英文母语环境。
+        .project.Our_advantage_161025_item2
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item2_161025.png', alt='纯外教')
+                dd 独家引进国际正版教材，国际学校在家上，让孩子获得权威的语言认证。
+        .project.Our_advantage_161025_item3
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item3_161025.png', alt='纯外教')
+                dd 在线直播上课，免除孩子奔波之苦，一副耳机连接全球外教。
+        .project.Our_advantage_161025_item4
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item4_161025.png', alt='纯外教')
+                dd 专属VIP课程顾问随时跟进孩子学习进度，定期测评，保证效果。
+        .project.Our_advantage_161025_item5
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item5_161025.png', alt='纯外教')
+                dd 课程体系受到20万亚洲家庭认可，让顾客满意是我们的责任。
+        .project.Our_advantage_161025_item6
+          .project__card
+            .project__card_rel
+              dl
+                dt
+                  img(src='../images_new/indexImages_new/youshi_item6_161025.png', alt='纯外教')
+                dd 个性定制学习方案，听说读写全面培优，让世界近在咫尺。
+        script(src='../js_new/index_js_new/jquery.hover3d.js')
+        script.
+          $(document).ready(function(){
+          $(".project").hover3d({
+          selector: ".project__card",
+          shine: true
+          });
+          /*$(".movie").hover3d({
+          selector: ".movie__card",
+          shine: true,
+          sensitivity: 20,
+          });*/
+          });
+    // 我们的优势 end
+    // 我们的教师 start
+    #gla
+      img.jiaoshi_title_161025(src='../images_new/indexImages_new/jiaoshi_title_161025.png', alt='我们的教师')
+      #gla_box
+        ul
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_10.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_11.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_3.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_4.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_5.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_6.png')
+          li
+            .gla_inbox
+              img(src='../images_new/indexImages_new/jiaoshi_new_161026_7.png')
+      .yuyuebtu_new_161026.yuyueshiting_btu_js 预约试听
+    // 我们的教师 end
+    // 我们的口碑 start
+    .koubei_new_161026
+      img.koubei_new_161026_title(src='../images_new/indexImages_new/koubei_title_161025.png', alt='我们的口碑')
+      .koubeirel_new_161026
+        .koubeiover_new_161026.smyclearfix
+          .left.koubeiover_page1_new_161026
+            img.zuoyouyidong.koubeiover_page1_new_161026_1(src='../images_new/indexImages_new/koubei_new/koubei1_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_2(src='../images_new/indexImages_new/koubei_new/koubei2_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_3(src='../images_new/indexImages_new/koubei_new/koubei3_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_4(src='../images_new/indexImages_new/koubei_new/koubei4_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_5(src='../images_new/indexImages_new/koubei_new/koubei5_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_6(src='../images_new/indexImages_new/koubei_new/koubei6_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_7(src='../images_new/indexImages_new/koubei_new/koubei7_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_9(src='../images_new/indexImages_new/koubei_new/koubei9_new.png')
+            img.zuoyouyidong.koubeiover_page1_new_161026_10(src='../images_new/indexImages_new/koubei_new/koubei10_new.png')
+          .left.koubeiover_page2_new_161026
+            img.zuoyouyidong.koubeiover_page2_new_161026_4(src='../images_new/indexImages_new/koubei_new/koubei14_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_2(src='../images_new/indexImages_new/koubei_new/koubei12_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_1(src='../images_new/indexImages_new/koubei_new/koubei11_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_3(src='../images_new/indexImages_new/koubei_new/koubei13_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_5(src='../images_new/indexImages_new/koubei_new/koubei15_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_6(src='../images_new/indexImages_new/koubei_new/koubei16_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_7(src='../images_new/indexImages_new/koubei_new/koubei17_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_8(src='../images_new/indexImages_new/koubei_new/koubei18_new.png')
+            img.zuoyouyidong.koubeiover_page2_new_161026_9(src='../images_new/indexImages_new/koubei_new/koubei19_new.png')
+        .new_warpper_161020.koubei_btubox_new_161026.smyclearfix
+          .left.koubei_btuleft_new_161026
+          .right.koubei_bturight_new_161026
+    // 我们的口碑 end
+    // 企业荣誉 start
+    .new_warpper_161020.qiyerongyu_new_161129
+      img.koubei_new_161026_title(src='../images_new/indexImages_new/qiye_title_161129.png', alt='企业荣誉')
+      .smyclearfix.qiyerongyu_new_161129-rel
+        a.qiyerongyu_new_161129-rel-item(target='_blank', href='http://mp.weixin.qq.com/s/Qvv-Orffxi1mkM4fByKXqg')
+          dl
+            dt.qiyerongyu_new_161129-rel-item-dt
+              img(src='../images_new/indexImages_new/qiye1.jpg')
+              span.light-161129
+            dd GoGoTalk荣获2016中国品牌影响力少儿英语机构
+        a.qiyerongyu_new_161129-rel-item(target='_blank', href='http://mp.weixin.qq.com/s/_trZpz8SKD1S-_dHnmpWiw')
+          dl
+            dt.qiyerongyu_new_161129-rel-item-dt
+              img(src='../images_new/indexImages_new/qiye2.jpg')
+              span.light-161129
+            dd GoGoTalk创始人肖一辉先生接受新浪专访
+        a.qiyerongyu_new_161129-rel-item(target='_blank', href='http://mp.weixin.qq.com/s/moiawAu7om7LJdY3XtBHUQ')
+          dl
+            dt.qiyerongyu_new_161129-rel-item-dt
+              img(src='../images_new/indexImages_new/qiye3.jpg')
+              span.light-161129
+            dd GoGoTalk荣获腾讯教育知名少儿英语品牌
+        a.qiyerongyu_new_161129-rel-item(target='_blank', href='http://mp.weixin.qq.com/s/Dr5szixqNqDAFFiP4UxGJA')
+          dl
+            dt.qiyerongyu_new_161129-rel-item-dt
+              img(src='../images_new/indexImages_new/qiye4.jpg')
+              span.light-161129
+            dd GoGoTalk联合创始人胡冰对话北京文艺广播FM87.6
+    // 企业荣誉 end
+    // 合作媒体 start
+    .new_warpper_161020.hezuo_new_161129
+      img.koubei_new_161026_title(src='../images_new/indexImages_new/hezuo_title_161129.png', alt='合作媒体')
+      .smyclearfix.hezuo_new_161129_rel
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo1.jpg')
+          a(target='_blank', href='http://video.sina.com.cn/view/250860558.html')
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo2.jpg')
+          // <a target="_blank" href=""></a>
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo3.jpg')
+          // <a target="_blank" href=""></a>
+        .project2
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo4.jpg')
+          // <a target="_blank" href=""></a>
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo5.jpg')
+          // <a target="_blank" href=""></a>
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo6.jpg')
+          // <a target="_blank" href=""></a>
+        .project2.mr-161129
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo7.jpg')
+          // <a target="_blank" href=""></a>
+        .project2
+          .project2__card
+            img.project2__card_rel(src='../images_new/indexImages_new/new/logo8.jpg')
+          // <a target="_blank" href=""></a>
+      script.
+        $(document).ready(function () {
+        $(".project2").hover3d({
+        selector: ".project2__card",
+        shine: false
+        });
+        /*$(".movie").hover3d({
+        selector: ".movie__card",
+        shine: true,
+        sensitivity: 20,
+        });*/
+        });
+    // 合作媒体 end
+    // 我们的愿景 start
+      .yuanjing_new_161026
+      .yuanjingxian_new_161026
+    // 我们的愿景 end
+    include footer 
