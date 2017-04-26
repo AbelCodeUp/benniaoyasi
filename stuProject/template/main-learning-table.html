@@ -79,7 +79,7 @@
                             <a href="/PDFJSInNet/PDFJSInNet/web/viewer.html?name={{studyList.FilePath.slice(studyList.FilePath.lastIndexOf('/')+1)}}" target="复习按钮']);"
                              ng-if="studyList.PageStatus == 3 || studyList.PageStatus == 4">复习</a>
                             <span  ng-repeat="sPath in studyList.Path" >
-                                <span ng-show="$index >= 0">,</span><a ng-href="{{sPath}}" target="_blank" class="vedioHover">录像{{$index + 1}}</a>
+                                <span ng-show="$index >= 0">|&nbsp;</span><a ng-href="{{sPath}}" target="_blank" class="vedioHover">录像{{$index + 1}}</a>
                             </span>
                         </td>
                     </tr>

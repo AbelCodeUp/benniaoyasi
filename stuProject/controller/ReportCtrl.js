@@ -51,6 +51,8 @@ ReportCtrl.controller('weekReportDetailCtrl', function($scope, $rootScope, $cook
                 } else {
                     $scope.StudentDes = res.data.StudentDes;
                 }
+
+                $scope.CodeImage ='http://'+ location.host + res.data.CodeImage;
             } else if (res.result >= 1000) {
                 $cookies.remove('tonken');
                 $cookies.remove('username');

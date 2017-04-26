@@ -138,7 +138,17 @@ angular.module('calendar',[])
 		            },
 		            eventClick: function (calEvent, jsEvent, view) {
 		                $this.clickGo(calEvent, jsEvent, view);
-		            }
+		            },
+		            eventMouseover: function(event, jsEvent, view){
+		            	var tTitle = event.title;
+		            	$('.fc-allow-mouse-resize').tinytooltip({message: function(tip) {
+		            		console.log(event.title)
+							return event.title;
+						}});
+		            	
+		            },
+					eventMouseout: function(event, jsEvent, view){
+					}
 		        });
 
 		        //on new event

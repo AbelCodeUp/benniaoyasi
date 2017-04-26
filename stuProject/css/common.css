@@ -32,6 +32,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 } 
 body{
     min-width: 1200px!important;
+    padding-right: 0!important;
 }
 :focus {
     outline: 0;
@@ -147,5 +148,7 @@ margin-bottom: 15px!important;
 .feed-error {
     color: #a94442!important;
 }
-
+.modal-open{
+    overflow: auto!important;
+}
 
