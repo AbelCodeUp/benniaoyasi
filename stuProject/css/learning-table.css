@@ -4,11 +4,17 @@
     margin-top: 10px;
     text-align: center;
 }
-.learning-table td div{
-   width: 80%;
+.learning-table td div.b_tchNameBox{
+    max-width: 50%;
     margin: 0 auto;
-    text-align: left;
-    line-height: 26px;
+    text-align: center!important;
+    position: relative;
+}
+.leaList{
+    position: absolute;
+    top: -2px;
+    right: -53px;
+    background-position: 0 2px;
 }
 .learning-table th{
     border-left:1px solid #ddd;border-top:1px solid #ddd;
@@ -26,6 +32,11 @@
     font-size: 14px;
     color: #4d4d4d;
     vertical-align:middle
+}
+.b_pinjia{
+    text-align: center!important;
+    float: left;
+    width: 100%;
 }
 .learning-table .learning-table-on td{
     color: #ff8a4d;

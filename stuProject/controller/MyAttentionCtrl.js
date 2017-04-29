@@ -424,12 +424,12 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 				})
 		}
 	$scope.closeTchId;
-	$scope.isAtten = function(tchId){
-		$('#guanzhu').modal('show');
+	$scope.l_isAtten = function(tchId){
+		$('#l_guanzhu').modal('show');
 		$scope.closeTchId = tchId;
 		// 取消关注
 	}
-	$scope.closeAtten = function() {
+	$scope.l_closeAtten = function() {
 		layer.load();
 		httpService.get(_AjaxURL.Attention, {
 				'teacherId': $scope.closeTchId,
@@ -438,7 +438,7 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 			.success(function(res) {
 				if (res.result == 1) {
 
-					$('#guanzhu').modal('hide');
+					$('#l_guanzhu').modal('hide');
 
 					layer.msg('取消成功',{icon:1})
 					//重新获取老师

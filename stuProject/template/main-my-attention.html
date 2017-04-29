@@ -245,45 +245,6 @@
         float: right;
         margin-top:14px;
     }
-
-    /*新*/
-    #guanzhu .modal-content{
-        padding-top: 51px;
-        padding-left: 133px;
-        padding-right:133px;
-        padding-bottom: 41px;
-    }
-    #guanzhu .modal-img {
-        text-align: center;
-    }
-    #guanzhu .modal-img img{
-        width: 155px;
-        height:155px;
-    }
-    #guanzhu .modal-content p{
-        text-align: center;
-        font-size: 14px;
-        color:#323232;
-        margin-top: 5px;
-    }
-    #guanzhu .modal-content button{
-        width: 100px;
-        height: 36px;
-        border-radius: 36px;
-        text-align: center;
-        line-height: 36px;
-        color:#323232;
-        font-size: 16px;
-        border:0;
-        float:left;
-        background:#dedede;
-        margin-top: 6px;
-    }
-    #guanzhu .modal-content button.ding{
-        color:#fff;
-        background:#3db6ff;
-        margin-left: 20px;
-    }
     .table-none{
         text-align: center;
         margin: 20px auto;
@@ -336,7 +297,7 @@
                                 <li class="cardName">{{teacherList.TeacherName}}</li>
                                 <li class="age">{{teacherList.Age}}岁</li>
                                 <li>讲课 <span>{{teacherList.Num}}次</span></li>
-                                <li style="cursor: pointer;" class="yiguanzhu" ng-click="isAtten(teacherList.TeacherId)">
+                                <li style="cursor: pointer;" class="yiguanzhu" ng-click="l_isAtten(teacherList.TeacherId)">
                                     已关注
                                 </li>
                             </ul>
@@ -384,7 +345,6 @@
                                 ng-class="{'yiyue':state[Tdata.tTime]=='1','weiyue':state[Tdata.tTime]=='0',' ':state[Tdata.tTime]==' '}" ng-bind="state[Tdata.tTime] | fiiterNum" 
                                 ng-click="orderTeacher(state[Tdata.tTime],Tdata.tTime,$event)" data-lessid="{{state}}"></td>
                             </tr>
-                            
                         </tbody>
                     </table>
                 </div>
@@ -429,7 +389,7 @@
 </div>
 <!--改 start-->
 <!-- 取消关注 -->
-<div id="guanzhu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+<div id="l_guanzhu" class="m-guanzhu modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content" style="width:486px;height:319px">
             <div class="modal-img">
@@ -438,7 +398,7 @@
             <p>确认要关注取消吗？</p>
             <div class="modal-btnbox">
                 <button data-dismiss="modal">取消</button>
-                <button class="ding"  ng-click="closeAtten()">确定</button>
+                <button class="ding"  ng-click="l_closeAtten()">确定</button>
             </div>
             
         </div>

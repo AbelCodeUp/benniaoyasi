@@ -17,75 +17,7 @@
                 color: #3f3f3f;
             }
 
-            .weiguanzhu{
-              color:#dd5b5b;
-              background: url(images/weiguanzhu.png) no-repeat 85% 0px;
-              text-align: right;
-              margin-right: 15px;
-            }
-            .yiguanzhu{  
-              color: #dd5b5b;
-              text-align: right;            
-              margin-right: 15px;
-              background: url(images/yiguanzhu.png) no-repeat 80% 0px;
-            }
-             /*改 start*/
-            .guanzhu{
-              float: right;
-              width: 52px;
-              height: 30px;
-              margin-right: 7px;
-              text-align: center;
-            }
-            .weiguanzhu{
-              color:#dd5b5b;
-              background: url(images/weiguanzhu.png) no-repeat 0 0px;
-              background-size:16px 16px;
-            }
-            .yiguanzhu{  
-              color: #dd5b5b;
-              background: url(images/yiguanzhu.png) no-repeat 0 0px;
-              background-size:16px 16px;
-            }
-            /*end*/
-            /*新*/
-    #guanzhu .modal-content{
-        padding-top: 51px;
-        padding-left: 133px;
-        padding-right:133px;
-        padding-bottom: 41px;
-    }
-    #guanzhu .modal-img {
-        text-align: center;
-    }
-    #guanzhu .modal-img img{
-        width: 155px;
-        height:155px;
-    }
-    #guanzhu .modal-content p{
-        text-align: center;
-        font-size: 14px;
-        color:#323232;
-        margin-top: 5px;
-    }
-    #guanzhu .modal-content button{
-        width: 100px;
-        height: 36px;
-        border-radius: 36px;
-        text-align: center;
-        line-height: 36px;
-        color:#323232;
-        font-size: 16px;
-        border:0;
-        float:left;
-        background:#dedede;
-        margin-top: 6px;
-    }
-    #guanzhu .modal-content button.ding{
-        color:#fff;
-        background:#3db6ff;
-        margin-left: 20px;
-    }
+            
 </style>
 
 <div class="col-lg-12" ng-if="!isBuyMeal">
@@ -246,24 +178,7 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-<!-- 取消关注 -->
-<div id="guanzhu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content" style="width:502px;height:319px">
-            <div class="modal-img">
-                <img src="images/none/table-none.png" alt="">
-            </div>
-            <p>确认要关注取消吗？</p>
-            <div class="modal-btnbox">
-                <button data-dismiss="modal">取消</button>
-                <button class="ding"  ng-click="closeAtten()">确定</button>
-            </div>
-            
-        </div>
 
-    </div>
-<!-- /.modal-dialog -->
-</div>
 <!-- <div class="yuyue-result">
     <div class="yuyue-result-zhezhao" ng-bind="orginMsg"></div>
 <div class="yuyue-result-rel"></div>

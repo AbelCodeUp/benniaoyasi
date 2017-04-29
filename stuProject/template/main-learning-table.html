@@ -58,8 +58,12 @@
 						<div style="text-align: center!important"  ng-if="studyList.LessonName==' '||studyList.LessonName.length < 1">待定</div>
                         </td>
                         <td>
-                            <div ng-bind="studyList.TeacherName" style="text-align: center!important"></div>
-                            <div style="text-align: center!important;" ng-if="studyList.IsComment">
+                            <div class="b_tchNameBox">
+                                {{studyList.TeacherName}}
+                                <div class="leaList guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[studyList.tchState == 1]" data-state=
+                                  '{{studyList.tchState}}' ng-bind="studyList.tchState | isGuanZhu" data-tchid="{{studyList.TeacherId}}" ng-click="Attention($event)"></div>
+                            </div>
+                            <div class="b_pinjia" ng-if="studyList.IsComment">
                                 <button type="button" ng-click="lookpj($event)" class="btn btn-primary btn-rounded waves-effect waves-light learning-table-over-btu" data-remark="{{studyList.Remark}}" data-score="{{studyList.StuScore}}"
                                 data-time="{{studyList.TchCommentTime}}" data-name="{{studyList.TeacherName}}">查看评价</button>
                             </div>

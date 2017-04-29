@@ -189,7 +189,24 @@
             </div>
             <!-- /.modal-dialog -->
         </div>
-        
+        <!-- 取消关注 -->
+        <div id="guanzhu" class="m-guanzhu modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width:502px;height:319px">
+                    <div class="modal-img">
+                        <img src="images/none/table-none.png" alt="">
+                    </div>
+                    <p>确认要关注取消吗？</p>
+                    <div class="modal-btnbox">
+                        <button data-dismiss="modal">取消</button>
+                        <button class="ding"  ng-click="closeAtten()">确定</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        <!-- /.modal-dialog -->
+        </div>
         <script type="text/javascript" src="lib/jquery.raty.min.js"></script>
         <script>
     $('#likeStar').raty({

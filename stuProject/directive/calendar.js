@@ -6,7 +6,7 @@ angular.module('calendar',[])
 				username:'@'
 			},
 			link:function(scope, element, attrs, ctril){
-
+			
 			var CalendarApp = function () {
 		        this.$body = $("body"),
 		            this.$event = ('#external-events div.external-event'),
@@ -141,13 +141,15 @@ angular.module('calendar',[])
 		            },
 		            eventMouseover: function(event, jsEvent, view){
 		            	var tTitle = event.title;
-		            	$('.fc-allow-mouse-resize').tinytooltip({message: function(tip) {
-		            		console.log(event.title)
-							return event.title;
-						}});
 		            	
 		            },
 					eventMouseout: function(event, jsEvent, view){
+					},
+					eventAfterRender:function(event, jsEvent, view){
+						$('.fc-day-grid-event').tinytooltip({message: function(tip) {
+        		
+							return $(this).html();
+						}});
 					}
 		        });
 
@@ -170,7 +172,7 @@ angular.module('calendar',[])
 		//initializing CalendarApp
 
 		    $.CalendarApp.init()
-
+		    
 			}
 		}
 	})
