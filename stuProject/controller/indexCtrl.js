@@ -230,7 +230,7 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 		$rootScope.thisEvent = e;
 		var teacherId = $(e.target).data('tchid');
 		layer.load();
-		var state = $(event.target).data('state');
+		var state = $(e.target).data('state');
 		if (state == 1) {
 			$rootScope.closeTchId = $(e.target).data('tchid');
 			$('#guanzhu').modal('show');
