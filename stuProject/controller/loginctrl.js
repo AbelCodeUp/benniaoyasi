@@ -114,7 +114,9 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 			})
 			.error(function(res) {
-				alert(res.msg);
+				layer.msg('登录失败'{
+						icon: 2
+				});
 				$scope.isLoginText = '点击登录';
 				$('#loginbtn').attr('disabled', false);
 				layer.closeAll('loading');

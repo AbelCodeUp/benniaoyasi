@@ -182,12 +182,16 @@ homeCtrl.controller('headerCtrl', ['$scope', '$rootScope', '$cookies', 'httpServ
 							$scope.outLogin();
 						}, 100)
 					} else {
-						alert(res.msg);
+						layer.msg(res.msg,{
+							icon: 2
+						});
 						$('#isChageText').attr("disabled", false);
 					}
 				})
 				.error(function(res) {
-					alert(res.msg);
+					layer.msg(res.msg,{
+							icon: 2
+						});
 					$('#isChageText').attr("disabled", false);
 				})
 
