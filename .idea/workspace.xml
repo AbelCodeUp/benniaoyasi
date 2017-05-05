@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227a668b-8f52-491e-8660-97fda85713db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/aboutus.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/aboutus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/agreement.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/agreement.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/course.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/course.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" afterPath="$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" afterPath="$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_161020.css" afterPath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_161020.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_170111-v=2017.css" afterPath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_170111-v=2017.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_170111.css" afterPath="$PROJECT_DIR$/website/gogotalk/styles_new/head_new_170111.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-learning-table.html" afterPath="$PROJECT_DIR$/stuProject/template/main-learning-table.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/template/main-my-attention.html" afterPath="$PROJECT_DIR$/stuProject/template/main-my-attention.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/main.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/price.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/price.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js_new/js/price.js" afterPath="$PROJECT_DIR$/website/gogotalk/js_new/js/price.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/dist/search.html" afterPath="$PROJECT_DIR$/website/gogotalk/dist/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/gogotalk/js/smy_0426_tijiao.js" afterPath="$PROJECT_DIR$/website/gogotalk/js/smy_0426_tijiao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/index.html" afterPath="$PROJECT_DIR$/stuProject/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stuProject/controller/teacherDetail.js" afterPath="$PROJECT_DIR$/stuProject/controller/teacherDetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyWorkSpaces.iws" />
@@ -38,110 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/course.html">
+      <file leaf-file-name="MyAttentionCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stuProject/controller/MyAttentionCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="price.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/js/price.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="price.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/js_new/js/price.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="25" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ch1225.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/js/ch1225.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shipei.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/js/shipei.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/video_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2956327">
-              <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-              <folding>
-                <marker date="1491376373876" expanded="true" signature="2421:2435" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="price.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/price.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="3" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-              <folding>
-                <marker date="1493786325816" expanded="true" signature="2440:2458" placeholder="..." />
-                <marker date="1493786325816" expanded="true" signature="2905:2919" placeholder="..." />
-                <marker date="1493786325816" expanded="true" signature="5465:5545" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wxpay.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/wxpay.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head_cebian_tijiao_new-v=20172.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="head_cebian_tijiao_new-v=20172.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="25" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="25" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.35219398">
+              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,6 +69,7 @@
         <option value="$PROJECT_DIR$/website/gogotalk/dist/main.html" />
         <option value="$PROJECT_DIR$/website/gogotalk/dist/price.html" />
         <option value="$PROJECT_DIR$/website/gogotalk/dist/search.html" />
+        <option value="$PROJECT_DIR$/stuProject/controller/MyAttentionCtrl.js" />
         <option value="$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" />
       </list>
     </option>
@@ -219,12 +120,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyWorkSpaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gogotalk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="head_js_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/BookStore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
@@ -294,9 +285,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1640625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16385669" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -331,19 +322,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/js/ch1225.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/js/shipei.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -351,9 +333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1491376373876" expanded="true" signature="2421:2435" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -361,7 +340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="3" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -369,11 +347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding>
-            <marker date="1493786325816" expanded="true" signature="2440:2458" placeholder="..." />
-            <marker date="1493786325816" expanded="true" signature="2905:2919" placeholder="..." />
-            <marker date="1493786325816" expanded="true" signature="5465:5545" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -381,7 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -389,9 +361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="25" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="3" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,11 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding>
-            <marker date="1493786325816" expanded="true" signature="2440:2458" placeholder="..." />
-            <marker date="1493786325816" expanded="true" signature="2905:2919" placeholder="..." />
-            <marker date="1493786325816" expanded="true" signature="5465:5545" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,17 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="25" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="25" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +646,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/video_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3034483">
+          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -705,17 +660,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stuProject/controller/MyAttentionCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/www.gogo-talk.story.com/video_list.html">
+    <entry file="file://$PROJECT_DIR$/website/gogotalk/js_new/head_js_new/head_cebian_tijiao_new-v=20172.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2956327">
-          <caret line="78" column="47" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-          <folding>
-            <marker date="1491376373876" expanded="true" signature="2421:2435" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.35219398">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

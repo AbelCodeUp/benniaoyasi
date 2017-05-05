@@ -108,6 +108,7 @@ $(function(){
 
     //预约试听点击弹出事件
     $(".yuyueshiting_btu_js").click(function(){
+        alert(1);
         $(".yuyueshiting_box1_new_161026").show();
     });
 

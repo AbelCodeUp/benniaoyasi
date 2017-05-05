@@ -119,11 +119,14 @@ teacherDetailCtrl.controller('teacherDetailCtrl', function($scope, $rootScope, $
 							});
 						}
 					});
-					console.log($scope.teacherTimes);
+					// console.log($scope.teacherTimes);
 					// angular.forEach($scope.teacherTimes, function(data1,index,array) {
 
 
 					// 				});
+					// $scope.teacherTimes = dateSort($scope.teacherTimes);
+					// 排序
+					dateSort($scope.teacherTimes);
 
 					if ($scope.teacherTimes.length > 0) {
 						$('#noData').show();
@@ -165,6 +168,13 @@ teacherDetailCtrl.controller('teacherDetailCtrl', function($scope, $rootScope, $
 	}
 	//点击日期 显示对应时间
 	$scope.allTime = null;
+
+	function dateSort(arr) {
+		arr.sort(function(a, b) {
+			return a.date > b.date ? 1 : -1;
+		});
+		return arr;
+	}
 
 	function quickSort(arr, name, snum) {
 		//如果数组<=1,则直接返回
