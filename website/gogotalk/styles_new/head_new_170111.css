@@ -183,10 +183,15 @@ background: url("../images_new/headImages_new/cebian_blue3_new_161025.png") no-r
     background: #e12c29;
 }
 .yuyueshiting_box1_new_161026,.yuyueshiting_box2_new_161026{display: none;}
+
 .orderbox{
     width: 100%;
     height: 720px;
-    position: relative;
+    position: fixed;
+    left:0;
+    top:0;
+    display: none;
+    z-index: 999;
 }
 .orderbox .orderzhezhao{
     width: 100%;
@@ -201,7 +206,7 @@ background: url("../images_new/headImages_new/cebian_blue3_new_161025.png") no-r
     height:480px;
     border-radius:8px;
     background-color: #e7e7e6;
-    position: absolute;
+    position: fixed;
     left: 0;
     top:0;
     right:0;
@@ -254,6 +259,7 @@ background: url("../images_new/headImages_new/cebian_blue3_new_161025.png") no-r
 .orderbox .orderconbox .formbox .inputbox label{
     float: left;
     padding-left: 22px;
+    height: 66px;
 }
 .orderbox .orderconbox .formbox .inputbox label input{
     border:0;
