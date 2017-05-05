@@ -178,7 +178,7 @@ $(function(){
                     // }
                     
                 }else{
-                    alert(data.data);
+                    alert('支付失败');
                 }
             });
          }

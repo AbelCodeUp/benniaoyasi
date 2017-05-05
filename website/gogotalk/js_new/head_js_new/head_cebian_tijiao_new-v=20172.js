@@ -31,7 +31,7 @@ function mySubmit(flag){
 		return flag;  
 	}
 
-/* 侧边栏 */
+/* 侧边栏 cebianlan_161025_blue_form_bxk*/
 $(function () {
     $(".cebianlan_161025_red").hover(function(){
         $(this).stop().animate({"right":0},400);
@@ -41,9 +41,9 @@ $(function () {
 
     $(".cebianlan_161025_blue").hover(function(){
         $(this).stop().animate({"right":0},400);
-        $(".cebianlan_161025_blue_form").show();
+        $(".cebianlan_161025_blue_form_bxk").show();
     }, function () {
-        $(".cebianlan_161025_blue_form").hide();
+        $(".cebianlan_161025_blue_form_bxk").hide();
         $(this).stop().animate({"right":"-148px"},400);
 
     });
@@ -59,23 +59,35 @@ $(function () {
 	
 
 
-    /* 查询订单 */	  
-	$("#cebianlan_161025_blue_form").submit(function(){  
-		var mobile= $("input#search_ord_161026").val();
-			if (mobile== "") {
-				return false;
-			}else{
-				var re = /^1[3|5|7|8|][0-9]{9}$/;
-				if (!re.test(mobile)) {
-					alert("请输入有效的手机号码！");
-					return mySubmit(false);  
-				}else{
-					 return mySubmit(true);  
-				}
-			}
-	});  
-    $(".search_ord_161026_button").click(function () { //按钮单击事件
-        $("#cebianlan_161025_blue_form").submit();
+    /* 查询订单 */
+    $(".search_ord_161026_button").click(function () { //°??????÷????
+        var mobile = $("input#search_ord_161026").val();
+        if (mobile == "") {
+            return false;
+        } else {
+            var re = /^1[3|5|7|8|][0-9]{9}$/;
+            if (!re.test(mobile)) {
+                alert("请输入正确的手机号");
+                return;
+            }
+        }
+        window.location.href = './search.html?phone=' + mobile;
+    });
+
+    $('.search_ord_161026').keydown(function (e) {
+        if (e.keyCode == 13) {                                  //????????
+            var mobile = $("input#search_ord_161026").val();
+            if (mobile == "") {
+                return false;
+            } else {
+                var re = /^1[3|5|7|8|][0-9]{9}$/;
+                if (!re.test(mobile)) {
+                    alert("请输入正确的手机号");
+                    return;
+                }
+            }
+            window.location.href = './search.html?phone=' + mobile;
+        }
     });
 });
 
@@ -109,59 +121,72 @@ $(function(){
         if(e.keyCode==13){                                  //回车事件
             var name = $("input#yuyuezhezhao_new_161026_form_name").val();
             if (name == "") {
+                alert('请输入您的姓名');
                 return false;
             }
             var mobile = $("input#yuyuezhezhao_new_161026_form_tel").val();
             if (mobile == "") {
                 return false;
-            }else{
+            } else {
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("请输入有效的手机号码！");
+                    alert("请输入正确的手机号");
                     return;
                 }
             }
             //$("#form1").submit();
             $("input#yuyuezhezhao_new_161026_form_name").val("");
             $("input#yuyuezhezhao_new_161026_form_tel").val("");
-			var sources = '官网注册';
-            $.post("http://www.gogo-talk.com/api.php?c=index&a=sources_tel", { name: name, mobile: mobile, sources:sources},function(data) {
-	            
-                if(data == 1){
-                    $(".yuyueshiting_box1_new_161026").hide();
-                    $(".yuyueshiting_box2_new_161026").show();
+
+            $.ajax({
+                type: "POST",
+                url: "http://w.gogo-talk.com/api/order/RegisterUser",
+                data: { Mobile: mobile, Name: name },
+                dataType: "json",
+                success: function (data) {
+                    if (data.Return == 1) {
+                        $(".yuyueshiting_box1_new_161026").hide();
+                        $(".yuyueshiting_box2_new_161026").show();
+                    }
                 }
             });
         }
     });
 
-    //弹窗表单提交事件
-    $("#yuyueshiting_new_161026_btu").click(function () { //“提交”按钮单击事件
+    //快速预约体验课
+    $("#yuyueshiting_new_161026_btu").click(function () { //?°?á???±°??????÷????
         var name = $("input#yuyuezhezhao_new_161026_form_name").val();
-            if (name == "") {
-                return false;
+        if (name == "") {
+            alert('请输入您的姓名');
+            return false;
+        }
+        var mobile = $("input#yuyuezhezhao_new_161026_form_tel").val();
+        if (mobile == "") {
+            return false;
+        } else {
+            var re = /^1[3|5|7|8|][0-9]{9}$/;
+            if (!re.test(mobile)) {
+                alert("请输入正确的手机号");
+                return;
             }
-            var mobile = $("input#yuyuezhezhao_new_161026_form_tel").val();
-            if (mobile == "") {
-                return false;
-            }else{
-                var re = /^1[3|5|7|8|][0-9]{9}$/;
-                if (!re.test(mobile)) {
-                    alert("请输入有效的手机号码！");
-                    return;
-                }
-            }
-            //$("#form1").submit();
-            $("input#yuyuezhezhao_new_161026_form_name").val("");
-            $("input#yuyuezhezhao_new_161026_form_tel").val("");
-			var sources = '官网注册';
-            $.post("http://www.gogo-talk.com/api.php?c=index&a=sources_tel", { name: name, mobile: mobile, sources:sources },function(data) {
-	            
-                if(data == 1){
+        }
+        //$("#form1").submit();
+        $("input#yuyuezhezhao_new_161026_form_name").val("");
+        $("input#yuyuezhezhao_new_161026_form_tel").val("");
+
+        $.ajax({
+            type: "POST",
+            url: "http://w.gogo-talk.com/api/order/RegisterUser",
+            data: { Mobile: mobile, Name: name },
+            dataType: "json",
+            success: function (data) {
+                if (data.Return == 1) {
                     $(".yuyueshiting_box1_new_161026").hide();
                     $(".yuyueshiting_box2_new_161026").show();
                 }
-            });
+            }
+        });
+
 
     });
 });

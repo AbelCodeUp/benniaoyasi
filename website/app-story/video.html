@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 忽略将数字变为电话号码 -->
+    <meta content="telephone=no" name="format-detection">
+    <title>video</title>
+    <script src="src/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<div class="video">
+    <iframe height=100% width=100% src='' frameborder=0 allowfullscreen id="video"></iframe>
+</div>
+<div class="video-name g-bg">
+    <div class="v-story-name line">
+        <p class="vname" id="videoName"></p>
+
+        <p class="vdescription">
+            睡前故事第一季 第一集
+        </p>
+
+        <div class="v-look-num fr">
+            <span class="play-look img look"></span>
+            <span class="play-look" id="lookNum"></span>
+        </div>
+    </div>
+
+</div>
+<div class="video-ji g-bg">
+    <ul class="j-video" id="j-video">
+        <li class="j-btn fl v-clickout">1</li>
+        <li class="j-btn fl v-active">2</li>
+        <li class="j-btn fl">3</li>
+        <li class="j-btn fl">4</li>
+        <li class="j-btn fl">5</li>
+        <li class="j-btn fl">6</li>
+        <li class="j-btn fl">7</li>
+        <li class="j-btn fl">8</li>
+        <li class="j-btn fl">9</li>
+        <li class="j-btn fl">10</li>
+    </ul>
+</div>
+<script src="src/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    if(!getItem('vKey')){
+        window.location.href="index.html";
+    }
+    var Data = JSON.parse(getItem('vKey'));
+    var dG = GetRequest().g;
+    for(var i in Data){
+        if(dG == i){
+            allData(Data[i]);
+        }
+    }
+    var iVideo = $('#video');
+    var iVideoName = $('#videoName');
+    var iVideoLookNum = $('#lookNum');
+    var lookNumber = GetRequest().l;
+    if(lookNumber > 9999){
+        lookNumber = '1万+';
+    }
+    iVideoLookNum.text(lookNumber + '次');
+    iVideo.attr('src', GetRequest().v);
+    iVideoName.text(GetRequest().n);
+
+
+    var lessonId = GetRequest().d;
+    //		默认加载一次浏览数
+    senPalyNum(lessonId);
+    document.title = GetRequest().n;
+
+    $('#j-video .j-btn').eq(0).addClass('v-active');
+    //		点击播放视及更新视频信息
+    $('#j-video').on('click', '.j-btn', function () {
+        var tDom = $(this);
+        var index = tDom.index();
+        tDom.data('touch', 1);
+        tDom.addClass('v-active').siblings().removeClass('v-active');
+        var url = tDom.data('url');
+
+        iVideo.attr('src', url);
+        iVideoLookNum.text(tDom.data('times') + '次');
+        iVideoName.text(tDom.data('name'));
+
+        for (var i = 0; i < $('#j-video .j-btn').length; i++) {
+            if ($('#j-video .j-btn').eq(i).data('touch') == 1 && i != index) {
+                $(this).addClass('v-clickout');
+            }
+        }
+        lessonId = tDom.data('id');
+
+        senPalyNum(lessonId);
+    });
+
+
+    var eventTester = function (e) {
+        Media.addEventListener(e, function () {
+            console.log((new Date()).getTime(), e)
+        }, false);
+    };
+
+
+    var resizeIframe = function () {
+        var bodyw = $('.video').height();
+        for (var ilength = 0; ilength <= document.getElementsByTagName("iframe").length; ilength++) {
+
+            document.getElementsByTagName("iframe")[ilength].height = bodyw * 9 / 16;//设定高度
+
+        }
+    };
+    function GetRequest() {
+        //url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；
+        var url = location.search; //获取url中"?"符以及其后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1)//url中存在问号，也就说有参数。
+        {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    //获取所有视频集数
+    function allData(data) {
+        var str = '';
+        for (var k=0;k<data.length;k++) {
+            str += '<li class="j-btn fl" data-touch="0" data-times="' + data[k].PlayTimes + '" data-name="' + data[k].StoryName + '" data-id="' + data[k].BedtimeStoryId + '" data-url="' + data[k].VideoUrl + '">' + (k+1) + '</li>';
+        }
+        $('#j-video').html(str);
+    }
+    //点击播放采集视频播放次数
+    function senPalyNum(id) {
+        $.ajax({
+            url: 'http://w.gogo-talk.com/api/BedTimeSotry/UpdatePlayTimes',
+            data: {'BedtimeStoryId': id},
+            type: 'post',
+            dataType: 'json',
+            success: function (res) {
+            },
+            error: function (res) {
+                console.error(res)
+            }
+        })
+    }
+
+
+</script>
+</body>
+</html>

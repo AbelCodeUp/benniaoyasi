@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 忽略将数字变为电话号码 -->
+	<meta content="telephone=no" name="format-detection"> 
+	<title>video</title>
+	<script src="src/flexible.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="video">
+		<iframe height=100% width=100% src='' frameborder=0 allowfullscreen id="video"></iframe>
+	</div>
+	<div class="video-name g-bg">
+		<div class="v-story-name line">
+			<p class="vname">Ants and bees</p>
+			<p class="vdescription">
+				睡前故事第一季  第一集
+			</p>
+			<div class="v-look-num fr">
+				<span class="play-look img look"></span>
+				<span class="play-look">16860次</span>
+			</div>
+		</div>
+		
+	</div>
+	<div class="video-ji g-bg">
+		<ul class="j-video">
+			<li class="j-btn fl v-clickout">1</li>
+			<li class="j-btn fl v-active">2</li>
+			<li class="j-btn fl">3</li>
+			<li class="j-btn fl">4</li>
+			<li class="j-btn fl">5</li>
+			<li class="j-btn fl">6</li>
+			<li class="j-btn fl">7</li>
+			<li class="j-btn fl">8</li>
+			<li class="j-btn fl">9</li>
+			<li class="j-btn fl">10</li>
+		</ul>
+	</div>
+	<script src="src/zepto.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		function GetRequest() {
+			//url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；
+			var url = location.search; //获取url中"?"符以及其后的字串
+			var theRequest = new Object();
+			if(url.indexOf("?") != -1)//url中存在问号，也就说有参数。
+			{
+				var str = url.substr(1);
+				strs = str.split("&");
+				for(var i = 0; i < strs.length; i ++)
+				{
+					theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest;
+		}
+
+		function allData(data){
+			for (var k in data) {
+				
+			}
+		}
+
+		var iVideo = $('#video');
+
+		iVideo.attr('src',GetRequest().v);
+		document.title = GetRequest().name;
+
+		var eventTester = function(e){
+			Media.addEventListener(e,function(){
+				console.log((new Date()).getTime(),e)
+			},false);
+		};
+
+
+		var resizeIframe=function(){
+			var bodyw=$('.video').height();
+			for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
+
+				document.getElementsByTagName("iframe")[ilength].height = bodyw*9/16;//设定高度
+
+			}
+		}
+	</script>
+</body>
+</html>

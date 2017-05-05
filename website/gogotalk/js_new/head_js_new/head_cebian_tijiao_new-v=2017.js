@@ -78,11 +78,11 @@ $(function () {
             } else {
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("ÇëÊäÈëÓÐÐ§µÄÊÖ»úºÅÂë£¡");
+                    alert("请输入正确的手机号");
                     return;
                 }
             }
-            $("#cebianlan_161025_blue_form").submit();
+            window.location.href = './search.html?phone=' + mobile;
         }
     });
 });
@@ -125,21 +125,25 @@ $(function () {
             } else {
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("ÇëÊäÈëÓÐÐ§µÄÊÖ»úºÅÂë£¡");
+                    alert("请输入正确的手机号");
                     return;
                 }
             }
             //$("#form1").submit();
             $("input#yuyuezhezhao_new_161026_form_name").val("");
             $("input#yuyuezhezhao_new_161026_form_tel").val("");
-            var sources = '¹ÙÍø×¢²á';
-            $.post("http://www.gogo-talk.com/api.php?c=index&a=sources_tel", { name: name, mobile: mobile, sources: sources }, function (data) {
 
-                if (data == 1) {
-                    $(".yuyueshiting_box1_new_161026").hide();
-                    $(".yuyueshiting_box2_new_161026").show();
+            $.ajax({
+                type: "POST",
+                url: "http://w.gogo-talk.com/api/order/RegisterUser",
+                data: { Mobile: mobile, Name: name },
+                dataType: "json",
+                success: function (data) {
+                    if (data.Return == 1) {
+                        $(".yuyueshiting_box1_new_161026").hide();
+                        $(".yuyueshiting_box2_new_161026").show();
+                    }
                 }
-
             });
         }
     });
