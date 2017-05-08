@@ -29,6 +29,13 @@
     }
     .cardBox .cardCon .cardName{
         font-size: 16px;
+        width:60px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        -o-text-overflow:ellipsis;
+        -webkit-text-overflow:ellipsis;
+        -moz-text-overflow:ellipsis;
+        white-space:nowrap;
     }
     /*改 start*/
     .cardBox .cardCon .age{
@@ -424,6 +431,7 @@
         width: 40%;
         margin-top: 7%;
         margin-left:0;
+        margin-right: 0;
     }
     .cardBox .cardCon{
         margin-right:0;
@@ -451,6 +459,7 @@
         width: 40%;
         margin-top: 10%;
         margin-left:0;
+        margin-right: 0;
     }
     .cardBox .cardCon{
         margin-right:0;
@@ -493,3 +502,8 @@
     }
 }
 </style>
+<script>
+    $('.cardName').tinytooltip({message: function(tip) {
+        return $(this).html();
+    }});
+</script>

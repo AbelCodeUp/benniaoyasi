@@ -98,7 +98,9 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 						}
 					}
 
-
+					$('.cardName').tinytooltip({message: function(tip) {
+						return $(this).html();
+					}});
 				}
 				layer.closeAll('loading')
 			})
