@@ -11,8 +11,8 @@
                         <div  class="teacher-detail-left-item-box-pad">
                             <div class="orderTeacher_teacher_item orderTeacher_teacher_item-detail"  ng-click="clickTeacher($index, teacher.TeacherId, teacher.FisrtName)">
                                 <div class="orderTeacher_teacher_item_img">
-                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl != ''" ng-src="{{teacher.ImageUrl}}" onerror="javascript:this.src='images/default.jpg?v=1.1'">
-                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl == ''" ng-src="images/default.jpg">
+                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl != ''" ng-src="{{teacher.ImageUrl}}" onerror="javascript:this.src='images/default.png?v=0508'">
+                                    <img class="teacher-detail-left-item-img" ng-if="teacher.ImageUrl == ''" ng-src="images/default.png?v=0508">
                                     <div class="orderTeacher_teacher_item_img_top"><span class="f-left-smy" ng-bind="teacher.FisrtName"></span></div>
                                     <span class="orderTeacher_teacher_item_img_year">{{teacher.Age}}岁</span>
                                 </div>
