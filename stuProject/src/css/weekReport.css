@@ -1,0 +1,135 @@
+.weekColor{
+	color: #6c1800;
+}
+.weekBorder{
+	border: 2px solid #6c1800;
+}
+.weekFontSize{
+	font-size: 16px;
+}
+
+.qxboxbg{
+	/* background:-webkit-linear-gradient(-45deg, #8f8f8f 30%, #fff 70%); */
+}
+.weekDetailbox {
+	overflow-x: hidden;
+	width: 920px;
+	margin: 60px auto;
+}
+.weekDetailbox .weekbigbox{
+	float: left;
+	margin-right: 10px;
+	background: url("../images/reportImg/bg1-8c6f5c2.png") no-repeat;
+	background-size: 100%;
+	width: 450px;
+	height: 642px;
+	box-sizing: border-box;
+	padding: 16px 16px 16px 8px;
+	position: relative;
+}
+.weekDetailbox .weekbigbox:nth-of-type(2){
+	margin-right: 0;
+}
+.week-header{
+	height: 70px;
+	width: 100%;
+	padding: 10px 12px;
+}
+.week-title{
+	width: 58px;
+	height: 58px;
+	background: url("../images/reportImg/report-f8a3933.png") no-repeat;
+	background-size: 100%;
+	text-align: center;
+	line-height: 53px;
+	font-size: 16px;
+	color: #6c1800;
+	display: inline-block;
+}
+.week-logo{
+	display: inline-block;
+	height: 40px;
+	margin-left: 110px;
+}
+.week-logo img{
+	height: 100%;
+}
+.week-header *{
+	vertical-align: top;
+}
+
+/* 主内容 */
+.week-center{
+	padding: 30px;
+	box-sizing: border-box;
+}
+.week-center-img{
+	margin: 0 auto;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	position: relative;
+}
+.week-center-img img{
+	width: 150%;
+	position: absolute;
+	top: -104px;
+	left: -41px;
+}
+.week-user-title{
+	height: 50px;
+	border-bottom: 2px solid #6c1800;
+	line-height: 50px;
+	font-size: 16px;
+	color: #6c1800;
+}
+.week-stu-content p{
+	display: inline;
+}
+.week-stu-content{
+	 padding-top: 10px;
+}
+
+/* 剩余 */
+.week-sy{
+	width: 58px;
+	height: 58px;
+	
+	position: absolute;
+	bottom: 60px;
+	right: 19px;
+	background: url("../images/reportImg/report-f8a3933.png") no-repeat;
+	background-size: 100%;
+	line-height: 10px;
+	padding-top:13px;
+}
+
+
+.week-center ul{
+	overflow: hidden;
+	border-bottom: 2px solid #6c1800;
+	text-align: center;
+}
+.week-center ul li{
+	float: left;
+	width: 50%;
+	height: 30px;
+	margin-bottom: 15px;
+	display: inline-block;
+	font-size: 16px;
+	color: #6c1800;
+}
+.week-center ul li *{
+	vertical-align: middle;
+}
+.week-center ul li img{
+	height: 100%;
+	margin: auto 4px;
+}
+
+.week-wx-box{
+	height: 160px;
+}
+.week-wx-box img{
+	height: 100%;
+}

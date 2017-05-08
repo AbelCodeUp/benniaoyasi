@@ -1,0 +1,212 @@
+
+
+.orderTeacher-filtrate{  width: 100%;  padding:0 30px;}
+.orderTeacher-filtrate-div{ position: relative; width: 100%;  padding-top: 15px;  padding-bottom: 12px;  border-bottom: 1px solid #d2d2d2;}
+.orderTeacher-item{ position: absolute;top:25px; left:0; width: 74px;text-align: right;  font-size: 16px;  color: #3a3a3a;}
+.orderTeacher-filtrate-right{ float: left; width:100%; padding-left: 74px;}
+.orderTeacher-filtrate-right ul{  width: 100%;}
+.orderTeacher-filtrate-right ul li{  float: left;  padding:10px;  font-size: 16px;  color: #747474; border-radius: 6px;margin:0 15px;}
+.ul_time_smy{padding-left: 6px;}
+.orderTeacher-filtrate-right ul.ul_time_smy li{  margin:0 0 0 8px;}
+.orderTeacher-filtrate-right-input label::before,.orderTeacher-filtrate-right-input label::after{  margin-top: 2px;}
+.orderTeacher-filtrate-right-input label{  position: relative;  top: -2px;}
+
+
+.orderTeacher_teacher{width: 100%; margin: 0;padding: 20px 20px 0;}
+.orderTeacher_teacher_item{
+    padding: 7px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+.orderTeacher_teacher_item_img{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.orderTeacher_teacher_item img{
+width: 100%;
+}
+.orderTeacher_teacher_item_img_top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    padding-top: 4%;
+    background: rgba(0,0,0,0.2);
+    text-indent: 16px;
+    overflow: hidden;
+}
+.orderTeacher_teacher_item_img_top span{
+    font-size: 14px;
+    color: #fff;
+}
+.orderTeacher_teacher_item_img_year{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+}
+
+
+.orderTeacher-filtrate-right ul li{
+    cursor: pointer;
+}
+.orderTeacher-filtrate-right ul li p:last-of-type{
+    font-size: 12px;
+    text-align: center;
+}
+.orderTeacher-filtrate-right ul li.orange1122_ff752f{
+    color: #fff;
+    background: #4c8de1;
+}
+.orderTeacher-filtrate-right ul li.orange1122_2_ff752f{
+    color: #ff8b53;
+}
+.no_click{
+    color: #eee!important;
+    pointer-events: none;
+}
+/* 滑过 */
+.orderTeacher-filtrate-right ul.ul_data_smy li:hover{
+    color: #fff;
+    background: #8bb9f4;
+}
+.orderTeacher-filtrate-right ul.ul_time_smy li:hover{
+    color: #fff;
+    background: #8bb9f4;
+}
+.orderTeacher-filtrate-right ul.ul_time_smy li:first-of-type:hover{
+    color: #444;
+    background: #fff;
+}
+/* 今天 */
+.orderTeacher-filtrate-right ul li.today_nav{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+/* 选中 */
+.orderTeacher-filtrate-right ul li.active_nav{
+    background: #4c8de1;
+    color: #fff;
+}
+
+.f-left-smy{
+    position: absolute;
+    text-align: left;
+    font-size: 16px;
+}
+.f-right-smy{
+    float: right;
+    padding-right: 10px;
+}
+.orderTeacher_teacher_ad{
+    height: 52px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.orderTeacher_teacher_ad div{
+    float: left;
+    text-align: center;
+    padding: 0 10px;
+    height: 26px;
+    line-height: 24px;
+    background: #d6d6d6;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 8px;
+    overflow: hidden;
+}
+.orderTeacher_teacher_ad div span{
+    display: block;
+    width: 100%;
+    height: 26px;
+    line-height: 24px;
+    margin: 0 auto;
+}
+.teacher-btu .btn-group{
+    width: 30%;
+
+}
+.teacher-btu .btn-group button{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.teacher-btu2{
+    width:66%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.teacher-btu .dropdown-menu{
+    width: 230px;
+    max-height: 160px;
+    overflow-y: auto;
+    top: 92%;
+}
+.teacher-btu .dropdown-menu li a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media screen and (min-width:1200px) {
+    .orderTeacher_teacher_item_box{
+        width: 25%;
+    }
+}
+@media screen and (max-width:1600px) {
+    .teacher-btu .dropdown-menu{
+        width: 190px;
+        max-height: 160px;
+        overflow-y: auto;
+    }
+    .teacher-btu .dropdown-menu li a{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (min-width:1400px) {
+    .orderTeacher_teacher_item_box{
+        width: 20%;
+    }
+
+}
+.btn-group:hover .dropdown-menu{
+    display: block;
+}
+
+
+.btn-group:hover .dropdown-menu::-webkit-scrollbar  
+{  
+    width: 6px;  
+    height: 6px;  
+    background-color: transparent;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+.btn-group:hover .dropdown-menu::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.1);  
+    border-radius: 10px;  
+    background-color: transparent;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+.btn-group:hover .dropdown-menu::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.1);  
+    background-color: #eee;  
+}

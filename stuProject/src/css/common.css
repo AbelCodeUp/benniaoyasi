@@ -1,0 +1,399 @@
+
+.font-write
+{
+    color: #fff!important;
+}
+.bg-fff
+{
+    background: #fff!important;
+}
+div
+{
+    font-size: 0;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+body,
+div,
+span,
+object,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td
+{
+    font-family: inherit;
+    font-family: '微软雅黑';
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
+    outline: 0;
+}
+body
+{
+    min-width: 1200px!important;
+    padding-right: 0!important;
+}
+:focus
+{
+    outline: 0;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration: none;
+}
+table
+{
+    border-spacing: 0;
+    border-collapse: separate;
+}
+th,
+td
+{
+    font-weight: normal;
+
+    text-align: left;
+}
+img,
+iframe
+{
+    text-decoration: none;
+
+    border: none;
+}
+ol,
+ul
+{
+    list-style: none;
+}
+input,
+textarea,
+select,
+button
+{
+    font-family: inherit;
+    font-size: 100%;
+}
+/* btn start */
+.btn-pink
+{
+    background: #fb6d9d;
+}
+.btn-hui
+{
+    background: #adadad;
+}
+.btn-font-size16
+{
+    font-size: 16px;
+}
+/* btn end */
+/* font color start */
+.font-yell
+{
+    color: #ffca15;
+}
+/* font color end */
+
+.smyclearfix:after
+{
+    font-size: 0;
+
+    display: block;
+    clear: both;
+    overflow: hidden;
+
+    height: 0;
+
+    content: '.';
+}
+.smyclearfix
+{
+    zoom: 1;
+}
+input,
+button,
+select,
+textarea
+{
+    outline: none;
+}
+
+input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0 1000px #2390cc inset;
+}
+
+/*间距*/
+.common_mb
+{
+    margin-bottom: 15px!important;
+}
+.orderTeacher
+{
+    width: 100%;
+    min-height: 810px;
+    margin-bottom: 15px!important;
+    padding: 24px 28px 30px;
+
+    border-radius: 5px;
+    background: #fff;
+}
+.orderTeacher_title
+{
+    font-size: 18px;
+
+    color: #595959;
+}
+.orderTeacher_title button
+{
+    font-size: 18px;
+
+    color: #595959;
+    background: #fff;
+}
+
+.bg-gray
+{
+    cursor: default!important;
+
+    color: #777;
+    border: none;
+    background: #ececec;
+}
+.bg-gray:hover
+{
+    color: #777;
+    background: #ececec;
+}
+.fc-day-grid-event .fc-content
+{
+    padding: 4px;
+}
+.fc-toolbar h2
+{
+    margin: 0 0 0 -97px!important;
+}
+
+/*公共类名*/
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.smyclearfix:after
+{
+    font-size: 0;
+
+    display: block;
+    clear: both;
+    overflow: hidden;
+
+    height: 0;
+
+    content: '.';
+}
+.smyclearfix
+{
+    zoom: 1;
+}
+
+.footer_161201_new
+{
+    font-size: 14px;
+    line-height: 26px;
+
+    width: 100%;
+    padding: 30px 0;
+
+    text-align: center;
+
+    color: #666;
+}
+.kongke
+{
+    display: inline-block;
+
+    padding-left: 30px;
+}
+.content-page > .content
+{
+    margin-bottom: 0;
+}
+.card-box
+{
+    margin-bottom: 0;
+}
+
+.fc-widget-content.fc-past
+{
+    background: #fcfcfc!important;
+}
+
+.feed-success
+{
+    color: #3c763d!important;
+}
+.feed-error
+{
+    color: #a94442!important;
+}
+.modal-open
+{
+    overflow: auto!important;
+}
+/* 关注 */
+.weiguanzhu
+{
+    margin-right: 15px;
+
+    text-align: right;
+
+    color: #dd5b5b;
+    background: url(images/weiguanzhu.png) no-repeat 85% 0;
+}
+.yiguanzhu
+{
+    margin-right: 15px;
+
+    text-align: right;
+
+    color: #dd5b5b;
+    background: url(images/yiguanzhu.png) no-repeat 80% 0;
+}
+/*改 start*/
+.guanzhu
+{
+    float: right;
+
+    width: 60px;
+    height: 30px;
+    margin-right: 7px;
+
+    text-align: left;
+    text-indent: 18px;
+}
+.weiguanzhu
+{
+    color: #dd5b5b;
+    background: url("../images/weiguanzhu-af7ea64.png") no-repeat 0 0;
+    background-size: 16px 16px;
+}
+.yiguanzhu
+{
+    color: #dd5b5b;
+    background: url("../images/yiguanzhu-f5f07c4.png") no-repeat 0 0;
+    background-size: 16px 16px;
+}
+/*end*/
+/*新*/
+.m-guanzhu .modal-content
+{
+    padding-top: 51px!important;
+    padding-right: 133px!important;
+    padding-bottom: 41px!important;
+    padding-left: 133px!important;
+}
+.m-guanzhu .modal-img
+{
+    text-align: center;
+}
+.m-guanzhu .modal-img img
+{
+    width: 155px;
+    height: 155px;
+}
+.m-guanzhu .modal-content p
+{
+    font-size: 14px;
+
+    margin-top: 5px;
+
+    text-align: center;
+
+    color: #323232;
+}
+.m-guanzhu .modal-content button
+{
+    font-size: 16px;
+    line-height: 36px;
+
+    float: left;
+
+    width: 100px;
+    height: 36px;
+    margin-top: 6px;
+
+    text-align: center;
+
+    color: #323232;
+    border: 0;
+    border-radius: 36px;
+    background: #dedede;
+}
+.m-guanzhu .modal-content button.ding
+{
+    margin-left: 20px;
+
+    color: #fff;
+    background: #3db6ff;
+}

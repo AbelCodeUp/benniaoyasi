@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2735199a-6316-430b-9140-995191275ca0" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\aboutus.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\course.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\footer.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\header.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\main.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\price.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\search.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\myWork\benniaoyasi\website\gogotalk\js_new\dist\wxpay.html" afterPath="" />
-    </list>
+    <list default="true" id="2735199a-6316-430b-9140-995191275ca0" name="Default" comment="" />
     <ignored path="benniaoyasi.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +24,7 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31264368">
+            <state vertical-scroll-proportion="0.254023">
               <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
               <folding />
             </state>
@@ -186,6 +176,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -222,6 +213,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2735199a-6316-430b-9140-995191275ca0" name="Default" comment="" />
@@ -254,6 +248,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -264,7 +266,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/website/gogotalk/dist/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31264368">
+        <state vertical-scroll-proportion="0.254023">
           <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
           <folding />
         </state>

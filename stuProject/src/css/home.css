@@ -1,0 +1,78 @@
+
+
+
+/*中右样式*/
+.content-page{
+    padding-top: 10px;
+    overflow: visible;
+}
+/*中间样式*/
+.middle_top_smy{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.middle_top_bg_smy{
+    width: 100%;
+}
+.middle_top_img_smy{
+    width: 42%;
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+button.middle_top_btu_smy{
+    position: absolute;
+    width: 20%;
+    min-width: 200px;
+    top:70%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.middle_bot_smy{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.middle_bot_bg_smy{
+    width: 100%;
+}
+.middle_bot_dl1_smy{
+    position: absolute;
+    top:10%;
+    left: 32%;
+}
+.middle_bot_dl2_smy{
+    position: absolute;
+    top:50%;
+    left: 18%;
+}
+.middle_bot_dl3_smy{
+    position: absolute;
+    top:33%;
+    right: 6%;
+}
+.middle_bot_dl1_smy dt,.middle_bot_dl2_smy dt,.middle_bot_dl3_smy dt{
+    height:36px;
+    font-size: 18px;
+    color: #f2ca68;
+}
+.middle_bot_dl1_smy dd,.middle_bot_dl2_smy dd,.middle_bot_dl3_smy dd{
+    height:26px;
+    font-size: 14px;
+    color: #989898;
+}
+.middle_bot_vd_smy{
+    position: absolute;
+    top: 72%;
+    left: 76%;
+    width: 20%;
+}
+.middle_bot_vd_smy img{
+    width: 100%;
+}
+

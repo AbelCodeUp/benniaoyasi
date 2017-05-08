@@ -1,0 +1,72 @@
+/*左侧样式*/
+.slimscrollleft{
+    background: url("../images/home/leftbg-1b51d79.jpg") left bottom no-repeat #fff;
+    background-size: 80%;
+}
+#wrapper.enlarged .left.side-menu{
+    z-index: 9;
+}
+#sidebar-menu ul li a i{
+    margin-left: 18px;
+    margin-right: 15px;
+}
+#sidebar-menu > ul > li > a > span{
+    font-size: 14px;
+}
+#sidebar-menu li.bo_bottom_smy{
+    border-bottom:1px solid #f4f8fb;
+}
+#sidebar-menu{
+    padding-top: 14px;
+}
+.waves-effect .waves-ripple{
+    background: #ebeff2;
+}
+.bo_bottom_smy>a:focus,.left_cur_smy{
+    background: #f4f8fb;
+    color: #5fbeaa!important;
+}
+.equipment_smy dt{
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #dd5c5c;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.wechat_smy dd{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 14px;
+    color: #707070;
+}
+.equipment_smy dd{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 14px;
+    color: #dd5c5c;
+}
+.wechat_smy img{
+    width: 50%;
+    display: block;
+    margin: 20px auto 0;
+}
+.wechat_smy dd.songti_smy{
+    font-family:"宋体";
+    font-size: 18px;
+    padding-top: 6px;
+    color: #2e2e2e;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+@media screen and (max-width:1020px) {
+    .equipment_smy,.wechat_smy{
+        display: none!important;
+    }
+}
