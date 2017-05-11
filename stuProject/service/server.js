@@ -85,6 +85,18 @@ httpService.factory('isLoginState', function($cookies){
         }
 	}
 })
+// 判断登录是否过期
+httpService.factory('isGuoQi', function($cookies){
+    return {
+        isGuoQi:function(){
+            if($cookies.get('isGuoQi')){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+})
 
 /**  通用页面之间参数传递  **/
 httpService.factory('sendParam', function ($cookies) {

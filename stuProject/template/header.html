@@ -127,19 +127,19 @@
                               ng-if="findPwdForm.NewPwd2.$valid"></span>
 
                         <div class="error-notice"
-                             ng-if="findPwdForm.NewPwd2.$error.required && findPwdForm.NewPwd2.$touched">
+                             ng-if="findPwdForm.NewPwd2.$error.required && !findPwdForm.NewPwd2.$focused">
                             <span class="ion-arrow-up-b"></span>
                             再次输入密码不能为空
                         </div>
                         <div class="error-notice"
-                             ng-if="findPwdForm.NewPwd2.$error.pattern && findPwdForm.NewPwd2.$touched">
+                             ng-if="findPwdForm.NewPwd2.$error.pattern && !findPwdForm.NewPwd2.$focused">
                             <span class="ion-arrow-up-b"></span>
                             再次输入密码格式不正确
                         </div>
                         <div class="error-notice"
-                             ng-if="findPwdForm.NewPwd2.$error.compare && findPwdForm.NewPwd2.$touched">
+                             ng-if="findPwdForm.NewPwd2.$error.compare && !findPwdForm.NewPwd2.$focused">
                             <span class="ion-arrow-up-b"></span>
-                            与第一次输入密码不对
+                            与第一次输入密码不一致
                         </div>
                     </div>
                 </form>

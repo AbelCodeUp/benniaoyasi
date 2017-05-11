@@ -20,9 +20,6 @@ angular.module('calendar',[])
 	        CalendarApp.prototype.clickGo = function (calEvent, jsEvent, view) {
 	        	_czc.push(['_trackEvent', '日历点击进入教室', '点击', '日历点击进入教室']);
 	            var $this = this;
-	            $this.$calendarObj.fullCalendar('removeEvents', function (ev) {
-
-	            });
 
 	            if (calEvent.type == 'underway') {
 	                $rootScope.goClient(calEvent.lessonId,attrs.username);

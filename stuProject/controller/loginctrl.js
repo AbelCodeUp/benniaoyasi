@@ -69,11 +69,10 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 						'expires': tempDate
 					});
 
-					console.log($rootScope.isTemp)
 
 					$scope.isDisable = false;
 					var expiresDate = new Date();
-
+					var isGuoQi = new　Date();
 					if ($scope.checkType) {
 						expiresDate.setDate(expiresDate.getDate() + 7);
 						$cookies.put('btnstaus', '1', {
@@ -94,9 +93,14 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 					$cookies.put('tonken', res.data.userToken);
 					$cookies.put('isComplete', res.data.isComplete);
-
 					$cookies.put('bookingId', res.data.bookingId);
+					
+					isGuoQi.setDate(isGuoQi.getHours() + 2);
+					$cookies.put('isGuoQi','1', {
+						'expires': isGuoQi
+					})
 					layer.closeAll('loading');
+
 					$rootScope.$state.go('home');
 
 
@@ -231,13 +235,13 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 					$cookies.remove('isComplete');
 					$cookies.remove('password');
 					$cookies.remove('bookingId');
-					// alert('登录时间太久，请重新登录');
 					$rootScope.$state.go('index.login');
 					layer.closeAll('loading');
 				} else {
 					layer.msg(res.msg, {
 						icon: 1
 					});
+					$scope.chageText = '点击修改';
 					$('#findBtn').attr("disabled", false);
 					layer.closeAll('loading');
 				}
@@ -246,6 +250,7 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 				layer.msg(res.msg, {
 					icon: 1
 				});
+				$scope.chageText = '点击修改';
 				$('#findBtn').attr("disabled", false);
 			})
 

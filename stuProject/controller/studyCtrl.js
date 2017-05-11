@@ -5,7 +5,7 @@ var studyCtrl = angular.module('studyCtrl',[]);
 
        //右边栏显示隐藏
       $rootScope.isShowRightBar = false;
-
+      $rootScope.studyIndex = 1;
       $scope.noData = false;
     	$rootScope.getStudyList = function (pageIndex){
         var index1 = layer.load();
@@ -57,7 +57,6 @@ var studyCtrl = angular.module('studyCtrl',[]);
       }).success(function (res) {
           if (res.result == 1) {
               $rootScope._serveTime = res.data.timestamp * 1000;
-              console.log($rootScope._serveTime)
           }else if(res.result >= 1000){
               $cookies.remove('tonken');
               $cookies.remove('username');
@@ -86,7 +85,7 @@ var studyCtrl = angular.module('studyCtrl',[]);
                 if(res.result == 1){
                   layer.close(index);
                     layer.msg('取消成功', {icon: 1});
-                    $rootScope.getStudyList(1);
+                    $rootScope.getStudyList($rootScope.studyIndex);
                 }else if(res.result >= 1000){
                     $cookies.remove('tonken');
                     $cookies.remove('username');
@@ -139,7 +138,8 @@ var studyCtrl = angular.module('studyCtrl',[]);
              jump: function (obj, first) { //触发分页后的回调
 
                  if (!first) { //点击跳页触发函数自身，并传递当前页：obj.curr
-                     $rootScope.getStudyList(obj.curr);
+                  $rootScope.studyIndex = obj.curr;
+                     $rootScope.getStudyList($rootScope.studyIndex);
                  }
                  
              }

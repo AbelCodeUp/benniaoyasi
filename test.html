@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script  src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+</head>
+<body>
+<form class="form-horizontal" onsubmit="return false" role="form" action="#">
+    <input type="hidden" name="_xsrf" value="2|a27b203b|5f122dcf815beb75815a9ba5f0b98f85|1494333699">
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label class="control-label" for="inputEmail3">用户名：</label>
+            <input class="form-control" id="inputEmail3" name="username" autofocus="" value="">
+            <p>输入用户名、邮箱或手机号</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label class="control-label" for="inputPassword3">密码：</label>
+            <input type="password" class="form-control" id="inputPassword3" name="password">
+            <p>由字母、大小写或下划线组成长度6-10位</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label>
+                <input name="remember" type="checkbox" class="i-yellow-flat" checked="">记住我
+                <span id="error-info"></span>
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <button type="submit" id="sub" class="green-btn signin-btn">登录</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <ul>
+
+
+
+            </ul>
+        </div>
+    </div>
+</form>
+<script>
+    /**
+     * Created by wx on 15-11-2.
+     */
+    $("#sub").click(function() {
+        var name = $("input[name='username']").val();
+        var password = $("input[name='password']").val();
+        var remember = $("input[name='remember']").is(":checked");
+        if (name == '' || password == '')
+        {
+            $("#error-info").html("请输入用户名和密码");
+            return false
+        }
+        $("#sub").html("正在登录");
+        $.post("/login", {'username': name, 'password': password, 'remember': remember}, function(msg){
+            if(msg == 'success'){window.location = "/learn"}else{
+                $("#error-info").html("矮油! 用户名或密码错了呢!");
+                $("input[type='password']").val('');
+                $("#sub").html("登&nbsp;&nbsp;&nbsp;&nbsp;录");
+            }
+        }, "json");
+    });
+    function getCookie(name){var c = document.cookie.match("\\b" + name + "=([^;]*)\\b");return c ? c[1] : undefined}
+</script>
+</body>
+</html>

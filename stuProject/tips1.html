@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tips</title>
+	<link rel="stylesheet" type="text/css" href="assets/tips/jquery.tinytooltip.css">
+</head>
+<body>
+<div class="fc-day-grid-event">
+	gfadfadfadfadfadfadfadfafa
+</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/tips/jquery.tinytooltip.min.js"></script>
+	<script>
+		$('.fc-day-grid-event').tinytooltip({message: function(tip) {
+        		
+			return $(this).html();
+		}});
+	</script>
+</body>
+</html>

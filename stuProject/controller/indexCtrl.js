@@ -1,6 +1,14 @@
 var commonCtrl = angular.module('indexCtrl', []);
 commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies', 'httpService', '$timeout', '$cookies', function($scope, $rootScope, $window, $cookies, httpService, $timeout, $cookies) {
 
+	window.alert = function(msg,type){
+		if(type==undefined){
+			type=2;
+		}
+		layer.msg(msg, {
+			icon: type
+		})
+	}
 
 	$rootScope.showAlert = function(msg, type) {
 		if (type == 1) {
@@ -63,7 +71,9 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 						// alert('登录时间太久，请重新登录');
 						$rootScope.$state.go('index.login');
 					} else if (res.result == 0) {
-						layer.msg(res.msg);
+						layer.msg(res.msg, {
+							icon: 2
+						})
 					}
 
 				})
@@ -246,7 +256,7 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 					$(e.target).data('state', 1);
 					$(e.target).removeClass('weiguanzhu').addClass('yiguanzhu').text('已关注');
-
+					$rootScope.getStudyList($rootScope.studyIndex);
 					layer.closeAll('loading');
 					layer.msg('关注成功', {
 						icon: 1
@@ -298,14 +308,13 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 						$($rootScope.thisEvent.target).data('state', 0);
 						$($rootScope.thisEvent.target).removeClass('yiguanzhu').addClass('weiguanzhu').text('关注');
-
+						$rootScope.getStudyList($rootScope.studyIndex);
 						layer.closeAll('loading');
 						layer.msg('取消成功', {
 							icon: 1
 						});
 						$('#guanzhu').modal('hide');
 					} else if (res.result >= 1000) {
-						layer.closeAll('loading')
 						layer.closeAll('loading')
 						$cookies.remove('tonken');
 						$cookies.remove('username');

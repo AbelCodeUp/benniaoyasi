@@ -297,7 +297,7 @@
                         <div class="cardBox cardAtt" ng-class="{true:'cardBox-active',false:' '}[isClick == $index]" ng-repeat="teacherList in teacherLists">
                                 <div class="cardPhoto">
                             <a href="javascript:;" ng-click="getTeacherData(teacherList.TeacherId,$index)">
-                                <img ng-src="{{teacherList.ImageUrl}}" alt=""  onerror="javascript:this.src='images/default.png?v=1.1'">
+                                <img ng-src="{{teacherList.ImageUrl}}" alt="" sex-img="{{teacherList.Gender}}">
                             </a>
                             </div>
                             <ul class="cardCon">

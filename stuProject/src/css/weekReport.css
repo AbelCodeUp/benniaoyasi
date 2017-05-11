@@ -85,6 +85,8 @@
 }
 .week-stu-content p{
 	display: inline;
+	word-wrap:break-word; 
+	word-break:break-all; 
 }
 .week-stu-content{
 	 padding-top: 10px;

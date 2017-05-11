@@ -175,16 +175,17 @@ homeCtrl.controller('headerCtrl', ['$scope', '$rootScope', '$cookies', 'httpServ
 					if (res.result == 1) {
 						$('#isChageText').attr("disabled", false);
 						$scope.isChageText = '修改成功';
-						layer.msg(res.msg,{icon: 2});
+						layer.msg(res.msg,{icon: 1});
 						$('#custom-width-modal2').modal('hide');
 						$('.modal-backdrop').hide();
 						$timeout(function() {
 							$scope.outLogin();
-						}, 100)
+						}, 500);
 					} else {
-						layer.msg(res.msg,{
+						layer.msg('原密码不正确',{
 							icon: 2
 						});
+						$scope.isChageText = '确认修改';
 						$('#isChageText').attr("disabled", false);
 					}
 				})
@@ -192,6 +193,7 @@ homeCtrl.controller('headerCtrl', ['$scope', '$rootScope', '$cookies', 'httpServ
 					layer.msg(res.msg,{
 							icon: 2
 						});
+					$scope.isChageText = '确认修改';
 					$('#isChageText').attr("disabled", false);
 				})
 
