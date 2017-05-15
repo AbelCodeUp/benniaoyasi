@@ -11,7 +11,7 @@ $(function () {
         $(this).find(".label1").hide();
         $(this).find(".error").hide();
     });
-    $("#btntijiao").click(function () { //¡°Ìá½»¡±°´Å¥µ¥»÷ÊÂ¼þ
+    $("#btntijiao").click(function () { //ï¿½ï¿½ï¿½á½»ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         $(".label1").hide();
         $('.error').hide();
         var name = $("input#smy_0401_name").val();
@@ -31,7 +31,7 @@ $(function () {
         }else{
             var re = /^1[3|5|7|8|][0-9]{9}$/;
             if (!re.test(mobile)) {
-                alert("ÇëÊäÈëÓÐÐ§µÄÊÖ»úºÅÂë£¡");
+                $.jAlert("ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ë£¡");
                 return;
             }
         }
@@ -50,7 +50,7 @@ $(function () {
             }
 
         });*/
-        var sources = '¹ÙÍø×¢²á';
+        var sources = 'ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½';
         $.post("http://www.gogo-talk.com/index.php?c=index&a=tel", { name: name, mobile: mobile, age:age, sources:sources},function(data) {
             if(data == 1){
                 $(".yuyue2_0426").show();
@@ -59,7 +59,7 @@ $(function () {
 
     });
     $('.error2').hide();
-    $("#btntijiao2").click(function () { //¡°Ìá½»¡±°´Å¥µ¥»÷ÊÂ¼þ
+    $("#btntijiao2").click(function () { //ï¿½ï¿½ï¿½á½»ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         $('.error2').hide();
         var name = $("input#smy_0401_name2").val();
         if (name == "") {
@@ -73,7 +73,7 @@ $(function () {
         }else{
             var re = /^1[3|5|7|8|][0-9]{9}$/;
             if (!re.test(mobile)) {
-                alert("ÇëÊäÈëÓÐÐ§µÄÊÖ»úºÅÂë£¡");
+                $.jAlert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ë£¡");
                 return;
             }
         }

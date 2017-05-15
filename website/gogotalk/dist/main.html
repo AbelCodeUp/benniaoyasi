@@ -30,6 +30,11 @@
     <script type="text/javascript" src="../js_new/index_js_new/index_jiaoshilunbo.js"></script>
     
     <!--教师轮播 js end-->
+
+    <!--jquery弹框插件-->
+    <script type="text/javascript" src="../js_new/head_js_new/jquery-alert.js"></script>
+    <link rel="stylesheet" href="../styles_new/index_css_new/jquery-alert.css">
+    <link rel="stylesheet" href="../styles_new/yuyue.css" type="text/css" />
 	
 
     <script type="text/javascript" src="../js_new/index_js_new/index_new.js"></script>
@@ -125,6 +130,9 @@
     <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" charset="gbk"></script>
 </div>
 <!--公共侧边栏 end-->
+<!--公共侧边栏 手机搜索时的错误提示 start-->
+
+<!--公共侧边栏 手机搜索时的错误提示 end-->
 <!--预约试听 start-->
 <!--<div class="yuyueshiting_box1_new_161026 shitingbox_new_161026">
     <div class="yuyuezhezhao_new_161026"></div>
@@ -154,20 +162,22 @@
 <div class="orderbox">
     <div class="orderzhezhao"></div>
     <div class="orderconbox">
+        <div class="orderclose">&times;</div>
         <p>预约试听课程</p>
         <div class="line"></div>
         <ul class='formbox'>
             <li>
                 <div class="inputbox">
-                    <div class="inputbox-left"><img src="../images_new/indexImages_new/corder/name-grey.png" alt=""></div>
+                    <div class="inputbox-left inputbox-left1"><img src="../images_new/indexImages_new/corder/name-grey.png" alt=""></div>
                     <label for="">
                         <input class="name-input" type="text" placeholder="姓名">
                     </label>
                 </div>
+                <div class="inputerror"></div>
             </li>
             <li>
                 <div class="inputbox">
-                    <div class="inputbox-left"><img src="../images_new/indexImages_new/corder/phone-grey.png" alt=""></div>
+                    <div class="inputbox-left inputbox-left2"><img src="../images_new/indexImages_new/corder/phone-grey.png" alt=""></div>
                     <label for="">
                         <input class="phone-input" type="text" placeholder="电话">
                     </label>
@@ -179,7 +189,19 @@
             </li>
         </ul>
     </div>
+    <div class="goxinbox">
+        <div class="orderclose">&times;</div>
+        <div class="goxinboxword">
+            <div><img src="../images_new/indexImages_new/corder/gongxi.png" alt=""></div>
+            <p>恭喜</p>
+        </div>
+        <p class="goxinvalue">您的试听课已经预约成功！稍后会有专业的老师与你联系，请耐心等候。</p>
+        <div class="quedingbox">
+            <button class='queding'>确定</button>
+        </div>
+    </div>
 </div>
+
 <!--预约试听 end-->
 
 <!--公共头部 end -->

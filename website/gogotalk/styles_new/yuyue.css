@@ -1,0 +1,176 @@
+.orderbox{
+    width: 100%;
+    height: 760px;
+    position: fixed;
+    left:0;
+    top:0;
+    display: none;
+    z-index: 999;
+}
+.orderbox .orderzhezhao{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,0.5);
+}
+.orderbox .orderconbox{
+    width: 474px;
+    height:480px;
+    border-radius:8px;
+    background-color: #e7e7e6;
+    position: fixed;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+.orderbox .orderconbox .orderclose {
+    font-size: 41px;
+    color:#ccc;
+    position: absolute;
+    right:20px;
+    top:6px;
+    cursor: pointer;
+}
+
+.orderbox .orderconbox>p{
+    height: 91px;
+    width: 100%;
+    line-height: 91px;
+    font-size: 34px;
+    text-align: center;
+    margin-top: 19px;
+}
+.orderbox .orderconbox>.line{
+    height: 2px;
+    width:453px;
+    margin:0 auto;
+    background:url('../images_new/indexImages_new/corder/line.png') ;
+}
+.orderbox .orderconbox .formbox{
+    width: 386px;
+    height: 287px;
+    padding-top:41px;
+    margin:0 auto;
+}
+.orderbox .orderconbox .formbox>li{
+    height: 93px;
+    margin-bottom: 22px;
+}
+.orderbox .orderconbox .formbox .inputbox{
+    width: 384px;
+    height: 66px;
+    border:1px solid #999;
+    border-radius: 8px;
+    line-height: 66px;
+}
+.orderbox .orderconbox .formbox .inputbox .inputbox-left{
+    width:65px;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #999;
+}
+.orderbox .orderconbox .formbox .inputbox .inputbox-left>img{
+    vertical-align: middle
+}
+.orderbox .orderconbox .formbox .inputerror{
+    display: none;
+}
+.orderbox .orderconbox .formbox .inputbox label{
+    float: left;
+    padding-left: 22px;
+    height: 66px;
+}
+.orderbox .orderconbox .formbox .inputbox label input{
+    border:0;
+    background-color: #e7e7e6;
+    font-size: 22px;line-height: 64px;
+    outline: none;
+    color: #333
+}
+.orderbox .orderconbox .formbox>li.error .inputbox{
+    border:1px solid #e2403e;
+    -webkit-box-shadow:0 0 10px rgba(255, 0, 0, .5);
+    -moz-box-shadow:0 0 10px rgba(255, 0, 0, .5);
+    box-shadow:0 0 5px rgba(255, 0, 0, .5);
+}
+.orderbox .orderconbox .formbox>li.error .inputbox .inputbox-left{
+    border-right: 1px solid #e2403e;
+}
+.orderbox .orderconbox .formbox>li.error .inputerror{
+    display: block;
+    line-height: 28px;
+    color:#e2403e;
+}
+.orderbox .orderconbox .formbox .yuyuebtn{
+    width: 386px;
+    height: 66px;
+    background:url(../images_new/indexImages_new/corder/corder.png) no-repeat;
+    border:none;
+    font-size: 22px;
+    color:#fff;
+}
+.orderbox .orderconbox .formbox .yuyuebtn:hover{
+    background:url(../images_new/indexImages_new/corder/corder2.png) no-repeat;
+}
+.orderbox .goxinbox{
+    width: 474px;
+    height:483px;
+    border-radius:8px;
+    background-color: #e7e7e6;
+    position: fixed;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    display: none;
+}
+.orderbox .goxinbox .orderclose {
+    font-size: 41px;
+    color:#ccc;
+    position: absolute;
+    right:20px;
+    top:6px;
+    cursor: pointer;
+}
+
+.orderbox .goxinbox .goxinboxword{
+    width: 159px;
+    height: 156px;
+    margin:40px auto 0px;
+    text-align:center;
+}
+.orderbox .goxinbox .goxinboxword>p{
+    font-size: 34px;
+    margin-top:10px;
+}
+.orderbox .goxinbox .goxinvalue{
+    width: 320px;
+    padding:0 20px;
+    font-size: 24px;
+    margin:0 auto;
+    margin-top: 22px;
+    color:#878787;
+    line-height: 2.5rem;
+}
+.orderbox .goxinbox .quedingbox{
+    width: 386px;
+    height: 66px;
+    margin:0 auto;
+    margin-top: 38px;
+}
+.orderbox .goxinbox .quedingbox .queding{
+    width: 386px;
+    height: 66px;
+    background:url(../images_new/indexImages_new/corder/corder.png) no-repeat;
+    border:none;
+    font-size: 22px;
+    color:#fff;
+}
+.orderbox .goxinbox .quedingbox .queding:hover{
+    background:url(../images_new/indexImages_new/corder/corder2.png) no-repeat;
+}

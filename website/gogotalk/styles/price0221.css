@@ -190,7 +190,7 @@
     radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
     background: radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 0 0/1.25em 1.25em,
     radial-gradient(circle, #fb5624 0.1em, rgba(0, 0, 0, 0) 0.2em) 4em 4em/1.25em 1.25em;
-    /* ÐÎ×´ £¬ Ã¿¸öÔ²Çò£¨»¨ÎÆ£©µÄÑÕÉ«Óë´óÐ¡ £¬½¥±äÑÕÉ«Óë½¥±ä°ë¾¶ £¬ ±³¾°X·½ÏòÆ«ÒÆÎ»ÖÃ £¬·Ö²¼¾ùÔÈ£¨Æ½ÆÌ£© £¬ ±³¾°Y·½ÏòÆ«ÒÆÎ»ÖÃ*/
+    /* ï¿½ï¿½×´ ï¿½ï¿½ Ã¿ï¿½ï¿½Ô²ï¿½ò£¨»ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½Ð¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ë½¥ï¿½ï¿½ë¾¶ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½Î»ï¿½ï¿½ ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½È£ï¿½Æ½ï¿½Ì£ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Yï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½Î»ï¿½ï¿½*/
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -510,7 +510,7 @@
 
 
 /* buy */
-.buy_form_0516{display:none; position:fixed;left:0;right:0; top: 0;bottom: 0; margin:auto;width:800px; height:602px; z-index: 9999999; background: #fff;}
+.buy_form_0516{display:none; position:fixed;left:0;right:0; top: 0;bottom: 0; margin:auto;width:807px; height:715px; z-index: 9999999; background: #e7e7e7;border-radius: 8px;}
 .xf_mb{width: 100%;height: 100%; background: rgba(0,0,0,0.75);position: fixed;top: 0;left: 0;z-index: 1001;display:none; }
 .close2_0427 {
     position: absolute;
@@ -524,69 +524,136 @@
 .close2_0427:hover {
     background: url("../images/price/form_close2.png") no-repeat;
 }
+.orderclose {
+    font-size: 41px;
+    color:#ccc;
+    position: absolute;
+    right:20px;
+    top:6px;
+    cursor: pointer;
+}
 .form_0516_title{
+    height: 91px;
     width: 100%;
+    line-height: 91px;
+    font-size: 34px;
     text-align: center;
-    height: 110px;
-    line-height: 110px;
-    font-size: 18px;
-    color: #333333;
+    margin-top: 19px;
+}
+#buy_form_0516 .line{
+    height: 2px;
+    width:786px;
+    margin:0 auto;
+    background:url('../images_new/indexImages_new/corder/line.png') ;
 }
 
 .form_0516_rel{
-    width: 100%;
+    width: 708px;
     height: auto;
+    margin:0 auto;
+    margin-top: 39px;
 }
 .form_0516_rel p{
     width: 100%;
     height: 48px;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 .buy_form_0516_lable{
     display: inline-block;
-    width: 240px;
-    text-align: right;
-    font-size: 16px;
-    color: #333;
-    padding-right: 10px;
+    font-size: 20px;
+    color: #666;
+    padding-left: 28px;
 }
-
+#dingdanhaoma{
+    color:#000;
+}
+#shangpinmingcheng{
+    color:#000;
+}
+#fukuanjine{
+    color:#dd3836;
+    width: 110px;
+}
+#shoujihaoma{
+    width: 528px;
+    height:54px;
+    border:1px solid #999;
+    border-radius: 8px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+#beizhuxinxi{
+    width: 528px;
+    height:54px;
+    border:1px solid #999;
+    border-radius: 8px;
+    padding-left: 20px;
+    font-size: 18px;
+}
 .buy_form input{
     width: 402px;
     height: 26px;
     line-height: 28px;
-    text-indent: 20px;
-    border: 1px solid #333;
+    font-size: 20px;
+    border: none;
+    background: #e7e7e7;
 }
 
 .duigou{
     display: inline-block;
-    width: 11px;
-    height: 11px;
-    border: 1px solid #999999;
-    background: #fff;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e7e7e6;
     position: relative;
+    background: #e7e7e6;
+    border-radius: 2px;
+    top:4px;
 }
+
 .duigou i{
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: -3px;
-    background:url("../images/price/duigou.png") no-repeat;
-    background-size: cover;
-    width: 14px;
-    height:9px;
+    top: -2px;
+    left: -2px;
+    background:url("../images_new/indexImages_new/corder/xuanze.png") no-repeat;
+    width: 21px;
+    height:20px;
     cursor: pointer;
 }
 .display_duigou{
    opacity: 0;
 }
 .btu_buy{
-    width: 210px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 2px;
+    width: 206px;
+    height: 66px;
+    line-height: 66px;
+    border-radius: 33px;
     margin: 30px 8px 0;
+    color:#fff;
+    font-size: 24px;
+    text-align: center;
+    background:#7f7f7f;
+    cursor: pointer;
+}
+.btu_buy1{
+
+    width:206px;background:url('../images_new/indexImages_new/corder/zhifubao.png') no-repeat
+}
+.btu_buy1_hover{
+    width:206px;margin-left: 32px;background:url('../images_new/indexImages_new/corder/zhifubao2.png') no-repeat
+}
+.btu_buy2{
+    width:206px;background:url('../images_new/indexImages_new/corder/weixing.png') no-repeat
+}
+.btu_buy2_hover{
+    width:206px;background:url('../images_new/indexImages_new/corder/weixing2.png') no-repeat
+}
+.btu_buy3{
+    width:206px;background:url('../images_new/indexImages_new/corder/wangyin.png') no-repeat
+}
+.btu_buy3_hover{
+    width:206px;background:url('../images_new/indexImages_new/corder/wangyin2.png') no-repeat
 }
 .succse{display:block; position:fixed;left:0;right:0; top: 0;bottom: 0; margin:auto;width:681px; height:537px; z-index: 9999999; background:url("../images/price/succse.jpg") no-repeat;}
 .succse div{color: #fff;}

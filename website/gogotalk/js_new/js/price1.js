@@ -6,37 +6,37 @@ $(function(){
     getTdData();
     function getTdData(){
         $.ajax({
-            type: "GET",
-            url: "http://w.gogo-talk.com/api/order/GetGoodsList",
-            dataType:'json',
-            success: function(data){
-                if(data.Return == 1){
-                    var tdData = data.data;
-                    for(var i=0;i<tdData.length;i++){
-                        var tdD = tdData[i];
-                        var ClassHours  =tdD.ClassHours;
-                        var GPrice = tdD.GPrice;
-                        var ExpireDay = Math.floor(tdD.ExpireDay/30);
-                        var tdStr = '<tr>'+
-                            '<td>'+ClassHours+'课时</td>'+
-                            '<td>'+GPrice+'元</td>'+
-                            '<td>'+ExpireDay+'个月</td>'+
-                            '<td class="dispaly_none"><div class="goodsBtn" data-bid="'+ tdD.GoodsId +'">购买</div></td>'+
-                            '</tr>';
-                        $('.table_0513 tbody').append(tdStr);
+               type: "GET",
+               url: "http://w.gogo-talk.com/api/order/GetGoodsList",
+               dataType:'json',
+               success: function(data){
+                    if(data.Return == 1){
+                        var tdData = data.data;
+                        for(var i=0;i<tdData.length;i++){
+                            var tdD = tdData[i];
+                            var ClassHours  =tdD.ClassHours;
+                            var GPrice = tdD.GPrice;
+                            var ExpireDay = Math.floor(tdD.ExpireDay/30);
+                            var tdStr = '<tr>'+
+                                    '<td>'+ClassHours+'课时</td>'+
+                                    '<td>'+GPrice+'元</td>'+
+                                    '<td>'+ExpireDay+'个月</td>'+
+                                    '<td class="dispaly_none"><div class="goodsBtn" data-bid="'+ tdD.GoodsId +'">购买</div></td>'+
+                                '</tr>';
+                            $('.table_0513 tbody').append(tdStr);
+                        }
                     }
+                },
+                error:function(msg,textStatus){
+                    console.log(msg)
+                    console.log(textStatus)
                 }
-            },
-            error:function(msg,textStatus){
-                console.log(msg)
-                console.log(textStatus)
-            }
-        });
+            });
     }
     $('.table_0513 tbody').on('click','.goodsBtn',function(){
         goodsId = $(this).data('bid');
         $.get("http://w.gogo-talk.com/api/order/GetNewOrderNum",{ 'GoodsId':goodsId },function(data){
-
+                
             if(data.Return == 1){
                 var buyData = data.data;
                 $('#dingdanhaoma').val(buyData.OrderNUM);
@@ -47,15 +47,15 @@ $(function(){
                 $("#wx_shangpinmingcheng").val(buyData.GoodsName);
                 $("#kq_shangpinmingcheng").val(buyData.GoodsName);
 
-                $('#fukuanjine').val(buyData.DiscountAmount.toFixed(2));
+                $('#fukuanjine').val(buyData.DiscountAmount.toFixed(2)); 
                 $("#wx_fukuanjine").val(buyData.DiscountAmount.toFixed(2));
                 $("#kq_fukuanjine").val(buyData.DiscountAmount.toFixed(2));
 
                 $("#buy_form_0516").show();
-                $("#xf_mb").show();
+		        $("#xf_mb").show();
             }
         });
-
+        
     })
     // 关闭弹窗
     $('.orderclose').click(function(){
@@ -73,9 +73,9 @@ $(function(){
     }
 
     // 支付宝按钮
-    $('#buy_queren_zhifubao').click(function(){
+    $('#buy_queren_zhifubao').click(function(){        
         payType(1);
-
+        
     })
     // 微信按钮
     $("#buy_queren_weixin").click(function () { //“提交”按钮单击事件
@@ -90,22 +90,22 @@ $(function(){
         var Mobile;
         var Remarks = $('#beizhuxinxi').val();
         if($('.duigou i').hasClass('display_duigou')){
-        }else{
-            Mobile = $("#shoujihaoma").val();
-            if (Mobile == null) {
-                return false;
-            }else{
-                var re = /^1[3|5|7|8|][0-9]{9}$/;
-                if (!re.test(Mobile)) {
-                    $("#shoujihaoma").css({border:"1px solid red"});
+		}else{
+	        Mobile = $("#shoujihaoma").val();
+	        if (Mobile == null) {
+	            return false;
+	        }else{
+	            var re = /^1[3|5|7|8|][0-9]{9}$/;
+	            if (!re.test(Mobile)) {
+	                $("#shoujihaoma").css({border:"1px solid red"});
                     $("#shoujihaomay").css("display","inline-block");
                     $("#shoujihaoma").focus();
-                    return;
-                }
-            }
-            $("input#beizhuxinxi").val("");
-            $("input#shoujihaoma").val("");
-            $("#shoujihaoma").css({border:"1px solid #333"});
+	                return;
+	            }
+	        }
+	        $("input#beizhuxinxi").val("");
+	        $("input#shoujihaoma").val("");
+	        $("#shoujihaoma").css({border:"1px solid #333"});
             $("#shoujihaomay").css("display","none");
             var sendMsg = 'OrderNum='+OrderNum+'&GoodsId='+goodsId+'&GoodsName='+GoodsName+'&Gprice='+Gprice+'&Mobile='+Mobile+'&Remarks='+Remarks;
 
@@ -124,27 +124,26 @@ $(function(){
         var Mobile;
         var Remarks = $('#beizhuxinxi').val();
         if($('.duigou i').hasClass('display_duigou')){
-        }else{
-            Mobile = $("#shoujihaoma").val();
-            if (Mobile == null) {
-                return false;
-            }else{
-                var re = /^1[3|5|7|8|][0-9]{9}$/;
-                if (!re.test(Mobile)) {
-
-                    $("#shoujihaoma").css({border:"1px solid red"});
+		}else{
+	        Mobile = $("#shoujihaoma").val();
+	        if (Mobile == null) {
+	            return false;
+	        }else{
+	            var re = /^1[3|5|7|8|][0-9]{9}$/;
+	            if (!re.test(Mobile)) {
+	                $("#shoujihaoma").css({border:"1px solid red"});
                     $("#shoujihaomay").css("display","inline-block");
                     $("#shoujihaoma").focus();
-                    return;
-                }
-            }
-            $("input#beizhuxinxi").val("");
-            $("input#shoujihaoma").val("");
-            $("#shoujihaoma").css({border:"1px solid #333"});
+	                return;
+	            }
+	        }
+	        $("input#beizhuxinxi").val("");
+	        $("input#shoujihaoma").val("");
+	        $("#shoujihaoma").css({border:"1px solid #333"});
             $("#shoujihaomay").css("display","none");
             $.post(postUrl,{'ZhiFuType':ZhiFuType,'OrderNum':OrderNum,'GoodsId':GoodsId,'GoodsName':GoodsName,'Gprice':Gprice,'Mobile':Mobile,'Remarks':Remarks},function(data){
                 if(data.Return == 1){
-                    if(type == 1){
+                    if(type == 1){ 
                         window.location.href = data.data;
                     }else if(type == 2){
 
@@ -181,52 +180,52 @@ $(function(){
 
                     //     $('#kq_buy_form').submit();
                     // }
-
+                    
                 }else{
                     $.jAlert('支付失败');
                 }
             });
-        }
-    }
-
-
+         }
+    } 
+        
+    
     function fun(class_hour,id){
-        //alert(window.location.href);
+	    //alert(window.location.href);
         $.post("http://www.gogo-talk.com/index.php?c=course&a=getCourse",{'class_hour':class_hour,'id':id},function(data){
-            //alert(data);
+           //alert(data);
             data = eval('('+data+')');
 
             //$("#dingdanhaoma").val(data.out_trade_no);
             $("#dingdanhaoma").attr("value",data.out_trade_no);
             $("#wx_dingdanhaoma").attr("value",data.out_trade_no);
             $("#kq_dingdanhaoma").attr("value",data.out_trade_no);
-
+            
             $("#out_trade_no").val(data.out_trade_no);
             $("#wx_out_trade_no").val(data.out_trade_no);
             $("#kq_out_trade_no").val(data.out_trade_no);
-
+            
             $("#course_id").val(data.id);
             $("#wx_course_id").val(data.id);
             $("#kq_course_id").val(data.id);
-
+            
             $("#shangpinmingcheng").val(data.subject);
             $("#wx_shangpinmingcheng").val(data.subject);
             $("#kq_shangpinmingcheng").val(data.subject);
-
+            
             $("#subject").val(data.subject);
             $("#wx_subject").val(data.subject);
             $("#kq_subject").val(data.subject);
-
+            
             $("#fukuanjine").val(data.total_fee);
             $("#wx_fukuanjine").val(data.total_fee);
             $("#kq_fukuanjine").val(data.total_fee);
-
+            
             $("#total_fee").val(data.total_fee);
             $("#wx_total_fee").val(data.total_fee);
-            $("#kq_total_fee").val(data.total_fee);
-
+			$("#kq_total_fee").val(data.total_fee);
+			
             $("#buy_form_0516").show();
-            $("#xf_mb").show();
+			$("#xf_mb").show();
         });
 
     }
@@ -270,10 +269,10 @@ $(function(){
             $(this).removeClass("btu_0426_hover2");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu_0426_hover2");
-         },function(){
-         $(this).removeClass("btu_0426_hover2");
-         });*/
+            $(this).addClass("btu_0426_hover2");
+        },function(){
+            $(this).removeClass("btu_0426_hover2");
+        });*/
     }else if (navigator.userAgent.indexOf('Firefox') >= 0){
         $(".btu2_0426").hover(function(){
             $(this).addClass("btu2_0426_hover");
@@ -286,10 +285,10 @@ $(function(){
             $(this).removeClass("btu3_0426_hover");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu4_0426_hover");
-         },function(){
-         $(this).removeClass("btu4_0426_hover");
-         })*/
+            $(this).addClass("btu4_0426_hover");
+        },function(){
+            $(this).removeClass("btu4_0426_hover");
+        })*/
 
     }else if (navigator.userAgent.indexOf('Opera') >= 0){
         $(".btu2_0426").hover(function(){
@@ -303,10 +302,10 @@ $(function(){
             $(this).removeClass("btu3_0426_hover");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu4_0426_hover");
-         },function(){
-         $(this).removeClass("btu4_0426_hover");
-         })*/
+            $(this).addClass("btu4_0426_hover");
+        },function(){
+            $(this).removeClass("btu4_0426_hover");
+        })*/
     }else if (navigator.userAgent.indexOf('Chrome') >= 0){
         $(".btu2_0426").hover(function(){
             $(this).addClass("btu2_0426_hover");
@@ -319,10 +318,10 @@ $(function(){
             $(this).removeClass("btu3_0426_hover");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu4_0426_hover");
-         },function(){
-         $(this).removeClass("btu4_0426_hover");
-         })*/
+            $(this).addClass("btu4_0426_hover");
+        },function(){
+            $(this).removeClass("btu4_0426_hover");
+        })*/
     }else if (navigator.userAgent.indexOf('Safari') >= 0){
         $(".btu2_0426").hover(function(){
             $(this).addClass("btu2_0426_hover");
@@ -335,10 +334,10 @@ $(function(){
             $(this).removeClass("btu3_0426_hover");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu4_0426_hover");
-         },function(){
-         $(this).removeClass("btu4_0426_hover");
-         })*/
+            $(this).addClass("btu4_0426_hover");
+        },function(){
+            $(this).removeClass("btu4_0426_hover");
+        })*/
     }else{
         $(".btu2_0426").hover(function(){
             $(this).addClass("btu_0426_hover2");
@@ -351,18 +350,18 @@ $(function(){
             $(this).removeClass("btu_0426_hover2");
         });
         /*$(".btu4_0426").hover(function(){
-         $(this).addClass("btu_0426_hover2");
-         },function(){
-         $(this).removeClass("btu_0426_hover2");
-         })*/
+            $(this).addClass("btu_0426_hover2");
+        },function(){
+            $(this).removeClass("btu_0426_hover2");
+        })*/
     }
-    // $(".banner_0512_au2").animate({top:"299px",right:"-400px"},300).animate({top:"40px", right:"0"},4000);
+   // $(".banner_0512_au2").animate({top:"299px",right:"-400px"},300).animate({top:"40px", right:"0"},4000);
     //$(".jishi").animate({top:"-399px"},200).animate({top:"0"},400).animate({top:"-30"},100).animate({top:"0"},100);
 
 
-    /* ajax */
-
-
+     /* ajax */
+    
+    
     $(".duigou i").click(function(){
         $(this).toggleClass("display_duigou");
         if($('.duigou i').hasClass('display_duigou')){

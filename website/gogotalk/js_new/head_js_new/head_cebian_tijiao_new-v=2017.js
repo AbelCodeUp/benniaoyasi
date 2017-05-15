@@ -125,7 +125,7 @@ $(function () {
             } else {
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("请输入正确的手机号");
+                    $.jAlert("请输入正确的手机号");
                     return;
                 }
             }
@@ -160,7 +160,7 @@ $(function () {
         } else {
             var re = /^1[3|5|7|8|][0-9]{9}$/;
             if (!re.test(mobile)) {
-                alert("请输入正确的手机号");
+                $.jAlert("请输入正确的手机号");
                 return;
             }
         }

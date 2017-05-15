@@ -121,7 +121,7 @@ $(function(){
 	        }else{
 	            var re = /^1[3|5|7|8|][0-9]{9}$/;
 	            if (!re.test(mobile)) {
-	                alert("请输入有效的手机号码！");
+	                $.jAlert("请输入有效的手机号码！");
 	                $("#shoujihaoma").css({border:"1px solid red"});
 	                return;
 	            }
@@ -143,7 +143,7 @@ $(function(){
             }else{
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("请输入有效的手机号码！");
+                    $.jAlert("请输入有效的手机号码！");
                     $("#shoujihaoma").css({border:"1px solid red"});
                     return;
                 }
@@ -171,7 +171,7 @@ $(function(){
             }else{
                 var re = /^1[3|5|7|8|][0-9]{9}$/;
                 if (!re.test(mobile)) {
-                    alert("请输入有效的手机号码！");
+                    $.jAlert("请输入有效的手机号码！");
                     $("#shoujihaoma").css({border:"1px solid red"});
                     return;
                 }
@@ -215,7 +215,7 @@ $(function(){
 		            $("input#kq_shoujihaoma").val("");
 		            $("#shoujihaoma").css({border:"1px solid #333"});
 	            }else{
-		            alert("订单已存在");
+		            $.jAlert("订单已存在");
 	            }
 
             });

@@ -10,7 +10,7 @@
     <script src="../js/jquery-1.7.2.min.js"></script>
     <script src="../js/order.js"></script>
     <script src="../js/smy_0426_tijiao.js" charset="gbk"></script>
-      <script src="../js_new/head_js_new/jquery-alert.js"></script>
+      <script src="../head_js_new/jquery-alert.js"></script>
     <style type="text/css" rel="stylesheet">
       .zfb_0613{position: absolute; top: 160px; left: 466px;width:102px; height: 28px; background: #fb5624; font-size: 12px; color: #fff; text-align: center; line-height: 28px; cursor: pointer;}
       .weixin_0613{position: absolute; top: 160px; left: 576px;width:102px; height: 28px; background: #fb5624; font-size: 12px; color: #fff; text-align: center; line-height: 28px; cursor: pointer;}
@@ -188,36 +188,33 @@
       </div>
       <div class="headNav_161025">
         <ul class="smyclearfix headRelNav_161025">
-          <li data-btntype="index" class="nav-group left"><a href="./main.html">首页</a></li>
+          <li data-btntype="index" class="nav-group cur_new left"><a href="./main.html">首页</a></li>
           <li data-btntype="about" class="nav-group left"><a href="./aboutus.html">关于我们</a></li>
           <li data-btntype="lesson" class="nav-group left"><a href="./course.html">课程体系</a></li>
           <li data-btntype="buyLesson" class="nav-group left"><a href="./price.html">课程购买</a></li>
-          <li class="left"><a target="_blank" href="scroll.html">学习理念</a></li>
+          <li class="left"><a target="_blank" href="index.php-c=scroll&amp;a=scroll.html">学习理念</a></li>
           <li class="left"><a target="_blank" href="http://bnys.121learn.cn/login?next=%2Flearn">在线上课</a></li>
           <li class="left yuyueshiting_btu_js"><a href="javascript:void(0);">预约试听</a></li>
         </ul>
       </div>
     </div>
     <!-- 导航 nav end-->
-    <!--公共侧边栏 start-->
+    <!-- 公共侧边栏 start-->
     <div class="cebianlan_161025">
       <div class="cebianlan_161025_red">
         <p class="cebianlan_161025_red_tel"><a href="tel://4008787276">400-8787-276</a></p>
         <p class="cebianlan_161025_red_time">工作时间：10:00-20:00</p>
       </div>
       <div class="cebianlan_161025_blue">
-        <div class="cebianlan_161025_blue_form_bxk" id="cebianlan_161025_blue_form_bxk">
-          <input name="mobile" type="text" class="search_ord_161026" id="search_ord_161026" value="输入电话，查询订单" /><span class="search_ord_161026_button"></span>
-        </div>
+        <form id="cebianlan_161025_blue_form" name="" method="post" action="index.php-c=search&amp;a=search.html" class="cebianlan_161025_blue_form">
+          <input id="search_ord_161026" name="mobile" type="text" value="输入电话，查询订单" class="search_ord_161026"><span class="search_ord_161026_button"></span>
+        </form>
       </div>
-      <div class="cebianlan_161025_green">
-        <img class="cebianlan_161025_green1" src="../images_new/headImages_new/cebian_green_new_161025.png" />
-        <img class="cebianlan_161025_green2" src="../images_new/headImages_new/cebian_green2_new_161025.png" />
-      </div>
-      <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" charset="gbk"></script>
+      <div class="cebianlan_161025_green"><img src="../images_new/headImages_new/cebian_green_new_161025.png" class="cebianlan_161025_green1"><img src="../images_new/headImages_new/cebian_green2_new_161025.png" class="cebianlan_161025_green2"></div>
+      <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" charset="gbk"></script>
     </div>
-    <!--公共侧边栏 end-->
-    <!--预约试听 start-->
+    <!-- 公共侧边栏 end-->
+    <!-- 预约试听 start-->
     <div class="yuyueshiting_box1_new_161026 shitingbox_new_161026">
       <div class="yuyuezhezhao_new_161026"></div>
       <div class="yuyueshiting_new_161026">
@@ -225,10 +222,16 @@
         <div class="yuyueshitingrel_new_161026">
           <div class="yuyueshiting_new_161026_close"></div>
           <div class="yuyueshiting_new_161026_title">预约试听课程</div>
-          <form class="yuyuezhezhao_new_161026_form" id="yuyuezhezhao_new_161026_form">
-            <p><input name="name" class="yuyuezhezhao_new_161026_form_name" id="yuyuezhezhao_new_161026_form_name" type="text" onfocus="this.value=''"/><label>姓名：</label></p>
-            <p><input name="mobile" class="yuyuezhezhao_new_161026_form_tel" id="yuyuezhezhao_new_161026_form_tel" type="text" onfocus="this.value=''"/><label>电话：</label></p>
-            <div class="yuyueshiting_new_161026_btu" id="yuyueshiting_new_161026_btu">马上预约</div>
+          <form id="yuyuezhezhao_new_161026_form" name="" method="post" action="" class="yuyuezhezhao_new_161026_form">
+            <p>
+              <input id="yuyuezhezhao_new_161026_form_name" name="name" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_name">
+              <label>姓名：</label>
+            </p>
+            <p>
+              <input id="yuyuezhezhao_new_161026_form_tel" name="mobile" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_tel">
+              <label>电话：</label>
+            </p>
+            <div id="yuyueshiting_new_161026_btu" class="yuyueshiting_new_161026_btu">马上预约</div>
           </form>
         </div>
       </div>

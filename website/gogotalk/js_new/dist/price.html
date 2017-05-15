@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/base_0425.css">
     <link rel="stylesheet" type="text/css" href="../styles/price0221.css">
     <script src="../js/jquery-1.7.2.min.js"></script>
-    <script src="../js_new/js/price.js" charset="utf-8"></script>
+    <script src="../js/price.js" charset="utf-8"></script>
     <script src="../js/smy_0426_tijiao.js" charset="gbk"></script>
     <script type="text/javascript" src="../js/jquery.downCount.js"></script>
     <script src="../js_new/newyear2.js"></script>
@@ -18,12 +18,6 @@
       $(function(){$(".fangda_1025").css({"opacity":1});});
     -->
     <script src="../js_new/yuanxiao.js"></script>
-    <script type="text/javascript" src="../js_new/head_js_new/jquery-alert.js"></script>
-    <link rel="stylesheet" href="../styles_new/index_css_new/jquery-alert.css">
-
-    <link rel="stylesheet" href="../styles_new/yuyue.css">
-    <script type="text/javascript" src="../js_new/head_js_new/jquery-alert.js"></script>
-    <link rel="stylesheet" href="../styles_new/index_css_new/jquery-alert.css">
   </head>
   <body>
     <!-- 公共头部 start-->
@@ -72,75 +66,60 @@
       </div>
       <div class="headNav_161025">
         <ul class="smyclearfix headRelNav_161025">
-          <li data-btntype="index" class="nav-group left"><a href="./main.html">首页</a></li>
+          <li data-btntype="index" class="nav-group cur_new left"><a href="./main.html">首页</a></li>
           <li data-btntype="about" class="nav-group left"><a href="./aboutus.html">关于我们</a></li>
           <li data-btntype="lesson" class="nav-group left"><a href="./course.html">课程体系</a></li>
-          <li data-btntype="buyLesson" class="nav-group cur_new left"><a href="./price.html">课程购买</a></li>
-          <li class="left"><a target="_blank" href="scroll.html">学习理念</a></li>
+          <li data-btntype="buyLesson" class="nav-group left"><a href="./price.html">课程购买</a></li>
+          <li class="left"><a target="_blank" href="index.php-c=scroll&amp;a=scroll.html">学习理念</a></li>
           <li class="left"><a target="_blank" href="http://bnys.121learn.cn/login?next=%2Flearn">在线上课</a></li>
           <li class="left yuyueshiting_btu_js"><a href="javascript:void(0);">预约试听</a></li>
         </ul>
       </div>
     </div>
     <!-- 导航 nav end-->
-    <!--公共侧边栏 start-->
+    <!-- 公共侧边栏 start-->
     <div class="cebianlan_161025">
       <div class="cebianlan_161025_red">
         <p class="cebianlan_161025_red_tel"><a href="tel://4008787276">400-8787-276</a></p>
         <p class="cebianlan_161025_red_time">工作时间：10:00-20:00</p>
       </div>
       <div class="cebianlan_161025_blue">
-        <div class="cebianlan_161025_blue_form_bxk" id="cebianlan_161025_blue_form_bxk">
-          <input name="mobile" type="text" class="search_ord_161026" id="search_ord_161026" value="输入电话，查询订单" /><span class="search_ord_161026_button"></span>
-        </div>
+        <form id="cebianlan_161025_blue_form" name="" method="post" action="index.php-c=search&amp;a=search.html" class="cebianlan_161025_blue_form">
+          <input id="search_ord_161026" name="mobile" type="text" value="输入电话，查询订单" class="search_ord_161026"><span class="search_ord_161026_button"></span>
+        </form>
       </div>
-      <div class="cebianlan_161025_green">
-        <img class="cebianlan_161025_green1" src="../images_new/headImages_new/cebian_green_new_161025.png" />
-        <img class="cebianlan_161025_green2" src="../images_new/headImages_new/cebian_green2_new_161025.png" />
-      </div>
-      <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=20172.js" charset="gbk"></script>
+      <div class="cebianlan_161025_green"><img src="../images_new/headImages_new/cebian_green_new_161025.png" class="cebianlan_161025_green1"><img src="../images_new/headImages_new/cebian_green2_new_161025.png" class="cebianlan_161025_green2"></div>
+      <script src="../js_new/head_js_new/head_cebian_tijiao_new-v=2017.js" charset="gbk"></script>
     </div>
-    <!--公共侧边栏 end-->
-    <!--预约试听 start-->
-    <div class="orderbox">
-      <div class="orderzhezhao"></div>
-      <div class="orderconbox">
-        <div class="orderclose">&times;</div>
-        <p>预约试听课程</p>
-        <div class="line"></div>
-        <ul class='formbox'>
-          <li>
-            <div class="inputbox">
-              <div class="inputbox-left inputbox-left1"><img src="../images_new/indexImages_new/corder/name-grey.png" alt=""></div>
-              <label for="">
-                <input class="name-input" type="text" placeholder="姓名">
-              </label>
-            </div>
-            <div class="inputerror"></div>
-          </li>
-          <li>
-            <div class="inputbox">
-              <div class="inputbox-left inputbox-left2"><img src="../images_new/indexImages_new/corder/phone-grey.png" alt=""></div>
-              <label for="">
-                <input class="phone-input" type="text" placeholder="电话">
-              </label>
-            </div>
-            <div class="inputerror"></div>
-          </li>
-          <li>
-            <button class='yuyuebtn'>马上预约</button>
-          </li>
-        </ul>
-      </div>
-      <div class="goxinbox">
-        <div class="orderclose">&times;</div>
-        <div class="goxinboxword">
-          <div><img src="../images_new/indexImages_new/corder/gongxi.png" alt=""></div>
-          <p>恭喜</p>
+    <!-- 公共侧边栏 end-->
+    <!-- 预约试听 start-->
+    <div class="yuyueshiting_box1_new_161026 shitingbox_new_161026">
+      <div class="yuyuezhezhao_new_161026"></div>
+      <div class="yuyueshiting_new_161026">
+        <div class="yuyueshitingbg_new_161026"></div>
+        <div class="yuyueshitingrel_new_161026">
+          <div class="yuyueshiting_new_161026_close"></div>
+          <div class="yuyueshiting_new_161026_title">预约试听课程</div>
+          <form id="yuyuezhezhao_new_161026_form" name="" method="post" action="" class="yuyuezhezhao_new_161026_form">
+            <p>
+              <input id="yuyuezhezhao_new_161026_form_name" name="name" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_name">
+              <label>姓名：</label>
+            </p>
+            <p>
+              <input id="yuyuezhezhao_new_161026_form_tel" name="mobile" type="text" onfocus="this.value=''" class="yuyuezhezhao_new_161026_form_tel">
+              <label>电话：</label>
+            </p>
+            <div id="yuyueshiting_new_161026_btu" class="yuyueshiting_new_161026_btu">马上预约</div>
+          </form>
         </div>
-        <p class="goxinvalue">您的试听课已经预约成功！稍后会有专业的老师与你联系，请耐心等候。</p>
-        <div class="quedingbox">
-          <button class='queding'>确定</button>
+      </div>
+    </div>
+    <div class="yuyueshiting_box2_new_161026 shitingbox_new_161026">
+      <div class="yuyuezhezhao_new_161026"></div>
+      <div class="yuyueshiting_s_new_161026">
+        <div class="yuyueshitingrel_new_161026">
+          <div class="yuyueshiting_new_161026_close"></div>
+          <div class="yuyueshiting_new_161026_btu2">确定</div>
         </div>
       </div>
     </div>
@@ -188,7 +167,7 @@
       <style>
         .a_0628{color: #f5fb00}
         .a_0628:hover{ color:#fbbd00;}
-
+        .btu_buy{width:130px !important;}
         script.
           function fun(class_hour,id){
           //alert(window.location.href);
@@ -229,48 +208,45 @@
       </style>
     </div>
     <div id="buy_form_0516" class="buy_form_0516">
-      <!--<div onclick="fun1()" class="close2_0427"></div>-->
-      <div class="orderclose">&times;</div>
+      <div onclick="fun1()" class="close2_0427"></div>
       <div class="form_0516_title">确认订单</div>
       <div class="line"></div>
       <div class="form_0516_rel">
         <form id="buy_form" name="buy_form" method="post" action="index.php-c=pay&amp;a=payment.html" style="" class="buy_form">
           <p>
             <label for="dingdanhaoma" class="buy_form_0516_lable">订单编号：</label>
-            <input id="dingdanhaoma" name="dingdanhaoma" type="text" onfocus="this.value=''"  disabled="disabled">
+            <input id="dingdanhaoma" name="dingdanhaoma" type="text" onfocus="this.value=''" value="" disabled="disabled">
             <input id="out_trade_no" name="WIDout_trade_no" type="hidden" value="">
             <input id="course_id" name="course_id" type="hidden" value="">
           </p>
           <p>
             <label for="shangpinmingcheng" class="buy_form_0516_lable">商品名称：</label>
-            <input id="shangpinmingcheng" name="shangpinmingcheng" type="text" onfocus="this.value=''"   disabled="true">
+            <input id="shangpinmingcheng" name="shangpinmingcheng" type="text" onfocus="this.value=''" disabled="true">
             <input id="subject" name="WIDsubject" type="hidden" value="">
           </p>
-          <p >
+          <p style="height:36px;">
             <label for="fukuanjine" class="buy_form_0516_lable">付款金额：</label>
-            <input id="fukuanjine" name="fukuanjine" type="text" onfocus="this.value=''"  disabled="true">
+            <input id="fukuanjine" name="fukuanjine" type="text" onfocus="this.value=''" disabled="true">
             <input id="total_fee" name="WIDtotal_fee" type="hidden" value="">
-            <span style="text-indent: 234px; font-size: 16px;color: #e2403e; position:relative;"><img style="position:absolute; top:2px; right:-28px; width:20px;" src="../images_new/indexImages_new/corder/youhui.png">试听当天报名，可享课程优惠，详情请致电<a href="tel://4008787276" style="color: #e2403e;font-size:16px;">400-8787-276</a></span>
           </p>
-
-          <p style="height:80px;margin-bottom: 25px;">
-            <label for="dingdanhaoma" class="buy_form_0516_lable" style="padding-left: 14px"><span style="display:inline-block;color: #fc5624; vertical-align: middle;">* </span>手机号码：</label>
+          <p style="text-indent: 234px; font-size: 14px;color: #fc5624;height: 42px; padding-top:6px; position:relative;"><img style="position:absolute; top:0; left:200px; width:20px;" src="../images/price/hui.png">试听当天报名，可享课程优惠，详情请致电<a href="tel://4008787276" style="color: #fc5624;font-size:12px;">4008787276</a></p>
+          <p style="height:36px;">
+            <label for="dingdanhaoma" class="buy_form_0516_lable"><span style="display:inline-block;color: #fc5624; vertical-align: middle;">* </span>手机号码：</label>
             <!-- <input name="WIDmobile" id="shoujihaoma" type="text" onfocus="this.value=''"/>-->
-            <input id="shoujihaoma" name="WIDmobile" type="text" onfocus="this.value=''" placeholder="必填（支付信息将以短信形式发送至您的手机）">
-             <span id="shoujihaomay" style="display: none;text-indent: 133px; font-size: 14px;color: #dd3836;height: 30px;line-height: 30px">请输入有效的手机号码!</span>
+            <input id="shoujihaoma" name="WIDmobile" type="text" onfocus="this.value=''">
           </p>
-
-          <p style="height:63px;margin-bottom: 25px">
+          <p style="text-indent: 194px; font-size: 12px;color: #999999;height: 36px;">注意：手机号码，必填（支付信息将以短信形式发送至您的手机）</p>
+          <p style="height:36px;">
             <label for="beizhuxinxi" class="buy_form_0516_lable">备注信息：</label>
             <!-- <input name="WIDremarks" id="beizhuxinxi" type="text" onfocus="this.value=''"/>-->
-            <input id="beizhuxinxi" name="WIDremarks" type="text" onfocus="this.value=''" placeholder="选填（可填写您对本课程的建议，要求等）">
+            <input id="beizhuxinxi" name="WIDremarks" type="text" onfocus="this.value=''">
           </p>
-          <!--<p style="text-indent: 194px; font-size: 12px;color: #999999;height:36px;">注意：备注信息，选填（可填写您对本课程的建议，要求等）</p>-->
-          <p style="text-indent: 32px; font-size: 16px; height: 30px;"><span class="duigou"><i></i></span><span style="display: inline-block; text-indent: 20px;">我已阅读并同意<a href="index.php-c=agreement&amp;a=agreement.html" target="_blank" style="color: #e2403e;"> 《GoGoTalk青少英语课程服务协议》</a></span></p>
+          <p style="text-indent: 194px; font-size: 12px;color: #999999;height:36px;">注意：备注信息，选填（可填写您对本课程的建议，要求等）</p>
+          <p style="text-indent: 162px; font-size: 14px; height: 30px;"><span class="duigou"><i></i></span><span style="display: inline-block; text-indent: 20px;">我已阅读并同意<a href="index.php-c=agreement&amp;a=agreement.html" target="_blank" style="color: #fc5624;"> 《GoGoTalk青少英语课程服务协议》</a></span></p>
           <div class="smyclearfix">
-            <div id="buy_queren_zhifubao" style="margin-left: 32px;" class="left btu_buy btu_buy1" >支付宝支付</div>
-            <div id="buy_queren_weixin" class="left btu_buy btu_buy2" style="">微信支付</div>
-            <div id="buy_queren_kuaiqian" class="left btu_buy btu_buy3" style="">网银/快捷支付</div>
+            <div id="buy_queren_zhifubao" style="margin-left: 200px;" class="left btu4_0426 btu_buy">支付宝支付</div>
+            <div id="buy_queren_weixin" class="left btu4_0426 btu_buy">微信支付</div>
+            <div id="buy_queren_kuaiqian" class="left btu4_0426 btu_buy">网银/快捷支付</div>
           </div>
         </form>
         <!-- 隐藏微信表单-->
