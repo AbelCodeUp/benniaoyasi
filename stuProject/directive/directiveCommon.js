@@ -127,7 +127,7 @@ angular.module('components', [])
         }
     })
     //coutnDown 倒计时
-    .directive('countDown', function($timeout, $interval) {
+    .directive('countDown', function($timeout, $interval,$rootScope) {
         return {
             strict: 'AE',
             scope: {
@@ -153,6 +153,7 @@ angular.module('components', [])
                     if (scope.stemp <= 0) {
                         $interval.cancel(counter);
                         scope.stemp = 0;
+                        $rootScope.getClassDatail();
                         // window.location.reload();
                     }
 
@@ -254,3 +255,17 @@ angular.module('components', [])
             }
         }
     })
+
+.directive('setIframeHeight', function() {
+    return {
+        link:function(scope, element, attrs){
+            var iframeName = document.getElementById(attrs.id);
+            var iframeBodyHeight = null;
+            setTimeout(function(){
+                iframeBodyHeight = iframeName.contentWindow.document.body.offsetHeight;
+                iframeName.height = iframeBodyHeight;
+            },500)
+            
+        }
+    }
+})

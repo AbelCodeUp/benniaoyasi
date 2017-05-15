@@ -246,6 +246,7 @@ p.keshi_1130
 .Learning-Record-ul li
 {
     height: 26px;
+    word-break: break-all;
 }
 
 .disabled_smy

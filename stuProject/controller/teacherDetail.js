@@ -89,6 +89,15 @@ teacherDetailCtrl.controller('teacherDetailCtrl', function($scope, $rootScope, $
 				if (res.result == 1) {
 					$scope.teacherDetail = res.data.info;
 					$scope.teacherLesson = res.data.lesson;
+					$('#noData').show();
+					if($scope.teacherLesson.length == 0){
+						$scope.teacherTimes = [];
+						$scope.allTime = [];
+						$('#noData').hide();
+						layer.closeAll('loading');
+						return false;
+
+					}
 					$scope.tcName = $scope.teacherDetail.Name; //获取老师名称
 					$scope.teacherTimes = [];
 					$scope.allTime = [];
