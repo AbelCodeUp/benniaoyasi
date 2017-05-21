@@ -92,12 +92,4 @@ gulp.task('serve',[],function(){
 })
 
 // gulp.task('default',['serve']);
-gulp.task('default',['serve'], function (done) {
-  condition = false;
-  runSequence(    //需要说明的是，用gulp.run也可以实现以上所有任务的执行，只是gulp.run是最大限度的并行执行这些任务，而在添加版本号时需要串行执行（顺序执行）这些任务，故使用了runSequence.
-    ['assetRev'],
-    ['revCss'],
-    ['revJs'],
-    ['revHtml'],
-    done);
-});
+gulp.task('default',['serve']);

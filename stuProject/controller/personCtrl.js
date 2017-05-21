@@ -46,14 +46,30 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
   $scope.UpdateMyInfo = function() {
     var nameReg = /^[a-zA-Z\u4e00-\u9fa5]+$/;
     var EnNameReg = /^[a-zA-Z]+$/;
+    var ageReg = /\d{4}-\d{1,2}-d\d{1,2}/;
 
-    if ($('#person1').val() == '' || $('#person2').val() == '' || $('#age').val() == '') {
-      layer.msg('用户信息不能为空', {
+    if ($('#person1').val() == '') {
+      layer.msg('孩子姓名不能为空', {
         icon: 2
       })
       return false;
 
-    } else if (!nameReg.test($scope.personData.Name) || !nameReg.test($scope.personData.FatherName)) {
+    }
+    if ($('#person2').val() == '') {
+      layer.msg('孩子英文姓名不能为空', {
+        icon: 2
+      })
+      return false;
+
+    }
+    if($('#age').val() == ''){
+      layer.msg('年龄不能为空', {
+        icon: 2
+      })
+      return false;
+
+    }
+    if (!nameReg.test($scope.personData.Name) || !nameReg.test($scope.personData.FatherName)) {
 
       layer.msg('姓名不能有数字或特殊符号', {
         icon: 2
@@ -66,11 +82,6 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
       })
       return false;
 
-    } else if ($scope.personData.Age <= 0) {
-      layer.msg('年龄不能为负数', {
-        icon: 2
-      })
-      return false;
     } else {
       layer.load();
       $('#saveMyinfo').attr('disabled',true);

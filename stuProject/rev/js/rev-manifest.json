@@ -1,12 +1,12 @@
 {
-  "MyAttentionCtrl.js": "MyAttentionCtrl.js?v=090404effc",
-  "ReportCtrl.js": "ReportCtrl.js?v=de90d9a346",
-  "homeCtrl.js": "homeCtrl.js?v=40bc4c3b3f",
-  "indexCtrl.js": "indexCtrl.js?v=77fe61fe51",
-  "loginctrl.js": "loginctrl.js?v=35fb750082",
-  "myCalenderCtrl.js": "myCalenderCtrl.js?v=a66768e2e6",
-  "orderTeacherCtrl.js": "orderTeacherCtrl.js?v=363eedef57",
-  "personCtrl.js": "personCtrl.js?v=3a1b54d991",
-  "studyCtrl.js": "studyCtrl.js?v=eb8d5be6b9",
-  "teacherDetail.js": "teacherDetail.js?v=4db1b1048e"
+  "MyAttentionCtrl.js": "MyAttentionCtrl-015e051e71.js",
+  "ReportCtrl.js": "ReportCtrl-83d7dc3303.js",
+  "homeCtrl.js": "homeCtrl-e0022d3942.js",
+  "indexCtrl.js": "indexCtrl-c2769b7b74.js",
+  "loginctrl.js": "loginctrl-419033167a.js",
+  "myCalenderCtrl.js": "myCalenderCtrl-5004eac737.js",
+  "orderTeacherCtrl.js": "orderTeacherCtrl-713c4f1674.js",
+  "personCtrl.js": "personCtrl-d230d21873.js",
+  "studyCtrl.js": "studyCtrl-e5de348f6d.js",
+  "teacherDetail.js": "teacherDetail-a287c7615e.js"
 }

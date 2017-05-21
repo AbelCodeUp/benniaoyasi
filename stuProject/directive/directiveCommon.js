@@ -268,4 +268,20 @@ angular.module('components', [])
             
         }
     }
+
+
+})
+.directive('datepicker', function() {
+    return {
+        link:function(scope, element, attrs){
+            $(element).datepicker({
+                format:'yyyy-mm-dd',
+                autoclose: true,
+                todayHighlight: true
+            });
+            
+        }
+    }
+
+
 })
