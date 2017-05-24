@@ -85,6 +85,7 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
     } else {
       layer.load();
       $('#saveMyinfo').attr('disabled',true);
+      $scope.personData.DateOfBirth = $('#age').val();
       httpService.post(_AjaxURL.UpdateStudentInfo, $scope.personData)
         .success(function(res) {
           if (res.result == 1) {
@@ -98,6 +99,8 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
            },1000);
             
           }else if(res.result >= 1000){
+            $('#saveMyinfo').attr('disabled',false);
+              layer.closeAll('loading');
               $cookies.remove('tonken');
               $cookies.remove('username');
               $cookies.remove('isComplete');
@@ -106,6 +109,8 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
               // alert('登录时间太久，请重新登录');
               $rootScope.$state.go('index.login');
           } else {
+            $('#saveMyinfo').attr('disabled',false);
+            layer.closeAll('loading');
             layer.msg(res.msg, {
               icon: 2
             });

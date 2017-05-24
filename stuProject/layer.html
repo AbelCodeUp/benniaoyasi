@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="button">test</button>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/layer/layer.js"></script>
+	<script>
+		$('button').click(function(){
+			//弹出即全屏
+			var index = layer.open({
+			  type: 2,
+			  content: 'http://global.talk-cloud.com:80/WebAPI/entry/serial/422967642/roomname/设备调试/username/GGT_00553/usertype/0/pid/70057/ts/1495588877/auth/b9295805c2c1299dfaff1e121682b036/chairmanpwd/6606cfb34e929f46d282b0ddb5cf29c8/domain/gogotalk/jumpurl/http://teacher.gogo-talk.com:9332/teacher/Comment.aspx?token=TXhSVStrSFg2cFl6RjZwNlo3N1BuYmxKZk5hUG5yNE0',
+			  area: ['320px', '195px'],
+			  maxmin: true
+			});
+			layer.full(index);
+		})
+	</script>
+</body>
+</html>

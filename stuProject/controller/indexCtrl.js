@@ -32,9 +32,20 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 			})
 			.success(function(res) {
 				if (res.result == 1) {
-					$rootScope.goClienturl = res.data.clienturl;
+					var wWeight = $(window).width();
+					var wHeight = $(window).height();
 
-					$('#goClient').attr('src', $rootScope.goClienturl);
+					$rootScope.goClienturl = res.data.clienturl;
+					var goClienturl = res.data.WebUrl;
+					var index = layer.open({
+						type: 2,
+						content:$rootScope.goClienturl,
+						maxmin: true,
+						title: '教室',
+						area: [wWeight+'px', wHeight+'px']
+					});
+					layer.full(index);
+
 				} else if (res.result >= 1000) {
 					$cookies.remove('tonken');
 					$cookies.remove('username');
@@ -85,10 +96,22 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 		httpService.get(_AjaxURL.StuEnterDebug, {})
 			.success(function(res) {
+				var wWeight = $(window).width();
+				var wHeight = $(window).height();
 				if (res.result == 1) {
-					$rootScope.goClienturl = res.data.clienturl;
-
-					$('#goClient').attr('src', $rootScope.goClienturl);
+					var roomUrl = res.data.WebUrl;
+					jQuery('#goUrl').attr('href',res.clienturl);
+                    jQuery("#spanId").click();
+					// var index = layer.open({
+					// 	type: 2,
+					// 	content:$rootScope.goClienturl,
+					// 	maxmin: true,
+					// 	title: '教室',
+					// 	area: [wWeight, wHeight]
+					// });
+					// layer.full(index);
+					
+					// $('#goClient').attr('src', $rootScope.goClienturl);
 				} else if (res.result >= 1000) {
 					$cookies.remove('tonken');
 					$cookies.remove('username');
@@ -108,9 +131,8 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 	$scope.stepAttr = ['images/indicate/indicate-1.jpg', 'images/indicate/indicate-2.jpg', 'images/indicate/indicate-3.jpg'];
 	$rootScope.stepIsShow = false;
-
-	//进入教室
-	$rootScope.joinClassRoom = function(lessonId, userName, LessonName) {
+	//拓课
+	$rootScope.joinTuokeRoom = function(lessonId, userName) {
 
 		_czc.push(['_trackEvent', '进入web端教室', '点击', '进入web端教室']);
 
@@ -118,28 +140,47 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 		var wHeight = $(window).height();
 
 		httpService.get(_AjaxURL.StuEnterRoom, {
-				'lessonId': lessonId
-			})
-			.success(function(res) {
-				if (res.result == 1) {
+			'lessonId': lessonId
+		})
+		.success(function(res) {
+			if (res.result == 1) {
+				var roomUrl = res.data.url;
+				$('#goUrl').attr('href',roomUrl);
+                $("#spanId").click();
 
 
-					var timecancel;
-					var timehome;
+			} else if (res.result >= 1000) {
+				$cookies.remove('tonken');
+				$cookies.remove('username');
+				$cookies.remove('isComplete');
+				$cookies.remove('password');
+				$cookies.remove('bookingId');
+				// alert('登录时间太久，请重新登录');
+				$rootScope.$state.go('index.login');
+			} else if (res.result == 0) {
+				layer.msg(res.msg);
+			}
 
-					var data = res.data;
+		})
+	}
+	//进入教室
+	$rootScope.joinClassRoom = function(lessonId, userName) {
 
-					var Second = data.Second ? data.Second : data.second;
-					var RoomNum = data.RoomNum ? data.RoomNum : data.roomNum;
+		_czc.push(['_trackEvent', '进入web端教室', '点击', '进入web端教室']);
 
+		var wWeight = $(window).width();
+		var wHeight = $(window).height();
 
+		httpService.get(_AjaxURL.StuEnterRoom, {
+			'lessonId': lessonId
+		})
+		.success(function(res) {
+			if (res.result == 1) {
+				var roomUrl = res.data.url;
 
-					//console.log('http://teacher.gogo-talk.com/room/student.html?room_Num='+data.RoomNum+'&time_surplus='+ encodeURIComponent(data.Second) +'&courseName='+encodeURIComponent(LessonName)+'&LessonId='+lessonId+'&user_Name='+userName+'&user_Pwd=123456&studentId='+data.studentId+'&role_Type=1')
-					//console.log();
-					// // 弹出即全屏
-					var index = layer.open({
+				var index = layer.open({
 						type: 2,
-						content: 'http://manage.gogo-talk.com/room/student.html?room_Num=' + data.RoomNum + '&time_surplus=' + data.Second + '&courseName=' + encodeURIComponent(encodeURIComponent(LessonName)) + '&LessonId=' + lessonId + '&user_Name=' + userName + '&user_Pwd=123456&studentId=' + data.studentId + '&role_Type=0',
+						content:roomUrl,
 						maxmin: true,
 						title: '教室',
 						area: [wWeight, wHeight],
@@ -155,30 +196,81 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 					});
 					layer.full(index);
 
+			} else if (res.result >= 1000) {
+				$cookies.remove('tonken');
+				$cookies.remove('username');
+				$cookies.remove('isComplete');
+				$cookies.remove('password');
+				$cookies.remove('bookingId');
+				// alert('登录时间太久，请重新登录');
+				$rootScope.$state.go('index.login');
+			} else if (res.result == 0) {
+				layer.msg(res.msg);
+			}
 
-					var sercod = data.Second * 1000;
+		})
+		// httpService.get(_AjaxURL.StuEnterRoom, {
+		// 		'lessonId': lessonId
+		// 	})
+		// 	.success(function(res) {
+		// 		if (res.result == 1) {
 
 
-					timecancel = $timeout(function() {
-						layer.closeAll();
-						$rootScope.AddTeacherTag(lessonId);
-					}, sercod);
+		// 			var timecancel;
+		// 			var timehome;
 
-				} else if (res.result >= 1000) {
-					$cookies.remove('tonken');
-					$cookies.remove('username');
-					$cookies.remove('isComplete');
-					$cookies.remove('password');
-					$cookies.remove('bookingId');
-					// alert('登录时间太久，请重新登录');
-					$rootScope.$state.go('index.login');
-				} else {
-					layer.msg('30分钟内方可进入教室', {
-						icon: 2
-					})
-				}
+		// 			var data = res.data;
 
-			})
+		// 			var Second = data.Second ? data.Second : data.second;
+		// 			var RoomNum = data.RoomNum ? data.RoomNum : data.roomNum;
+
+
+
+		// 			//console.log('http://teacher.gogo-talk.com/room/student.html?room_Num='+data.RoomNum+'&time_surplus='+ encodeURIComponent(data.Second) +'&courseName='+encodeURIComponent(LessonName)+'&LessonId='+lessonId+'&user_Name='+userName+'&user_Pwd=123456&studentId='+data.studentId+'&role_Type=1')
+		// 			//console.log();
+		// 			// // 弹出即全屏
+		// 			var index = layer.open({
+		// 				type: 2,
+		// 				content: 'http://manage.gogo-talk.com/room/student.html?room_Num=' + data.RoomNum + '&time_surplus=' + data.Second + '&courseName=' + encodeURIComponent(encodeURIComponent(LessonName)) + '&LessonId=' + lessonId + '&user_Name=' + userName + '&user_Pwd=123456&studentId=' + data.studentId + '&role_Type=0',
+		// 				maxmin: true,
+		// 				title: '教室',
+		// 				area: [wWeight, wHeight],
+		// 				cancel: function(index) {
+		// 					if (confirm('确定要关闭么')) {
+		// 						layer.close(index);
+
+		// 						$timeout.cancel(timecancel);
+
+		// 					}
+		// 					return false;
+		// 				}
+		// 			});
+		// 			layer.full(index);
+
+
+		// 			var sercod = data.Second * 1000;
+
+
+		// 			timecancel = $timeout(function() {
+		// 				layer.closeAll();
+		// 				$rootScope.AddTeacherTag(lessonId);
+		// 			}, sercod);
+
+		// 		} else if (res.result >= 1000) {
+		// 			$cookies.remove('tonken');
+		// 			$cookies.remove('username');
+		// 			$cookies.remove('isComplete');
+		// 			$cookies.remove('password');
+		// 			$cookies.remove('bookingId');
+		// 			// alert('登录时间太久，请重新登录');
+		// 			$rootScope.$state.go('index.login');
+		// 		} else {
+		// 			layer.msg('30分钟内方可进入教室', {
+		// 				icon: 2
+		// 			})
+		// 		}
+
+		// 	})
 
 
 	}

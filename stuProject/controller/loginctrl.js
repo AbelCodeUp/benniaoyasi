@@ -12,6 +12,9 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 	$scope.isDisable = false; //点击登录防多次点击提交
 
+	if($cookies.get('username')){
+		$rootScope.$state.go('home');
+	}
 
 
 	$scope.loginData = {

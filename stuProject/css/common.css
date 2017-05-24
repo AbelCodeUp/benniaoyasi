@@ -86,18 +86,7 @@ body
     min-width: 1200px!important;
     padding-right: 0!important;
 }
-:focus
-{
-    outline: 0;
-}
-a,
-a:link,
-a:visited,
-a:hover,
-a:active
-{
-    text-decoration: none;
-}
+
 table
 {
     border-spacing: 0;

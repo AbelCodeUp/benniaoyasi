@@ -130,3 +130,17 @@ comfilter.filter('isGuanZhu', function() {
 		}
 	}
 })
+// 年龄
+comfilter.filter('getAge', function($rootScope) {
+	return function(data) {
+		var serverTime = $rootScope.serviceTime;
+        function getAge(t,s){
+            var sTime = new Date(s);
+            var tTime = new Date(t);
+            return (sTime.getFullYear() - tTime.getFullYear() + 1) + '岁';
+        }
+
+
+		return  getAge(data,serverTime);
+	}
+})

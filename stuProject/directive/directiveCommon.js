@@ -14,7 +14,6 @@ angular.module('components', [])
                 var reg = /^1[3-9]\d{9}$/;
                 scope.onClick = function() {
                     _czc.push(['_trackEvent', '找回密码手机发送按钮', '点击', '找回密码手机发送按钮']);
-                    console.log(reg.test(scope.teltext));
                     if (reg.test(scope.teltext)) {
                         var data = {
                             'cell': scope.teltext
@@ -218,7 +217,7 @@ angular.module('components', [])
                 stepShow: '='
             },
             link: function(scope, element, attrs, ctrl) {
-                console.log(scope.stepShow)
+
                 if (scope.stepShow == true) {
                     element.show();
                 } else {
@@ -256,30 +255,27 @@ angular.module('components', [])
         }
     })
 
-.directive('setIframeHeight', function() {
+.directive('datepicker', function($rootScope) {
     return {
         link:function(scope, element, attrs){
-            var iframeName = document.getElementById(attrs.id);
-            var iframeBodyHeight = null;
-            setTimeout(function(){
-                iframeBodyHeight = iframeName.contentWindow.document.body.offsetHeight;
-                iframeName.height = iframeBodyHeight;
-            },500)
-            
-        }
-    }
-
-
-})
-.directive('datepicker', function() {
-    return {
-        link:function(scope, element, attrs){
-            $(element).datepicker({
-                format:'yyyy-mm-dd',
+            var serverTime = $rootScope.serviceTime;
+            $(element).datetimepicker({
+                format: 'yyyy-mm-dd',
                 autoclose: true,
-                todayHighlight: true
+                todayHighlight: true,
+                minView:'month',
+                language: 'zh-CN'
+            }).on('changeDate',function(ev){
+                serverTime = $rootScope.serviceTime;
+                $(element).parents('.form-group').find('#sAge').text(getAge(ev.date.valueOf(),serverTime))
             });
-            
+
+            function getAge(t,s){
+                var sTime = new Date(s);
+                var tTime = new Date(t);
+
+                return (sTime.getFullYear() - tTime.getFullYear() + 1) + '岁';
+            }
         }
     }
 

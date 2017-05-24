@@ -100,7 +100,7 @@ File: Pages
 .fc-event {
   border-radius: 2px;
   border: none;
-  cursor: move;
+  cursor: pointer;
   font-size: 13px;
   margin: 5px 7px;
   padding: 5px 5px;

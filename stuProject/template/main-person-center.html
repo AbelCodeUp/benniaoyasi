@@ -21,12 +21,17 @@
 							</div>
 						</li>
 						<li style="width: 100%">
+							<!-- <datepicke t-date="{{personData.Age}}"></datepicke> -->
 							<div class="form-group">
-								<label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子年龄：</label>
-								<div class="col-sm-2">
-									<input type="text" id="age" maxlength="2" class="form-control" required ng-model="personData.Age" onKeyPress="if ((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" datepicker/>
-								</div>
-							</div>
+			                    <label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子生日：</label>
+			                    <div class="col-sm-2">
+			                        <input type="text" maxlength="2" class="form-control" ng-model="personData.Age" required onKeyPress="if ((event.keyCode<48 || event.keyCode>57)) event.returnValue=false" datepicker id="age" />
+			                    </div>
+			                    <label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子年龄：</label>
+			                    <div class="col-sm-2 divAge" style="padding-top:6px;">
+			                        <span id="sAge" ng-bind="personData.Age | getAge">岁</span>
+			                    </div>
+			                </div>
 						</li>
 						<li style="width: 100%">
 							<div class="form-group">
@@ -52,7 +57,7 @@
 				</div>
 	    </div>
     <div class="orderTeacher" style="min-height: 0!important">
-        <h2 class="orderTeacher_title">帐户信息</h2>
+        <h2 class="orderTeacher_title">账户信息</h2>
         <div class="person-text-box box-padding">
             <ul class="person-ui-box">
                 <li>
@@ -78,3 +83,4 @@
     </div>
 
 </div>
+<

@@ -37,7 +37,7 @@ html{
     width: 60%;
 }
 .nav_box_smy > li{
-    width: 16%;
+    width: 14%;
     position: relative;
 }
 .nav_box_smy > li > a{
@@ -49,7 +49,21 @@ html{
     font-size: 18px;
     color: #232323;
 }
-.nav_box_smy > li > a:focus,.cur_smy{
+
+.nav_box_smy > li > a,
+.nav_box_smy > li > a:link,
+.nav_box_smy > li > a:visited,
+.nav_box_smy > li > a:hover,
+.nav_box_smy > li > a:active
+{
+    text-decoration: none;
+    color: #777!important;
+}
+.nav_box_smy > li > a:hover{
+    background: url("../images/home/topbg2-21fcaea.jpg") repeat-x;
+    color: #fff!important;
+}
+.nav_box_smy > li > a.cur_smy{
     background: url("../images/home/topbg2-21fcaea.jpg") repeat-x;
     color: #fff!important;
 }
