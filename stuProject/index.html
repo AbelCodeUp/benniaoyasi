@@ -28,23 +28,23 @@
         <link href="assets/plugins/hopscotch/css/hopscotch.min.css" rel="stylesheet" type="text/css" />
 
 
-        <link rel="stylesheet" href="css/common.css?v=6e777f63bc">
-        <link rel="stylesheet" href="css/register.css?v=6e64247fcb">
-        <link rel="stylesheet" href="css/login.css?v=bdef4fac2b">
-        <link rel="stylesheet" href="css/header.css?v=6f039bb98c">
-        <link rel="stylesheet" href="css/leftbar.css?v=2ae7e18912">
-        <link rel="stylesheet" href="css/rightbar.css?v=17e9afb639">
-        <link rel="stylesheet" href="css/home.css?v=84d222a6d1">
-        <link rel="stylesheet" href="css/person.css?v=d94695d93f">
-        <link rel="stylesheet" href="css/main-content-class2.css?v=39962c1317">
-        <link rel="stylesheet" href="css/main-orderTeacher.css?v=e170103e90">
-        <link rel="stylesheet" href="css/main-my-appraisal.css?v=4a8b870205">
-        <link rel="stylesheet" href="css/main-Assessment-details.css?v=e5dc23efcf">
-        <link rel="stylesheet" href="css/main-orderTeacher-detail.css?v=b92677018c">
-        <link rel="stylesheet" href="css/main-my-appraisal.css?v=4a8b870205">
-        <link rel="stylesheet" href="css/popup-window.css?v=9475979d79">
-        <link rel="stylesheet" href="css/learning-table.css?v=3f1cb25d0f"/>
-        <link rel="stylesheet" href="css/weekReport.css?v=d51fd2264e">
+        <link rel="stylesheet" href="css/common.css?v=95615e8ae3">
+        <link rel="stylesheet" href="css/register.css?v=fb9859db02">
+        <link rel="stylesheet" href="css/login.css?v=8e19b7d3ab">
+        <link rel="stylesheet" href="css/header.css?v=aef17404f3">
+        <link rel="stylesheet" href="css/leftbar.css?v=76e2060b3f">
+        <link rel="stylesheet" href="css/rightbar.css?v=b79479efde">
+        <link rel="stylesheet" href="css/home.css?v=bfc69c7d2f">
+        <link rel="stylesheet" href="css/person.css?v=cdfd033f8d">
+        <link rel="stylesheet" href="css/main-content-class2.css?v=96c47259f1">
+        <link rel="stylesheet" href="css/main-orderTeacher.css?v=9364964869">
+        <link rel="stylesheet" href="css/main-my-appraisal.css?v=01f517c27d">
+        <link rel="stylesheet" href="css/main-Assessment-details.css?v=174d4fab98">
+        <link rel="stylesheet" href="css/main-orderTeacher-detail.css?v=2289670a23">
+        <link rel="stylesheet" href="css/main-my-appraisal.css?v=01f517c27d">
+        <link rel="stylesheet" href="css/popup-window.css?v=666cda07b5">
+        <link rel="stylesheet" href="css/learning-table.css?v=7619e1d6bb"/>
+        <link rel="stylesheet" href="css/weekReport.css?v=1f4341618e">
         <link rel="stylesheet" type="text/css" href="assets/tips/jquery.tinytooltip.css">
         <link rel="stylesheet" type="text/css" href="assets/datetimepicker/css/bootstrap-datetimepicker.min.css">
      <script>
@@ -58,6 +58,23 @@
                    window.location.href="/template/browsers.html";
                 }
             }
+        function detectBrowser()
+        {
+        var browser = navigator.appName
+        if(navigator.userAgent.indexOf("MSIE")>0){ 
+            var b_version = navigator.appVersion
+            var version = b_version.split(";");
+            var trim_Version = version[1].replace(/[ ]/g,"");
+            if ((browser=="Netscape"||browser=="Microsoft Internet Explorer"))
+            {
+                if(trim_Version == 'MSIE8.0' || trim_Version == 'MSIE7.0' || trim_Version == 'MSIE6.0' || trim_Version == 'MSIE9.0'){
+                    window.location.href="/template/browsers.html";
+                    return;
+                }
+            }
+        }
+   }
+    detectBrowser();
         </script>
 
        
@@ -209,17 +226,17 @@
         <script src="directive/directiveCommon.js"></script>
         <script src="service/server.js"></script>
         <script src="js/app.js"></script>
-        <script src="controller/orderTeacherCtrl.js?v=363eedef57"></script>
+        <script src="controller/orderTeacherCtrl.js?v=713c4f1674"></script>
         <script src="filter/commonFilter.js"></script>
-        <script src="controller/indexCtrl.js?v=93ed72a348"></script>
-        <script src="controller/loginctrl.js?v=7599bff88d"></script>
-        <script src="controller/personCtrl.js?v=51af72a333"></script>
-        <script src="controller/homeCtrl.js?v=40bc4c3b3f"></script>
-        <script src="controller/myCalenderCtrl.js?v=a66768e2e6"></script>
-        <script src="controller/ReportCtrl.js?v=de90d9a346"></script>
-        <script src="controller/studyCtrl.js?v=eb8d5be6b9"></script>
-        <script src="controller/teacherDetail.js?v=4db1b1048e"></script>
-        <script src="controller/MyAttentionCtrl.js?v=090404effc"></script>
+        <script src="controller/indexCtrl.js?v=56a56d028d"></script>
+        <script src="controller/loginctrl.js?v=408cbc3f01"></script>
+        <script src="controller/personCtrl.js?v=6a09951d1c"></script>
+        <script src="controller/homeCtrl.js?v=e0022d3942"></script>
+        <script src="controller/myCalenderCtrl.js?v=5004eac737"></script>
+        <script src="controller/ReportCtrl.js?v=83d7dc3303"></script>
+        <script src="controller/studyCtrl.js?v=e5de348f6d"></script>
+        <script src="controller/teacherDetail.js?v=a287c7615e"></script>
+        <script src="controller/MyAttentionCtrl.js?v=015e051e71"></script>
         <script src="assets/layer/layer.js"></script>
         <script src="directive/calendar.js"></script>
         <script src="assets/html2canvas/html2canvas.min.js"></script>

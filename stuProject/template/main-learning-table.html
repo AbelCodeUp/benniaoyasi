@@ -61,7 +61,7 @@
                             <div class="b_tchNameBox">
                                 <span style="width:65%;word-wrap:break-word;display: block">{{studyList.TeacherName}}</span>
                                 <div class="leaList guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[studyList.tchState == 1]" data-state=
-                                  '{{studyList.tchState}}' ng-bind="studyList.tchState | isGuanZhu" data-tchid="{{studyList.TeacherId}}" ng-click="Attention($event)"></div>
+                                  '{{studyList.tchState}}' ng-bind="studyList.tchState | isGuanZhu" data-tchid="{{studyList.TeacherId}}" ng-click="Attention_p($event)"></div>
                             </div>
                             <div class="b_pinjia" ng-if="studyList.IsComment">
                                 <button style="margin-left: -50px" type="button" ng-click="lookpj($event)" class="btn btn-primary btn-rounded waves-effect waves-light learning-table-over-btu" data-remark="{{studyList.Remark}}" data-score="{{studyList.StuScore}}"
@@ -131,6 +131,24 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">确定</button>
             </div>
+        </div>
+
+    </div>
+<!-- /.modal-dialog -->
+</div>
+<!-- 取消关注 -->
+<div id="guanzhu_b" class="m-guanzhu modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:502px;height:319px">
+            <div class="modal-img">
+                <img src="images/none/table-none.png" alt="">
+            </div>
+            <p>确认要取消关注吗？</p>
+            <div class="modal-btnbox">
+                <button data-dismiss="modal">取消</button>
+                <button class="ding"  ng-click="closeAtten_b()">确定</button>
+            </div>
+            
         </div>
 
     </div>

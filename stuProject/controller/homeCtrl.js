@@ -225,7 +225,7 @@ homeCtrl.controller('homeContentCtrl', ['$scope', '$rootScope', '$cookies', 'isL
 		$('#mask3-1,#mask2-1,#mask1').hide();
 		$('#step-btn2').hide();
 		$('#step-btn3').hide();
-		$('#step-btn4').hide();
+		// $('#step-btn4').hide();
 
 	}
 
@@ -241,7 +241,7 @@ homeCtrl.controller('homeContentCtrl', ['$scope', '$rootScope', '$cookies', 'isL
 		$scope.firstIn = false;
 		$('#step-btn2').hide();
 		$('#step-btn3').show();
-		$('#step-btn4').hide();
+		// $('#step-btn4').hide();
 
 		$('.slimscrollleft').css('overflow','visible');
 		$('.slimScrollDiv').css('overflow','visible');
@@ -252,14 +252,15 @@ homeCtrl.controller('homeContentCtrl', ['$scope', '$rootScope', '$cookies', 'isL
 
 		$scope.firstIn = false;
 		$('#step-btn2').hide();
-		$('#step-btn4').show();
+		// $('#step-btn4').show();
+		$rootScope.sendFun();
 	})
 
 	$rootScope.sendFun = function() {
 			$('#step-btn2').hide();
 			$scope.firstIn = false;
 			$('#step-btn3').hide();
-			$('#step-btn4').hide();
+			// $('#step-btn4').hide();
 			$('#mask3-1,#mask2-1,#mask1').hide();
 
 			httpService.post(_AjaxURL.UpdateIsShowGuide, {})

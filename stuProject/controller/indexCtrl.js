@@ -348,7 +348,7 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 					$(e.target).data('state', 1);
 					$(e.target).removeClass('weiguanzhu').addClass('yiguanzhu').text('已关注');
-					$rootScope.getStudyList($rootScope.studyIndex);
+					// $rootScope.getStudyList($rootScope.studyIndex);
 					layer.closeAll('loading');
 					layer.msg('关注成功', {
 						icon: 1
@@ -400,7 +400,7 @@ commonCtrl.controller('indexCtrl', ['$scope', '$rootScope', '$window', '$cookies
 
 						$($rootScope.thisEvent.target).data('state', 0);
 						$($rootScope.thisEvent.target).removeClass('yiguanzhu').addClass('weiguanzhu').text('关注');
-						$rootScope.getStudyList($rootScope.studyIndex);
+						// $rootScope.getStudyList($rootScope.studyIndex);
 						layer.closeAll('loading');
 						layer.msg('取消成功', {
 							icon: 1
