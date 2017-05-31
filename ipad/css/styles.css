@@ -1,0 +1,244 @@
+.header
+{
+    width: 100%;
+    height: .980392rem;
+}
+.header-title
+{
+    width: 6.111111rem;
+    height: .83878rem;
+    margin: 0 auto;
+
+    background: url('../images/b_title_bg.png')no-repeat center;
+    background-size: 100% 100%;
+}
+.header-title h2
+{
+    font-size: .326797rem;
+    line-height: .7rem;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    color: #b95e0a;
+}
+.header-title h3
+{
+    font-size: .217865rem;
+
+    width: 100%;
+    margin-top: -.2rem;
+
+    text-align: center;
+    letter-spacing: .1rem;
+
+    color: #999797;
+}
+
+/*header 结束*/
+.b_content{
+	position: relative;
+}
+.bigcontent{
+	padding-left:0.729847rem;
+	padding-right:  0.729847rem;
+	padding-top: 1rem;
+}
+/*content start*/
+.b_content_one_box
+{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+.b_content_one_box li{
+	width: 15%;
+}
+.b_c1_img{
+	position: relative;
+}
+.b_c1_img img{
+	/*width: 1.8257rem;*/
+	width: 100%;
+}
+.b_c1_miaoshu{
+	width: 100%;
+	height: 0.426797rem;
+	margin-top: 0.217865rem;
+	color: #fff;
+	font-size: 0.196078rem;
+	text-align: center;
+	line-height: 0.426797rem;
+}
+.b_c0{
+	background: #3ebd12;
+}
+.b_c1{
+	background: #33c3ac;
+}
+.b_c2{
+	background: #62b6e6;
+}
+.b_c3{
+	background: #df8bdb;
+}
+.b_c4{
+	background: #f74466;
+}
+.b_c5{
+	background: #f1c833;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*.b_img1{
+	position: relative;
+	width: 1.198257rem;
+	height: 0.77342rem;
+}*/
+
+/*content end*/
+.b_content_two{
+	margin-top: 0.501089rem;
+}
+.b_test_img{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.b_content_two_title{
+	text-align: center;
+	margin-bottom: 0.501089rem;
+
+}
+.b_content_two_title img{
+	width: 4.684096rem;
+	height: 0.588235rem;
+}
+.b_content_two_box{
+	margin-bottom: 
+}
+.b_content_two_box li{
+	margin-bottom: 0.22rem;
+}
+.b_test_title{
+	width: 0.9rem;
+	height: 0.9rem;
+	margin-right: 0.5rem;
+}
+.b_test_title img{
+	width: 100%;
+}
+.b_test_bottom_miaoshu{
+	padding-left: 1.4rem;
+	font-size: 0.261438rem;
+	color:#666;
+}
+.b_test_r_box{
+	height: 0.5305rem;
+	border: 1px solid #E6E6E6;
+	-webkit-flex: auto;
+    flex: auto;
+}
+.active_line{
+	height: 100%;
+	line-height: 0.45rem;
+}
+.active_line div{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -3px;
+}
+.b_test_r_box .b_test_line{
+	height: 0.108932rem;
+	background: #EA5851;
+	max-width: 91.55%;
+	width: 0%;
+	transition: width ease-in-out 9s;
+	-webkit-transition: width ease-in-out 1s;
+}
+.b_test_skuai{
+	width: 0.2rem;
+	height: 0.213399rem;
+	background: #EA5851;
+}
+.b_test-num{
+	width: 0.697168rem;
+	height: 0.305011rem;
+	background: #EA5851;
+	text-align: center;
+	line-height: 0.3rem;
+	color:#fff;
+	font-size: 0.217865rem;
+
+}
+/*3333*/
+.b_content_three_title{
+	text-align: center;
+	margin-bottom: 0.801089rem;
+	margin-top: 0.4rem;
+
+}
+.b_content_three_title img{
+	width: 4.684096rem;
+	height: 0.588235rem;
+}
+.b_content_three_box ul li{
+	margin-bottom: 0.2rem;
+}
+.b_content_three_box ul li span{
+	letter-spacing: 0.05rem;
+	font-size: 0.33rem;
+	margin-left: 0.2rem;
+}
+.b_pinjia_text{
+	font-size: 0.26rem;
+	color:#333333;
+}
+.b_pinjia_title *{
+	display: inline-block;
+	vertical-align: middle;
+}
+.b_content_four{
+	text-align: center;
+	padding-bottom: 1.3rem;
+}
+.b_content_four p{
+	letter-spacing: 0.05rem;
+	font-size: 0.22rem;
+	color: #666666;
+}
+.wecodebox{
+	width: 1.75rem;
+	height: 1.75rem;
+	border: 3px solid #EA5851;
+	margin:0.5rem auto 0.2rem;
+	border-radius: 0.2rem;
+	padding: 0.04rem;
+}
+.wecodebox img{
+	width: 100%;
+}
+.b_test_sum{
+	width: 2.15rem;
+	height: 2.32rem;
+	background: url('../images/b_left_num.png')no-repeat center;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0.5rem;
+	text-align: center;
+	line-height: 2.32rem;
+	font-size: 0.74rem;
+	color:#5c5c5c;
+}
+.b_level_bg{
+	width: 0.95rem;
+	height: 0.65rem;
+}

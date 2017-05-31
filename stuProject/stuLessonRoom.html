@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LessonRoom</title>
+	<style>
+		.mylayerbox{
+                width:100%;
+                height:100%;
+                position: fixed;
+                left: 0;
+                top:0;
+                background:#fff;
+                z-index: 999;
+                display: none;
+            }
+            .mylayerbox .mytitle{
+                position: absolute;
+                left: 40px;
+                top:5px;
+                line-height: 50px;
+                font-size: 18px;
+                color:#333;
+            }
+            .mylayerbox .mycolse{
+                width: 50px;
+                height:50px;
+                position: absolute;
+                right:15px;
+                top:5px;
+                font-size: 30px;
+                color:#666;
+                cursor: pointer;
+            }
+            .mylayerbox .mycolse:hover{
+                color:#000;
+            }
+            .mylayerbox iframe{
+                position: absolute;
+                top:55px;
+                left:15px;
+            }
+	</style>
+</head>
+<body>
+<div class="mylayerbox" id="mylayerbox">
+    <div class="mytitle">教室</div>
+    <div class="mycolse">&times;</div>
+    <iframe src="" frameborder="0" id="myiframe"></iframe>
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+<script>
+		var lessonId = GetRequest().lessonid;
+        var token = getCookie('tonken');
+        var type = GetRequest().type;
+
+        if(type == 'lesson'){
+            goLessonRoom(lessonId);
+        }else if(type == 'debug'){
+            goDebugRoom();
+        }
+        function goDebugRoom(){
+            $.ajax({
+                url:"http://learnapi.gogo-talk.com:9332/api/Lesson/StuEnterDebug",
+                data:{},
+                type:'get',
+                headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                        ,'Authorization': getCookie('tonken')
+                },
+                success:function(res){
+                    if (res.result == 1) {
+                        // console.log(res);
+                        if(res.data == null){
+                            window.location.reload();
+                        }
+                        location.href = res.data.WebUrl;
+                    }else{
+                        alert(res.msg)
+                    }
+                }
+            })
+        }
+        function goLessonRoom(lessonId){
+            $.ajax({
+                url:"http://learnapi.gogo-talk.com:9332/api/Lesson/StuEnterRoom",
+                data:{ 'lessonId': lessonId },
+                type:'get',
+                headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                        ,'Authorization': getCookie('tonken')
+                },
+                success:function(res){
+                    if (res.result == 1) {
+                        // console.log(res);
+                        if(res.data == null){
+                            window.location.reload();
+                        }
+                        location.href = res.data.url;
+                    }
+                }
+            })
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+            }
+            return "";
+        } 
+		function GetRequest() {  
+		    //url例子：XXX.aspx?ID=" + ID + "&Name=" + Name；  
+		    var url = location.search; //获取url中"?"符以及其后的字串  
+		    var theRequest = new Object();  
+		    if(url.indexOf("?") != -1)//url中存在问号，也就说有参数。  
+		    {   
+		      var str = url.substr(1);  
+		        strs = str.split("&");  
+		      for(var i = 0; i < strs.length; i ++)  
+		        {   
+		         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+		        }  
+		    }  
+		    return theRequest;  
+		}
+        function openRoom(url){
+            $('#mylayerbox').show();
+            $("#mylayerbox > #myiframe").css({width:$(window).width()-30,height:$(window).height()-70}).attr("src",url);
+            $(".mycolse").click(function(){
+                $("#mylayerbox").hide();
+                $("#mylayerbox > #myiframe").attr("src","");
+            })
+        }
+</script>
+</body>
+</html>

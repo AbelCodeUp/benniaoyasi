@@ -131,6 +131,7 @@ homeCtrl.controller('rightbarCtrl', ['$scope', '$rootScope', 'isLoginState', '$c
 
 //头部
 homeCtrl.controller('headerCtrl', ['$scope', '$rootScope', '$cookies', 'httpService', '$timeout', function($scope, $rootScope, $cookies, httpService, $timeout) {
+		
 		if (!$cookies.get('tonken')) {
 			$rootScope.$state.go('index.login');
 		}
