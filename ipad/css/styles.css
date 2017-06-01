@@ -40,6 +40,7 @@
 /*header 结束*/
 .b_content{
 	position: relative;
+	margin-top: 2rem;
 }
 .bigcontent{
 	padding-left:0.729847rem;
@@ -238,7 +239,32 @@
 	font-size: 0.74rem;
 	color:#5c5c5c;
 }
-.b_level_bg{
-	width: 0.95rem;
-	height: 0.65rem;
+.b_c1_img{
+	display: flex;
+	display: -webkit-flex;
+	justify-content:space-between;
+    align-items:flex-end;
+
+}
+.b_c1_img .cp_box{
+	width: 28%;
+	position: relative;
+}
+.b_c1_img .cp_box img{
+	width: 100%;
+}
+.b_cp_tishi{
+	width: 1.4rem;
+	height: 1.1rem;
+	text-align: center;
+	background: url('../images/leave.png')no-repeat center;
+	background-size: 100% 100%;
+	color:#fff;
+	font-size: 0.17rem;
+	position: absolute;
+	top:-1.8rem;
+	left:50%;
+	margin-left: -0.7rem;
+	padding-top: 22%;
+	line-height: 15px;
 }
