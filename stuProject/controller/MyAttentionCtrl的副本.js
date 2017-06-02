@@ -28,7 +28,6 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 	$scope.isClick;
 	$scope.tchId;
 	$scope.getTeacherData = function(tchId, index) {
-		console.log($scope.timeAttrs);
 		if (index) {
 			$scope.isClick = index;
 		} else {
@@ -267,7 +266,7 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 	$scope.thisWeekFirst;
 	$scope.setDate = function(date) {
 		var week = date.getDay() - 1;
-		date = $scope.addDate(date, 0);
+		date = $scope.addDate(date, week * -1);
 		$scope.thisWeekFirst = new Date(date);
 		$scope.currentFirstDate = new Date(date);;
 
@@ -283,7 +282,7 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 	}
 
 	$scope.setDate(new Date($rootScope.serviceTime));
-
+	
 	$scope.thisFirstDat = $scope.thisWeekFirst;
 	if($scope.thisFirstDat.getTime() == $scope.currentFirstDate.getTime()){
 		$scope.isShowUpWeek = true;

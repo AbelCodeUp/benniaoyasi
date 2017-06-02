@@ -322,14 +322,14 @@
                     <ul class="monthBox">
 
                         <li class="month-leftbtn">
-                             <span class="ion-ios7-arrow-left" style="margin-right:10px;font-size:18px;vertical-align: middle;margin-top: -2px" ng-if="!isShowUpWeek" ></span>
-                             <span style="cursor: pointer;" ng-click='getWeekTime(0,$event)'  ng-if="!isShowUpWeek">上一周</span></li>
+                             <!-- <span class="ion-ios7-arrow-left" style="margin-right:10px;font-size:18px;vertical-align: middle;margin-top: -2px" ng-if="!isShowUpWeek" ></span> -->
+                             <span style="cursor: pointer;" ng-click='getWeekTime(0,$event)'  ng-if="!isShowUpWeek"></span></li>
 
                         <li class="month"> <span ng-bind="tYear"></span>年 <span ng-bind="tMonth"></span>月</li>
 
                         <li class="month-rightbtn week-active">
-                            <span style="cursor: pointer;"  ng-click="getWeekTime(1,$event)">下一周</span>
-                            <span class=" ion-ios7-arrow-right" style="margin-left:10px;font-size:18px;vertical-align: middle;margin-top: -2px"></span>
+                            <span style="cursor: pointer;"  ng-click="getWeekTime(1,$event)"></span>
+                           <!--  <span class=" ion-ios7-arrow-right" style="margin-left:10px;font-size:18px;vertical-align: middle;margin-top: -2px"></span> -->
                         </li>
                     </ul>
                     <table>
