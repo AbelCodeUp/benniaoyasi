@@ -1,0 +1,67 @@
+
+<div class="loginPwd_box">
+    <ul class="loginPwd_font_top_title_box">
+	    <li class="loginPwd_font_top_title loginPwd_font_top_title_item1 login_top">            
+            注册
+            
+            <div class="login_bk">
+            <a href="#" ui-sref="index.ggtlogin">
+                <span></span>
+                返回登录
+            </a>
+            </div>
+        </li>
+    </ul>
+    <form role="form" class="loginPwd_form" name="regForm">
+        <div class="form-group loginPwd_form_div has-feedback"
+            ng-class="{'has-success':regForm.username.$valid,'has-error':regForm.username.$invalid && regForm.username.$touched}">
+            <input type="text" class="form-control" name="username" 
+                    ng-model="regData.Cell" required ng-maxlength="11" ng-pattern="/^1[34578]\d{9}$/"    
+                   placeholder="请输入注册手机号码" autocomplete="off" ng-focus>
+
+            
+            <i class="phone-feed" ng-class="{'phone-feed-success':regForm.username.$valid  , 'phone-feed-error':regForm.username.$invalid && regForm.username.$touched}"></i>
+            <div class="error-notice"  ng-if="
+                regForm.username.$error.required && 
+                !regForm.username.$focused">
+                <span></span>
+                手机号不能为空
+            </div>
+            <div class="error-notice" ng-if="
+                !regForm.username.$focused && 
+                regForm.username.$error.pattern">
+                <span></span>
+                手机号码格式不正确
+            </div>
+        </div>
+        <div class=" form-group loginPwd_form_div has-feedback"
+            ng-class="{'has-success':regForm.password.$valid,'has-error':regForm.password.$invalid && regForm.password.$touched}">
+            <input type="password" name="password" class="form-control" 
+                placeholder="请输入登录密码（6-12位）"
+                 ng-model="regData.Password" required ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+                required ng-focus>
+            
+            <i class="ps-feed" ng-class="{'ps-feed-success':regForm.password.$valid  ,'ps-feed-error':regForm.password.$invalid && regForm.password.$touched}"></i>
+            <div class="error-notice" ng-if="
+                regForm.password.$error.required && 
+                !regForm.password.$focused">
+                <span></span>
+                密码不能为空
+            </div>
+            <div class="error-notice" ng-if="
+                !regForm.password.$focused && 
+                regForm.password.$error.pattern">
+                <span></span>
+                密码格式错误
+            </div>
+        </div>
+        </pre>
+        <div class="form-group">
+            <button type="button" class="cnLogin ladda-button btn btn-font-size16 btn-block font-write" ng-disabled="regForm.$invalid" ng-click="register()" ng-bind="registerText" id="regbtn">登录</button>
+        </div>
+    </form>
+    <div class="ps-backbox ps-mis-back">
+        <a href="javascript:;">客服电话：400-8787-276</a>
+    </div>
+</div>
+

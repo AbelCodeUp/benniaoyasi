@@ -68,7 +68,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 templateUrl: 'template/loginview.html?rgg=' + Math.floor(Date.now() / 1000),
             },
             'loginview@index': {
-                templateUrl: 'template/login.html?rgg=' + Math.floor(Date.now() / 1000),
+                templateUrl: 'template/login_mis.html?rgg=' + Math.floor(Date.now() / 1000),
                 controller: 'loginCtrl'
             }
         },
@@ -85,6 +85,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             },
 
         })
+        .state('index.loginregister', {
+            url: '/loginregister',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_register.html?rgg=' + Math.floor(Date.now() / 1000),
+                    controller: 'registerCtrl'
+                }
+            },
+
+        })
         .state('index.register', {
             url: '/register',
             views: {
@@ -95,12 +105,49 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             },
 
         })
+        .state('index.ggtlogin', {
+            url: '/ggtlogin',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_ggt.html?rgg=' + Math.floor(Date.now() / 1000),
+                    controller: 'loginCtrl'
+                }
+            },
+        })
+        .state('index.mislogin', {
+            url: '/mislogin',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_mis.html?rgg=' + Math.floor(Date.now() / 1000),
+                    controller: 'loginCtrl'
+                }
+            },
+        })
         .state('index.findpwd', {
             url: '/findpwd',
             views: {
                 'loginview@index': {
                     templateUrl: 'template/findPwd.html?rgg=' + Math.floor(Date.now() / 1000),
                     controller: 'findpwdCtrl'
+                }
+            },
+
+        })
+        .state('index.backps', {
+            url: '/backps',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_backps.html?rgg=' + Math.floor(Date.now() / 1000),
+                    controller: 'findpwdCtrl'
+                }
+            },
+
+        })
+        .state('index.backpssuccess', {
+            url: '/backpssuccess',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_backps_success.html?rgg=' + Math.floor(Date.now() / 1000)
                 }
             },
 
@@ -134,11 +181,27 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
 
         })
+        .state('index.registersuccess', {
+            url: '/registersuccess',
+            views: {
+                'loginview@index': {
+                    templateUrl: 'template/login_register_success.html?rgg=' + Math.floor(Date.now() / 1000),
+                    controller:function($scope,$rootScope,$interval){                       
+
+                        $scope.goHome = function(){
+                            _czc.push(['_trackEvent', '5s内进入首页按钮', '点击', '注册完成进入首页按钮']);
+                            $rootScope.$state.go('home');
+                        }
+                    }
+                }
+            }
+
+        })
         .state('index.login', {
             url: '/login',
             views: {
                 'loginview@index': {
-                    templateUrl: 'template/login.html?rgg=' + Math.floor(Date.now() / 1000),
+                    templateUrl: 'template/login_mis.html?rgg=' + Math.floor(Date.now() / 1000),
                     controller: 'loginCtrl'
                 }
             },

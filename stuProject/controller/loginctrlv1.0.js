@@ -5,7 +5,7 @@ login.controller('userMessage', ['$scope', '$rootScope', '$cookies', function($s
 	}
 }]);
 
-login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', ',$http', function($scope, $rootScope, loginService, $cookies, isLoginState, $interval, $http) {
+login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', function($scope, $rootScope, loginService, $cookies, isLoginState, $interval) {
 	layer.closeAll('loading');
 	$interval.cancel($rootScope.intelTime);
 	$scope.isLoginText = '点击登录';
@@ -129,55 +129,6 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 			})
 	}
 
-	// MIS 登录
-	$scope.loginMIS = function(){
-		_czc.push(['_trackEvent', 'MIS登录按钮', '点击', 'MIS登录按钮']);
-		layer.load();
-		$scope.isLoginText = '登录中...';
-		$scope.isDisable = true;
-		$('#loginMis').attr('disabled', true);
-		$http({
-			method:'post',
-			url:'http://wrap-cms.121learn.com/api/v2/out/login_url',
-			headers: {
-	            'Content-Type': 'application/x-www-form-urlencoded'
-	            ,'Authorization': 'Token 1208b84f53d2ea94697bd82d5a2f5fb632b564ca'
-            },
-			data:{name:"aaa",id:1,age:20}  
-
-		})
-			.success(function(res) {
-				if (res.result == 1) {
-					$('#loginMis').attr('disabled', false);
-					$scope.isLoginText = '登录成功';
-					$scope.isDisable = false;
-					layer.closeAll('loading');
-					$rootScope.$state.go('home');
-
-
-				} else {
-
-					layer.msg(res.msg, {
-						icon: 2
-					})
-					$scope.isDisable = false;
-					$('#loginMis').attr('disabled', false);
-					$scope.isLoginText = '点击登录';
-					layer.closeAll('loading');
-				}
-
-			})
-			.error(function(res) {
-				layer.msg('登录失败', {
-					icon: 2
-				})
-				$scope.isLoginText = '点击登录';
-				$('#loginMis').attr('disabled', false);
-				layer.closeAll('loading');
-			})
-			
-	}
-
 	$(document).keydown(function(event) {
 		if (event.keyCode == 13) { //绑定回车 
 			$('#loginbtn').click(); //自动触发登录按钮 
@@ -197,7 +148,7 @@ login.controller('registerCtrl', function($scope, $rootScope, loginService, $coo
 		"OrgId": 0
 	};
 	$scope.isDisable = true;
-	$scope.registerText = '注册';
+	$scope.registerText = '下一步';
 
 	$scope.register = function() {
 		_czc.push(['_trackEvent', '注册按钮', '点击', '登录页注册按钮']);
@@ -232,11 +183,11 @@ login.controller('registerCtrl', function($scope, $rootScope, loginService, $coo
 
 					$cookies.put('bookingId', 0);
 
-					$rootScope.$state.go('index.registersuccess');
+					$rootScope.$state.go('index.wxregister');
 
 
 				} else {
-					$scope.registerText = '注册';
+					$scope.registerText = '下一步';
 					$('#regbtn').attr('disabled', false);
 					layer.msg('该手机号已注册，请更换手机号', {
 						icon: 2
@@ -261,7 +212,7 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 	};
 	$scope.againPwd = {};
 	$scope.isDisable = true;
-	$scope.chageText = '确认';
+	$scope.chageText = '点击修改';
 
 	$scope.findpwd = function() {
 		_czc.push(['_trackEvent', '修改密码按钮', '点击', '修改密码按钮']);
@@ -280,21 +231,20 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 					layer.msg('修改成功', {
 						icon: 1
 					});
-					$rootScope.$state.go('index.backpssuccess');
-					layer.closeAll('loading');
+					$rootScope.$state.go('index.login');
 				} else if (res.result >= 1000) {
 					$cookies.remove('tonken');
 					$cookies.remove('username');
 					$cookies.remove('isComplete');
 					$cookies.remove('password');
 					$cookies.remove('bookingId');
-					$rootScope.$state.go('index.ggtlogin');
+					$rootScope.$state.go('index.login');
 					layer.closeAll('loading');
 				} else {
 					layer.msg(res.msg, {
 						icon: 1
 					});
-					$scope.chageText = '确认';
+					$scope.chageText = '点击修改';
 					$('#findBtn').attr("disabled", false);
 					layer.closeAll('loading');
 				}
@@ -303,7 +253,7 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 				layer.msg(res.msg, {
 					icon: 1
 				});
-				$scope.chageText = '确认';
+				$scope.chageText = '点击修改';
 				$('#findBtn').attr("disabled", false);
 			})
 

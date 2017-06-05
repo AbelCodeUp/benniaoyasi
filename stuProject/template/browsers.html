@@ -9,67 +9,106 @@
 			text-align: center;
 			font-family: '微软雅黑';
 		}
+		ul,li,h2,p{
+			margin:0;padding:0;
+		}
 		img{
 			border: none;
 		}
 		.browtext{
-			width: 500px;
+			width: 100%;
+			font-size: 22px;
+			color:#666;
+			margin-bottom: 28px;
 		}
 		.browtext li{
 			display: inline-block;
 		}
 		.browerbox{
-			width: 100%;
+			width:auto;
 			overflow: hidden;
+			margin-top: 35px;
+			padding-left: 31px;
+			padding-right: 23px;
 		}
-		.browerbox a{
-			display: block;
+		.browerbox .brower{
 			float: left;
-			width: 25%;
-			margin-top: 20px;
+		}
+		.browerbox .brower>a{
+			display: block;
+			cursor: pointer;
+		}
+		.browerbox .brower>p{
+            color:#666;
+            margin-top: 17px;
 		}
 		#bowesers{
 			position: absolute;
 			left: 0;top: 0;right: 0;bottom: 0;
 			margin: auto;
-			height:512px;
+			height:560px;
+			width: 771px;
+			background: url(browser/browsers_header.png) no-repeat top center #fff;
+			padding-top: 68px;
+		}
+		#bowesers>h2{
+			font-size: 38px;
+			font-weight: normal;
+			margin-bottom: 23px;
+		}
+		#bowesers>p{
+			color:#737373;
+			line-height: 30px;
+		}
+		#gengxin{
+			width: 146px;
+			height: 46px;
+			border:1px solid #f34242;
+			border-radius: 7px;
+			color:#f34242;
+			display: block;
+			line-height: 46px;
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			margin-top: 27px;
+			margin-left: 21px;
 		}
 	</style>
 </head>
 <body>
-<div  id="bowesers" style="width: 600px;border-top:2px solid #f05050;border-bottom: 2px solid #f05050;padding: 20px 30px;">
+<div  id="bowesers">
 	<h2>学习效果提升200%</h2>
 	<ul class="browtext">
 		<li>不卡顿</li>
 		<li>更安全</li>
 	</ul>
-	<p>尊敬的会员，检测到您的浏览器版本较低，为了帮助孩子拥有更好的学习效果,帮助孩子更好的提高课程，请下载最新的浏览器</p>
+	<p>尊敬的会员，检测到您的浏览器版本较低，强力推荐 “谷歌浏览器”</p>
+	<p>不支持火狐、IE等其它浏览器</p>
 	<div class="browerbox">
-		<a href="http://ie.sogou.com/">
-			<img src="/browser/browser-sogou.png" alt="">
-		</a>
-		<a href="http://www.firefox.com.cn/">
-			<img src="/browser/browser-fire.png" alt="">
-		</a>
-		<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">
-			<img src="/browser/browser-chrome.png" alt="">
-		</a>
-		<a href="http://www.opera.com/zh-cn">
-			<img src="/browser/browser-opera.png" alt="">
-		</a>
-		<a href="http://browser.qq.com/">
-			<img src="/browser/browser-qq.png" alt="">
-		</a>
-		<a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">
-			<img src="/browser/browser-ie.png" alt="">
-		</a>
-		<a href="https://support.apple.com/kb/index?page=search&type=suggested&locale=zh_CN&q=safari+下载&src=support_searchbox_main">
-			<img src="/browser/browser-safari.png" alt="">
-		</a>
-		<a href="http://www.uc.cn/">
-			<img src="/browser/browser-uc.png" alt="">
-		</a>
+	    <div class="brower" style='padding-top: 38px;margin-right: 100px'>
+	    	<a href="http://chrome.360.cn/">
+				<img src="browser/browsers_360.png" alt="">
+			</a>
+			<p>360浏览器</p>
+	    </div>
+	    <div class="brower" style='margin-right:45px;'>
+	    	<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">
+				<img src="browser/browsers_chrome.jpg" alt="">
+			</a>
+			<p style='margin-top: 0;margin-left:-23%'>
+				Chrome
+			</p>
+			<a id='gengxin' href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">下载更新</a>
+	    </div>
+	    <div class="brower" style='padding-top: 38px;margin-right: 0;'>
+	    	<a href="http://ie.sogou.com/">
+				<img src="browser/browsers_sogo.png" alt="">
+			</a>
+			<p>搜狗浏览器</p>
+	    </div>
 	</div>
+
 </div>
 	
 </body>

@@ -25,14 +25,12 @@ angular.module('components', [])
                                     scope.showTimer = true;
                                     scope.timer = true;
                                     scope.text = "秒后重新获取";
-                                    $("#yanzhengma").addClass("login_yanzhen");
                                     var counter = $interval(function() {
                                         scope.timerCount = scope.timerCount - 1;
                                     }, 1000);
 
                                     $timeout(function() {
                                         scope.text = "重新获取验证码";
-                                        $("#yanzhengma").removeClass("login_yanzhen");
                                         scope.timer = false;
                                         $interval.cancel(counter);
                                         scope.showTimer = false;
@@ -51,7 +49,7 @@ angular.module('components', [])
 
                 }
             },
-            template: '<button ng-click="onClick()" ng-disabled="timer" type="button" class="btn btn-sm find-pink"  id="yanzhengma"> ' +
+            template: '<button ng-click="onClick()" ng-disabled="timer" type="button" class="btn btn-sm find-pink">' +
                 '<span ng-if="showTimer">{{ timerCount }}</span>{{text}}</button>',
         };
     })

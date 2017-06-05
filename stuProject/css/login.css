@@ -1,5 +1,12 @@
 /* 帐号登录 start */
 /* 公共部分 start*/
+.loginbox{
+    width: 412px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.45);
+    border-radius: 8px;
+    overflow: hidden;
+}
 .loginPwd_box{
     width: 100%;
     box-sizing: border-box;
@@ -7,20 +14,29 @@
 }
 .loginPwd_font_top_title_box{
     width: 100%;
-    height: 48px;
+    height: 46px;
+    margin-top: 4px;
 }
 .loginPwd_font_top_title{
     float: left;
     width: 50%;
     height:100%;
-    line-height: 48px;
+    line-height: 43px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
 }
 .loginPwd_font_top_title_item1{
-    background: #29b6f6;
-    color: #fff;
+    color: #333;
+}
+.login_now{
+    color:#cf121c;
+}
+.login_now_line{
+    width: 98px;
+    height: 3px;
+    background: #cf121c;
+    margin:0 auto;
 }
 .loginPwd_font_top_title_item1 a{
     display: block;
@@ -32,6 +48,36 @@
 .loginPwd_font_top_title_item2{
     color: #474747;
 }
+.login_top{
+    width: 100%;
+    line-height: 50px;
+    background: #cf121c;
+    color:#fff;
+    text-align: center;
+    height: 50px;
+    margin-top: -4px;
+    position: relative;
+}
+.login_top .login_bk{
+    position: absolute;
+    left: 20px;
+    top:19px;
+    line-height: 14px;
+    font-size: 12px;
+}
+.login_top  .login_bk>a{
+    color:#fff;
+    line-height: 14px
+}
+.login_top .login_bk>a>span{
+    float: left;
+    display: block;
+    width: 8px;
+    height: 13px;
+    background: url(../images/login_new/back.png) no-repeat;
+    margin-right: 11px;
+}
+
 
 /*状态*/
 .login-input-success .form-control{
@@ -45,12 +91,25 @@
 }
 /*按钮不能点*/
 .login_fff{
-    background: #b0b0b0;
-    color: #fff;
+    background: #fff;
+    color: #666;
     font-size: 16px;
+    text-align: center;
+    line-height: 44px;
+    width: 360px;
+    height: 44px;
+    border:1px solid #666;
+    display: block;
+    border-radius: 5px;
+    margin-top: 22px;
+    cursor: pointer;
+    letter-spacing:5px;
+    padding:0;
 }
 .login_fff:hover{
     color: #fff;
+    background: #cf121c;
+    border:1px solid #cf121c;
 }
 /*按钮能点*/
 .login_pink{
@@ -64,55 +123,84 @@
 /*错误提示*/
 .error-notice{
     position: absolute;
-    top:44px;
-    left: 20px;
-    padding: 5px 10px;
-    background:#fcdede;
+    top:52px;
+    left: 30px;
+    padding: 8px 7px;
+    background:#fff;
     font-size: 14px;
     color: #0a0a0a;
     z-index: 99999;
     border-radius: 3px;
-    border: 1px solid #e0c0c0;
+    border: 1px solid #cf121c;
     display: none;
     opacity: 1;
     /* -webkit-animation:heijin-zi-left1 3s forwards;animation:heijin-zi-left1 3s forwards; */
 }
 .error-notice span{
     position: absolute;
-    top:-9px;
+    top:-6px;
     left: 10px;
-    color: #ffe3e3;
-    text-shadow: -1px -1px 0 #e0c0c0;
+    width: 10px;
+    height: 7px;
+    background:url(../images/login_new/top_up.jpg) no-repeat;
 }
 .has-error .error-notice{
     display: block;
+}
+.ps-backbox{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 27px;
+    margin-bottom: 18px;
+}
+.ps-backbox a{
+    display: block;
+    color:#666;
+    text-decoration: none;
+}
+.ps-mis-back{
+    margin-top: 45px
 }
 /* 公共部分 end*/
 .loginPwd_form{
     width: 100%;
     overflow: hidden;
-    padding: 44px 32px 20px 32px;
+    padding: 40px 25px 0px 25px;
     box-sizing: border-box;
 }
 .loginPwd_form_div{
     position: relative;
     margin-bottom: 22px;
+    height:48px;
+    border:1px solid #999999;
+    border-radius: 5px;
+}
+.loginPwd_form_div input{
+    position: absolute;
+    left: 47px;
+    top:0;
+    border:0px;
+    line-height: 46px;
+    text-indent: 11px;
+    outline: none;
+    width: 246px;
+    background: rgba(0,0,0,0);
+    padding:0!important;
+    height:46px!important;
 }
 .loginPwd_form_div i{
     position: absolute;
-    top: 2px;
-    left : 4px;
+    top: 0px;
+    left:0px;
     display: block;
-    width: 34px;
-    height: 34px;
+    width: 47px;
+    height: 46px;
     line-height: 34px;
     text-align: center;
     pointer-events: none;
     font-size: 20px;
     color: #bbbbbb;
-}
-.loginPwd_form_div input{
-    text-indent: 30px;
 }
 .loginPwd_a_div{
     width: 100%;
@@ -135,6 +223,59 @@
     /*width: 14px;*/
     /*height: 14px;*/
 /*}*/
+.name-feed{
+    background:url(../images/login_new/denglu_name1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.name-feed-success{
+    background:url(../images/login_new/denglu_name1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.name-feed-error{
+    background:url(../images/login_new/denglu_name2.png) no-repeat center;
+    border-right: 1px solid #cf121c
+}
+.ps-feed{
+    background:url(../images/login_new/denglu_ps1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.ps-feed-success{
+    background:url(../images/login_new/denglu_ps1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.ps-feed-error{
+    background:url(../images/login_new/denglu_ps2.png) no-repeat center;
+    border-right: 1px solid #cf121c
+}
+.phone-feed{
+    background:url(../images/login_new/ps_phone1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.phone-feed-success{
+    background:url(../images/login_new/ps_phone1.png) no-repeat center;
+    border-right: 1px solid #999;
+}
+.phone-feed-error{
+    background:url(../images/login_new/ps_phone2.png) no-repeat center;
+    border-right: 1px solid #cf121c
+}
+.has-success{
+    border:1px solid #999;
+    background-color: #fff;
+}
+.has-error{
+    background-color: #fef9f9;
+    border:1px solid #cf121c;
+}
+.login_yanzhenbox{
+    background-color: #fef9f9;
+    border:1px solid #cf121c;
+}
+#yanzhengma.login_yanzhen{
+    background-color: #fef9f9;
+    border:1px solid #cf121c;
+    color:#666;
+}
 .form-switchCheck-span{
     vertical-align: middle;
 }
@@ -144,7 +285,51 @@
     border-radius: 0;
 }
 .loginPwd_register button{
-    border-radius: 0;
+    border-radius: 0;outline: none;
+}
+.form-group button{
+    width: 362px;
+    height: 48px;
+    border:0;
+    background:#cf121c;
+    border-radius: 5px;
+    color:#fff;
+    font-size: 16px;
+    letter-spacing:5px;
+    margin-top: 18px;outline: none;
+    margin-bottom: 74px;
+    cursor: pointer;
+}
+.form-group button:hover{
+    background:#ab0f18;
+}
+.loginPwd_form_div .duanxin{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+#yanzhengma{
+    position: absolute;
+    right:-1px;
+    top:-1px;
+    width: 106px;
+    height: 48px;
+    background: #cf121c;
+    color:#fff;
+    border:0;
+    letter-spacing:0px;
+    font-size: 12px;
+    margin-top: 0;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+}
+.form-control:focus{
+    border:0;
+    background:none;
+}
+.form-group button.cnLogin{
+    margin-top: 40px;
+    margin-bottom:0;
 }
 /* 帐号登录 end */
 
@@ -180,3 +365,71 @@
 /* 手机号找回密码 end */
 
 /* 登录 提示 */
+
+
+
+/* 注册成功 start*/
+.register_box .register_title{
+   font-size: 24px;
+   text-align: center;
+   color:#cf121c;
+   letter-spacing:4px;
+   margin-top: 29px;
+   margin-bottom: 18px;
+}
+.register_box .register_con{
+    width: 157px;
+    margin:0 auto;
+    margin-bottom: 27px;
+}
+.register_box .register_con>p{
+    text-align: center;
+    font-size: 12px;
+    color:#000;
+    margin-top: 7px;
+}
+.register_box .register_btn{
+    display: block;
+    width: 348px;
+    height: 46px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 46px;
+    color:#fff;
+    background:#cf121c;
+    margin:0 auto;
+    margin-bottom: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 注册成功 end*/
+
+/* 找回密码成功 start*/
+.back_box .back_title{
+   font-size: 24px;
+   text-align: center;
+   color:#cf121c;
+   letter-spacing:4px;
+   margin-top: 72px;
+   margin-bottom: 28px;
+}
+.back_box .back_con{
+    width: 86px;
+    margin:0 auto;
+    margin-bottom: 40px;
+}
+.back_box .back_btn{
+    display: block;
+    width: 348px;
+    height: 46px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 46px;
+    color:#fff;
+    background:#cf121c;
+    margin:0 auto;
+    margin-bottom: 56px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* 找回密码成功 end*/
