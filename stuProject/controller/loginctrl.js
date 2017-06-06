@@ -5,7 +5,7 @@ login.controller('userMessage', ['$scope', '$rootScope', '$cookies', function($s
 	}
 }]);
 
-login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', ',$http', function($scope, $rootScope, loginService, $cookies, isLoginState, $interval, $http) {
+login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', '$http', function($scope, $rootScope, loginService, $cookies, isLoginState, $interval, $http) {
 	layer.closeAll('loading');
 	$interval.cancel($rootScope.intelTime);
 	$scope.isLoginText = '点击登录';
@@ -147,12 +147,13 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 		})
 			.success(function(res) {
+				console.log(res)
 				if (res.result == 1) {
 					$('#loginMis').attr('disabled', false);
 					$scope.isLoginText = '登录成功';
 					$scope.isDisable = false;
 					layer.closeAll('loading');
-					$rootScope.$state.go('home');
+					console.log('')
 
 
 				} else {
