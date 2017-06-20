@@ -28,7 +28,7 @@
             <img src="images/none/teacher-none.png">
             <div class="teacher-none-text">您暂未购买课程，去看看有什么课程吧</div>
             <div>
-              <a class="btn btn-lg btn-primary" href="http://www.gogo-talk.com/index.php?c=price&a=price" onClick="_czc.push(['_trackEvent', '预约老师页面暂未购买课程按钮', '点击', '预约老师页面暂未购买课程按钮']);">购买课程</a>
+              <a class="btn btn-lg btn-primary" href="http://www.gogo-talk.com/dist/price.html" onClick="_czc.push(['_trackEvent', '预约老师页面暂未购买课程按钮', '点击', '预约老师页面暂未购买课程按钮']);">购买课程</a>
             </div>
         </div>
   </div>
@@ -106,7 +106,7 @@
                         <div class="orderTeacher_teacher_item_img_top">
                           <span class="f-left-smy" ng-bind="item.TeacherName"></span>
                           <div class="guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[item.tchState == 1]" data-state=
-                          '{{item.tchState}}' ng-bind="item.tchState | isGuanZhu" data-tchid="{{item.TeacherId}}" ng-click="Attention($event)"></div>
+                          '{{item.tchState}}' data-tchid="{{item.TeacherId}}" ng-click="Attention($event)"></div>
                         </div>
                         <span class="orderTeacher_teacher_item_img_year">{{item.Age}}岁</span>
                     </div>

@@ -21,7 +21,6 @@
 							</div>
 						</li>
 						<li style="width: 100%">
-							<!-- <datepicke t-date="{{personData.Age}}"></datepicke> -->
 							<div class="form-group">
 			                    <label class="col-sm-2 control-label"  style="width:130px;text-align: right;margin-left: 10px;padding-right: 0;">孩子生日：</label>
 			                    <div class="col-sm-2">
@@ -74,5 +73,12 @@
             </ul>
         </div>
     </div>
-
+	<div class="orderTeacher" style="min-height: 0!important">
+        <h2 class="orderTeacher_title">我的订单</h2>
+		
+        <div style="padding:0 30px;">
+            <iframe ng-src="{{trustSrc}}" id="alipay" style="min-width: 800px;">
+            </iframe>
+        </div>
+    </div>
 </div>

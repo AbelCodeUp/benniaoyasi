@@ -28,7 +28,6 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 	$scope.isClick;
 	$scope.tchId;
 	$scope.getTeacherData = function(tchId, index) {
-		console.log($scope.timeAttrs);
 		if (index) {
 			$scope.isClick = index;
 		} else {
@@ -213,6 +212,7 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 			}
 
 		}
+		$scope.isClick = 0;
 
 	}
 	$scope.isClick = 0;
@@ -345,6 +345,9 @@ MyAttention.controller('MyAttentionCtrl', ['$scope', '$rootScope', '$cookies', '
 							$rootScope.$state.go('index.login');
 						}
 					})
+				$('.modal-con').mCustomScrollbar({
+					theme:"minimal"
+				});
 				$('#myModal').modal('show');
 			}
 

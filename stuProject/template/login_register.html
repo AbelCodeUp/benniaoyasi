@@ -37,8 +37,8 @@
         <div class=" form-group loginPwd_form_div has-feedback"
             ng-class="{'has-success':regForm.password.$valid,'has-error':regForm.password.$invalid && regForm.password.$touched}">
             <input type="password" name="password" class="form-control" 
-                placeholder="请输入登录密码（6-12位）"
-                 ng-model="regData.Password" required ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+                placeholder="请设置登录密码（6-12位）"
+                 ng-model="regData.Password" required ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,12}$/"
                 required ng-focus>
             
             <i class="ps-feed" ng-class="{'ps-feed-success':regForm.password.$valid  ,'ps-feed-error':regForm.password.$invalid && regForm.password.$touched}"></i>

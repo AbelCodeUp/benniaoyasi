@@ -134,7 +134,7 @@ angular.module('calendar',[])
 		                day: '日'
 		            },
 		            eventClick: function (calEvent, jsEvent, view) {
-		                $this.clickGo(calEvent, jsEvent, view);
+		                // $this.clickGo(calEvent, jsEvent, view);
 		            },
 		            eventMouseover: function(event, jsEvent, view){
 		            	var tTitle = event.title;
@@ -147,6 +147,9 @@ angular.module('calendar',[])
         		
 							return $(this).html();
 						}});
+						if(event.type == 'underway'){  //underway
+							$(jsEvent).attr({'href':'http://learn.gogo-talk.com/stuLessonRoom.html?lessonid='+ event.lessonId +'&type=lesson&r'+ Math.random(),'target':'_blank'});
+						}
 					}
 		        });
 

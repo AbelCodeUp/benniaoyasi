@@ -42,11 +42,15 @@
                 <span></span>
                 验证码不能为空
             </div>
+            <div class="error-notice" ng-if="findPwdForm.code.$error.pattern && !findPwdForm.code.$focused">
+                <span></span>
+                 短信验证码输入错误
+            </div>
         </div>
         <div class="form-group loginPwd_form_div has-feedback" ng-class="{'has-success':findPwdForm.password.$valid,'has-error':findPwdForm.password.$invalid && findPwdForm.password.$touched}">
             <input type="password" name="password" class="form-control" 
-                placeholder="请输入登录密码（6-12位）"
-                 ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+                placeholder="请设置新密码（6-12位）"
+                 ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,12}$/"
                 ng-model="findPwdData.newPsw"
                 required ng-focus>
             <i class="ps-feed" ng-class="{'ps-feed-success':findPwdForm.password.$valid ,'ps-feed-error':findPwdForm.password.$invalid && findPwdForm.password.$touched}"></i>
@@ -59,13 +63,11 @@
                 密码格式错误
             </div>
         </div>
-        </pre>
         <div class="form-group">
-            <button type="button" ng-disabled="findPwdForm.$invalid" ng-bind="chageText" ng-click="findpwd()" ui-sref="index.backpssuccess" id="findBtn">确定</button>
+            <button type="button" ng-disabled="findPwdForm.$invalid" ng-bind="chageText" ng-click="findpwd()" class="cnLogin ladda-button btn btn-font-size16 btn-block font-write" id="findBtn">确定</button>
         </div>
     </form>
 </div>
-</div>	
 <script>
 var flage=true;
 function sendNum(ele){

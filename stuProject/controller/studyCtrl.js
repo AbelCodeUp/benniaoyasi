@@ -4,6 +4,7 @@ var studyCtrl = angular.module('studyCtrl',[]);
     studyCtrl.controller('studyListCtrl',function($scope, $rootScope, $cookies, $filter, httpService, $http, $timeout){
       $scope.closeTchId;
       $scope.thisEvent;
+      
       $scope.Attention_p = function(e) {
         $scope.thisEvent = e;
         var teacherId = $(e.target).data('tchid');
@@ -23,7 +24,7 @@ var studyCtrl = angular.module('studyCtrl',[]);
             if (res.result == 1) {
 
               $(e.target).data('state', 1);
-              $(e.target).removeClass('weiguanzhu').addClass('yiguanzhu').text('已关注');
+              $(e.target).removeClass('weiguanzhu').addClass('yiguanzhu');
               $scope.getStudyList($rootScope.studyIndex);
               layer.closeAll('loading');
               layer.msg('关注成功', {
@@ -75,7 +76,7 @@ var studyCtrl = angular.module('studyCtrl',[]);
           if (res.result == 1) {
 
             $($scope.thisEvent.target).data('state', 0);
-            $($scope.thisEvent.target).removeClass('yiguanzhu').addClass('weiguanzhu').text('关注');
+            $($scope.thisEvent.target).removeClass('yiguanzhu').addClass('weiguanzhu');
             $scope.getStudyList($scope.studyIndex);
             layer.closeAll('loading');
             layer.msg('取消成功', {

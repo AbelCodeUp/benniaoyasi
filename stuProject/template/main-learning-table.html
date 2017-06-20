@@ -23,7 +23,7 @@
 <div class="col-lg-12">
     <!-- Start content -->
     <div class="orderTeacher">
-        <h2 class="orderTeacher_title">学习记录<p style="float: right;margin-right: 30px;"><a ng-click="goTestClient()" href="javascript:;">设备调试</a></p></h2>
+        <h2 class="orderTeacher_title">学习记录<p style="float: right;margin-right: 30px;"><a href="/stuLessonRoom.html?&type=debug&r=1.6" target="_blank">设备调试</a></p></h2>
         <div class="table-none" id="studyNo" style="display: block;">
             <img src="images/none/table-none.png">
             <div class="table-none-text">当前没有学习记录，去预约课程吧！</div>
@@ -57,16 +57,22 @@
                         <td><div style="text-align: center!important" ng-if="studyList.LessonName.length>1">{{studyList.LessonName}}</div>
 						<div style="text-align: center!important"  ng-if="studyList.LessonName==' '||studyList.LessonName.length < 1">待定</div>
                         </td>
-                        <td>
+                        <td style="position:relative;">
                             <div class="b_tchNameBox">
-                                <span style="width:65%;word-wrap:break-word;display: block">{{studyList.TeacherName}}</span>
-                                <div class="leaList guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[studyList.tchState == 1]" data-state=
-                                  '{{studyList.tchState}}' ng-bind="studyList.tchState | isGuanZhu" data-tchid="{{studyList.TeacherId}}" ng-click="Attention_p($event)"></div>
+                                <span style="width:100%;word-wrap:break-word;display: block;position:relative;">
+                                    {{studyList.TeacherName}}
+                                    <!--关注-->
+                                    <div class="leaList guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[studyList.tchState == 1]" data-state=
+                                    '{{studyList.tchState}}' data-tchid="{{studyList.TeacherId}}" ng-click="Attention_p($event)"></div>
+                                </span>
+                                <div class="b_pinjia" ng-if="studyList.IsComment">
+                                    <button type="button" ng-click="lookpj($event)" class="btn btn-primary btn-rounded waves-effect waves-light learning-table-over-btu" data-remark="{{studyList.Remark}}" data-score="{{studyList.StuScore}}"
+                                    data-time="{{studyList.TchCommentTime}}" data-name="{{studyList.TeacherName}}">查看评价</button>
+                                </div>
+                                
                             </div>
-                            <div class="b_pinjia" ng-if="studyList.IsComment">
-                                <button style="margin-left: -50px" type="button" ng-click="lookpj($event)" class="btn btn-primary btn-rounded waves-effect waves-light learning-table-over-btu" data-remark="{{studyList.Remark}}" data-score="{{studyList.StuScore}}"
-                                data-time="{{studyList.TchCommentTime}}" data-name="{{studyList.TeacherName}}">查看评价</button>
-                            </div>
+                            <!--<div class="leaList guanzhu scstate" style="cursor: pointer;" ng-class="{true: 'yiguanzhu', false: 'weiguanzhu'}[studyList.tchState == 1]" data-state=
+                                  '{{studyList.tchState}}' ng-bind="studyList.tchState | isGuanZhu" data-tchid="{{studyList.TeacherId}}" ng-click="Attention_p($event)"></div>-->
                         </td>
                         <td>
                             <a href="/PDFJSInNet/PDFJSInNet/web/viewer.html?name={{studyList.FilePath.slice(studyList.FilePath.lastIndexOf('/')+1)}}" target="_blank" ng-if="studyList.PageStatus < 3 && studyList.IsDemo != 1 && studyList.LessonName.length > 1" onClick="_czc.push(['_trackEvent', '学习记录页,暂无学习记录，预习按钮', '点击', '学习记录页,预习按钮']);">预习</a>
@@ -76,13 +82,13 @@
 
                             <span ng-if="studyList.PageStatus == 0 && studyList.IsDemo == 1">体验课已约</span>
                             <!-- <a href="javascript:;" ng-click="joinClassRoom(studyList.LessonId, userName, studyList.LessonName)" ng-if="studyList.PageStatus == 2 || (studyList.StartTime | fateDate)">WEB ROOM&nbsp;&nbsp;|&nbsp;&nbsp;</a> -->
-                            <a href="javascript:;" ng-if="(studyList.PageStatus == 2 || (studyList.StartTime | fateDate)) && studyList.ClassRoomUrl == '---'" ng-click="goClient(studyList.LessonId, userName)">VIP ROOM</a>
+                            <a ng-if="(studyList.PageStatus == 2 || (studyList.StartTime | fateDate)) && studyList.ClassRoomUrl == '---'" target="_blank"  href="/stuLessonRoom.html?lessonid={{studyList.LessonId}}&type=lesson&r=1.4">VIP ROOM</a>
 
                             <a ng-href="{{studyList.ClassRoomUrl}}" data-url="{{studyList.ClassRoomUrl}}" ng-click="goQQRoom(studyList.LessonId, userName, $event)" target="_blank" ng-if="(studyList.PageStatus == 2 || (studyList.StartTime | fateDate)) && studyList.ClassRoomUrl != '---'" >QQ ROOM</a>
 
                             <a href="/PDFJSInNet/PDFJSInNet/web/viewer.html?name={{studyList.FilePath.slice(studyList.FilePath.lastIndexOf('/')+1)}}" target="复习按钮']);"
                              ng-if="studyList.PageStatus == 3 || studyList.PageStatus == 4">复习</a>
-                            <span  ng-repeat="sPath in studyList.Path" >
+                            <span ng-if="studyList.Path != ''" ng-repeat="sPath in studyList.Path.split(',')" >
                                 <span ng-show="$index >= 0">|&nbsp;</span><a ng-href="{{sPath}}" target="_blank" class="vedioHover">录像{{$index + 1}}</a>
                             </span>
                         </td>
@@ -134,10 +140,11 @@
         </div>
 
     </div>
+
 <!-- /.modal-dialog -->
 </div>
-<!-- 取消关注 -->
-<div id="guanzhu_b" class="m-guanzhu modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <!-- 取消关注 -->
+<div id="guanzhu_b" class="m-guanzhu modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" style="width:502px;height:319px">
             <div class="modal-img">
@@ -152,7 +159,6 @@
         </div>
 
     </div>
-<!-- /.modal-dialog -->
 </div>
 <script>
     

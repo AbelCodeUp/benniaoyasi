@@ -2,8 +2,8 @@
 <div class="loginbox">
 <div class="loginPwd_box">
     <ul class="loginPwd_font_top_title_box">
-	    <li class="loginPwd_font_top_title loginPwd_font_top_title_item1" ui-sref="index.mislogin">MIS系统登录</li>
-        <li class="loginPwd_font_top_title loginPwd_font_top_title_item1 login_now" ui-sref="index.ggtlogin">GoGoTalk登录
+	    <li class="loginPwd_font_top_title loginPwd_font_top_title_item1" ui-sref="index.mislogin">MIS系统</li>
+        <li class="loginPwd_font_top_title loginPwd_font_top_title_item1 login_now" ui-sref="index.ggtlogin">GoGo系统
             <div class="login_now_line"></div>
         </li>
         
@@ -35,7 +35,7 @@
                     'has-error':loginForm.password.$touched && loginForm.password.$invalid}">
             <input type="password" name="password" class="form-control" 
                 placeholder="请输入登录密码（6-12位）"
-                ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+                ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,12}$/"
                 ng-model="loginData.Password"
                 required ng-focus>
             
@@ -51,7 +51,6 @@
                 密码格式错误
             </div>
         </div>
-        </pre>
         <div class="form-group">
             <button type="button" class="cnLogin ladda-button btn btn-font-size16 btn-block font-write"
                 ng-disabled="loginForm.$invalid" ng-click="loginGo()" ng-bind="isLoginText" id="loginbtn">登录</button>

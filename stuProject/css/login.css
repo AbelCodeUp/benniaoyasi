@@ -433,3 +433,47 @@
     cursor: pointer;
 }
 /* 找回密码成功 end*/
+/*MIS*/
+.layer_mis{
+    /*width: 475px!important;
+    height: 192px!important;*/
+    border-radius: 10px!important;
+    box-shadow: 0 0 35px #111!important;
+    background: #fff;
+}
+.b_mis_message{
+    width: 475px;
+    height: 192px;
+    padding: 20px 8px;
+}
+.b_mis_header{
+    height: 43px;
+    text-align: center;
+    font-size: 22px;
+    color:#3a3a3a;
+    position: relative;
+    border-bottom: 1px dotted #d2d2d2;
+}
+.b_mis_close{
+    color:#d2d2d2;
+    float: right;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 0;
+}
+.b_mis_content{
+    border-top: 1px dotted #fff;
+    padding: 30px;
+    color:#333;
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    
+}
+.b_mis_red{
+    color: #dd3836;
+    text-decoration: underline;
+}
+/*MIS end*/

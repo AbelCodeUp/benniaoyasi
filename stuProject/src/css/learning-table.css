@@ -5,15 +5,14 @@
     text-align: center;
 }
 .learning-table td div.b_tchNameBox{
-    max-width: 50%;
+    max-width:128px;
     margin: 0 auto;
     text-align: center!important;
     position: relative;
 }
 .leaList{
     position: absolute;
-    top: -2px;
-    right: -53px;
+    right: -12px;
     background-position: 0 2px;
 }
 .learning-table th{

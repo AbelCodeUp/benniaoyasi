@@ -110,7 +110,7 @@ comfilter.filter('levelStatus', function() {
 comfilter.filter('fiiterNum', function() {
 	return function(data) {
 		if(data == '1'){
-			return '已约'
+			return '已  约'
 		}else if(data == '0'){
 			return '可预约'
 		}else{
@@ -141,6 +141,7 @@ comfilter.filter('getAge', function($rootScope) {
         }
 
 
-		return  getAge(data,serverTime);
+		// return  getAge(data,serverTime) == NaN ? '' : getAge(data,serverTime);
+		return  getAge(data,serverTime) == 'NaN岁' ? '--' : getAge(data,serverTime);
 	}
 })

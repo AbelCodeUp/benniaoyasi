@@ -136,14 +136,16 @@
                             class="btn waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy tour-two" ng-class="{'btn-primary':!isJoinClassRoom}"
                             ng-disabled="isJoinClassRoom" ng-click="goClient(nextData.lessonId, userName)">VIP教室进入
                     </button> -->
-                     <button ng-if="classBtn == 1" type="button"
-                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy tour-two" ng-click="joinTuokeRoom(nextData.lessonId, userName)">
-                        拓课教室进入
-                    </button>
+                    <!-- 拓课 -->
+                     <a ng-if="classBtn == 1"
+                            class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button disabled_smy tour-two" target="_blank" href="/stuLessonRoom.html?lessonid={{nextData.lessonId}}&type=lesson&r=1.3">
+                        进入教室
+                    </a>
+                    <!-- 百家云 -->
                     <button ng-if="classBtn == 4" type="button"
                             class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button" ng-disabled="isJoinClassRoom" ng-click="joinClassRoom(nextData.lessonId, userName,nextData.lessonName)">
                         
-                        百家云教室进入
+                        进入教室
                     </button>
                     <a ng-href="{{nextData.ClassRoomUrl}}" target="_blank" data-url="{{nextData.ClassRoomUrl}}" ng-click="goQQRoom(nextData.lessonId, userName, $event)" target="_blank" ng-if="classBtn == 2" class="btn btn-primary waves-effect waves-light w-lg main-content-class-middle-btu_dd_button">
                         QQ教室进入

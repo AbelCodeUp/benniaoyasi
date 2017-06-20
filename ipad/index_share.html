@@ -16,6 +16,10 @@
 <body>
 <div class="bigcontent">
 	<div class="panel_header">
+		<h2>测评报告</h2>
+		<div class="btn_share" id="btn_share">
+			<img src="images/fenxiang@3x.png" alt="">
+		</div>
 	</div>
 	<header id="header" class="header">
 		<div class="header-title">
@@ -282,6 +286,9 @@
 				NeedToImprove.text(res.NeedToImprove);
 			}
 		});
+		$('#btn_share').click(function(){
+			window.webkit.messageHandlers.AppModel.postMessage({body: 'share'});
+		})
 		function Percentage(num, total) { 
 		    return (Math.round(num / total * 10000) / 100.00 + "%");// 小数点后两位百分比
 		}

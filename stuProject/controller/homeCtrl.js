@@ -157,7 +157,7 @@ homeCtrl.controller('headerCtrl', ['$scope', '$rootScope', '$cookies', 'httpServ
 			$cookies.remove('password');
 			$cookies.remove('isComplete');
 
-			$rootScope.$state.go('index.login');
+			$rootScope.$state.go('index.ggtlogin');
 		}
 
 		$scope.findPwdData = {

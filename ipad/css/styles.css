@@ -1,3 +1,28 @@
+.bigcontent{
+	background: #fff;
+}
+.panel_header{
+	height: 1rem;
+	line-height: 1rem;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content:space-between;
+}
+.panel_header h2{
+	line-height: 1rem;
+	font-size: .26rem;
+}
+.panel_header .btn_share{
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	text-align: right;
+}
+.panel_header .btn_share img{
+	width: 35%;
+}
 .header
 {
     width: 100%;
@@ -45,7 +70,6 @@
 .bigcontent{
 	padding-left:0.729847rem;
 	padding-right:  0.729847rem;
-	padding-top: 1rem;
 }
 /*content start*/
 .b_content_one_box
@@ -67,12 +91,12 @@
 }
 .b_c1_miaoshu{
 	width: 100%;
-	height: 0.426797rem;
+	height: 0.6rem;
 	margin-top: 0.217865rem;
 	color: #fff;
-	font-size: 0.196078rem;
+	font-size: 0.2rem;
 	text-align: center;
-	line-height: 0.426797rem;
+	line-height: 0.6rem;
 }
 .b_c0{
 	background: #3ebd12;

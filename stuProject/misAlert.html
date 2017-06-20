@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        .b_mis_message{
+            width: 475px;
+            height: 192px;
+            padding: 20px 8px;
+            border-radius: 10px;
+            box-shadow: 0 0 35px #111;
+        }
+        .b_mis_header{
+            height: 43px;
+            text-align: center;
+            font-size: 22px;
+            color:#3a3a3a;
+            position: relative;
+            border-bottom: 1px dotted #d2d2d2;
+        }
+        .b_mis_close{
+            color:#d2d2d2;
+            float: right;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            font-size: 22px;
+            line-height: 0;
+        }
+        .b_mis_content{
+            border-top: 1px dotted #fff;
+            padding: 30px;
+            color:#333;
+            text-align: left;
+        }
+        .b_mis_red{
+            color: #dd3836;
+        }
+    </style>
+</head>
+<body>
+    <div class="b_mis_message">
+        <div class="b_mis_header">
+            登录失败
+            <a href="javascript:;" class="b_mis_close">
+                &times;
+            </a>
+        </div>
+        <div class="b_mis_content">
+            请检查账号/密码是否输入有误，或<a href="javascript:;" class="b_mis_red">点击此处</a>进入MIS系统登录页重新登录
+        </div>
+    </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <div class="loginPwd_box">
     <ul class="loginPwd_font_top_title_box">
         <li class="loginPwd_font_top_title loginPwd_font_top_title_item1">账号登录</li>
-        <li class="loginPwd_font_top_title loginPwd_font_top_title_item1"  style="background-color: #07d9e6;"><a href="http://bnys.121learn.cn/login?next=%2Flearn" target="_blank" style="color: #fff;"> MIS 系统登录入口  <img style="display: inline-block;vertical-align: middle;" src="images/misIcon.png" alt=""></a></li>
+        <li class="loginPwd_font_top_title loginPwd_font_top_title_item1"  style="background-color: #07d9e6;"><a href="http://gogotalk.121learn.cn" target="_blank" style="color: #fff;"> MIS 系统登录入口  <img style="display: inline-block;vertical-align: middle;" src="images/misIcon.png" alt=""></a></li>
     </ul>
     <form role="form" class="loginPwd_form" name="loginForm">
         <div class="form-group loginPwd_form_div has-feedback"
@@ -32,8 +32,8 @@
                     {'has-success':loginForm.password.$valid,
                     'has-error':loginForm.password.$touched && loginForm.password.$invalid}">
             <input type="password" name="password" class="form-control" 
-                placeholder="密码由6至20字母或数字或符号组成"
-                ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,20}$/"
+                placeholder="密码由6至12字母或数字或符号组成"
+                ng-pattern="/^[a-zA-Z0-9!#@*-_.]{6,12}$/"
                 ng-model="loginData.Password"
                 required ng-focus>
             <span class="glyphicon glyphicon-ok form-control-feedback" ng-if="loginForm.password.$valid"></span>

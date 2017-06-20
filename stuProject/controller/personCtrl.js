@@ -7,7 +7,7 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
 
   $scope.ifreamePay = 'http://www.gogo-talk.com/index.php?c=search&a=getsearch&mobile=';
   //订单页
-  $scope.trustSrc = $sce.trustAs($sce.RESOURCE_URL, 'http://www.gogo-talk.com/index.php?c=search&a=getsearch&mobile=' + $rootScope.userName);
+  $scope.trustSrc = $sce.trustAs($sce.RESOURCE_URL, 'http://www.gogo-talk.com/dist/search_stu.html?phone=' + $rootScope.userName);
 
   $scope.personData = {};
 
@@ -63,7 +63,7 @@ personCenter.controller('personCtrl', ['$scope', '$rootScope', '$cookies', '$sce
 
     }
     if($('#age').val() == ''){
-      layer.msg('年龄不能为空', {
+      layer.msg('请设置孩子生日', {
         icon: 2
       })
       return false;

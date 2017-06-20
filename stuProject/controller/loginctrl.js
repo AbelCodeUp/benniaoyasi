@@ -1,18 +1,18 @@
 var login = angular.module('loginCtrl', []);
-login.controller('userMessage', ['$scope', '$rootScope', '$cookies', function($scope, $rootScope, $cookies) {
-	$scope.outLogin = function() {
+login.controller('userMessage', ['$scope', '$rootScope', '$cookies', function ($scope, $rootScope, $cookies) {
+	$scope.outLogin = function () {
 
 	}
 }]);
 
-login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', '$http', function($scope, $rootScope, loginService, $cookies, isLoginState, $interval, $http) {
+login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies', 'isLoginState', '$interval', '$http', '$timeout',function ($scope, $rootScope, loginService, $cookies, isLoginState, $interval, $http, $timeout) {
 	layer.closeAll('loading');
 	$interval.cancel($rootScope.intelTime);
-	$scope.isLoginText = '点击登录';
+	$scope.isLoginText = '登录';
 
 	$scope.isDisable = false; //点击登录防多次点击提交
 
-	if($cookies.get('username')){
+	if ($cookies.get('username')) {
 		$rootScope.$state.go('home');
 	}
 
@@ -24,7 +24,7 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 	//获取单选按钮的值
 	$scope.checkDisabled = false;
 	$scope.checkType = false;
-	$('#switchCheck').change(function() {
+	$('#switchCheck').change(function () {
 		_czc.push(['_trackEvent', '登录记住密码按钮', '点击', '登录记住密码按钮']);
 		$scope.checkType = $(this).prop('checked');
 	});
@@ -50,14 +50,14 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 	$rootScope.isTemp = 1;
 	$rootScope.isBuyMeal = false;
-	$scope.loginGo = function() {
+	$scope.loginGo = function () {
 		_czc.push(['_trackEvent', '登录按钮', '点击', '登录页登录按钮']);
 		layer.load();
 		$scope.isLoginText = '登录中...';
 		$scope.isDisable = true;
 		$('#loginbtn').attr('disabled', true);
 		loginService.post(_AjaxURL.login, $scope.loginData)
-			.success(function(res) {
+			.success(function (res) {
 				if (res.result == 1) {
 					$('#loginbtn').attr('disabled', false);
 					$scope.isLoginText = '登录成功';
@@ -75,7 +75,7 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 					$scope.isDisable = false;
 					var expiresDate = new Date();
-					var isGuoQi = new　Date();
+					var isGuoQi = new Date();
 					if ($scope.checkType) {
 						expiresDate.setDate(expiresDate.getDate() + 7);
 						$cookies.put('btnstaus', '1', {
@@ -97,9 +97,9 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 					$cookies.put('tonken', res.data.userToken);
 					$cookies.put('isComplete', res.data.isComplete);
 					$cookies.put('bookingId', res.data.bookingId);
-					
+
 					isGuoQi.setDate(isGuoQi.getHours() + 2);
-					$cookies.put('isGuoQi','1', {
+					$cookies.put('isGuoQi', '1', {
 						'expires': isGuoQi
 					})
 					layer.closeAll('loading');
@@ -109,87 +109,116 @@ login.controller('loginCtrl', ['$scope', '$rootScope', 'loginService', '$cookies
 
 				} else {
 
-					layer.msg(res.msg, {
+					layer.msg('帐号或密码错误', {
 						icon: 2
 					})
 					$scope.isDisable = false;
 					$('#loginbtn').attr('disabled', false);
-					$scope.isLoginText = '点击登录';
+					$scope.isLoginText = '登录';
 					layer.closeAll('loading');
 				}
 
 			})
-			.error(function(res) {
-				layer.msg('登录失败', {
+			.error(function (res) {
+				layer.msg('登录失败，请联系管理员', {
 					icon: 2
 				})
-				$scope.isLoginText = '点击登录';
+				$scope.isLoginText = '登录';
 				$('#loginbtn').attr('disabled', false);
 				layer.closeAll('loading');
 			})
 	}
-
+	$scope.loginMisData = {};
+	var misUrlStr = '';
 	// MIS 登录
-	$scope.loginMIS = function(){
+	$scope.loginMIS = function () {
+
 		_czc.push(['_trackEvent', 'MIS登录按钮', '点击', 'MIS登录按钮']);
 		layer.load();
 		$scope.isLoginText = '登录中...';
 		$scope.isDisable = true;
 		$('#loginMis').attr('disabled', true);
 		$http({
-			method:'post',
-			url:'http://wrap-cms.121learn.com/api/v2/out/login_url',
+			method: 'get',
+			url: 'http://cms-wrap.121learn.com/api/v2/out/login_url',
 			headers: {
-	            'Content-Type': 'application/x-www-form-urlencoded'
-	            ,'Authorization': 'Token 1208b84f53d2ea94697bd82d5a2f5fb632b564ca'
-            },
-			data:{name:"aaa",id:1,age:20}  
+				'Authorization': 'Token b914fe4cd5fcb81a4eef58a029c979c1fbab8d65'
+			},
+			params: $scope.loginMisData
 
 		})
-			.success(function(res) {
+			.success(function (res) {
 				console.log(res)
-				if (res.result == 1) {
+				if (res.code == 1000) {
 					$('#loginMis').attr('disabled', false);
 					$scope.isLoginText = '登录成功';
 					$scope.isDisable = false;
 					layer.closeAll('loading');
-					console.log('')
-
+					misUrlStr = res.data;
+					// window.location.href = res.data;
 
 				} else {
-
-					layer.msg(res.msg, {
-						icon: 2
-					})
+					layer.open({
+						type: 1,
+						title: false,
+						closeBtn: 0,
+						area: ['475px', '192px'],
+						shadeClose: true,
+						skin: 'layer_mis',
+						content: $('#misAlert'),
+						success:function(layers,index){
+							$(layers).find('.b_mis_close').click(function(){
+								layer.close(index);
+							})
+						}
+					});
 					$scope.isDisable = false;
 					$('#loginMis').attr('disabled', false);
-					$scope.isLoginText = '点击登录';
+					$scope.isLoginText = '登录';
 					layer.closeAll('loading');
 				}
 
 			})
-			.error(function(res) {
-				layer.msg('登录失败', {
+			.error(function (res) {
+				layer.msg(res, {
 					icon: 2
 				})
-				$scope.isLoginText = '点击登录';
-				$('#loginMis').attr('disabled', false);
+				$scope.isLoginText = '登录';
+				$('#loginMis').attr('disabled', false);a
 				layer.closeAll('loading');
 			})
 			
+			
+
+
+		// $timeout(function(){
+		// 	if(misUrlStr.length > 0){
+		// 		misUrl(misUrlStr);
+		// 	}
+		// },600)	
+		
 	}
 
-	$(document).keydown(function(event) {
-		if (event.keyCode == 13) { //绑定回车 
-			$('#loginbtn').click(); //自动触发登录按钮 
-		}
-	});
+	$scope.closeMisLayer = function(){
+		layer.closeAll();
+	}
+
+function misUrl(url){
+	var misUrl = url || 'javascript:;';
+	$('#goMisUrl').attr({'href':misUrl,'target':'_blank'});
+	$('#goMisUrl span').trigger('click');
+}
+	// $(document).keydown(function(event) {
+	// 	if (event.keyCode == 13) { //绑定回车 
+	// 		$('#loginbtn').click(); //自动触发登录按钮 
+	// 	}
+	// });
 
 
 
 }])
 
-login.controller('registerCtrl', function($scope, $rootScope, loginService, $cookies) {
+login.controller('registerCtrl', function ($scope, $rootScope, loginService, $cookies) {
 	$scope.regData = {
 		"UserId": 0,
 		"NickName": "未填写",
@@ -200,14 +229,14 @@ login.controller('registerCtrl', function($scope, $rootScope, loginService, $coo
 	$scope.isDisable = true;
 	$scope.registerText = '注册';
 
-	$scope.register = function() {
+	$scope.register = function () {
 		_czc.push(['_trackEvent', '注册按钮', '点击', '登录页注册按钮']);
 		layer.load();
 		$('#regbtn').attr('disabled', true);
 		$scope.registerText = '注册中...';
 		$('#regbtn').attr('disabled', true);
 		loginService.post(_AjaxURL.AddUser, $scope.regData)
-			.success(function(res) {
+			.success(function (res) {
 				if (res.result == 1) {
 					$rootScope.isTemp = res.data.isShowGuide;
 
@@ -246,7 +275,7 @@ login.controller('registerCtrl', function($scope, $rootScope, loginService, $coo
 
 				}
 			})
-			.error(function(res) {
+			.error(function (res) {
 				layer.msg(res.msg, {
 					icon: 2
 				})
@@ -256,15 +285,15 @@ login.controller('registerCtrl', function($scope, $rootScope, loginService, $coo
 	}
 })
 
-login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', function($scope, $rootScope, loginService) {
+login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', function ($scope, $rootScope, loginService) {
 	$scope.findPwdData = {
 
 	};
 	$scope.againPwd = {};
 	$scope.isDisable = true;
-	$scope.chageText = '确认';
+	$scope.chageText = '确定';
 
-	$scope.findpwd = function() {
+	$scope.findpwd = function () {
 		_czc.push(['_trackEvent', '修改密码按钮', '点击', '修改密码按钮']);
 		layer.load();
 		$('#findBtn').attr("disabled", true);
@@ -272,7 +301,7 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 		$scope.isDisable = false;
 		$scope.chageText = '正在修改...';
 		loginService.post(_AjaxURL.chagePwd, $scope.findPwdData)
-			.success(function(res) {
+			.success(function (res) {
 				if (res.result == 1) {
 					$('#findBtn').attr("disabled", false);
 					$scope.chageText = '修改成功';
@@ -293,18 +322,18 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 					layer.closeAll('loading');
 				} else {
 					layer.msg(res.msg, {
-						icon: 1
+						icon: 2
 					});
-					$scope.chageText = '确认';
+					$scope.chageText = '确定';
 					$('#findBtn').attr("disabled", false);
 					layer.closeAll('loading');
 				}
 			})
-			.error(function(res) {
+			.error(function (res) {
 				layer.msg(res.msg, {
-					icon: 1
+					icon: 2
 				});
-				$scope.chageText = '确认';
+				$scope.chageText = '确定';
 				$('#findBtn').attr("disabled", false);
 			})
 
@@ -312,10 +341,10 @@ login.controller('findpwdCtrl', ['$scope', '$rootScope', 'loginService', functio
 	};
 }])
 
-login.controller('regjoinCtrl', ['$scope', '$rootScope', '$cookies', 'isLoginState', function($scope, $rootScope, $cookies, isLoginState) {
+login.controller('regjoinCtrl', ['$scope', '$rootScope', '$cookies', 'isLoginState', function ($scope, $rootScope, $cookies, isLoginState) {
 
 	// 判断登录状态
-	$scope.goHome = function() {
+	$scope.goHome = function () {
 		$cookies.put('tonken', $rootScope.getTonken);
 		$rootScope.$state.go('home');
 	}
